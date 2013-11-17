@@ -26,8 +26,8 @@ DATABASES = {
         #'PASSWORD': '',
         'USER': tri_config.MySQL_User,
         'PASSWORD': tri_config.MySQL_Pass,
-        'HOST': '',                # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
-        'PORT': '',                      # Set to empty string for default.
+        'HOST': tri_config.MySQL_Host,
+        'PORT': tri_config.MySQL_Port,
     }
 }
 

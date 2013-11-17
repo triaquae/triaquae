@@ -8,7 +8,7 @@ from django.contrib import auth
 from django.contrib.auth.decorators import login_required
 from django.core.exceptions import ObjectDoesNotExist
 from models import Devinfo, Check_Devinfo, ServerStatus, DevForm
-from models import Group,IP,RemoteUser,OpsLog,OpsLogTemp,TriaquaeUser,AuthByIpAndRemoteUser
+from models import Group,IP,RemoteUser,OpsLog,OpsLogTemp,TriaquaeUser,AuthByIpAndRemoteUser,QuickLink
 #from models import *
 
 from TriAquae.backend import MultiRunCounter
@@ -30,7 +30,7 @@ def index(request):
         percent = 0
     else:
         percent = round(up / float(total), 4) * 100
-    context = {'up':up, 'down':down, 'total':total, 'percent':percent}
+    context = {'up':up, 'down':down, 'total':total, 'percent':percent }
     return render(request,'index.html', context)
 @login_required
 def assets(request):
@@ -190,7 +190,7 @@ def account_auth(request):
 #
 @login_required
 def showDashboard(request):
-    return render_to_response('index.html',{'user':request.user})
+    return render_to_response('index.html',{'user':request.user , 'quick_links': QuickLink.objects.all()})
 def logout_view(request):
     user = request.user
     auth.logout(request)
