@@ -1,9 +1,4 @@
-triaquae
-========
 
-To be the best IT management software
-
-Ubuntu 12
 
 安装依赖环境
 yum install gcc gcc-c++ make sysstat nc -y
@@ -14,8 +9,7 @@ yum install mysql mysql-server mysql-devel -y
 
 
 安装rrdtool
-yum install cairo-devel libxml2-devel pango-devel pango libpng-devel freetype freetype-devel libart_lgpl libart_lgpl-devel int
-ltool -y
+yum install cairo-devel libxml2-devel pango-devel pango libpng-devel freetype freetype-devel libart_lgpl libart_lgpl-devel intltool -y
 yum install rrdtool rrdtool-devel -y
 
 
@@ -40,7 +34,7 @@ Tri_IP = '192.168.2.2'
 配置报警接受邮件
 SMTP_server = 'smtp.company.com' #replace it to your company smtp server
 Mail_username = 'tri_mailuser'
-Mail_password = 'yourPassword'
+Mail_password = 'Motherfucker!23'
 
 
 初始化
@@ -63,3 +57,4 @@ http://ip:7000/
 FAQ
 1、跳板机不显示连接信息
 logs目录需要777权限
+
