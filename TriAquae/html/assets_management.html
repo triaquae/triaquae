@@ -1,0 +1,164 @@
+<!-- ArolineZong -->
+{% extends "fmbase.html" %}
+{% block page-content %}
+{% load staticfiles %}
+<div id="page-content">
+    <!-- page header -->
+    <h1 id="page-header">Assets Management</h1>
+
+    <div class="fluid-container">
+        
+        <!-- start icons -->
+        <div id="start">
+            <ul>
+                <li>
+                    <label>{{ auto_check }} </label>
+                    <a href="/assets_management/diff" title="">
+                        <img src="{% static "img/start-icons/upgrade.png" %}" alt="">
+                        <span>Auto Discover</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- end start icons -->
+        
+        <!-- widget grid -->
+        <section id="widget-grid" class="">
+            
+            <!-- row-fluid -->
+            <div class="row-fluid">
+                <article class="span12">
+                    <!-- new widget -->
+                    <div class="jarviswidget" id="widget-id-1">
+                        <header>
+                        <h2>Assets Management<span onclick="show_div()" style="cursor:default;"><img src="{% static 'img/click.png' %}"></span></h2>
+                        </header>
+                        <!-- wrap div -->
+                        <div>
+                             {% include "editbox" %}
+                             <div class="inner-spacer" style="overflow:auto;">
+                             <!-- content goes here -->
+
+                                <table class="table table-striped table-bordered responsive" id="col-filter">
+                                    <thead>
+                                       <tr>
+                                           <th>Triaquae_Hostname</th>
+                                           <th>System_Hostname</th>
+                                           <th>System_Ip</th>
+                                           <th>Device_Type</th>
+                                           <th>Device_Model</th>
+                                           <th>System_Kernel</th>
+                                           <th>Ethernet_Interface</th>
+                                           <th>Memory_Slots_Number</th>
+                                           <th>Memory_Slots_All</th>
+                                           <th>Physical_Memory</th>
+                                           <th>Logical_Cpu_Cores</th>
+                                           <th>Physical_Cpu_Cores</th>
+                                           <th>Physical_Cpu_Model</th>
+                                           <th>Physical_Cpu_MHz</th>
+                                           <th>System_Version</th>
+                                           <th>Hard_Disk</th>
+                                           <th>System_Mac</th>
+                                           <th>System_Hostid</th>
+                                           <th>System_Swap</th>
+                                           <th>Device_Sn</th>
+                                           <th>Asset_Number</th>
+                                           <th>Note1</th>
+                                           <th>Note2</th>
+                                           <th>Note3</th>
+                                           <th>Check_Time</th>
+                                       </tr>
+                                       <tr class="second">
+                                           <td><input type="text" name="search" value="Filter" class="search_init"></td>
+                                           <td><input type="text" name="search" value="Filter" class="search_init"></td>
+                                           <td><input type="text" name="search" value="Filter" class="search_init"></td>
+                                           <td><input type="text" name="search" value="Filter" class="search_init"></td>
+                                           <td><input type="text" name="search" value="Filter" class="search_init"></td>
+                                           <td><input type="text" name="search" value="Filter" class="search_init"></td>
+                                           <td><input type="text" name="search" value="Filter" class="search_init"></td>
+                                           <td><input type="text" name="search" value="Filter" class="search_init"></td>
+                                           <td><input type="text" name="search" value="Filter" class="search_init"></td>
+                                           <td><input type="text" name="search" value="Filter" class="search_init"></td>
+                                           <td><input type="text" name="search" value="Filter" class="search_init"></td>
+                                           <td><input type="text" name="search" value="Filter" class="search_init"></td>
+                                           <td><input type="text" name="search" value="Filter" class="search_init"></td>
+                                           <td><input type="text" name="search" value="Filter" class="search_init"></td>
+                                           <td><input type="text" name="search" value="Filter" class="search_init"></td>
+                                           <td><input type="text" name="search" value="Filter" class="search_init"></td>
+                                           <td><input type="text" name="search" value="Filter" class="search_init"></td>
+                                           <td><input type="text" name="search" value="Filter" class="search_init"></td>
+                                           <td><input type="text" name="search" value="Filter" class="search_init"></td>
+                                           <td><input type="text" name="search" value="Filter" class="search_init"></td>
+                                           <td><input type="text" name="search" value="Filter" class="search_init"></td>
+                                           <td><input type="text" name="search" value="Filter" class="search_init"></td>
+                                           <td><input type="text" name="search" value="Filter" class="search_init"></td>
+                                           <td><input type="text" name="search" value="Filter" class="search_init"></td>
+                                           <td><input type="text" name="search" value="Filter" class="search_init"></td>
+                                       </tr>
+                                   </thead>
+                                   <tbody> 
+                                       {% for host in latest_host_list %}
+                                       <tr class="odd gradeX"> 
+                                           <td><a href="{% url 'assets_detail' host.id %}">{{ host.Triaquae_Hostname}}</a></td>
+                                           <td><a href="{% url 'assets_detail' host.id %}">{{ host.System_Hostname}}</a></td>
+                                           <td><a href="{% url 'assets_detail' host.id %}">{{ host.System_Ip}}</a></td>
+                                           <td>{{ host.Device_Type }}</td>
+                                           <td>{{ host.Device_Model }}</td> 
+                                           <td>{{ host.System_Kernel }}</td> 
+                                           <td class="center">{{ host.Ethernet_Interface }}</td> 
+                                           <td>{{ host.Memory_Slots_Number }}</td> 
+                                           <td>{{ host.Memory_Slots_All }}</td> 
+                                           <td>{{ host.Physical_Memory }}</td>
+                                           <td class="center">{{ host.Logical_Cpu_Cores }}</td> 
+                                           <td class="center">{{ host.Physical_Cpu_Cores }}</td> 
+                                           <td class="center">{{ host.Physical_Cpu_Model }}</td> 
+                                           <td class="center">{{ host.Physical_Cpu_MHz }}</td> 
+                                           <td class="center">{{ host.System_Version}}</td> 
+                                           <td class="center">{{ host.Hard_Disk }}</td> 
+                                           <td class="center">{{ host.System_Mac }}</td> 
+                                           <td class="center">{{ host.System_Hostid }}</td> 
+                                           <td class="center">{{ host.System_Swap }}</td> 
+                                           <td class="center">{{ host.Device_Sn }}</td> 
+                                           <td class="center">{{ host.Asset_Number }}</td> 
+                                           <td class="center">{{ host.Note1}}</td> 
+                                           <td class="center">{{ host.Note2}}</td> 
+                                           <td class="center">{{ host.Note3}}</td> 
+                                           <td class="center">{{ host.Check_Time}}</td> 
+                                       </tr> 
+                                       {% endfor %}
+                                    </tbody>
+                                </table>
+                                </div>
+    
+                                <div id="colsDiv" style="background-color:#eeeeee; display:none;">
+                                </div>
+                                <!--
+                                -->
+                             <!-- end content-->
+
+                        </div>
+                        <!-- end wrap div -->
+                    </div>
+                    <!-- end widget -->
+                </article>
+            </div>
+            <!-- end row-fluid -->
+        </section>
+        <!-- end widget grid -->
+    </div>      
+</div>
+<!-- end main content -->
+<script>
+	$(function(){
+			if($(".expanded a").attr("href") == "\/assets_management"){
+				return;
+			}
+			$(".expanded").removeClass("expanded");
+			$(".current").removeClass("current");
+			var _parent = $("a[href='\/assets_management']").parent();
+			_parent.addClass("expanded");
+			_parent.parents("li").addClass("current");
+	});
+</script>
+<script src="{% static 'js/include/assets_filter_table.js' %}"></script>
+{% endblock %}

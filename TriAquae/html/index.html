@@ -1,0 +1,592 @@
+{% extends "fmbase.html" %}
+{% block page-content %}
+{% load staticfiles %}
+ <script src="/static/js/include/highcharts.js" type="text/javascript"></script>
+ <script type="text/javascript">
+$(function () {
+	Highcharts.setOptions({
+		global: {
+			useUTC: false
+		}
+	});
+	var totalmem = 0,usedmem = 0;
+	$.ajax({
+		url:"/getMemInfo/",
+		async:false,
+		success:function(data){
+			var jsondata= JSON.parse(data);
+			totalmem = jsondata.total_mem;
+			usedmem = jsondata.used_mem;
+		}
+	
+	});
+       var usrcpu =0,systemcpu =0;
+         $.ajax({
+                 url:"/getCPUInfo/",
+                 async:false,
+                 success:function(data){
+                              var jsondata= JSON.parse(data);
+                              usrcpu = jsondata.user;
+                              systemcpu = jsondata.system;
+                         }
+                        
+                });
+	
+	$.ajax({
+		url:"/getServerUpDownNum/",
+		success:function(data){
+			var jsondata= JSON.parse(data);
+			var total = jsondata.total_server,up = jsondata.up_server,down = jsondata.down_server;
+			$('#updown_container').highcharts({
+				chart: {
+					plotBackgroundColor: null,
+					plotBorderWidth: null,
+					plotShadow: true
+				},
+				title: {
+					text: 'Up and Down Server Percent'
+				},
+				tooltip: {
+					pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+				},
+				legend: {
+					enabled:true,
+					align:'center'
+				},
+				plotOptions: {
+					pie: {
+						allowPointSelect: true,
+						cursor: 'pointer',
+						dataLabels: {
+							enabled: true,
+							color: '#000000',
+							connectorColor: '#000000',
+							format: '<b>{point.name}</b>: <b>{point.y}</b>'
+						},
+						showInLegend: true
+					}
+				},
+				series: [{
+					type: 'pie',
+					name: 'Up/Down  Server Percentage',
+					data:[{
+						name: 'Up_Server',
+						color: '#8bbc21',
+						y: up
+						}, {
+						name: 'Down_Server',
+						color: '#910000',
+						y: down
+					}]		
+				}]
+			});	
+		}
+	});	
+	
+	var chart;
+	$("#memusage-container").highcharts({
+		chart: {
+			type: 'area',
+			marginRight: 10,
+			events: {
+				load: function() {
+					// set up the updating of the chart each second
+					var series0 = this.series[0];// ,series1= this.series[1];
+					setInterval(function() {
+						var x = (new Date()).getTime(), // current time
+						   y = Math.random(),system=Math.random();
+						$.ajax({
+							url:"/getMemInfo/",
+							async:false,
+							success:function(data){
+								var jsondata= JSON.parse(data);
+								y = jsondata.used_mem;
+							}
+						
+						});		
+						series0.addPoint([x, y], true, true);
+					//	series1.addPoint([x,system],true,true);
+					}, 15000);
+				}
+			}
+		},
+		title: {
+			text: "Live Memory Usage (Total Memory: " + totalmem+" MB)"
+		},
+		xAxis: {
+			type: 'datetime',
+			tickPixelInterval: 150
+		},
+		yAxis: {
+			title: {
+				text: 'Memory Used (MB)',
+			},
+			plotLines: [{
+				value: 0,
+				width: 1,
+				color: '#808080'
+			}]
+		},
+		tooltip: {
+			formatter: function() {
+					return '<b>'+ this.series.name +'</b><br/>'+
+					Highcharts.dateFormat('%Y-%m-%d %H:%M:%S', this.x) +'<br/>'+
+					Highcharts.numberFormat(this.system, 2);
+			}
+		},
+		legend: {
+			enabled:true
+		},
+		backgroundColor: '#dddddd',
+		plotOptions:{
+			area:{
+			//	marker:{enabled:false},
+			//	linecolor:'#000',
+				color:'#f27d2f',
+			//	fillColor:'#ecae3d',
+				fillOpacity:0.8,
+				
+                marker: {
+                        enabled: false,
+                        symbol: 'circle',
+                        radius: 2,
+                        states: {
+                            hover: {
+                                enabled: true
+                            }
+                        }
+                    }
+			}
+		},
+		exporting: {
+			enabled: false
+		},
+		series: [
+			{
+				name: 'Used Memory',
+				data: (function() {
+					// generate an array of random data
+					var data = [],
+						time = (new Date()).getTime(),
+						i;
+
+					for (i = -5; i <= 0; i++) {
+						data.push({
+							x: time + i * 1000,
+							y: usedmem
+						});
+					}
+					return data;
+				})()
+			}
+		]
+});
+	$("#container").highcharts({
+		chart: {
+			type: 'area',
+//                animation: Highcharts.svg, // don't animate in old IE
+			marginRight: 10,
+			events: {
+				load: function() {
+
+					// set up the updating of the chart each second
+					var series0 = this.series[0],series1= this.series[1];
+					setInterval(function() {
+						var x = (new Date()).getTime(), // current time
+						   y = Math.random(),system=Math.random();
+			$.ajax({
+				url:"/getCPUInfo/",
+				async:false,
+				success:function(data){
+											var jsondata= JSON.parse(data);
+											y = jsondata.user;
+											system = jsondata.system;
+				}
+			
+			});
+//				alert('x and y is :'+x+","+y);
+		
+						series0.addPoint([x, y], true, true);
+			series1.addPoint([x,system],true,true);
+					}, 15000);
+				}
+			}
+		},
+		title: {
+			text: "Live CPU and System Data(%)"
+		},
+		xAxis: {
+			type: 'datetime',
+			tickPixelInterval: 150
+		},
+		yAxis: {
+			title: {
+				text: 'Value'
+			},
+			plotLines: [{
+				value: 0,
+				width: 1,
+				color: '#808080'
+			}]
+		},
+		tooltip: {
+			formatter: function() {
+					return '<b>'+ this.series.name +'</b><br/>'+
+					Highcharts.dateFormat('%Y-%m-%d %H:%M:%S', this.x) +'<br/>'+
+					Highcharts.numberFormat(this.system, 2);
+			}
+		},
+		legend: {
+			enabled:true
+		},
+		plotOptions:{
+			area:{
+			//	fillColor:'#ecae3d',
+				fillOpacity:0.8,
+				
+                marker: {
+                        enabled: false,
+                        symbol: 'circle',
+                        radius: 2,
+                        states: {
+                            hover: {
+                                enabled: true
+                            }
+                        }
+                }
+			}
+
+	    },
+		exporting: {
+			enabled: false
+		},
+		series: [{
+			name: 'User data',
+			data: (function() {
+				// generate an array of random data
+				var data = [],
+					time = (new Date()).getTime(),
+					i;
+
+				for (i =-19 ; i <= 0; i++) {
+					data.push({
+						x: time + i * 1000,
+						y: usrcpu //Math.random()
+					});
+				}
+				return data;
+			})(),
+		//	color:'#f28f43'
+		},
+	{name:'System data',
+	data:(function(){
+		var data=[],
+		time =(new Date()).getTime(),
+		i;
+		for(i=-19;i<=0;i++){
+			data.push({
+				x:time + i*1000,
+				y:systemcpu//Math.random()
+			});
+		}
+		return data;
+	})(),
+	//color:'#492970'
+	}
+]
+	});
+        var min_1_load =0, min_5_load =0;
+         $.ajax({
+                 url:"/getAverageLoad/",
+                 async:false,
+                 success:function(data){
+                              var jsondata= JSON.parse(data);
+                              min_1_load = jsondata.min_1;
+                              min_5_load = jsondata.min_5;
+                 }
+                   
+         });
+
+	$("#average_load").highcharts({
+                chart: {
+			type: 'area',
+//                animation: Highcharts.svg, // don't animate in old IE
+			marginRight: 10,
+			events: {
+				load: function() {
+
+					// set up the updating of the chart each second
+					var series0 = this.series[0],series1= this.series[1];
+					setInterval(function() {
+						var x = (new Date()).getTime(), // current time
+						   y = Math.random(),system=Math.random();
+			$.ajax({
+				url:"/getAverageLoad/",
+				async:false,
+				success:function(data){
+											var jsondata= JSON.parse(data);
+											y = jsondata.min_1;
+											system = jsondata.min_5;
+				}
+			
+			});
+//				alert('x and y is :'+x+","+y);
+		
+						series0.addPoint([x, y], true, true);
+			series1.addPoint([x,system],true,true);
+					}, 15000);
+				}
+			}
+		},
+		title: {
+			text: "System Average Load"
+		},
+		xAxis: {
+			type: 'datetime',
+			tickPixelInterval: 200
+		},
+		yAxis: {
+			title: {
+				text: 'Value'
+			},
+			plotLines: [{
+				value: 0,
+				width: 1,
+				color: '#808080'
+			}]
+		},
+		tooltip: {
+			formatter: function() {
+					return '<b>'+ this.series.name +'</b><br/>'+
+					Highcharts.dateFormat('%Y-%m-%d %H:%M:%S', this.x) +'<br/>'+
+					Highcharts.numberFormat(this.system, 2);
+			}
+		},
+		legend: {
+			enabled:true
+		},
+		plotOptions:{
+			area:{
+			//	fillColor:'#ecae3d',
+				fillOpacity:0.8,
+				
+                marker: {
+                        enabled: false,
+                        symbol: 'circle',
+                        radius: 2,
+                        states: {
+                            hover: {
+                                enabled: true
+                            }
+                        }
+                }
+			}
+
+	    },
+		exporting: {
+			enabled: false
+		},
+		series: [{
+			name: '1-minute Load',
+			data: (function() {
+				// generate an array of random data
+				var data = [],
+					time = (new Date()).getTime(),
+					i;
+
+				for (i =-19 ; i <= 0; i++) {
+					data.push({
+						x: time + i * 1000,
+						y: min_1_load//Math.random()
+					});
+				}
+				return data;
+			})(),
+			color:'#f28f43'
+		},
+	{name:'5-minute Load',
+	data:(function(){
+		var data=[],
+		time =(new Date()).getTime(),
+		i;
+		for(i=-19;i<=0;i++){
+			data.push({
+				x:time + i*1000,
+				y: min_5_load//Math.random()
+			});
+		}
+		return data;
+	})(),
+	color:'#492970'
+	}
+]
+        });
+
+});
+	
+ </script>
+<!-- main content -->
+<div id="page-content">
+    <!-- breadcrumb -->
+    <!-- DISABLED 
+	<ul class="breadcrumb">
+		<li>
+			<a href="javascript:void(0);"><i class="icon-off"></i> Dashboard</a><span class="divider">/</span>
+		</li>
+		<li>
+			<a href="javascript:void(0);">Library</a><span class="divider">/</span>
+		</li>
+		<li class="active">
+			Current Page
+		</li>
+	</ul>
+	-->
+	<!-- end breadcrumb -->
+	
+	<!-- page header -->
+    <h1 id="page-header">Dashboard</h1>	
+    
+    <div class="fluid-container">
+
+        <!-- start icons -->
+        <div id="start">
+            <ul>
+	            <li>
+                    <a href="/admin" title="">
+                        <img src="{% static "img/start-icons/add-user.png" %}" alt="">
+                        <span>Admin Center</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/file_transfer" title="">
+                        <img src="{% static "img/start-icons/mass.png" %}" alt="">
+                        <span>File Transfer</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/server_status" title="">
+                        <img src="{% static "img/start-icons/stats.png" %}" alt="">
+                        <span>Server Status</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="command_execution" title="">
+                        <img src="{% static "img/start-icons/pending-message.png" %}" alt="">
+                        <span>Command Execution</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="assets_management" title="">
+                        <img src="{% static "img/start-icons/upgrade.png" %}" alt="">
+                        <span>Assets Management</span>
+                    </a>
+                </li>
+            </ul>
+        </div>						
+		<!-- end start icons -->
+		
+        <!-- widget grid -->
+        <section id="widget-grid" class="">
+	
+		<!-- row-fluid -->
+		
+		<div class="row-fluid">
+
+			<article class="span6">
+				<!-- new widget -->
+				<div class="jarviswidget" id="widget-id-server">
+				    <header>
+				        <h2>Server Up/Down Statistic</h2>                           
+				    </header>
+				    <div>
+                        {% include "editbox" %}
+				        <div class="inner-spacer"> 
+				        <!-- content goes here -->
+							<div id= "updown_container"></div>
+				        <!-- end content -->
+				        </div>     
+				    </div>
+				</div>
+				<!-- end widget -->
+			</article>		
+			<article class="span12" style="margin-left:0px">
+				<!-- new widget -->
+				<div class="jarviswidget" id="widget-id-mem">
+				    <header>
+				        <h2>Memory Usage</h2>                           
+				    </header>
+				    
+				    <!-- widget div-->
+				    <div>
+				    	<!-- widget edit box -->
+				        <div class="jarviswidget-editbox">
+				            <div>
+				                <label>Title:</label>
+				                <input type="text" />
+				            </div>
+				            <div>
+				                <label>Styles:</label>
+				                <span data-widget-setstyle="purple" class="purple-btn"></span>
+				                <span data-widget-setstyle="navyblue" class="navyblue-btn"></span>
+				                <span data-widget-setstyle="green" class="green-btn"></span>
+				                <span data-widget-setstyle="yellow" class="yellow-btn"></span>
+				                <span data-widget-setstyle="orange" class="orange-btn"></span>
+				                <span data-widget-setstyle="pink" class="pink-btn"></span>
+				                <span data-widget-setstyle="red" class="red-btn"></span>
+				                <span data-widget-setstyle="darkgrey" class="darkgrey-btn"></span>
+				                <span data-widget-setstyle="black" class="black-btn"></span>
+				            </div>
+				        </div>
+				        <!-- end widget edit box -->
+
+				        <div class="inner-spacer"> 
+				        <!-- content goes here -->
+							<!-- memusage container -->
+				        	<div id="memusage-container">
+
+				        	</div>
+				        	<!-- memusage container -->
+				        </div>
+				        
+				    </div>
+				    <!-- end widget div -->
+				</div>
+				<!-- end widget -->
+			</article>
+					
+			<article class="span12" style="margin-left:0px">
+				<!-- new widget -->
+				<div class="jarviswidget" id="widget-id-cpu">
+				    <header>
+				        <h2>CPU & System Usage</h2>                           
+				    </header>
+					<div>
+						<div class="inner-spacer">
+							<div id="container" style="min-width:400px;height:300px;magin:0 auto;"></div>
+						</div>
+					</div>
+				</div>
+			</article>
+			<article class="span12" style="margin-left:0px">
+                                <!-- new widget -->
+                                <div class="jarviswidget" id="widget-id-load">
+                                    <header>
+                                        <h2>Average Load</h2>
+                                    </header>
+                                        <div>
+                                                <div class="inner-spacer">
+                                                        <div id="average_load" style="min-width:400px;height:300px;magin:0 auto;"></div>
+                                                </div>
+                                        </div>
+                                </div>
+                        </article>
+		</div>
+		
+		<!-- end row-fluid -->
+
+	</section>
+	<!-- end widget grid -->
+</div>		
+	</div>
+	<!-- end main content -->
+{% endblock %}

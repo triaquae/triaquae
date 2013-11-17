@@ -1,0 +1,161 @@
+{% extends "fmbase.html" %}
+{% block page-content %}
+{% load staticfiles %}
+<div id="page-content">
+    <!-- page header -->
+    <h1 id="page-header">Assets Management > Assets Detail</h1>
+
+    <div class="fluid-container">
+
+        <!-- detail -->
+        <div id="invoice-bar" class="btn-toolbar">
+            <div class="btn-group">
+                <!--
+                <button type="button" id="invoice-print" class="btn medium">
+                    <i class="cus-printer"></i> Print Invoice 
+                </button>
+                -->
+            </div>
+        </div>
+        <div id="invoice-id-01" class="invoice" style:"width:100%;overflow:scroll">
+            <div class="invoice-header" >
+                <img src="{% static "img/favicons/host.png" %}" width="114" height="114" alt="device icon">
+                <div class="invoice-company-info invoice-info pull-right">
+                    <h4>{{ host.Triaquae_Hostname }}</h4><br />
+                    <!--
+                    <ul>
+                        <li>Purchase Time:<span>2013-01-01</span></li>
+                        <li>Expired Time:<span>2015-01-01</span></li>
+                        <li>Contact:<span>010-76353758</span></li>
+                    </ul>
+                    -->
+                </div>
+            </div>
+
+            <div class="assets-detail-body">
+                <table id="assets_detail" class="table table-striped responsive">
+                    <thead>
+                        <tr>
+                            <th class="item">Item</th>
+                            <th class="desc">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><a href="javascript:void(0);">System_Hostname</a></td>
+                            <td style="display:">{{ host.System_Hostname }}</td>
+                        </tr>
+                        <tr>
+                            <td><a href="javascript:void(0);">System_Ip</a></td>
+                            <td style='display:absoluate'>{{ host.System_Ip}}</td>
+                        </tr>
+                        <tr>
+                            <td><a href="javascript:void(0);">Device_Type</a></td>
+                            <td>{{ host.Device_Type}}</td>
+                        </tr>
+                        <tr>
+                            <td><a href="javascript:void(0);">Device_Model</a></td>
+                            <td>{{ host.Device_Model}}</td>
+                        </tr>
+                        <tr>
+                            <td><a href="javascript:void(0);">System_Kernel</a></td>
+                            <td>{{ host.System_Kernel}}</td>
+                        </tr>
+                        <tr>
+                            <td><a href="javascript:void(0);">Ethernet_Interface</a></td>
+                            <td>{{ host.Ethernet_Interface}}</td>
+                        </tr>
+                        <tr>
+                            <td><a href="javascript:void(0);">Memory_Slots_Number</a></td>
+                            <td>{{ host.Memory_Slots_Number}}</td>
+                        </tr>
+                        <tr>
+                            <td><a href="javascript:void(0);">Memory_Slots_All</a></td>
+                            <td>{{ host.Memory_Slots_All}}</td>
+                        </tr>
+                        <tr>
+                            <td><a href="javascript:void(0);">Physical_Memory</a></td>
+                            <td>{{ host.Physical_Memory}}</td>
+                        </tr>
+                        <tr>
+                            <td><a href="javascript:void(0);">Logical_Cpu_Cores</a></td>
+                            <td>{{ host.Logical_Cpu_Cores}}</td>
+                        </tr>
+                        <tr>
+                            <td><a href="javascript:void(0);">Physical_Cpu_Cores</a></td>
+                            <td>{{ host.Physical_Cpu_Cores}}</td>
+                        </tr>
+                        <tr>
+                            <td><a href="javascript:void(0);">Physical_Cpu_Model</a></td>
+                            <td>{{ host.Physical_Cpu_Model}}</td>
+                        </tr>
+                        <tr>
+                            <td><a href="javascript:void(0);">Physical_Cpu_Mhz</a></td>
+                            <td>{{ host.Physical_Cpu_MHz}}</td>
+                        </tr>
+                        <tr>
+                            <td><a href="javascript:void(0);">System_Version</a></td>
+                            <td>{{ host.System_Version}}</td>
+                        </tr>
+                        <tr>
+                            <td><a href="javascript:void(0);">Hard_Disk</a></td>
+                            <td>{{ host.Hard_Disk}}</td>
+                        </tr>
+                        <tr>
+                            <td><a href="javascript:void(0);">System_Mac</a></td>
+                            <td>{{ host.System_Mac}}</td>
+                        </tr>
+                        <tr>
+                            <td><a href="javascript:void(0);">System_Hostid</a></td>
+                            <td>{{ host.System_Hostid}}</td>
+                        </tr>
+                        <tr>
+                            <td><a href="javascript:void(0);">System_Swap</a></td>
+                            <td>{{ host.System_Swap}}</td>
+                        </tr>
+                        <tr>
+                            <td><a href="javascript:void(0);">Device_Sn</a></td>
+                            <td>{{ host.Device_Sn}}</td>
+                        </tr>
+                        <tr>
+                            <td><a href="javascript:void(0);">Asset_Number</a></td>
+                            <td>{{ host.Asset_Number}}</td>
+                        </tr>
+                        <tr>
+                            <td><a href="javascript:void(0);">Note1</a></td>
+                            <td>{{ host.Note1}}</td>
+                        </tr>
+                        <tr>
+                            <td><a href="javascript:void(0);">Note2</a></td>
+                            <td>{{ host.Note2}}</td>
+                        </tr>
+                        <tr>
+                            <td><a href="javascript:void(0);">Note3</a></td>
+                            <td>{{ host.Note3}}</td>
+                        </tr>
+                        <tr>
+                            <td><a href="javascript:void(0);">Check_Time</a></td>
+                            <td>{{ host.Check_Time|date:"Y-m-d H:i"}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!-- end detail -->
+    </div>
+</div>
+<!-- end main content -->
+<script>
+	$(function(){
+			if($(".expanded a").attr("href") == "\/assets_management"){
+				return;
+			}
+			$(".expanded").removeClass("expanded");
+			$(".current").removeClass("current");
+			var _parent = $("a[href='\/assets_management']").parent();
+			_parent.addClass("expanded");
+			_parent.parents("li").addClass("current");
+	});
+</script>
+        
+{% endblock %}

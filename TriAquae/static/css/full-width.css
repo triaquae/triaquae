@@ -1,0 +1,57 @@
+	/*         
+	     __                   .__        
+	    |__|____ __________  _|__| ______
+	    |  \__  \\_  __ \  \/ /  |/  ___/
+	    |  |/ __ \|  | \/\   /|  |\___ \ 
+	/\__|  (____  /__|    \_/ |__/____  >
+	\______|    \/                    \/ 
+	
+	Copyright 2013 - Jarvis : Smart Admin Template
+	
+	 * This is part of an item on wrapbootstrap.com
+	 * https://wrapbootstrap.com/user/myorange
+	 * ==================================
+	 */
+
+	/* full width css */
+	
+	.contained {
+		max-width: none;
+	}
+	
+	#main {
+		padding-left: 0;
+		padding-right: 0;
+	}
+	
+	aside.right {
+		position:absolute;
+		top:0px;
+		right:0px;
+		border-left:none;
+		display: none;
+	}
+	
+	@media screen and (min-width: 1279px) { /* was 1325 */
+		#page-content {
+			/*margin-right:249px;*/
+			margin-right:10px;
+			border-right-color: #DBDBDC;
+		}
+		
+		#page-content {
+			border-radius: 10px;
+			-webkit-border-radius: 10px;
+			-moz-border-radius: 10px;
+		}
+		
+		aside.right {
+			display:block;
+		}
+	
+		#page-content:after {
+			/*content:"min-width: 1325px";*/
+		}
+	}
+
+

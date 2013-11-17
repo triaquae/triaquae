@@ -1,0 +1,109 @@
+{% extends "fmbase.html" %}
+{% block page-content %}
+<div id="page-content">
+    <!-- page header -->
+    <h1 id="page-header">Assets Notification</h1>
+
+    <div class="fluid-container">
+        
+        <!-- widget grid -->
+        <section id="widget-grid" class="">
+            
+            <!-- row-fluid -->
+            <div class="row-fluid">
+                <article class="span12">
+                    <!-- new widget -->
+                    <div class="jarviswidget" id="widget-id-1">
+                        <header>
+                            <h2>Assets Notification</h2>
+                        </header>
+                        <!-- wrap div -->
+                        <div>
+                            <div class="jarviswidget-editbox">
+                                <div>
+                                    <label>Title:</label>
+                                    <input type="text" />
+                                </div>
+                                <div>
+                                    <label>Styles:</label>
+                                    <span data-widget-setstyle="purple" class="purple-btn"></span>
+                                    <span data-widget-setstyle="navyblue" class="navyblue-btn"></span>
+                                    <span data-widget-setstyle="green" class="green-btn"></span>
+                                    <span data-widget-setstyle="yellow" class="yellow-btn"></span>
+                                    <span data-widget-setstyle="orange" class="orange-btn"></span>
+                                    <span data-widget-setstyle="pink" class="pink-btn"></span>
+                                    <span data-widget-setstyle="red" class="red-btn"></span>
+                                    <span data-widget-setstyle="darkgrey" class="darkgrey-btn"></span>
+                                    <span data-widget-setstyle="black" class="black-btn"></span>
+                                 </div>
+                             </div>
+
+                             <div class="inner-spacer">
+                             <!-- content goes here -->
+
+                             <table class="table table-striped table-bordered responsive" id="col-filter">
+                                <col></col>
+                                <col></col>
+                                <col></col>
+                                <col class="hidden-desktop"></col>
+                                <col class="hidden-desktop"></col>
+                                <col class="hidden-desktop"></col>
+                                <!--
+                                -->
+                                 <thead>
+                                    <tr>
+                                        <th>Triaquae_Hostname</th>
+                                        <th>Change_Type</th>
+                                        <th>Old_Value</th>
+                                        <th>New_Value</th>
+                                        <th>Change_Time</th>
+                                    </tr>
+                                    <tr class="second">
+                                        <td><input type="text" name="search_hosts" value="Filter" class="search_init"></td> 
+                                        <td><input type="text" name="search_name" value="Filter" class="search_init"> </td>
+                                        <td><input type="text" name="search_platform" value="Filter" class="search_init"></td>
+                                        <td><input type="text" name="search_group" value="Filter" class="search_init"></td>
+                                        <td><input type="text" name="search_cpu" value="Filter" class="search_init"></td>
+                                    </tr>
+                                </thead>
+                                <tbody> 
+                                    {% for host in latest_host_list %}
+                                    <tr class="odd gradeX"> 
+                                        <td>{{ host.Triaquae_Hostname}}</td> 
+                                        <td>{{ host.Change_Type }}</td> 
+                                        <td>{{ host.Old_Value }}</td>
+                                        <td>{{ host.New_Value }}</td> 
+                                        <td class="center">{{ host.Change_Time }}</td> 
+                                    </tr> 
+                                    {% endfor %}
+                                 </tbody>
+                             </table>
+                             </div>
+                             <!-- end content-->
+
+                        </div>
+                        <!-- end wrap div -->
+                    </div>
+                    <!-- end widget -->
+                </article>
+            </div>
+            <!-- end row-fluid -->
+
+        </section>
+        <!-- end widget grid -->
+    </div>      
+</div>
+<script>
+	$(function(){
+			if($(".expanded a").attr("href") == "\/assets_management"){
+				return;
+			}
+			$(".expanded").removeClass("expanded");
+			$(".current").removeClass("current");
+			var _parent = $("a[href='\/assets_management']").parent();
+			_parent.addClass("expanded");
+			_parent.parents("li").addClass("current");
+	});
+</script>
+<!-- end main content -->
+{% endblock %}

@@ -1,0 +1,15 @@
+README.rst
+django_wsgiserver/__init__.py
+django_wsgiserver/wsgiutil.py
+django_wsgiserver.egg-info/PKG-INFO
+django_wsgiserver.egg-info/SOURCES.txt
+django_wsgiserver.egg-info/dependency_links.txt
+django_wsgiserver.egg-info/top_level.txt
+django_wsgiserver/management/__init__.py
+django_wsgiserver/management/commands/__init__.py
+django_wsgiserver/management/commands/runwsgiserver.py
+django_wsgiserver/wsgiserver/__init__.py
+django_wsgiserver/wsgiserver/ssl_builtin.py
+django_wsgiserver/wsgiserver/ssl_pyopenssl.py
+django_wsgiserver/wsgiserver/wsgiserver2.py
+django_wsgiserver/wsgiserver/wsgiserver3.py

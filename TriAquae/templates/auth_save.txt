@@ -1,0 +1,9 @@
+192.168.1.11	weblogic	ssh	123456
+192.168.1.11	apache	ssh	123456
+192.168.1.11	test	ssh	123456
+192.168.1.11	root	ssh	123456
+192.168.1.10	weblogic	ssh	123456
+192.168.1.10	apache	ssh-key	123456
+192.168.1.10	test	ssh	123456
+192.168.1.10	root	ssh	abcedf
+

@@ -1,0 +1,379 @@
+	/*         
+	     __                   .__        
+	    |__|____ __________  _|__| ______
+	    |  \__  \\_  __ \  \/ /  |/  ___/
+	    |  |/ __ \|  | \/\   /|  |\___ \ 
+	/\__|  (____  /__|    \_/ |__/____  >
+	\______|    \/                    \/ 
+	
+	Copyright 2013 - Jarvis : Smart Admin Template
+	
+	 * This is part of an item on wrapbootstrap.com
+	 * https://wrapbootstrap.com/user/myorange
+	 * ==================================
+	 */
+
+	/* ---------------------------------------------------------------------- */
+	/*	Responsive adjustments
+	/* ---------------------------------------------------------------------- */		
+
+	@media screen and (min-width: 1279px) { /* was 1325 */
+		#page-content {
+			/*margin-right:249px !important;*/
+			margin-right:15px !important;
+			border-right-color: #DBDBDC;
+			border-radius: 10px;
+			-webkit-border-radius: 10px;
+			-moz-border-radius: 10px;
+		}
+		
+		.no-right-bar #page-content {
+			margin-right:15px !important;
+		}
+		
+		aside.right {
+			display:block;
+		}
+		
+		.no-right-bar aside.right {
+			display:none !important;
+		}
+	
+		#page-content:after {
+			/*content:"min-width: 1325px";*/
+		}
+	}
+	
+	@media screen and (min-width: 1150px) {
+
+		#page-content:after {
+			/*content:"min-width: 1150px";*/
+		}
+	}
+	
+	@media (min-width: 980px) {
+				
+		#page-content {
+			border-radius: 10px;
+			-webkit-border-radius: 10px;
+			-moz-border-radius: 10px;
+			
+			margin-right:15px;	
+		
+		}
+		
+		#page-content:after {
+			/*content:"min-width: 980px";*/
+		}
+	}
+	
+	@media (min-width: 768px) and (max-width: 979px) {	
+
+		.dt-footer .span6 {
+			display: block;
+			float: none;
+			width: 100%;
+			margin-left: 0;
+		}
+		ul.all-icons-display li {
+			width:33%;
+		}
+		
+		aside {
+			width:215px;
+			}.easypie {
+				display: inline-block;
+				margin: 10px 6px 20px;
+			}
+			.my-profile{
+				padding: 0 10px;	
+			}
+			.mini-inbox div.alert.inbox {
+				max-height: 90px;
+				}.mini-inbox div.alert.inbox a {
+					font-size: 12px;
+					}
+			aside ul.menu a {
+				font-size:13px;
+				}aside ul.menu > li > ul > li a {
+					font-size:12px; text-indent: 32px;
+					}
+			.number-stats ul li {
+				width: 38px;
+				padding: 0 9px;
+			}		
+		
+		#page-content {
+			border-radius: 10px;
+			-webkit-border-radius: 10px;
+			-moz-border-radius: 10px;			
+			margin-right:15;
+		}
+		
+		#gague-chart > div {
+			width: 80.5px;
+			height: 55px;
+			display: inline-block;
+			margin: 0 0 20px 0;
+		}
+		
+		.radio.inline, .checkbox.inline {
+			display:block;
+		}
+		.radio.inline+.radio.inline, .checkbox.inline+.checkbox.inline {
+			margin-left: 0;
+		}
+		
+		div#main #page-header {
+			font-size:30px;
+			line-height:30px;
+		}
+	
+		/* big icons margin subtracted to align it with header */
+		#start {
+			margin: 0 -10px;
+		}
+	
+		/* big icons resized */
+		#start ul li, #start ul li:first-child, #start ul li:last-child {
+			margin: 4px 1%;
+			width: 30%;
+		}
+	
+		#page-content:after {
+			/*content:"(min-width: 768px) and (max-width: 979px)";*/
+		}
+		
+	}
+	
+	@media (min-width: 768px) and (max-width: 880px) {	
+		ul.all-icons-display li {
+			width:50%;
+		}
+		#page-content {
+			border-radius: 10px;
+			-webkit-border-radius: 10px;
+			-moz-border-radius: 10px;
+			
+			margin-right:15px;
+		}
+		
+		.radio.inline, .checkbox.inline {
+			display:block;
+		}
+		.radio.inline+.radio.inline, .checkbox.inline+.checkbox.inline {
+			margin-left: 0;
+		}
+			
+		div#main #page-header {
+			font-size:30px;
+			line-height:30px;
+		}
+		
+		/* big icons margin subtracted to align it with header */
+		#start {
+			margin: 0 -10px;
+		}
+		
+		/* label adjustment */
+		#start ul li label {
+			right:auto;
+			left:55%;
+		}
+		
+		/* big icons resized */
+		#start ul li {
+			margin: 4px 1%;
+			width: 30%;
+		}
+		
+		/* at ipad (portrait) view convert all widgets to 100% width */
+		section#widget-grid article {
+			display: block;
+			float: none;
+			width: 100%;
+			margin-left: 0;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+			
+		#page-content:after {
+			/*content:"(min-width: 768px) and (max-width: 880px)";*/
+		}
+	}
+	
+	@media (max-width: 767px) {
+		ul.all-icons-display li {
+			width:50%;
+		}
+		/* display responsive navigation */
+		.js .selectnav {
+			display: block;
+		}
+		
+		#header-toolbar {
+			padding-left:15px;
+			padding-right:15px;
+		}
+		body {
+			padding-left:0px;
+			padding-right:0px;
+		}
+		#page-content {
+			border-radius: 10px;
+			-webkit-border-radius: 10px;
+			-moz-border-radius: 10px;
+			
+			margin-top:15px;
+			margin-right:15px;
+			margin-left:15px;
+		}
+
+		.radio.inline, .checkbox.inline {
+			display:block;
+		}
+		.radio.inline+.radio.inline, .checkbox.inline+.checkbox.inline {
+			margin-left: 0;
+		}
+		
+		/* big icons resized */
+		#start ul li {
+			display: inline-table;
+			width: 49%;
+			margin: 1px 1px 5px 0;
+		}
+		
+		aside {
+			display:none;
+		}
+		
+		#page-content:after {
+			/* content:"max-width: 767px"; */
+		}
+	}
+	
+	@media only screen and (min-width: 0px) and (max-width: 679px) {
+		ul.all-icons-display li {
+			width:100%;
+		}
+		/* display responsive navigation */
+		.js .selectnav {
+			display: block;
+		}
+		
+		#page-content:after {
+			/*content:"@media only screen and (min-width: 0px) and (max-width: 679px)";*/
+		}
+	}
+	
+	@media (max-width: 480px) {
+		ul.all-icons-display li {
+			width:100%;
+		}
+		#page-content {
+			margin-right:0px;
+			margin-left:0px;
+		}
+
+		.radio.inline, .checkbox.inline {
+			display:block;
+		}
+		.radio.inline+.radio.inline, .checkbox.inline+.checkbox.inline {
+			margin-left: 0;
+		}
+		
+		div#main #page-header {
+			font-size:22px;
+			line-height:22px;
+		}
+		/*
+		.chat-tabs li:first-child {
+			margin-left:10px;
+		}
+		
+		.chat-tabs li {
+			margin-left:10px;
+			margin-right:10px;
+		}*/
+		
+		#page-content {
+			border-radius: 10px;
+			-webkit-border-radius: 10px;
+			-moz-border-radius: 10px;
+		}
+		
+	    /* hide left hand menu and top menu */
+		.js ul#top-nav, aside, #secondary-nav {
+			display: none;
+		}
+		
+		#header-toolbar {
+			background: none;
+			margin-left: -5px;
+			margin-right: -5px;
+			padding-left: 10px;
+			padding-right: 10px;
+		}
+		
+		.dropdown-menu.pull-right {
+			right: auto;
+			left: -133px;
+		}
+		
+		body {
+			padding:0 5px;
+		}
+		html, body {
+			background: #313131;
+			background: -moz-linear-gradient(top,#313131 0,#101010 100%);
+			background: -webkit-gradient(linear,left top,left bottom,color-stop(0%,#313131),color-stop(100%,#101010));
+			background: -webkit-linear-gradient(top,#313131 0,#101010 100%);
+			background: -o-linear-gradient(top,#313131 0,#101010 100%);
+			background: -ms-linear-gradient(top,#313131 0,#101010 100%);
+			background: linear-gradient(top,#313131 0,#101010 100%);
+			filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#313131',endColorstr='#101010',GradientType=0);
+		}
+		nav {
+			border-radius:4px 4px 0px 0px;
+		}
+		
+		#header-toolbar {
+			background:none;
+		}
+		
+		#page-content, nav {
+			padding:10px;
+		}
+		
+		/* display responsive navigation */
+		.js .selectnav {
+			display: block;
+		}
+		
+		#page-content:after {
+			/*content:"max-width: 480px";*/
+		}
+		
+		/*badges only on small screens*/
+		.bwizard-steps li,
+		.bwizard-steps li.active,
+		.bwizard-steps li:first-child,
+		.bwizard-steps li:last-child {
+			background-color: transparent;
+			padding: 0;
+			margin-right: 0;}
+		.bwizard-steps li:after,
+		.bwizard-steps li:before {
+			border: none;
+		}
+	}
+	
+	@media only screen and (min-width: 320px) and (max-width: 479px) {	
+		#page-content:after {
+			/*content:"iphone";*/
+		}
+	}
+	
+	
+	

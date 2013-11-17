@@ -1,0 +1,191 @@
+{% extends "fmbase.html" %}
+{% block page-content %}
+<link href="/static/liger/css/ligerui-all.css" rel="stylesheet" type="text/css" />
+<script src="/static/liger/js/base.js" type="text/javascript"></script>
+<script src="/static/liger/js/ligerTree.js" type="text/javascript"></script>
+<script src="/static/liger/js/ligerDrag.js" type="text/javascript"></script>
+<script src="/static/liger/js/ligerCustom.js" type="text/javascript"></script>
+
+ <style>
+.ui-progressbar {
+	position: relative;
+}
+.progress-label {
+	position: absolute;
+	left: 50%;
+	top: 4px;
+	font-weight: bold;
+	text-shadow: 1px 1px 0 #fff;
+}
+
+	
+h4{
+	padding:5px 0 5px 0;
+
+}
+</style>
+<script>
+</script>
+<div id="page-content">
+	<!-- page header -->
+	<h1 id="page-header">Server Management > File Transfer </h1>
+	<div class="fluid-container">	
+		<!-- widget grid -->
+		<section id="widget-grid" class="">
+		
+			<!-- row-fluid -->
+			<div class="row-fluid">
+				<!-- article -->	
+				<article class="span12">
+					<!-- new widget -->
+					<div class="jarviswidget" id="widget-id-2">
+					    <header>
+			                <h2>Run Commands</h2>                           
+					    </header>
+					    <!-- wrap div -->
+					    <div>
+					        <div class="jarviswidget-editbox">
+					            <div>
+					                <label>Title:</label>
+					                <input type="text" />
+					            </div>
+					            <div>
+					                <label>Styles:</label>
+					                <span data-widget-setstyle="purple" class="purple-btn"></span>
+					                <span data-widget-setstyle="navyblue" class="navyblue-btn"></span>
+					                <span data-widget-setstyle="green" class="green-btn"></span>
+					                <span data-widget-setstyle="yellow" class="yellow-btn"></span>
+					                <span data-widget-setstyle="orange" class="orange-btn"></span>
+					                <span data-widget-setstyle="pink" class="pink-btn"></span>
+					                <span data-widget-setstyle="red" class="red-btn"></span>
+					                <span data-widget-setstyle="darkgrey" class="darkgrey-btn"></span>
+					                <span data-widget-setstyle="black" class="black-btn"></span>
+					            </div>
+					        </div>
+					        <div class="inner-spacer"> 
+					        <!-- content goes here -->
+								<form class="form-horizontal themed" action="">
+									<fieldset>
+<div class="control-group">
+                                                                                        <h5 style="display:inline-block">Choose Action:</h5>
+                                                                                         <select id="invokeAction" >
+                                                                                                <option>SendFile</ooption>
+                                                                                                <option>GetFile</option>
+                                                                                          </select>
+                                                                                        <h5 style="margin-left:50px;display:inline-block">Choose User:</h5>
+                                                                                        <select id="invokeUser" >
+                                                                                        </select>
+                                                                                </div>
+		
+										<div class="control-group">
+											<div id="message"></div>
+											<div style="height:70%;position:absolute">
+												<div style="border:1px solid #ccc;background:#e1e1e1">Server Lists</div>
+												<div style="height: 95%;  float: left; border: 1px solid #ccc; overflow: auto;">
+													<ul id="tree1"></ul>
+												</div>
+											</div>
+											
+<div id="fileTransferDiv" style="position:relative;float:right;width:68%;height:100%;border:1px solid #ccc">
+											    <div style="position: relative;float:left;min-width: 20px;display: inline-block;width: 45%;padding:5px 0 0 6px;height:280px;">
+													<div style="border:1px solid #ccc;background:#e1e1e1;border-bottom-style:none;">The File Lists:</div>
+													<div  style="border:1px solid #ccc;border-bottom-style:none; padding:0 0 0 10px">Filter:<input type="text" id="filterFiles" style="margin:2px 0 2px 0;width:80%;height:12px;"></div>
+													<select size="10"  multiple="MULTIPLE" id="fileLists" style="display:block;width:100%;height: 80%;border: 1px solid #ccc;overflow:auto">
+													</select>
+													<br />
+													<button  id="chooseall" class="btn btn-primary" style="margin-left:30%"> Choose All </button>
+											</div>
+											<div style="position: relative;width: 5%;display: inline-block;margin:20% 0 30% 1%">
+												<button  id="movetoright" class="btn btn-primary btn-small" style="display:block;"> >> </button>
+												<br />
+												<button  id="movetoleft"  class="btn btn-primary btn-small"> << </button>
+											</div>
+											<div style="position: relative;float:right;min-width: 20px;display: inline-block;width: 45%;padding:5px 5px 0 0;height:280px;">
+												<div style="border:1px solid #ccc; background:#97b6d6;border-bottom-style:none">Selected Files:</div>
+												<select size="12" id="selectedFiles" style="display: block;width:100%;height: 90%;border: 1px solid #ccc;margin:0px 10px 0 0">
+												</select>
+												<br />
+												<button  id="removeall" class="btn btn-primary" style="margin-left:30%"> Remove All </button>
+											</div>
+											<h5 style="padding:0 5px 0 10px;">Remote Path: <input type="text" id="remotepath" style ="width:60%;margin-left:5px" value="/tmp/"/></h5>
+										</div>
+										</div>									
+										<div class="control-group">
+											<button class="btn btn-primary" id="transferFileBtn" style="margin-left:75%;"> Run Now </button>
+				<button id="stopprocess" class="btn btn-danger" disabled=true style="float:right">Stop  Now</button>
+
+										</div>
+									</fieldset>
+								</form>
+						    </div>
+						    <!-- end content-->
+					    </div>
+					    <!-- end wrap div -->
+					</div>
+					<!-- end widget -->
+					<div class="jarviswidget" id="widget-id-3">
+					    <header>
+							<h2>Execution Results</h2>                           
+					    </header>
+					    <!-- wrap div -->
+					    <div>  
+					        <div class="jarviswidget-editbox">
+					            <div>
+					                <label>Title:</label>
+					                <input type="text" />
+					            </div>
+					            <div>
+					                <label>Styles:</label>
+					                <span data-widget-setstyle="purple" class="purple-btn"></span>
+					                <span data-widget-setstyle="navyblue" class="navyblue-btn"></span>
+					                <span data-widget-setstyle="green" class="green-btn"></span>
+					                <span data-widget-setstyle="yellow" class="yellow-btn"></span>
+					                <span data-widget-setstyle="orange" class="orange-btn"></span>
+					                <span data-widget-setstyle="pink" class="pink-btn"></span>
+					                <span data-widget-setstyle="red" class="red-btn"></span>
+					                <span data-widget-setstyle="darkgrey" class="darkgrey-btn"></span>
+					                <span data-widget-setstyle="black" class="black-btn"></span>
+					            </div>
+					        </div>
+							<div id="progressbar" style="display:none"><div class="progress-label">Loading...</div></div>
+			<div class="tabbable"> <!-- Only required for left/right tabs -->
+				<ul class="nav nav-tabs">
+					<li class="active"><a href="#execution_process" data-toggle="tab">Total Tasks:<span class="badge" id="totalnum">0</span></a></li>
+					<li><a href="#execution_success" data-toggle="tab">Number of Success:<span class="badge badge-success" id="successnum">0</span></a></li>
+					<li><a href="#execution_failed" data-toggle="tab">Number of Failure:<span class="badge badge-warning" id="failednum">0</span></a></li>
+				</ul>
+				<div class="tab-content">
+					<div class="tab-pane active" id="execution_process">
+					  <pre style="max-height:500px"></pre>
+					</div>
+					<div class="tab-pane" id="execution_success">
+					  <p style="max-height:500px"></p>
+					</div>
+					<div class="tab-pane" id="execution_failed">
+					  <p style="max-height:500px"></p>
+					</div>
+				</div>
+			</div>
+
+					    </div>
+					    <!-- end wrap div -->
+					</div>
+					<!-- end widget -->
+				</article>
+				<!-- end article-->
+			</div>
+			<!-- end row-fluid -->
+		</section>
+		<!-- end widget grid -->
+	</div>		
+	<div id="dialog-confirm" style="display:none" title="Execute command">
+	<p>
+		<span class="ui-icon ui-icon-alert" style="float: left; margin: 0 7px 20px 0;"></span>
+		<span id="dialog_body"><span>
+	</p>
+	</div>
+</div>
+<!-- end main content -->
+<script src="/static/js/include/command_exec_core.js" type="text/javascript"></script>
+<script src="/static/js/include/file_transfer.js" type="text/javascript"></script>
+{% endblock %}

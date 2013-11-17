@@ -1,0 +1,86 @@
+{% extends "fmbase.html" %}
+{% block page-content %}
+{% load staticfiles %}
+<link rel="stylesheet" href="/static/css/server_status.css?v=1">
+<div id="page-content">
+    <!-- page header -->
+    <h1 id="page-header">Service Status</h1>
+
+    <div class="fluid-container">
+        
+        <!-- widget grid -->
+        <section id="widget-grid" class="">
+            
+            {% for group_name, server_status_list in group_dic.items %}
+            <!-- row-fluid -->
+            <div class="row-fluid"> 
+                <!-- article -->
+                <article class="span12">
+                    <!-- new widget -->
+                    {% comment %}
+                    <div class="jarviswidget" id="widget-id-{{group_name}}" data-widget-refresh="15" data-widget-load="{% static 'ajax/widget-ajax2.php' %}">
+                    {% endcomment %}
+                    <div class="jarviswidget" id="widget-id-{{group_name}}" data-widget-refresh="15">
+                        <header>
+                            <h2>{{ group_name }}</h2>
+                        </header>
+                        <!-- wrap div --> 
+                        <div>
+                            {% include "editbox" %}
+                            <div class="inner-spacer"> 
+                                <!-- content goes here --> 
+                                <table group="{{group_name}}" class="table table-bordered table-striped text-left"> 
+                                    <thead> 
+                                        <tr> 
+                                            <th>Status</th> 
+                                            <th>Host Name</th> 
+                                            <th>Ip Address</th> 
+                                            <th>Ping Status</th> 
+                                            <th>Availability</th> 
+                                            <th>Last Check</th> 
+                                        </tr> 
+                                    </thead> 
+                                    <tbody> 
+                                        {% for host,status in server_status_list.items %}
+                                        <tr host="{{host}}">
+                                            <td key="host_status"><div class='host-status host-status-{{status.host_status}}'>&nbsp;</div><span>{{ status.host_status }}</span></td>
+                                            <td><a href="{% url 'status_detail' host.hostname %}">{{ status.hostname }}</a></td>
+                                            <td><a href="{% url 'status_detail' host.hostname %}">{{ status.host }}</a></td> 
+                                            <td key="ping_status">{{ status.ping_status }}</td>
+                                            <td key="availability">{{ status.availability }}</td>
+                                            <td key="last_check">{{ status.last_check }}</td>
+                                        </tr>
+                                        {% endfor %}
+                                    </tbody> 
+                                </table> 
+                            </div> 
+                            <!-- end content-->
+                        </div> 
+                        <!-- end wrap div --> 
+                    </div> 
+                    <!-- end widget --> 
+                </article> 
+                <!-- end article --> 
+            </div> 
+            <!-- end row-fluid -->
+            {% endfor %}
+        </section>
+        <!-- end widget grid -->
+    </div>      
+    <script type='text/javascript' src="{% static 'js/include/status/service_status.js' %}"></script>
+    <script>
+	$(function(){
+		if($(".expanded a").attr("href") == "\/server_status"){
+			return;
+		}
+		 $(".expanded").removeClass("expanded");
+		 $(".current").removeClass("current");
+		 var _parent = $("a[href='\/server_status']").parent();
+		 _parent.addClass("expanded");
+		 _parent.parents("li").addClass("current");
+
+	});
+    </script>
+</div>
+<!-- end main content -->
+{% endblock %}

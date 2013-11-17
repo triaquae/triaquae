@@ -1,0 +1,19 @@
+<html><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style>
+
+</style>
+<b><h1>Load Batch IP</h1></b>
+<form action='/admin/triWeb/load_batch_ip/' method=POST>
+{% csrf_token %}
+<textarea rows="30" cols="100" name='buf'>
+#Input your authorization for ip & remoteuser here. 
+#Format: ip \t hostname \t IDC \t prototype \t port \t operating system. 
+#Example: 
+#        192.168.1.1 \t test1 \t BJ \t ssh-password \t 22 \t linux
+#        192.168.1.2 \t test2 \t SH \t ssh-key \t 22 \t linux
+</textarea>
+<P>
+<input type=submit value='提交'><input type=reset value='重置'>
+</form>
+--------------------------------
+</html>

@@ -1,0 +1,176 @@
+{% extends "fmbase.html" %}
+{% block page-content %}
+<link href="/static/liger/css/ligerui-all.css" rel="stylesheet" type="text/css" />
+<script src="/static/liger/js/base.js" type="text/javascript"></script>
+<script src="/static/liger/js/ligerTree.js" type="text/javascript"></script>
+<script src="/static/liger/js/ligerDrag.js" type="text/javascript"></script>
+<script src="/static/liger/js/ligerCustom.js" type="text/javascript"></script>
+
+
+
+ <style>
+.ui-progressbar {
+	position: relative;
+}
+.progress-label {
+	position: absolute;
+	left: 50%;
+	top: 4px;
+	font-weight: bold;
+	text-shadow: 1px 1px 0 #fff;
+}
+h4{
+	padding:5px 0 5px 0;
+
+}
+#appendedDropdownButton{
+	width:200%;
+}
+.alert{
+	display:none;
+}
+</style>
+<script>
+</script>
+<div id="page-content">
+	<!-- page header -->
+	<h1 id="page-header">Server Management > Command Execution</h1>
+	<div class="fluid-container">	
+		<!-- widget grid -->
+		<section id="widget-grid" class="">
+		
+			<!-- row-fluid -->
+			<div class="row-fluid">
+				<!-- article -->	
+				<article class="span12">
+					<!-- new widget -->
+					<div class="jarviswidget" id="widget-id-4">
+					    <header>
+			                <h2>Run Commands</h2>                           
+					    </header>
+					    <!-- wrap div -->
+					    <div>
+					        <div class="jarviswidget-editbox">
+					            <div>
+					                <label>Title:</label>
+					                <input type="text" />
+					            </div>
+					            <div>
+					                <label>Styles:</label>
+					                <span data-widget-setstyle="purple" class="purple-btn"></span>
+					                <span data-widget-setstyle="navyblue" class="navyblue-btn"></span>
+					                <span data-widget-setstyle="green" class="green-btn"></span>
+					                <span data-widget-setstyle="yellow" class="yellow-btn"></span>
+					                <span data-widget-setstyle="orange" class="orange-btn"></span>
+					                <span data-widget-setstyle="pink" class="pink-btn"></span>
+					                <span data-widget-setstyle="red" class="red-btn"></span>
+					                <span data-widget-setstyle="darkgrey" class="darkgrey-btn"></span>
+					                <span data-widget-setstyle="black" class="black-btn"></span>
+					            </div>
+					        </div>
+					        <div class="inner-spacer"> 
+					        <!-- content goes here -->
+								<form class="form-horizontal themed" action="test.py">
+									<fieldset>		
+										<div class="control-group">
+											<div id="message"></div>
+											<div style="height:400px;">
+												<div style="border:1px solid #ccc;background:#e1e1e1;width:284px">Server Lists</div>
+												<div style="height: 100%;  float: left; border: 1px solid #ccc; overflow: auto;">
+													<ul id="tree1"></ul>
+												</div>
+											</div>
+										</div>									
+										<div class="control-group">
+											<label class="control-label">Enter your commands:</label>
+											<div class="controls">
+												<div class="input-append">
+													<input id="appendedDropdownButton" type="text" />
+													<div class="btn-group">
+														<button class="btn dropdown-toggle btn-primary medium" data-toggle="dropdown">Run <span class="caret"></span></button>
+														<ul id="invokeOperation" class="dropdown-menu btn-small pull-right">
+														</ul>
+													</div>
+												</div>
+												<button id="stopprocess" class="btn  btn-danger" disabled=true style="float:right">Stop Now</a></button>
+                            				</div>
+<br />
+	<div class="alert alert-error" >
+		<button type="button" class="close" data-dismiss="alert">x</button>
+		<strong>Be Careful!</strong>
+		You are about to execute dangerous command that may cause unrecoverable destroy.</div>
+										</div>
+									</fieldset>
+								</form>
+						    </div>
+						    <!-- end content-->
+					    </div>
+					    <!-- end wrap div -->
+					</div>
+					<!-- end widget -->
+					<div class="jarviswidget" id="widget-id-3">
+					    <header>
+							<h2>Execution Results</h2>                           
+					    </header>
+					    <!-- wrap div -->
+					    <div>  
+					        <div class="jarviswidget-editbox">
+					            <div>
+					                <label>Title:</label>
+					                <input type="text" />
+					            </div>
+					            <div>
+					                <label>Styles:</label>
+					                <span data-widget-setstyle="purple" class="purple-btn"></span>
+					                <span data-widget-setstyle="navyblue" class="navyblue-btn"></span>
+					                <span data-widget-setstyle="green" class="green-btn"></span>
+					                <span data-widget-setstyle="yellow" class="yellow-btn"></span>
+					                <span data-widget-setstyle="orange" class="orange-btn"></span>
+					                <span data-widget-setstyle="pink" class="pink-btn"></span>
+					                <span data-widget-setstyle="red" class="red-btn"></span>
+					                <span data-widget-setstyle="darkgrey" class="darkgrey-btn"></span>
+					                <span data-widget-setstyle="black" class="black-btn"></span>
+					            </div>
+					        </div>
+							<div id="progressbar" style="display:none"><div class="progress-label">Loading...</div></div>
+							<div class="tabbable"> <!-- Only required for left/right tabs -->
+				<ul class="nav nav-tabs">
+					<li class="active"><a href="#execution_process" data-toggle="tab">Total Tasks:<span class="badge" id="totalnum">0</span></a></li>
+					<li><a href="#execution_success" data-toggle="tab">Number of Success:<span class="badge badge-success" id="successnum">0</span></a></li>
+					<li><a href="#execution_failed" data-toggle="tab">Number of Failure:<span class="badge badge-warning" id="failednum">0</span></a></li>
+				</ul>
+				<div class="tab-content">
+					<div class="tab-pane active" id="execution_process">
+					  <pre style="max-height:500px"></pre>
+					</div>
+					<div class="tab-pane" id="execution_success">
+					  <p style="max-height:500px"></p>
+					</div>
+					<div class="tab-pane" id="execution_failed">
+					  <p style="max-height:500px"></p>
+					</div>
+				</div>
+			</div>
+
+					    </div>
+					    <!-- end wrap div -->
+					</div>
+					<!-- end widget -->
+				</article>
+				<!-- end article-->
+			</div>
+			<!-- end row-fluid -->
+		</section>
+		<!-- end widget grid -->
+	</div>		
+	<div id="dialog-confirm" style="display:none" title="Execute command">
+	<p>
+		<span class="ui-icon ui-icon-alert" style="float: left; margin: 0 7px 20px 0;"></span>
+		<span id="dialog_body"><span>
+	</p>
+	</div>
+</div>
+<!-- end main content -->
+<script src="/static/js/include/command_exec_core.js" type="text/javascript"></script>
+<script src="/static/js/include/command_execution.js" type="text/javascript"></script>
+{% endblock %}

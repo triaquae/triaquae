@@ -1,0 +1,3 @@
+<a href="/admin/hosts/load_batch_ip_form/" class="btn btn-mini changelink"><i class="icon-edit"></i> {% trans 'Batch Add Servers' %}</a>
+                <a href="{{ model.admin_url }}" class="btn btn-mini changelink"><i class="icon-edit"></i> {% trans 'Batch Add RemoteUsers' %}</a>
+                <a href="{{ model.admin_url }}" class="btn btn-mini changelink"><i class="icon-edit"></i> {% trans 'Batch Add Auth_IP_User Binding' %}</a>

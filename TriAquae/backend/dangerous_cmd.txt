@@ -1,0 +1,12 @@
+rm
+/bin/rm
+:(){ :|: & };:
+mkfs.ext4
+command > /dev/sda
+dd
+mv
+wget
+halt
+reboot
+shutdown
+yum remove

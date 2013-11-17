@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en-us" >
+<head>
+<title>TriAquae administration | admin</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+<!-- Le styles, placed after extrastyle to correctly override default styling -->
+<link href="/static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="/static/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="/static/admin/css/overrides.css" />
+
+<!-- <link rel="stylesheet" type="text/css" href="/static/admin/css/base.css" /> -->
+<script type="text/javascript">window.__admin_media_prefix__ = "/static/admin/";</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src="/static/bootstrap/js/bootstrap.min.js"></script>
+
+
+
+<meta name="robots" content="NONE,NOARCHIVE" />
+<script type="text/javascript">
+(function($) {
+    $(document).ready(function() {
+        $('input[type="submit"]').addClass('btn');
+    });
+}(jQuery));
+</script>
+</head>
+
+
+<body class="">
+
+<!-- Container -->
+<div class="container-fluid">
+
+    
+    <!-- Header -->
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          
+<a class="brand" href="/admin/">TriAquae 3.0 administration</a>
+
+          <div class="nav-collapse collapse pull-right">
+            <ul class="nav">
+            
+            
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+    <!-- END Header -->
+    <div class="row-fluid">
+        <div class="span12">
+            
+        </div>
+    </div>
+    
+
+    <!-- Content -->
+    <div id="content" class="colM">
+        
+        <div class="row-fluid">
+            <div class="navbar">
+                <div class="navbar-inner">
+                    
+                    <a class="brand">Login</a>
+                    
+                </div>
+            </div>
+        </div>
+        
+
+        
+            
+        
+
+        
+
+
+
+
+<div id="content-main">
+<form class="form-horizontal" action="/admin/" method="post" id="login-form"><input type='hidden' name='csrfmiddlewaretoken' value='hKNcDfjdHHueKXDr6qXInNxf9VOe44pw' />
+  <div class="control-group">
+    <div class="control-label">
+        <label for="id_username" class="required">Username:</label> 
+    </div>
+    <div class="controls">
+        <input id="id_username" maxlength="254" name="username" type="text" />
+        <span class="help-inline"></span>
+    </div>
+  </div>
+  <div class="control-group">
+    <div class="control-label">
+        <label for="id_password" class="required">Password:</label> 
+    </div>
+    <div class="controls">
+        <input id="id_password" name="password" type="password" />
+        <span class="help-inline"></span>
+    </div>
+    <input type="hidden" name="this_is_the_login_form" value="1" />
+    <input type="hidden" name="next" value="/admin/" />
+  </div>
+  
+  
+  <div class="form-actions">
+    <input type="submit" value="Log in" class="btn btn-primary" />
+  </div>
+</form>
+
+<script type="text/javascript">
+document.getElementById('id_username').focus()
+</script>
+</div>
+
+        
+    </div>
+    <!-- END Content -->
+
+    <footer id="footer"></footer>
+</div>
+<!-- END Container -->
+
+</body>
+</html>

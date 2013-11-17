@@ -1,0 +1,53 @@
+.ss-title {
+	float: left
+}
+
+.ss-summary {
+	float: right;
+	margin-top: 10px
+}
+
+.ss-summary-title {
+	font-size: 10pt;
+	font-weight: bold;
+}
+
+.ss-summary-table {
+	border: 1px solid #D3D3D3;
+	border-collapse: collapse;
+	text-align: left;
+	margin: 5px;
+	font-size: 8pt;
+}
+
+.ss-summary-table th{
+	background: #D3D3D3;
+}
+
+.ss-summary-table thead{
+	background: #D3D3D3;
+}
+
+.ss-summary-table thead tr{
+	background: #D3D3D3;
+}
+
+.ss-summary-table tbody tr{
+	
+}
+
+.ss-summary-Critical {
+	background-color: #FF795F
+}
+
+.ss-summary-Ok {
+	background-color: #B2FF5F
+}
+
+.ss-summary-Unhandled {
+	background-color:#FFC85F
+}
+
+.ss-summary-Problem {
+	background-color:#FFE4AF
+}

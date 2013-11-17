@@ -1,0 +1,16 @@
+
+td div.host-status{
+  font-weight:bold;
+  text-align:center;
+  float:left;
+  margin-right:6px;
+  padding-right:10px;
+}
+
+td div.host-status-UP{
+  background-color:#00BB33;
+}
+
+td div.host-status-DOWN{
+  background-color:red;
+}

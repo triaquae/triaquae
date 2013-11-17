@@ -1,0 +1,36 @@
+<html><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<head>
+<link rel="stylesheet" href="/static/css/jquery-ui.min.css" />
+    <script src="/static/js/libs/jquery.min.js"></script>
+    <script src="/static/js/libs/jquery.ui.min.js"></script>
+
+<!-- bootstrap default css (DO NOT REMOVE) -->
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css?v=1">
+    <link rel="stylesheet" href="/static/css/bootstrap-responsive.min.css?v=1">
+    <!-- font awsome and custom icons -->
+    <!-- jarvis widget css -->
+
+
+
+
+
+
+</head>
+
+<style>
+
+</style>
+<body style="padding-left:20px">
+<b><h1>{{batch_title}}</h1></b>
+<div class="btn-group">
+	<form action={{batch_action}} method=POST>
+	{% csrf_token %}
+	<textarea  class="input-xxlarge" rows="20" cols='150'  name='buf'>
+	{{batch_comment}}
+	</textarea>
+	<P>
+	<input  class="btn  btn-danger" type=submit value='Submit'>  <input class="btn btn-info" style='margin-left:15px' type=reset vlaue='Reset'>
+	</form>
+</div>
+</body>
+</html>
