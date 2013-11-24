@@ -1,230 +1,167 @@
 #!/usr/bin/env python
 
-import random,time,datetime
-import curses
-import traceback
-from baoleidb import DisGroup, DisIP, DisRemotUser
+import os, sys, time, datetime, readline, socket
+from baoleidb import DBQuery
 
-data_vals = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-updt_cnt1 = 0
-updt_cnt2 = 0
+# tab completion
+readline.parse_and_bind('tab: complete')
+# history file
+histfile = os.path.join(os.environ['HOME'], '.pythonhistory')
 
-ran = random.random
+username = sys.argv[1]
 
+head = '''\33[32;1m
+                                                        TriConn by TriAquae
+________________________________________________________________________________\033[0m
+'''
 
-def GetDate():
-    global currdate
-    date = datetime.datetime.now()
-    currdate = time.strftime('%Y-%m-%d')
+tail = '''\33[32;1m
+                                                        TriConn by TriAquae
+________________________________________________________________________________\033[0m
+'''
 
-def GetTime():
-    global currtime
-    time = datetime.datetime.now()
-    currtime = time.strftime('%H:%M:%S')
-
-# write data and time to display
-def WriteDateTime(win):
-    GetDate()
-    GetTime()
-
-    win.move(2,15)
-    win.clrtoeol()
-    win.addstr("%s" % currdate)
-    win.move(3,15)
-    win.clrtoeol()
-    win.addstr("%s" % currtime)
-    win.refresh()
+class TriConn:
+    def __init__(self):
+        # definition type(self.GroupList, self.GroupList, self.UserList)
+        self.GroupList = {}
+        self.IPList = {}
+        self.UserList = {}
+        self.summary = []
 
 
-# get simulated data input values
-def getDataVals():
-    pass
-    """
-    global data_vals, updt_cnt1, updt_cnt2
+    def GetDate(self):
+        global currdate
+        date = datetime.datetime.now()
+        currdate = time.strftime('%Y-%m-%d')
 
-    data_vals[0] = ran() * 10.0
-    data_vals[1] = ran() * 10.0
+    
+    def GetTime(self):
+        global currtime
+        time = datetime.datetime.now()
+        currtime = time.strftime('%H:%M:%S')
 
-    if updt_cnt1 >= 4:
-        for i in range(2,5):
-            data_vals[i] = ran() * 10.0
-        updt_cnt1 = 0
-    else:
-        updt_cnt1 += 1
 
-    if updt_cnt2 >= 10:
-        for i in range(4,8):
-            data_vals[i] = ran() * 10.0
-        updt_cnt2 = 0
-    else:
-        updt_cnt2 += 1
-    """
+    def Help(self):
+        print '''\033[32;1m
+            id            Select the ID of the item.
+            f   fast      fast login
+            s   search    search keyword.
+            b   backup    backup menu.
+            h   help      parameter description.
+            q   quit      exit TriConn.
+        \033[0m'''
 
-# write channel data values
-def writeDataVals(win):
-    pass
-    """
-    idx = 0
-    for i in range(6,14):
-        win.move(i,10)
-        win.clrtoeol()
-        win.addstr("%6.2f" % data_vals[idx])
-        idx += 1
-
-    win.refresh()
-    # put cursor below display text when update is done
-    win.move(16,1)
-    """
-
-group_info = {}
-ip_info = {}
-user_info = {}
-
-# main page
-def mainScreen(win):
-    win.erase()
-
-    # headline
-    win.move(1,30)
-    win.addstr("Welcome to use TriAquae TriConn")
-    win.refresh()
-
-    # time fence
-    win.move(2,1)
-    win.addstr("Current Date:")
-    win.move(3,1)
-    win.addstr("Current Time:")
-    win.refresh()
-    WriteDateTime(win)
-
-    # content fence
-    win.move(6,1)
-    win.addstr("  GID\tGroup\t\tExplain\t\tShortcuts")
-    gid = 0
-    gid_row = 7
-    gid_line = 4
-    group_row = 7
-    group_line = 9
-    for g in DisGroup():
-        gid = gid + 1
-        gid_row = gid_row + 1
-        group_row = group_row + 1
-        win.addstr(gid_row, gid_line, "%s" % gid)
-        win.addstr(group_row, group_line, "%s\n" % g)
-        win.refresh()
-        group_info = {gid:g}
-
-    # Shortcut bar
-    win.move(8,40)
-    win.addstr("| [ 1-9 ] choose GID.")
-    win.move(9,40)
-    win.addstr("| [ q ] quit TriConn.")
-    win.refresh()
-
-    #win.move(25,1)
-    #win.addstr("Enter X to exit, W for window.")
-    #win.refresh()
-
-def chooseIP(win, group_name='BJ'):
-    # create a select ip sub-window and keep it open until user presses the X
-    #subwin = win.subwin(10, 40, 15, 25)
-    subwin = win.subwin(15, 25)
-    subwin.nodelay(1)  # disable getch() blocking
-    subwin.erase()
-    subwin.bkgdset(' ')
-    subwin.refresh()
-
-    subwin.addstr(0, 0, "+-----------------------------+")
-    subwin.addstr(1, 0, "| ID\tIP                    |")
-    id = 0
-    row = 1
-    for ip in DisIP(group_name):
+    def Connection(self, remote_ip, remote_user):
         try:
+            socket.inet_aton(remote_ip)
+            valid_ip = 'ok'
+            print DBQuery().Summary(remote_ip, remote_user, username)
+        except:
+            valid_ip = 'no'
+            print '\033[31;1mPlease enter a valid IP\033[0m'
+
+
+    def Search(self, type, search):
+        # search keyword. type(self.GroupList, self.GroupList, self.UserList) search(user search input key)
+
+        key = 0
+        print head
+        print '\033[35;1m id  group\033[0m'
+        print
+        for k, v in type:
+            if search in v.lower():
+                print '\033[32;1m %s. %s\033[0m' % (k, v)
+                key = key + 1
+        else:
+            if key == 0:
+                print '\033[31;1m %s Not found\033[0m' % search
+        print tail 
+
+
+    def Display(self, title, type, dbquery):
+        # Display all info
+        id = 0
+        print head
+        for n in self.summary:
+            print "\033[35;1m%s\033[0m =>" % n,
+        print 
+        print 
+        print '\033[32;1m id  %s\033[0m' % title
+        print
+
+        #data = map(str, dbquery[0])
+        #num = dbquery[1]
+        data = map(str, dbquery)
+        print 'data : ', data
+        #print 'num : ', num
+        for i in data:
+            location = data.index(i)
+            #number = num[location]
             id = id + 1
-            row = row + 1
-            subwin.addstr(row, 0, "| %s  " % id)
-            subwin.addstr(row, 6, "| %s  " % ip)
-            subwin.addstr(row, 30, "|")
-            if len(DisIP(group_name)) == row:
-                subwin.addstr(row + 2, 0, "+-----------------------------+")
-            subwin.refresh()
-        except :
-            pass
+            print '\033[32;1m  %s. %s  \033[36;1m[%s]\033[0m \033[0m' % (id , i, '1')
+            type[id] = str(i)
+        print tail
 
-    while 1:
-        inch = subwin.getch()
-        if inch != -1:
-            try:
-                instr = chr(inch)
-            except:
-                # just ignore non-character input
-                pass
-            else:
-                if instr.upper() == 'Q':
-                    break
-        time.sleep(0.2)
-    return subwin
 
-def chooseUser(win, group_name='BJ'):
-    pass
+    def InputKey(self, type, next_page):
+        # judge user input type(self.GroupList, self.GroupList, self.UserList)
 
-def mainloop(win):
-    win.nodelay(1)  # disable getch() blocking
-    # draw the main display template
-    mainScreen(win)
+        while True:
+            input = raw_input('Please choose items [ id | f | s | b | | h | q ]: ').strip()
+            print 'input : ', input
+            print 'type : ', map(str, type.keys())
+            print 'self.summary : ', self.summary
+            if input in map(str, type.keys()):   # gain user input id
+                element = type[int(input)]
+                self.summary.append(element)  # summary list
+                print 'element : ', element
+                next_page(element)               # skip next page
+            elif input == 'f':                   # search keyword.
+                ip_user = raw_input('Please input ip and user > ').strip().split()
+                remote_ip, remote_user = ip_user[0], ip_user[1]
+                self.Connection(remote_ip, remote_user)
+            elif input == 's':                   # search keyword.
+                search = raw_input('Please input the key words > ').strip()
+                self.Search(type.items(), search)
+            elif input == 'b':                   # backend menu
+                self.Main()
+            elif input == 'h':                   # display help
+                self.Help()
+            elif input == 'q':                   # quit TriConn
+                sys.exit(0)
 
-    # run until the user wants to quit
-    while 1:
-        # check for keyboard input
-        inch = win.getch()
-        # getch() will return -1 if no character is available
-        if inch != -1:
-            # see if inch is really a character
-            try:
-                instr = str(chr(inch))
-            except:
-                # just ignore non-character input
-                pass
-            else:
-                if instr.upper() == '1':
-                    chooseIP(win, 'SH')
-                    mainScreen(win)
-                if instr.upper() == 'Q':
-                    break
-                if instr.upper() == 'W':
-                    subwin = chooseIP(win)
-                    # simple way to restore underlying main screan
-                    mainScreen(win)
-        WriteDateTime(win)
-        getDataVals()
-        writeDataVals(win)
-        time.sleep(0.2)
+    def Summary(self, remote_user):
+        try:
+            print 'summmar : ',self.summary
+            remote_ip = self.summary[1]
+            remote_user = self.summary[2]
+            self.Connection(remote_ip, remote_user)
+        except:
+            print '\033[31;1m%s\033[0m Not logged in authority.' % remote_ip
+        
 
-def startup():
-    # borrowed the idea of using a try-except wrapper around the
-    # initialization from David Mertz.
+    def ChooseRemoteUser(self, ip):
+        # Show the IP of users
+        self.Display('user', self.UserList, DBQuery().DisRemotUser(ip))
+        self.InputKey(self.UserList, self.Summary)
+
+
+    def ChooseRemoteIP(self, group):
+        # The IP under the display group.
+        self.Display('ip', self.IPList, DBQuery().DisIP(group))
+        self.InputKey(self.IPList, self.ChooseRemoteUser)
+
+
+    def Main(self):
+        # Display all groups.
+        self.summary = []
+        self.Display('group', self.GroupList, DBQuery().DisGroup())   # Query the database, display menu
+        self.InputKey(self.GroupList, self.ChooseRemoteIP)            # Determine the user to enter the keywords, (self.GroupList is type | self.ChooseRemoteIP is next page function) 
+
+
+    
+if __name__ == '__main__':
     try:
-        # Initialize curses
-        stdscr = curses.initscr()
-
-        # Turn off echoing of keys, and enter cbreak mode,
-        # where no buffering is performed on keyboard input
-        curses.noecho()
-        curses.cbreak()
-
-        mainloop(stdscr)                # Enter the main loop
-
-        # Set everything back to normal
-        curses.echo()
-        curses.nocbreak()
-
-        curses.endwin()                 # Terminate curses
-    except:
-        # In event of error, restore terminal to sane state.
-        curses.echo()
-        curses.nocbreak()
-        curses.endwin()
-        traceback.print_exc()           # Print the exception
-
-if __name__=='__main__':
-    startup()
+        TriConn().Main()
+    except KeyboardInterrupt:
+        print '\n\033[31;1mTriAquae TriConn Exit\033[0m'

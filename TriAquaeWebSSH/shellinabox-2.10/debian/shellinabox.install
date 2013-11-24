@@ -1,0 +1,4 @@
+etc/shellinabox/options-available
+etc/shellinabox/options-enabled
+usr/bin
+usr/share/man/man1

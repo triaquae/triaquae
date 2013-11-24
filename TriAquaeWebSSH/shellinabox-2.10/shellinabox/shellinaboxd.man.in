@@ -1,0 +1,858 @@
+'\" t
+.\" shellinaboxd.man -- Make command line applications available as AJAX web applications
+.\" Copyright (C) 2008-2009 Markus Gutschke <markus@shellinabox.com>
+.\"
+.\" This program is free software; you can redistribute it and/or modify
+.\" it under the terms of the GNU General Public License version 2 as
+.\" published by the Free Software Foundation.
+.\"
+.\" This program is distributed in the hope that it will be useful,
+.\" but WITHOUT ANY WARRANTY; without even the implied warranty of
+.\" MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+.\" GNU General Public License for more details.
+.\"
+.\" You should have received a copy of the GNU General Public License along
+.\" with this program; if not, write to the Free Software Foundation, Inc.,
+.\" 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+.\"
+.\" In addition to these license terms, the author grants the following
+.\" additional rights:
+.\"
+.\" If you modify this program, or any covered work, by linking or
+.\" combining it with the OpenSSL project's OpenSSL library (or a
+.\" modified version of that library), containing parts covered by the
+.\" terms of the OpenSSL or SSLeay licenses, the author
+.\" grants you additional permission to convey the resulting work.
+.\" Corresponding Source for a non-source form of such a combination
+.\" shall include the source code for the parts of OpenSSL used as well
+.\" as that of the covered work.
+.\"
+.\" You may at your option choose to remove this additional permission from
+.\" the work, or from any part of it.
+.\"
+.\" It is possible to build this program in a way that it loads OpenSSL
+.\" libraries at run-time. If doing so, the following notices are required
+.\" by the OpenSSL and SSLeay licenses:
+.\"
+.\" This product includes software developed by the OpenSSL Project
+.\" for use in the OpenSSL Toolkit. (http://www.openssl.org/)
+.\"
+.\" This product includes cryptographic software written by Eric Young
+.\" (eay@cryptsoft.com)
+.\"
+.\"
+.\" The most up-to-date version of this program is always available from
+.\" http://shellinabox.com
+.\"
+.TH SHELLINABOXD 1 "Nov 21, 2009"
+.SH NAME
+shellinaboxd \- publish command line shell through AJAX interface
+.SH SYNOPSIS
+.TP
+.B shellinaboxd
+[\ \fB-b\fP\ | \fB--background\fP[\fB=\fP\fIpidfile\fP]\ ]
+#ifdef HAVE_OPENSSL
+[\ \fB-c\fP\ | \fB--cert=\fP\fIcertdir\fP\ ]
+#endif
+[\ \fB--cert-fd=\fP\fIfd\fP\ ]
+[\ \fB--css=\fP\fIfilename\fP\ ]
+[\ \fB--cgi\fP[\fB=\fP\fIportrange\fP]\ ]
+[\ \fB-d\fP\ | \fB--debug\fP\ ]
+[\ \fB-f\fP\ | \fB--static-file=\fP\fIurl\fP:\fIfile\fP\ ]
+[\ \fB-g\fP\ | \fB--group=\fP\fIgid\fP\ ]
+[\ \fB-h\fP\ | \fB--help\fP\ ]
+[\ \fB--linkify\fP=[\fBnone\fP|\fBnormal\fP|\fBaggressive\fP]\ ]
+[\ \fB--localhost-only\fP\ ]
+[\ \fB--no-beep\fP\ ]
+[\ \fB-n\fP\ | \fB--numeric\fP\ ]
+[\ \fB-p\fP\ | \fB--port=\fP\fIport\fP\ ]
+[\ \fB-s\fP\ | \fB--service=\fP\fIservice\fP\ ]
+#ifdef HAVE_OPENSSL
+[\ \fB-t\fP\ | \fB--disable-ssl\fP\ ]
+#endif
+[\ \fB--disable-ssl-menu\fP\ ]
+[\ \fB-q\fP\ | \fB--quiet\fP\ ]
+[\ \fB-u\fP\ | \fB--user=\fP\fIuid\fP\ ]
+[\ \fB--user-css=\fP\fIstyles\fP\ ]
+[\ \fB-v\fP\ | \fB--verbose\fP\ ]
+[\ \fB--version\fP\ ]
+.SH DESCRIPTION
+The
+.B shellinaboxd
+daemon implements a webserver that listens on the specified
+.IR port .
+The web server publishes one or more
+.I services
+that will be displayed in a VT100 emulator implemented as an AJAX web
+application. By default, the port is 4200 and the default service URL is
+.IR http://localhost:4200/ .
+.P
+If no particular
+.I service
+was requested, the server launches
+.B /bin/login
+querying the user for their username and password. It then starts the
+user's default login shell.
+.P
+Any modern JavaScript and CSS enabled browser will be able to access the
+published
+.I service
+without requiring additional plugins.
+.SH OPTIONS
+The following command line parameters control the operation of the daemon:
+.TP \w'\-b\ |\ 'u
+\fB-b\fP\ | \fB--background\fP[\fB=\fP\fIpidfile\fP]
+Launch
+.B shellinaboxd
+as a background daemon process. Optionally, write the process id to
+.IR pidfile .
+#ifdef HAVE_OPENSSL
+.TP
+\fB-c\fP\ |\ \fB--cert=\fP\fIcertdir\fP
+If built with SSL/TLS support enabled, the daemon will look in
+.I certdir
+for any certificates. If unspecified, this defaults to the current
+working directory.
+
+If the browser negotiated a
+.B Server Name Identification
+the daemon will look for a matching
+.I certificate-\f[BI]SERVERNAME\fP.pem
+file. This allows for virtual hosting of multiple server names on the
+same IP address and port.
+
+If no
+.B SNI
+handshake took place, it falls back on using the certificate in the
+.I certificate.pem
+file.
+
+The administrator should make sure that there are matching
+certificates for each of the virtual hosts on this server, and that
+there is a generic
+.I certificate.pem
+file.
+
+If no suitable certificate is installed,
+.B shellinaboxd
+will attempt to invoke
+.B /usr/bin/openssl
+and create a new self-signed certificate. This only succeeds if, after
+dropping privileges,
+.B shell\%ina\%boxd
+has write permissions for
+.IR certdir .
+
+Most browsers show a warning message when encountering a self-signed
+certificate and then allow the user the option of accepting the
+certificate. Due to this usability problem, and due to the perceived
+security implications, the use of auto-generated self-signed
+certificates is intended for testing or in intranet deployments, only.
+.TP
+\fB--cert-fd=\fP\fIfd\fP
+Instead of providing a
+.B --cert
+directory, it is also possible to provide a filedescriptor
+.I fd
+where the certificate and key can be retrieved. While this option disables
+.B SNI
+support, it does offer an alternative solution for securely providing
+the private key data to the daemon.
+#endif
+.TP
+\fB--css=\fP\fIfilename\fP
+Sometimes, it is not necessary to replace the entire style sheet using the
+.B --static-file
+option. But instead a small incremental change should be made to the visual
+appearance of the terminal. The
+.B --css
+option provides a means to append additional style rules to the end of
+the default
+.B styles.css
+sheet. More than one
+.B --css
+option can be given on the same command line.
+.TP
+\fB--cgi\fP[\fB=\fP\fIportrange\fP]
+Instead of running
+.B shellinaboxd
+as a permanent process, it can be demand-loaded as a CGI web server
+extension. When doing so, it will spawn a server that lives for the
+duration of the user's session. If an optional
+.I portrange
+of the form
+.BR MINPORT-MAXPORT
+has been provided, the server limits itself to these port numbers. They
+should be configured to pass through the firewall.
+
+The
+.B --cgi
+option is mutually exclusive with the
+.B --background
+and
+.B --port
+options.
+
+In order to be useful as a CGI script, the
+.B shellinaboxd
+binary probably will have to be made
+.BR setuid-root .
+This is currently a discouraged configuration. Use with care. 
+.TP
+\fB-d\fP\ |\ \fB--debug\fP
+Enables debugging mode, resulting in lots of log messages on
+.IR stderr .
+This option is mutually exclusive with
+.B --quiet
+and
+.BR --verbose .
+.TP
+\fB-f\fP\ |\ \fB--static-file=\fP\fIurl\fP:\fIfile\fP
+The daemon serves various built-in resources from URLs underneath the
+.I service
+mount points. One or more
+.B --static-file
+options allow for overriding these resources with customized externally
+provided
+.IR files .
+The
+.I url
+can either be an absolute or a relative path. In the former case, it overrides
+exactly one built-in resource for one specific
+.IR service ,
+whereas in the latter case it overrides resources for each defined
+.IR service .
+
+The following resources are available for customization:
+.RS
+.TP \w'ShellInABox.js\ \ \ 'u
+.B beep.wav
+audio sample that gets played whenever the terminal BEL is sounded.
+.TP
+.B favicon.ico
+favicon image file that is displayed in the browser's navigation bar.
+.TP
+.B ShellInABox.js
+JavaScript file implementing the AJAX terminal emulator.
+.TP
+.B styles.css
+CSS style file that controls the visual appearance of the terminal.
+.TP
+.B print-styles.css
+CSS style file that controls the visual appearance of printed pages when using
+the VT100 transparent printing feature.
+.P
+It is not recommended to override the root HTML page for a particular
+.IR service .
+Instead, move the service to an anonymous URL and serve a
+.I static-file
+that references the
+.I service
+in an
+.IR <iframe> .
+
+Instead of a
+.IR file ,
+it is possible to provide the name of a directory. This turns
+.B shellinaboxd
+into a simple web server that publishes all of the files in that
+particular directory. This option can be helpful when publishing a more
+complex root HTML page.
+.RE
+.TP
+\fB-g\fP\ |\ \fB--group=\fP\fIgid\fP
+When started as
+.BR root ,
+the server drops most privileges at start up. Unless overridden by the
+.B --group
+option, it switches to
+.BR nogroup .
+
+When already running as an unprivileged user, group changes are not
+possible.
+
+If running with SSL/TLS support enabled, the certificates must be
+accessible to the unprivileged user and/or group that the daemon
+runs as.
+.TP
+\fB-h\fP\ |\ \fB--help\fP
+Display a brief usage message showing the valid command line parameters.
+.TP
+\fB--linkify\fP=[\fBnone\fP|\fBnormal\fP|\fBaggressive\fP]
+the daemon attempts to recognize URLs in the terminal output and makes them
+clickable. This is not neccessarily a fool-proof process and both false
+negatives and false positives are possible. By default, only URLs starting
+with a well known protocol of
+.BR http:// ,\  https:// ,\  ftp:// ,\ or\  mailto:
+are recognized. In
+.B aggressive
+mode, anything that looks like a hostname, URL or e-mail address is
+recognized, even if not preceded by a protocol.
+.TP
+\fB--localhost-only\fP
+Normally, 
+.B shellinaboxd
+listens on all available network interfaces. When operating behind a
+reverse-proxy that is not always desirable. This command line option
+tells the daemon to only listen on the loopback interface.
+.TP
+\fB--no-beep\fP
+not only are audible signals undesired in some working environments, but
+browser support for media playback is often buggy, too. Setting this option
+suppresses all audio playback and enables the visual bell by default.
+.TP
+\fB-n\fP\ |\ \fB--numeric\fP
+When running in
+.B --verbose
+mode, the daemon prints an
+.IR Apache -style
+log file to
+.IR stderr .
+By default, host names of peers get resolved
+before logging them. As DNS look-ups can be expensive, it is possible
+to request logging of numeric IP addresses, instead.
+.TP
+\fB-p\fP\ |\ \fB--port=\fP\fIport\fP
+Unless overridden by this option, the web server listens on port 4200
+for incoming HTTP and HTTPS requests.
+
+.B shellinaboxd
+can distinguish between SSL/TLS requests and unencrypted requests. It
+also knows how to negotiate
+.B Server Name
+.BR Identification ,
+allowing the use of a single port for all types of requests even when
+virtual hosting.
+.TP
+\fB-s\fP\ |\ \fB--service=\fP\fIservice\fP
+One or more services can be registered on different URL paths:
+.in +4
+\fISERVICE\fP := <url-path> ':' \fIAPPLICATION\fP
+.in
+
+There is a pre-defined \fIapplication\fP, 'LOGIN', which causes the
+daemon to invoke
+.B /bin/login
+requesting the user's name and password, and starting his
+login shell. This is the default option for the
+.B root
+user, if no
+.B --service
+was defined. Starting
+.B /bin/login
+requires
+.B root
+privileges.
+
+There is another pre-defined \fIapplication\fP, 'SSH'. Instead of invoking
+.BR /bin/login ,
+it calls
+.BR ssh .
+This is the default option for unprivileged users, if no
+.B --service
+was defined. This operation is available to both privileged and regular
+users. If the optional \fIhost\fP parameter is omitted,
+.B shellinaboxd
+connects to
+.BR localhost .
+
+Alternatively, an \fIapplication\fP can be specified by providing a
+\fIuser\fP description, a working directory, and a command line:
+.in +4
+\fIAPPLICATION\fP := 'LOGIN' | 'SSH' [ ':' <host> ] |  \fIUSER\fP ':' \fICWD\fP ':' <cmdline>
+
+#ifdef HAVE_PAM
+.in
+The keyword 'AUTH' indicates that the \fIuser\fP information should
+be requested interactively, instead of being provided as part of the
+\fIservice\fP description:
+.in +4
+#endif
+#ifdef HAVE_PAM
+\fIUSER\fP := 'AUTH' |
+#endif
+#ifndef HAVE_PAM
+\fIUSER\fP :=
+#endif
+<username> ':' <groupname>
+.in
+
+The working directory can either be given as an absolute path, or it
+can be the user's home directory:
+.in +4
+\fICWD\fP := 'HOME' : <dir>
+.in
+
+The <cmdline> supports expansion of variables of the form ${VAR}.
+Supported variables are:
+.RS
+.TP \w'${columns}\ \ 'u
+.B ${columns}
+number of columns.
+.TP
+.B ${gid}
+numeric group id.
+.TP
+.B ${group}
+group name.
+.TP
+.B ${home}
+home directory.
+.TP
+.B ${lines}
+number of rows.
+.TP
+.B ${peer}
+name of remote peer.
+.TP
+.B ${uid}
+numeric user id.
+.TP
+.B ${url}
+the URL that serves the terminal session.
+.TP
+.B ${user}
+user name.
+.P
+Other than the default environment variables of
+.BR $TERM ,
+.B $COLUMNS
+and
+.BR $LINES ,
+services can have environment variables passed to them, by preceding
+the <cmdline> with space separated variable assignments of the form
+.IR KEY = VALUE .
+
+The <cmdline> supports single and double quotes, as well as
+backslashes for escaping characters in the familiar fashion.
+
+Please note that when invoking
+.B shellinaboxd
+from a command line shell, additional quoting might be required to
+prevent the shell from expanding the variables prior to passing them
+to the daemon.
+
+If no explicit
+.B --service
+has been requested,
+.B shellinaboxd
+defaults to attaching the default service to the root directory of the web
+server. For
+.BR root ,
+this is
+.BR /bin/login ,
+and for unprivileged users, this is \fBssh localhost\fP. This is equivalent
+to saying
+.BR --service=/:LOGIN ,
+or
+.BR --service=/:SSH ,
+respectively.
+.RE
+#ifdef HAVE_OPENSSL
+.TP
+\fB-t\fP\ |\ \fB--disable-ssl\fP
+By default,
+.B shellinaboxd
+redirectes all incoming HTTP requests to their equivalent HTTPS
+URLs. If promoting of connections to encrypted SSL/TLS sessions is
+undesired, this behavior can be disabled.
+
+This option is also useful during testing or for deployment in trusted
+intranets, if SSL certificates are unavailable.
+#endif
+.TP
+\fB--disable-ssl-menu\fP
+If the user should not be able to switch between HTTP and HTTPS modes, this
+choice can be removed from the context menu. The user can still make this
+choice by directly going to the appropriate URL.
+.TP
+\fB-q\fP\ |\ \fB--quiet\fP
+Surpresses all messages to
+.IR stderr .
+This option is mutually exclusive with
+.B --debug
+and
+.BR --verbose .
+.TP
+\fB-u\fP\ |\ \fB--user=\fP\fIuid\fP
+If started as
+.BR root ,
+the server drops privileges by changing to
+.BR nobody ,
+unless the
+.I uid
+has been overridden by this option.
+
+For more details, refer to the description of the
+.B --group
+option.
+.TP
+\fB--user-css=\fP\fIstyles\fP
+The visual appearance of the terminal emulator can be customized
+through user-selectable style sheets. These style sheets will show up
+as options in the right-click context menu of the terminal emulator.
+
+Styles sheet make up either independently selectable on/off options,
+or multiple style sheets can be grouped together. When forming a group,
+only one member of the group can be active at any given time. This is
+used for multiple-choice options.
+
+Multiple independent groups are separated by semicolons:
+.in +4
+\fISTYLES\fP := \fIGROUP\fP { ';' \fIGROUP\fP }*
+.in
+
+The members of a group are separated by commas:
+.in +4
+\fIGROUP\fP := \fIOPTION\fP { ',' OPTION }*
+.in
+
+Groups with exactly one member are used for options that can be
+independently turned on and off.
+
+Options include a human readable label that will be shown in the
+context menu, followed by the name of the CSS file. They also must
+include an indicator showing whether the option should initially be
+turned on or turned off. Within a group, exactly one option should be
+turned on:
+.in +4
+\fIOPTION\fP := <label> ':' [ '-' | '+' ] <css-file>
+.in
+
+The user's selection of options will be persisted in a cookie. This
+means, the default settings of options as passed on the command line
+only takes effect the very first time the user visits the terminal
+emulator in his browser. On all subsequent visits, the user's
+preferences take precedence.
+.TP
+\fB-v\fP\ |\ \fB--verbose\fP
+Enables logging of
+.IR Apache -style
+log file to
+.IR stderr .
+This option is mutually exclusive with
+.B --debug
+and
+.BR --quiet .
+.TP
+\fB--version\fP
+Prints the version number of the binary and exits.
+.SH CONFIGURATION
+#ifndef DPKGBUILD
+There are no configuration files or permanent settings for
+.BR shell\%ina\%boxd .
+#endif
+#ifdef DPKGBUILD
+Except for the options in
+.I /etc/default/shellinabox
+that are used when running the daemon as a system-wide service, and
+except for the style sheet definitions in
+.IR /etc/shellinabox ,
+there are no other configuration options.
+#endif
+
+A small number of run-time configuration options are available from a
+context menu that becomes available when clicking the right mouse
+button. These options get persisted in a browser cookie.
+
+Many sites already have a web server running and would like to
+integrate
+.B shellinaboxd
+into their existing site. This is most commonly done by means of a
+reverse-proxy entry for the main web server. For
+.I Apache
+this would require adding an option such as:
+.in +4
+ <Location /shell>
+     ProxyPass  http://localhost:4200/
+     Order      allow,deny
+     Allow      from all
+ </Location>
+.in
+
+If you are using a different web server, refer to that server's
+documentation on how to configure reverse proxy operations.
+
+When using a reverse proxy, the
+.B --localhost-only
+option would normally be enabled as well.
+#ifdef DPKGBUILD
+This can be done in
+.IR /etc/default/shellinabox .
+#endif
+In addition, the
+.B --disable-ssl
+might also be considered depending on the exact configuration details
+of the reverse proxy.
+.SH EXAMPLES
+.TP \w'shellinaboxd\ 'u
+.B shellinaboxd
+Attaches a web-enabled login shell to
+.IR https://localhost:4200/ .
+If the user connected without SSL, the session will automatically be promoted.
+Unless SSL certificates can be found in the current directory, the daemon will
+automatically generate suitable self-signed certificates. If the command was
+invoked by a non-\fBroot\fP user, the daemon uses
+.B ssh
+instead of
+.B /bin/login
+for the session.
+.TP
+.B shellinaboxd -t
+Attaches a web-enabled login shell to
+.I http://localhost:4200/
+with SSL/TLS support disabled.
+.TP
+.B shellinaboxd -t -f beep.wav:/dev/null
+Runs all services with the audible-bell permanently disabled.
+.TP
+.B shellinaboxd -s /:SSH:example.org
+The terminal connects to a
+.B ssh
+session on
+.IR example.org .
+.TP
+.B shellinaboxd -t -s /:AUTH:HOME:/bin/bash
+Interactively request the user's name and password prior to launching
+a Bourne shell. This command can be run by unprivileged users. But if
+doing so, it only allows this particular user to log in.
+.TP
+.B shellinaboxd -c certificates -u shellinabox -g shellinabox
+If the
+.B certificates
+directory exists and is writable by the
+.B shellinabox
+user and group, self-signed SSL certificates will be generated in this
+directory. This might require creating an appropriately named user first.
+Running this command as
+.B root
+allows any user on the system to log in at
+.BR http://localhost:4200/ .
+Sessions will automatically be promoted to SSL/TLS.
+.TP
+.B shellinaboxd -t -s /:LOGIN -s /who:nobody:nogroup:/:w
+In addition to the login shell at
+.IR http://localhost:4200 ,
+show a list of currently logged in users when accessing
+.IR http://localhost:4200/who .
+This command must be run as
+.B root
+in order to be able to change to
+.B nobody:nogroup
+as requested by the service description.
+.TP
+.B shellinaboxd -t -s '/:root:root:/:wy60 -c /bin/login'
+Instead of the standard
+.B ANSI/VT100
+terminal, publish a
+.B Wyse 60\*(Tm
+terminal. Again, this command should be run as
+.BR root .
+.TP
+#ifndef DPKGBUILD
+.B shellinaboxd --css white-on-black.css
+#endif
+#ifdef DPKGBUILD
+.B shellinaboxd --css '/etc/shellinabox/options-available/00_White On Black.css'
+#endif
+Loads the
+#ifndef DPKGBUILD
+.B white-on-black.css
+#endif
+#ifdef DPKGBUILD
+.B 00_White On Black.css
+#endif
+style sheet
+#ifndef DPKGBUILD
+from the current directory
+#endif
+and appends it to the built-in
+.B styles.css
+sheet. This causes the terminal to always render white text on a black
+background.
+.TP
+.B shellinaboxd --user-css Normal:+black-on-white.css,Reverse:-white-on-black.css
+Allow the user to select whether they want text to be rendered
+normally or in reverse video. This command line option adds a new
+entry to the right-click context menu.
+#ifdef DPKGBUILD
+
+If starting
+.B shellinaboxd
+as a system process, the
+.I /etc/init.d/shellinabox
+script looks in
+.I /etc/shell\%in\%a\%box/op\%tions-\%en\%abled
+for style sheets that should be added to the command line. See the
+.I README
+file in that directory for details on how to configure system-wide
+options.
+#endif
+.P
+.SH DIAGNOSTICS
+The daemon returns a non-zero exit code in case of failure. With the
+exception of a small number of common error cases that are handled
+explicitly, most errors result in printing a
+.I \(dqCheck failed\(dq
+message. This does not typically indicate a bug in the program but is
+instead its normal way of reporting errors.
+
+Common failure conditions are reusing a port that is already in use,
+lack of sufficient privileges to run a service, failure to find
+SSL/TLS certificates, and failure to write newly generated
+certificates to the certification directory.
+#ifdef DPKGBUILD
+.SH FILES
+.TP 10
+.I /etc/default/shellinabox
+The system-wide installation of
+.B shellinaboxd
+can be configured by editing this file. After making any changes, restart
+the daemon with \fBsudo service shellinabox restart\fP.
+.TP
+.I /etc/shellinabox
+This directory contains style sheets that will be used for the
+.B --user-css 
+command line option, when running
+.B shellinaboxd
+as a system-wide service.
+.TP
+.I /etc/init.d/shellinabox
+This is the system-wide service definition. Usually, there is no need to
+edit this file.
+.TP
+.I /var/lib/shellinabox
+This directory contains the certificate files that
+.B shellinaboxd
+uses when serving encrypted SSL sessions. If suitable files do not exist, yet,
+it tries to populate the directory with self-signed certificates the first
+time a particular certificate is needed. Over time, it should contain
+\fBcertificate.pem\fP, \fBcertificate-localhost.pem\fP, and
+\fBcertificate-\fP\fIHOSTNAME\fP\fB.pem\fP.
+.TP
+.I /var/run/shellinaboxd.pid
+This file is created any time the system-wide service gets started.
+#endif
+.SH "SEE ALSO"
+.BR chmod (1),
+.BR last (1),
+.BR login (1),
+.BR sh (1),
+.BR shells (5),
+.BR openssl (1SSL),
+.BR w (1),
+.BR wy60 (1),
+.BR xterm (1).
+.SH SECURITY
+The daemon uses privilege separation techniques to allow it to drop
+privileges early. It is aware of setuid flags and restricts some
+operations when launched as a setuid application.
+
+Despite these safety features, a bug could conceivably lead to a
+determined attacker gaining elevated privileges. It is therefore
+strongly discouraged to set the setuid flag on the binary.
+
+The expected deployment would be from a system
+.I rc
+script launched by
+.BR /sbin/init .
+For extra security, the
+.B --group
+and
+.B --user
+options should be used to change to a dedicated user.
+.SH AUTHOR
+Copyright (C) 2008-2009 by Markus Gutschke
+.RI < "markus@shellinabox.com" >.
+.P
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License version 2 as
+published by the Free Software Foundation.
+.P
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+.P
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307
+USA
+.P
+In addition to these license terms, the author grants the following
+additional rights:
+.P
+If you modify this program, or any covered work, by linking or
+combining it with the OpenSSL project's OpenSSL library (or a
+modified version of that library), containing parts covered by the
+terms of the OpenSSL or SSLeay licenses, the author
+grants you additional permission to convey the resulting work.
+Corresponding Source for a non-source form of such a combination
+shall include the source code for the parts of OpenSSL used as well
+as that of the covered work.
+.P
+You may at your option choose to remove this additional permission from
+the work, or from any part of it.
+.P
+If you would like to negotiate different licensing terms that are
+compatible for integration with other projects, please contact the
+author.
+#ifdef HAVE_OPENSSL
+.P
+If the OpenSSL
+system libraries can be found at run-time, they will be invoked by
+.B shellinaboxd
+to provide SSL/TLS support. The OpenSSL and SSLeay
+licenses require the following notices:
+.P
+This product includes software developed by the OpenSSL Project
+for use in the OpenSSL Toolkit. (http://www.openssl.org/)
+.P
+This product includes cryptographic software written by Eric Young
+(eay@cryptsoft.com)
+#endif
+.SH BUGS
+Due to browser limitations, some features might not be available to
+users of all browers.
+.P
+Konqueror does not allow for reliable interception of
+.I CTRL
+keys. If you press a key together with the
+.I CTRL
+modifier, it continues performing the browser's predefined behavior for
+this particular key combination. In most cases, it also fails to report
+the correct key to the terminal emulator. As a work-around, pressing
+both the
+.I CTRL
+and the
+.I WINDOWS
+key sometimes works.
+.P
+Some browsers, most notably IE on Windows, disallow interception of
+.I ALT
+keys and always interpret these keys as menu accelerators. As a
+work-around, many UNIX applications allow pressing
+.IR ESC ,
+instead of
+.IR ALT .
+.P
+When using non-US keyboard layouts, some browser do not allow for
+reliably determining shifted
+.I ALT
+keys. Please report these cases if they turn out to be a problem, as
+work-arounds might be possible.
+.P
+Access to the native clipboard is typically not possible. Instead, an
+internal clipboard accessible from the right-button context menu is used
+for all but IE.
+.P
+Some browsers restrict the number of concurrent connections to a
+server. This restricts how many AJAX terminals can be opened
+simultaneously. If this becomes a problem, users can typically
+reconfigure their browsers to raise the limit.
+.P
+There have been reports of the VLC plugin on Linux/x86_64 crashing Firefox
+when the browser page gets reloaded. Setting the
+.B --no-beep
+option eliminates all references to VLC and thus appears to work around
+this crash.

@@ -1,1 +1,1 @@
-python /usr/local/TriAquae/TriAquae/backend/baoleihost.py 127.0.0.1 22 root SSH_PASSWD 1 admin
+python /usr/local/TriAquae/TriAquae/backend/baoleihost.py 127.0.0.1 22 coral SSH_PASSWD 1 admin
