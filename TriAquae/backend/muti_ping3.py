@@ -19,7 +19,7 @@ for i in ip_list:
 	#ip = "10.98.33.%s" % i
 	ip = i.ip
 	if len(db_connector.ServerStatus.objects.filter(host = ip)) ==0:
-		insert_status_item = db_connector.ServerStatus.objects.create(host = ip, hostname = i.hostname,last_check=time.strftime('%Y_%m_%d %H:%M:%S'))
+		insert_status_item = db_connector.ServerStatus.objects.create(host = ip, hostname = i.hostname,host_uptime=time.strftime('%Y_%m_%d %H:%M:%S'), last_check=time.strftime('%Y_%m_%d %H:%M:%S'))
 		insert_status_item.save()
 	p.append((ip, Popen(['ping', '-c', '3', ip], stdout=subprocess.PIPE)))
 

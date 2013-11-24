@@ -15,9 +15,10 @@
        success: function(msg){
         //response.write(msg.toString());
         if(msg){
-        $("#ifShell").attr({src:msg.url});
-        $("#ui_uname").text(msg.username);
-        $("#ui_upass").text(msg.password);
+	window.open(msg.url,'TriAquae WebSSH');
+        //$("#ifShell").attr({src:msg.url});
+        //$("#ui_uname").text(msg.username);
+        //$("#ui_upass").text(msg.password);
         //$($("#ifShell")).
         }
    }
@@ -206,15 +207,15 @@ $(function(){
                                             </div-->
                                             <div>
                                                 <span>username:</span>
-                                                <span style="color:red;margin-right:20px;" id="ui_uname"></span>
+                                                <span style="color:red;margin-right:20px;" id="ui_uname">{{tri_user}}</span>
                                                 <span>password:</span>
-                                                <span style="color:red;" id="ui_upass"></span>
+                                                <span style="color:red;" id="ui_upass">{{tri_pass}}</span>
                                             </div>
                                         </div>
-                                        <div style="height:90%;">
+                                        <!--div style="height:90%;">
                                             <iframe id="ifShell" name="iframe" src="" width="98%" height="100%" style="border-width:1 1 1 1;border-style:solid;border-color:#eeeeee;">
                                             </iframe>
-                                        </div>
+                                        </div-->
                                     </div>
                                     <div class="tab-pane fade" id="s5">
                                     	<div>
