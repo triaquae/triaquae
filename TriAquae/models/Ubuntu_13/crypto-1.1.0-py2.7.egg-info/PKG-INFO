@@ -1,0 +1,11 @@
+Metadata-Version: 1.1
+Name: crypto
+Version: 1.1.0
+Summary: Simply tool for cryptography
+Home-page: http://ondrejsika.com/docs/python-crypto
+Author: Ondrej Sika
+Author-email: dev@ondrejsika.com
+License: GNU LGPL v.3
+Download-URL: https://github.com/sikaondrej/python-crypto
+Description: UNKNOWN
+Platform: UNKNOWN

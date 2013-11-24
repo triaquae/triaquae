@@ -37,7 +37,7 @@ def shellinabox():
     if service_status('shellinaboxd') == 'Running':
         print "\033[33;1mshellinaboxd service is already running!\033[0m" 
     else:
-        cmd = '%s/shellinaboxd/bin/shellinaboxd -t -b' % triaquae_path
+        cmd = '%s/shellinaboxd/bin/shellinaboxd -t -b -p %s' % (triaquae_path,tri_config.Tri_Port)
         if os.system(cmd) == 0:
             print '\033[32;1mshellinaboxd start success!\n\033[0m'
         else:

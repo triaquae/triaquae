@@ -18,6 +18,8 @@ elif version == 'centos-6':
     Tri_Ver_Models = os.path.join(tri_config.Working_dir,'TriAquae/models/Centos_6.4')
 elif version == 'Ubuntu-12':
     Tri_Ver_Models = os.path.join(tri_config.Working_dir,'TriAquae/models/Ubuntu_12')
+elif version == 'Ubuntu-13':
+    Tri_Ver_Models = os.path.join(tri_config.Working_dir,'TriAquae/models/Ubuntu_13')
 else:
     Tri_Ver_Models = os.path.join(tri_config.Working_dir,'TriAquae/models/Centos_5.9')
 sys.path.append(Tri_Ver_Models)

@@ -8,7 +8,7 @@ from django.contrib import auth
 from django.contrib.auth.decorators import login_required
 from django.core.exceptions import ObjectDoesNotExist
 from models import Devinfo, Check_Devinfo, ServerStatus, DevForm
-from models import Group,IP,RemoteUser,OpsLog,OpsLogTemp,TriaquaeUser,AuthByIpAndRemoteUser
+from models import Group,IP,RemoteUser,OpsLog,OpsLogTemp,TriaquaeUser,AuthByIpAndRemoteUser,QuickLink
 #from models import *
 
 from TriAquae.backend import MultiRunCounter
@@ -30,7 +30,7 @@ def index(request):
         percent = 0
     else:
         percent = round(up / float(total), 4) * 100
-    context = {'up':up, 'down':down, 'total':total, 'percent':percent}
+    context = {'up':up, 'down':down, 'total':total, 'percent':percent }
     return render(request,'index.html', context)
 @login_required
 def assets(request):
@@ -93,6 +93,7 @@ def status_detail(request,hostname):
     for user in AuthByIpAndRemoteUser.objects.filter(ip__ip=host):
         AuthByIpAndRemoteUser_remote_user.append(str(user.remoteUser))
     remote_users = set(TriaquaeUser_remote_users) & set(AuthByIpAndRemoteUser_remote_user)
+    tri_user,tri_pass = tri_config.Tri_connector_username,tri_config.Tri_connector_password 
     try:
     	assets = Devinfo.objects.get(Triaquae_Hostname=hostname)
     except ObjectDoesNotExist:
@@ -103,7 +104,7 @@ def status_detail(request,hostname):
     rrd_list = os.listdir(rrd_dir)
     rrd_file_list_1hour = [i for i in rrd_list if (i.startswith(ip) and i.endswith('1h.png'))]
     rrd_file_list_1day = [i for i in rrd_list if (i.startswith(ip) and i.endswith('1d.png'))]
-    return render(request, 'status_detail.html', {'host':host, 'assets':assets, 'remote_user':remote_users,'rrd_dir':rrd_dir,'rrd_file_list_1hour':rrd_file_list_1hour,'rrd_file_list_1day':rrd_file_list_1day}, context_instance=RequestContext(request))
+    return render(request, 'status_detail.html', {'host':host, 'assets':assets, 'tri_user':tri_user,'tri_pass':tri_pass, 'remote_user':remote_users,'rrd_dir':rrd_dir,'rrd_file_list_1hour':rrd_file_list_1hour,'rrd_file_list_1day':rrd_file_list_1day}, context_instance=RequestContext(request))
     '''
     if request.is_ajax():
         from django.core import serializers
@@ -190,7 +191,7 @@ def account_auth(request):
 #
 @login_required
 def showDashboard(request):
-    return render_to_response('index.html',{'user':request.user})
+    return render_to_response('index.html',{'user':request.user , 'quick_links': QuickLink.objects.all()})
 def logout_view(request):
     user = request.user
     auth.logout(request)

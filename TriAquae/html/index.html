@@ -508,7 +508,33 @@ $(function () {
 				    </div>
 				</div>
 				<!-- end widget -->
-			</article>		
+			</article>
+
+			<article class="span6">
+                                <!-- new widget -->
+                                <div class="jarviswidget" id="idget-id-server">
+                                    <header>
+                                        <h2>Quick Links</h2>
+                                    </header>
+                                    <div>
+                        {% include "editbox" %}
+
+                                        <div class="inner-spacer" >
+                                        <!-- content goes here -->
+						<div style="height:380px;padding:10px"> 
+						  <h5><a href="/admin/hosts/quicklink/"><span class="icon icon-wrench"></span>Manage</a></h5>
+						  {%  for link in quick_links %}
+							<button type="button" onclick="location='{{link.url}}'" style="margin:5px" class="btn {{link.color}}">{{link.link_name}}</button>&nbsp;
+						  {% endfor%}
+						</div>
+                                        <!-- end content -->
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end widget -->
+                        </article>
+
+		
 			<article class="span12" style="margin-left:0px">
 				<!-- new widget -->
 				<div class="jarviswidget" id="widget-id-mem">

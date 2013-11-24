@@ -184,4 +184,8 @@ class OpsLogTemp(models.Model):
         note = models.CharField(max_length=100,blank=True)
         def __unicode__(self):
             return self.ip
-
+class QuickLink(models.Model):
+	link_name = models.CharField(max_length=50)
+	url = models.URLField()
+	COLOR_CHOICES = (('btn-danger', 'red'),('btn-warning', 'yellow'),('btn-success','green'), ('btn-primary','dark-blue'),('btn-info','blue'))
+        color = models.CharField(max_length=100, choices=COLOR_CHOICES)

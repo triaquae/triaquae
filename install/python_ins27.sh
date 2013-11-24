@@ -3,8 +3,8 @@
 #define variable
 Tools_Dir="/usr/local/src"
 Python_Dir="/usr/local/python"
-Log_File="/tmp/install.log"
-Err_Log="/tmp/install_err.log"
+Log_File="/tmp/tri_install.log"
+Err_Log="/tmp/tri_install_err.log"
 
 install_python(){
     printf "Install Python,Please wait...\n"
@@ -26,6 +26,7 @@ install_python(){
     ln -s $Python_Dir /usr/local/python
     rename python python2.6_bak /usr/bin/python
     ln -s /usr/local/python/bin/python /usr/bin/python
+    ln -s /usr/local/python/lib/libpython2.7.so /usr/lib
     #modifiy yum command content
     sed -i 's@^#!/usr/bin/python$@#!/usr/bin/python2.6@g' /usr/bin/yum
     #load python2.7 lib

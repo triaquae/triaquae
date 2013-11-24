@@ -36,6 +36,7 @@
                                             <th>Host Name</th> 
                                             <th>Ip Address</th> 
                                             <th>Ping Status</th> 
+					    <th>Up Since</th>
                                             <th>Availability</th> 
                                             <th>Last Check</th> 
                                         </tr> 
@@ -47,6 +48,7 @@
                                             <td><a href="{% url 'status_detail' host.hostname %}">{{ status.hostname }}</a></td>
                                             <td><a href="{% url 'status_detail' host.hostname %}">{{ status.host }}</a></td> 
                                             <td key="ping_status">{{ status.ping_status }}</td>
+					    <td key"up_since"> {{status.host_uptime}} </td>
                                             <td key="availability">{{ status.availability }}</td>
                                             <td key="last_check">{{ status.last_check }}</td>
                                         </tr>

@@ -29,6 +29,8 @@ class StatusAdmin(admin.ModelAdmin):
     search_fields = ('host','host_status')
     list_display = ('host','host_status','ping_status','availability','host_uptime','breakdown_count','up_count','attempt_count')
 
+class QuickLinkAdmin(admin.ModelAdmin):
+	list_display = ('link_name','url','color')
 admin.site.register(models.Idc)
 admin.site.register(models.IP, admin_ip.IpAdmin)
 admin.site.register(models.Group, admin_ip.GroupAdmin)
@@ -38,4 +40,4 @@ admin.site.register(models.AuthByIpAndRemoteUser, admin_auth.AuthByIpAndRemoteUs
 admin.site.register(ServerStatus,StatusAdmin)
 admin.site.register(OpsLogTemp,LogAdmin)
 admin.site.register(OpsLog,OpsLogAdmin)
-
+admin.site.register(models.QuickLink,QuickLinkAdmin)
