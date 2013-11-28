@@ -105,7 +105,7 @@ http://ip:7000/
 
 	python setup_dev.py init    #初始化数据库
 
-
+然后启动服务即可！
 
 FAQ
 -----
