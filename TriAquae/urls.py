@@ -1,6 +1,5 @@
 #from django.conf.urls import patterns, include, url
 from django.conf.urls import *
-from TriAquae.views import TriAquae
 #from TriAquae.views import CpuUsage
 #from TriAquae.views import ServiceStatus
 #from TriAquae.datas import TriAquaeData

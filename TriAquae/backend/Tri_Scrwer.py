@@ -7,7 +7,7 @@ import subprocess
 import platform
 triaquae_user='triaquae'
 save_dir='/tmp'
-old_passwd='dqnzbf'
+old_passwd='5jykPF'
 try:
     if sys.argv[1] == '-h':
         print '''

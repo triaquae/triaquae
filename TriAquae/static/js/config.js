@@ -1430,7 +1430,7 @@ function setup_all_buttons() {
 
   $('#theme-switcher ul#theme-links-js li a').bind('click',
       function(e) {
-        $("#switch-theme-js").attr("href", "css/themes/"+$(this).data('rel')+".css");
+        $("#switch-theme-js").attr("href", "/static/css/themes/"+$(this).data('rel')+".css");
         return false;
       }
       );
