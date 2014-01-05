@@ -1,6 +1,6 @@
 #from django.conf.urls import patterns, include, url
 from django.conf.urls import *
-from TriAquae.views import TriAquae
+#from TriAquae.views import TriAquae
 #from TriAquae.views import CpuUsage
 #from TriAquae.views import ServiceStatus
 #from TriAquae.datas import TriAquaeData
@@ -66,7 +66,8 @@ urlpatterns = patterns('',
     (r'^baoleihost_remote/$',baoleihost_remote),
     #(r'^loadFileTransferPage/$',loadFileTransferPage),
     #---------- Log ----------
-    (r'^log/$', Log),
-    (r'^log_view/$', LogView),
+    #(r'^log/$', Log),
+    #(r'^log_view/$', LogView),
+    (r'^getLog/$', getLog),
     #end by tangjing
 )

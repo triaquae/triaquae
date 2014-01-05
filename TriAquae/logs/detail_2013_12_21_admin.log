@@ -1,0 +1,177 @@
+Last login: Sat Oct 26 13:53:13 2013 from 192.168.2.5
+[root@coral ~]# ip addr
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 16436 qdisc noqueue state UNKNOWN 
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP qlen 1000
+    link/ether 00:0c:29:f8:bc:7e brd ff:ff:ff:ff:ff:ff
+    inet 192.168.2.2/16 brd 192.168.255.255 scope global eth0
+    inet6 fe80::20c:29ff:fef8:bc7e/64 scope link 
+       valid_lft forever preferred_lft forever
+3: eth1: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP qlen 1000
+    link/ether 00:0c:29:f8:bc:74 brd ff:ff:ff:ff:ff:ff
+    inet 10.237.94.29/24 brd 10.237.94.255 scope global eth1
+    inet6 fe80::20c:29ff:fef8:bc74/64 scope link 
+       valid_lft forever preferred_lft forever
+[root@coral ~]# ls
+anaconda-ks.cfg  [0m[01;31mepel-release-6-8.noarch.rpm[0m  install.log.syslog
+[01;34mbuild[0m            install.log                  test.py
+[m[root@coral ~]# pwd
+/root
+[root@coral ~]# ifconfig
+eth0      Link encap:Ethernet  HWaddr 00:0C:29:F8:BC:7E  
+          inet addr:192.168.2.2  Bcast:192.168.255.255  Mask:255.255.0.0
+          inet6 addr: fe80::20c:29ff:fef8:bc7e/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:128142 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:64779 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:21439505 (20.4 MiB)  TX bytes:48634071 (46.3 MiB)
+
+eth1      Link encap:Ethernet  HWaddr 00:0C:29:F8:BC:74  
+          inet addr:10.237.94.29  Bcast:10.237.94.255  Mask:255.255.255.0
+          inet6 addr: fe80::20c:29ff:fef8:bc74/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:237984 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:68420 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:56132457 (53.5 MiB)  TX bytes:4437628 (4.2 MiB)
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          inet6 addr: ::1/128 Scope:Host
+          UP LOOPBACK RUNNING  MTU:16436  Metric:1
+          RX packets:45368 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:45368 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:4062956 (3.8 MiB)  TX bytes:4062956 (3.8 MiB)
+
+[root@coral ~]# ls
+anaconda-ks.cfg  [0m[01;31mepel-release-6-8.noarch.rpm[0m  install.log.syslog
+[01;34mbuild[0m            install.log                  test.py
+[m[root@coral ~]# vim /etc/hosts
+-bash: vim: command not found
+[root@coral ~]# vim /etc/hostsls[K[Cvim /etc/hosts[Kvim /etc/hosts[Kvim /etc/hosts[Kvim /etc/hostsls[K[C[Cvim /etc/hosts[Kvim [K[K /etc/hosts
+[?1h=[1;24r[m[m[0m[H[J[24;1H"/etc/hosts" 3L, 174C[1;1H127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4
+::1[8C localhost localhost.localdomain localhost6 localhost6.localdomain6
+127.0.0.1 coral
+[1m~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~[1;1H[0m[24;1H[K[24;1H:q[?1l>[24;1H[K[24;1H[root@coral ~]# dslfj
+-bash: dslfj: command not found
+[root@coral ~]# ifconfig
+eth0      Link encap:Ethernet  HWaddr 00:0C:29:F8:BC:7E  
+          inet addr:192.168.2.2  Bcast:192.168.255.255  Mask:255.255.0.0
+          inet6 addr: fe80::20c:29ff:fef8:bc7e/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:128382 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:64925 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:21462141 (20.4 MiB)  TX bytes:48650523 (46.3 MiB)
+
+eth1      Link encap:Ethernet  HWaddr 00:0C:29:F8:BC:74  
+          inet addr:10.237.94.29  Bcast:10.237.94.255  Mask:255.255.255.0
+          inet6 addr: fe80::20c:29ff:fef8:bc74/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:238060 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:68531 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:56137017 (53.5 MiB)  TX bytes:4442290 (4.2 MiB)
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          inet6 addr: ::1/128 Scope:Host
+          UP LOOPBACK RUNNING  MTU:16436  Metric:1
+          RX packets:45479 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:45479 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:4072724 (3.8 MiB)  TX bytes:4072724 (3.8 MiB)
+
+[root@coral ~]# vi /etc/hosts
+[?1h=[1;24r[m[m[0m[H[J[24;1H"/etc/hosts" 3L, 174C[1;1H127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4
+::1[8C localhost localhost.localdomain localhost6 localhost6.localdomain6
+127.0.0.1 coral
+[1m~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~[1;1H
+
+[0m
+127.0.0.1 coral127[24;1H[K[24;1H:wq"/etc/hosts" 4L, 190C written[?1l>
+[root@coral ~]# exit
+logout
+Last login: Sat Oct 26 14:51:09 2013 from 192.168.2.5
+[root@coral ~]# exit
+logout
+Welcome to Ubuntu 12.04.3 LTS (GNU/Linux 3.8.0-29-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+Last login: Sat Dec 21 23:12:46 2013 from 192.168.0.179
+coral@coral:~$ 
+coral@coral:~$ 
+coral@coral:~$ ifconfig lo[K[K
+eth0      Link encap:Ethernet  HWaddr 00:0c:29:77:95:3c  
+          inet addr:192.168.2.5  Bcast:192.168.255.255  Mask:255.255.0.0
+          inet6 addr: fe80::20c:29ff:fe77:953c/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:120312 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:148734 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:13021483 (13.0 MB)  TX bytes:59305207 (59.3 MB)
+
+eth1      Link encap:Ethernet  HWaddr 00:0c:29:77:95:46  
+          inet addr:192.168.137.9  Bcast:192.168.137.255  Mask:255.255.255.0
+          inet6 addr: fe80::20c:29ff:fe77:9546/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:274341 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:41729 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:66728692 (66.7 MB)  TX bytes:3902414 (3.9 MB)
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          inet6 addr: ::1/128 Scope:Host
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:301946 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:301946 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:102909799 (102.9 MB)  TX bytes:102909799 (102.9 MB)
+
+coral@coral:~$ exit
+logout

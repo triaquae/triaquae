@@ -1,0 +1,272 @@
+{% extends "fmbase.html" %}
+{% block page-content %}
+{% load staticfiles %}
+
+<script>
+ function getShowInBox(){
+    var uname= $("#selUser option:selected").text();
+    var ip= $("#hidCurIp").val();
+//  alert(uname+":"+ip);
+    $.ajax({
+            type: "get",
+       url: "/baoleihost_remote",
+       data: "user="+uname+"&ip="+ip,
+       dataType:"json",
+       success: function(msg){
+        //response.write(msg.toString());
+        if(msg){
+	window.open(msg.url,'TriAquae WebSSH');
+        //$("#ifShell").attr({src:msg.url});
+        //$("#ui_uname").text(msg.username);
+        //$("#ui_upass").text(msg.password);
+        //$($("#ifShell")).
+        }
+   }
+});
+        
+ }
+$(function(){
+	if($(".expanded a").attr("href") == "\/server_status"){
+		return;
+	}
+	 $(".expanded").removeClass("expanded");
+	 $(".current").removeClass("current");
+	 var _parent = $("a[href='\/server_status']").parent();
+	 _parent.addClass("expanded");
+	 _parent.parents("li").addClass("current");
+
+});
+//function(){
+//	
+//}
+</script>
+
+
+<div id="page-content">
+    <!-- page header -->
+    <h1 id="page-header">Server Status > Status Detail</h1>
+
+    <div class="fluid-container">
+        <!-- widget grid -->
+        <!-- vanished
+        -->
+        <section id="widget-grid" class="">
+            <div class="row-fluid">
+                <article class="span12">
+                    <!-- new widget -->
+                    {% comment %}
+                    <div class="jarviswidget" id="widget-id-{{ host.hostname }} data-widget-refresh="15" data-widget-load="{% static 'ajax/widget-ajax2.php' %}">
+                    {% endcomment %}
+                    <div class="jarviswidget" id="widget-id-{{ host.hostname }}">
+                        <header>
+                            <h2>{{ host.hostname }}</h2>
+                        </header>
+
+                        <!-- widget div-->
+                        <div>
+                            <!-- widget edit box -->
+                            {% include "editbox" %}
+                            <!-- end widget edit box -->
+
+                            <div class="inner-spacer widget-content-padding">
+                            <!-- content -->
+                                <ul id="StatusTab" class="nav nav-tabs default-tabs">
+                                    <li class="active">
+                                        <a href="#s1" data-toggle="tab">Overview</a>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Performance<b class="caret"></b></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#s2" data-toggle="tab">1 Hour</a></li>
+                                            <li><a href="#s3" data-toggle="tab">1 Day</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#s4" data-toggle="tab">Console</a>
+                                    </li>
+                                    <!--li>
+                                        <a href="#s5" data-toggle="tab">Logs</a>
+                                    </li-->
+
+                                </ul>
+
+                                <div id="StatusTabConent" class="tab-content">
+                                    <div class="tab-pane fade in active" id="s1">
+                                        <!-- article -->
+                                        <article class="span6">
+                                            <ul>
+                                                <li>System Hostname: {{ host.hostname }}</li>
+                                                <li>Ip Adress: {{ host.host }}</li>
+                                                <li>System Version: {{ assets.System_Version}}</li>
+                                                <li>Device Type: {{ assets.Device_Type}}</li>
+                                                <li>System Kernel: {{ assets.System_Kernel }}</li>
+                                                <li>Total Memory: {{ assets.Physical_Memory }}</li>
+                                                <li>Logical Cpu Cores: {{ assets.Logical_Cpu_Cores }}</li>
+                                                <li>Physical Cpu Model: {{ assets.Physical_Cpu_Model }}</li>
+                                                <li>Hardisk: {{ assets.Hard_Disk}}</li>
+                                                <li>Assets Last Check Time: {{ assets.Check_Time }}</li>
+                                            </ul>
+                                        </article>
+                                        <article class="span6">
+                                            <div class="inner-spacer">
+                                            <!-- content goes here -->
+                                                 <table class="table table-bordered text-left table-hover" id="just-table">
+                                                     <thead>
+                                                         <tr>
+                                                             <th>#</th>
+                                                             <th>Item</th>
+                                                             <th>Value</th>
+                                                         </tr>
+                                                     </thead>
+                                                     <tbody>
+                                                         <tr>
+                                                             <td>1</td>
+                                                             <td>host_status</td>
+                                                             <td key='host_status'>{{ host.host_status }}</td>
+                                                         </tr>
+                                                         <tr>
+                                                             <td>2</td>
+                                                             <td>ping_status</td>
+                                                             <td key='ping_status'>{{ host.ping_status }}</td>
+                                                         </tr>
+                                                         <tr>
+                                                             <td>3</td>
+                                                             <td>last_check</td>
+                                                             <td key='last_check'>{{ host.last_check }}</td>
+                                                         </tr>
+                                                         <tr>
+                                                             <td>4</td>
+                                                             <td>attemp_count</td>
+                                                             <td key='attemp_count'>{{ host.attemp_count }}</td>
+                                                         </tr>
+                                                         <tr>
+                                                             <td>5</td>
+                                                             <td>breakdown_count</td>
+                                                             <td key='breakdown_count'>{{ host.breakdown_count }}</td>
+                                                         </tr>
+                                                           <tr>
+                                                             <td>6</td>
+                                                             <td>up_count</td>
+                                                             <td key='up_count'>{{ host.up_count}}</td>
+                                                         </tr>
+                                                         <tr>
+                                                             <td>7</td>
+                                                             <td>availablility</td>
+                                                             <td key='availability'>{{ host.availability }}</td>
+                                                         </tr>
+                                                     </tbody>
+                                                 </table>
+                                             </div>
+                                             <!-- end content-->
+                                        </article>
+                                    </div>
+                                    <div class="tab-pane fade" id="s2">
+                                        {% if rrd_file_list_1hour|length != 0 %}
+                                            {% for png in rrd_file_list_1hour %}
+                                                <div class="row-fluid">
+                                                    <div class="inner-spacer widget-content-padding">
+                                                    <!-- content goes here -->
+                                                        <img src="/static/img/rrdtool_png/{{ png }}" alt="" />
+                                                    </div>
+                                                </div>
+                                                <!-- end row-fluid -->
+                                            {% endfor %}
+                                        {% else %}  
+                                            <p>No graphs available , please check your SNMP configruation, use "python snmp_monitor.py" command  to check on TriAquae terminal.</p>
+                                        {% endif %}
+                                    </div>
+                                    <div class="tab-pane fade" id="s3">
+                                        {% if rrd_file_list_1day|length != 0 %}
+                                            {% for png in rrd_file_list_1day %}
+                                                <div class="row-fluid">
+                                                    <div class="inner-spacer widget-content-padding">
+                                                    <!-- content goes here -->
+                                                        <img src="/static/img/rrdtool_png/{{ png }}" alt="" />
+                                                    </div>
+                                                </div>
+                                                <!-- end row-fluid -->
+                                            {% endfor %}
+                                        {% else %}  
+                                            <p>No graphs available , please check your SNMP configruation, use "python snmp_monitor.py" command  to check on TriAquae terminal.</p>
+                                        {% endif %}
+                                    </div>    
+                                    <div class="tab-pane fade" id="s4">
+                                        <div>
+                                            <h3>Choose Remote User</h3>
+                                            <select id="selUser" name="user" style="margin:10px 0px;">
+                                            {% for user in remote_user %}
+                                            <option value={{user}}>{{user}}</option>
+                                            {% endfor %}
+                                            </select>
+                                            <div class="btn-group">
+                                                <button class="btn btn-primary medium" onclick="getShowInBox()" style="margin:10px 0px;">Connect</button>
+                                                <input type="text" style="display:none;" id="hidCurIp" value="{{ host.host }}" />
+                                            </div>  
+                                            <!--div align="right">
+                                                <a href="/log" class="btn btn-primary medium" style="margin:10px 0px;" >Overview</a>
+                                            </div-->
+                                            <div>
+                                                <span>username:</span>
+                                                <span style="color:red;margin-right:20px;" id="ui_uname">{{tri_user}}</span>
+                                                <span>password:</span>
+                                                <span style="color:red;" id="ui_upass">{{tri_pass}}</span>
+                                            </div>
+                                        </div>
+                                        <!--div style="height:90%;">
+                                            <iframe id="ifShell" name="iframe" src="" width="98%" height="100%" style="border-width:1 1 1 1;border-style:solid;border-color:#eeeeee;">
+                                            </iframe>
+                                        </div-->
+                                    </div>
+                                    <div class="tab-pane fade" id="s5">
+                                    	<div>
+                                            <div></div>
+					    <div>
+				            <table class="table table-bordered table-hover" style="border:1px solid #ddd;">
+	<thead>
+		<tr>
+			<th>IP</th>
+			<th>Date</th>
+			<th>User</th>
+			<th>Input Command</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>t_col_1</td>
+			<td>t_col_1</td>
+			<td>t_col_1</td>
+			<td>t_col_1</td>
+		</tr>
+		<tr>
+			<td>t_col_1</td>
+			<td>t_col_1</td>
+			<td>t_col_1</td>
+			<td>t_col_1</td>
+		</tr>
+	</tbody>
+  </table> 
+
+					    </div>
+                                        </div>
+                                    </di>
+                                </div>
+                                <!-- end tab-content -->
+                            </div>
+                            <!-- end content -->
+                        </div>
+                        <!-- end widget div -->
+                    </div>
+                    <!-- end widget -->
+                </article>
+            </div>
+            <!-- end row-fluid -->
+        
+        <!-- vanished
+        -->
+        </section> 
+        <!-- end widget grid -->
+    </div>      
+</div>
+<script type='text/javascript' src='/static/js/include/status/status_detail.js' />
+<!-- end main content -->
+{% endblock %}

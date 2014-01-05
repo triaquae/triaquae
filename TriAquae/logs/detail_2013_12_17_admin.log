@@ -1,0 +1,319 @@
+Welcome to Ubuntu 12.04.3 LTS (GNU/Linux 3.8.0-29-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+Last login: Tue Dec 17 00:08:59 2013 from 192.168.0.179
+coral@coral:~$ ls
+[0m[01;34mDesktop[0m    [01;34mDownloads[0m         [01;34mMusic[0m     [01;34mPublic[0m     [01;34mVideos[0m
+[01;34mDocuments[0m  examples.desktop  [01;34mPictures[0m  [01;34mTemplates[0m
+coral@coral:~$ pwd
+/home/coral
+coral@coral:~$ cd /tmp/
+coral@coral:/tmp$ ll
+total 72
+drwxrwxrwt 17 root    root    4096 Dec 17 00:04 [0m[30;42m.[0m/
+drwxr-xr-x 24 root    root    4096 Nov  5 04:48 [01;34m..[0m/
+drwxrwxrwt  2 lightdm lightdm 4096 Dec  9 21:35 [30;42mat-spi2[0m/
+drwxrwxrwt  2 root    root    4096 Dec  9 21:35 [30;42m.ICE-unix[0m/
+drwx------  2 coral   coral   4096 Dec  9 21:35 [01;34mkeyring-RhR3th[0m/
+drwx------  2 lightdm lightdm 4096 Dec  9 21:36 [01;34mpulse-PKdhtXMmr18n[0m/
+drwx------  2 coral   coral   4096 Dec  9 21:36 [01;34mpulse-qjbWP7Mvaczl[0m/
+drwxrwxr-x  2 coral   coral   4096 Dec  9 21:54 [01;34mrecycled[0m/
+drwx------  2 coral   coral   4096 Dec 17 00:04 [01;34mssh-gBgDh32367[0m/
+drwx------  2 coral   coral   4096 Dec  9 21:35 [01;34mssh-NTxwwzRd2156[0m/
+drwx------  2 coral   coral   4096 Dec 15 18:10 [01;34mssh-pHUBl27458[0m/
+drwx------  2 coral   coral   4096 Dec 16 00:16 [01;34mtmp1_27VW[0m/
+drwx------  3 coral   coral   4096 Dec 16 00:16 [01;34mtmp1W8Q4J[0m/
+-rw-rw-r--  1 lightdm lightdm    0 Dec  9 21:35 unity_support_test.0
+drwx------  2 coral   coral   4096 Dec  9 21:36 [01;34mvmware-coral[0m/
+drwxrwxrwt  3 coral   coral   4096 Dec  9 21:36 [30;42mVMwareDnD[0m/
+drwx------  2 root    root    4096 Dec  9 21:35 [01;34mvmware-root[0m/
+-r--r--r--  1 root    root      11 Dec  9 21:35 .X0-lock
+drwxrwxrwt  2 root    root    4096 Dec  9 21:35 [30;42m.X11-unix[0m/
+coral@coral:/tmp$ c[Kmkdir recycled
+mkdir: cannot create directory `recycled': File exists
+coral@coral:/tmp$ cd res[Kcycled/
+coral@coral:/tmp/recycled$ ll
+total 8
+drwxrwxr-x  2 coral coral 4096 Dec  9 21:54 [0m[01;34m.[0m/
+drwxrwxrwt 17 root  root  4096 Dec 17 00:04 [30;42m..[0m/
+coral@coral:/tmp/recycled$ cp /etc/hosts .
+coral@coral:/tmp/recycled$ ll
+total 12
+drwxrwxr-x  2 coral coral 4096 Dec 17 00:11 [0m[01;34m.[0m/
+drwxrwxrwt 17 root  root  4096 Dec 17 00:04 [30;42m..[0m/
+-rw-r--r--  1 coral coral  220 Dec 17 00:11 hosts
+coral@coral:/tmp/recycled$ vim [K>hosts
+coral@coral:/tmp/recycled$ cd[K[Kll
+total 8
+drwxrwxr-x  2 coral coral 4096 Dec 17 00:11 [0m[01;34m.[0m/
+drwxrwxrwt 17 root  root  4096 Dec 17 00:04 [30;42m..[0m/
+-rw-r--r--  1 coral coral    0 Dec 17 00:11 hosts
+coral@coral:/tmp/recycled$ rm -rf hosts 
+coral@coral:/tmp/recycled$ cd
+coral@coral:~$ ll
+total 204
+drwxr-xr-x 26 coral coral  4096 Dec 15 18:27 [0m[01;34m.[0m/
+drwxr-xr-x  4 root  root   4096 Nov  4 21:24 [01;34m..[0m/
+drwx------  3 coral coral  4096 Dec  9 21:46 [01;34m.adobe[0m/
+-rw-------  1 coral coral 10069 Dec 16 00:34 .bash_history
+-rw-r--r--  1 coral coral   220 Nov  5 04:47 .bash_logout
+-rw-r--r--  1 coral coral  3486 Nov  5 04:47 .bashrc
+drwx------ 16 coral coral  4096 Nov 17 16:20 [01;34m.cache[0m/
+drwx------ 14 coral coral  4096 Dec  9 21:56 [01;34m.config[0m/
+drwx------  3 coral coral  4096 Nov  5 04:51 [01;34m.dbus[0m/
+drwxr-xr-x  2 coral coral  4096 Dec  9 21:37 [01;34mDesktop[0m/
+-rw-r--r--  1 coral coral    26 Dec  9 21:35 .dmrc
+drwxr-xr-x  2 coral coral  4096 Nov  5 04:51 [01;34mDocuments[0m/
+drwxr-xr-x  2 coral coral  4096 Nov 25 13:33 [01;34mDownloads[0m/
+-rw-r--r--  1 coral coral  8445 Nov  5 04:47 examples.desktop
+drwx------  4 coral coral  4096 Dec  9 21:36 [01;34m.gconf[0m/
+drwx------  4 coral coral  4096 Nov  5 04:51 [01;34m.gnome2[0m/
+drwx------  2 coral coral  4096 Nov  9 21:37 [01;34m.gnupg[0m/
+-rw-rw-r--  1 coral coral   137 Dec  9 21:36 .gtk-bookmarks
+dr-x------  2 coral coral     0 Dec  9 21:35 [01;34m.gvfs[0m/
+-rw-------  1 coral coral  2202 Dec  9 21:35 .ICEauthority
+drwxr-xr-x  3 coral coral  4096 Nov  5 04:51 [01;34m.local[0m/
+drwx------  3 coral coral  4096 Dec  9 21:46 [01;34m.macromedia[0m/
+drwx------  3 coral coral  4096 Nov  5 04:51 [01;34m.mission-control[0m/
+drwx------  4 coral coral  4096 Nov 17 16:19 [01;34m.mozilla[0m/
+drwxr-xr-x  2 coral coral  4096 Nov  5 04:51 [01;34mMusic[0m/
+-rw-------  1 coral coral    24 Nov 17 16:29 .mysql_history
+drwxr-xr-x  2 coral coral  4096 Nov  5 04:51 [01;34mPictures[0m/
+-rw-r--r--  1 coral coral   675 Nov  5 04:47 .profile
+drwxr-xr-x  2 coral coral  4096 Nov  5 04:51 [01;34mPublic[0m/
+drwx------  2 coral coral  4096 Dec  9 21:36 [01;34m.pulse[0m/
+-rw-------  1 coral coral   256 Nov  5 04:51 .pulse-cookie
+-rw-------  1 coral coral     2 Nov  9 21:38 .pythonhistory
+drwxr-xr-x  2 coral coral  4096 Nov  5 04:51 [01;34mTemplates[0m/
+drwx------  4 coral coral  4096 Nov  4 20:55 [01;34m.thumbnails[0m/
+drwxr-xr-x  2 coral coral  4096 Nov  5 04:51 [01;34mVideos[0m/
+drwxr-xr-x 15 coral coral  4096 Dec  9 21:39 [01;34m.vim[0m/
+-rw-------  1 coral coral 15153 Dec 15 18:27 .viminfo
+drwxrwxr-x  6 coral coral  4096 Nov 25 13:37 [01;34m.vim_old[0m/
+-rw-rw-r--  1 coral coral  2276 Dec  9 21:47 .vimrc
+-rw-------  1 coral coral    50 Dec  9 21:35 .Xauthority
+-rw-------  1 coral coral  7568 Dec 15 18:27 .xsession-errors
+-rw-------  1 coral coral 12197 Dec  9 21:34 .xsession-errors.old
+coral@coral:~$ cd /
+coral@coral:/$ ll
+total 100
+drwxr-xr-x  24 root root  4096 Nov  5 04:48 [0m[01;34m.[0m/
+drwxr-xr-x  24 root root  4096 Nov  5 04:48 [01;34m..[0m/
+drwxr-xr-x   2 root root  4096 Nov  5 04:48 [01;34mbin[0m/
+drwxr-xr-x   3 root root  4096 Dec  9 21:33 [01;34mboot[0m/
+drwxr-xr-x   2 root root  4096 Nov  5 04:47 [01;34mcdrom[0m/
+drwxr-xr-x  14 root root  4180 Dec  9 21:35 [01;34mdev[0m/
+drwxr-xr-x 129 root root 12288 Dec  9 21:45 [01;34metc[0m/
+drwxr-xr-x   4 root root  4096 Nov  4 21:24 [01;34mhome[0m/
+lrwxrwxrwx   1 root root    32 Nov  5 04:48 [01;36minitrd.img[0m -> boot/initrd.img-3.8.0-29-generic
+drwxr-xr-x  20 root root  4096 Nov  5 04:48 [01;34mlib[0m/
+drwxr-xr-x   2 root root  4096 Aug 21 01:57 [01;34mlib64[0m/
+drwx------   2 root root 16384 Nov  5 04:45 [01;34mlost+found[0m/
+drwxr-xr-x   4 root root  4096 Dec  9 21:36 [01;34mmedia[0m/
+drwxr-xr-x   2 root root  4096 Apr 19  2012 [01;34mmnt[0m/
+drwxr-xr-x   2 root root  4096 Aug 21 01:56 [01;34mopt[0m/
+dr-xr-xr-x 214 root root     0 Dec  9 21:35 [01;34mproc[0m/
+drwx------   7 root root  4096 Dec 17 00:04 [01;34mroot[0m/
+drwxr-xr-x  22 root root   860 Dec 17 00:11 [01;34mrun[0m/
+drwxr-xr-x   2 root root  4096 Dec  9 21:25 [01;34msbin[0m/
+drwxr-xr-x   2 root root  4096 Mar  6  2012 [01;34mselinux[0m/
+drwxr-xr-x   2 root root  4096 Aug 21 01:56 [01;34msrv[0m/
+dr-xr-xr-x  13 root root     0 Dec  9 21:35 [01;34msys[0m/
+drwxrwxrwt  17 root root  4096 Dec 17 00:04 [30;42mtmp[0m/
+drwxr-xr-x  10 root root  4096 Aug 21 01:56 [01;34musr[0m/
+drwxr-xr-x  14 root root  4096 Dec  9 21:35 [01;34mvar[0m/
+lrwxrwxrwx   1 root root    29 Nov  5 04:48 [01;36mvmlinuz[0m -> boot/vmlinuz-3.8.0-29-generic
+coral@coral:/$ cd /[Ktmp/
+coral@coral:/tmp$ ll
+total 72
+drwxrwxrwt 17 root    root    4096 Dec 17 00:04 [0m[30;42m.[0m/
+drwxr-xr-x 24 root    root    4096 Nov  5 04:48 [01;34m..[0m/
+drwxrwxrwt  2 lightdm lightdm 4096 Dec  9 21:35 [30;42mat-spi2[0m/
+drwxrwxrwt  2 root    root    4096 Dec  9 21:35 [30;42m.ICE-unix[0m/
+drwx------  2 coral   coral   4096 Dec  9 21:35 [01;34mkeyring-RhR3th[0m/
+drwx------  2 lightdm lightdm 4096 Dec  9 21:36 [01;34mpulse-PKdhtXMmr18n[0m/
+drwx------  2 coral   coral   4096 Dec  9 21:36 [01;34mpulse-qjbWP7Mvaczl[0m/
+drwxrwxr-x  2 coral   coral   4096 Dec 17 00:11 [01;34mrecycled[0m/
+drwx------  2 coral   coral   4096 Dec 17 00:04 [01;34mssh-gBgDh32367[0m/
+drwx------  2 coral   coral   4096 Dec  9 21:35 [01;34mssh-NTxwwzRd2156[0m/
+drwx------  2 coral   coral   4096 Dec 15 18:10 [01;34mssh-pHUBl27458[0m/
+drwx------  2 coral   coral   4096 Dec 16 00:16 [01;34mtmp1_27VW[0m/
+drwx------  3 coral   coral   4096 Dec 16 00:16 [01;34mtmp1W8Q4J[0m/
+-rw-rw-r--  1 lightdm lightdm    0 Dec  9 21:35 unity_support_test.0
+drwx------  2 coral   coral   4096 Dec  9 21:36 [01;34mvmware-coral[0m/
+drwxrwxrwt  3 coral   coral   4096 Dec  9 21:36 [30;42mVMwareDnD[0m/
+drwx------  2 root    root    4096 Dec  9 21:35 [01;34mvmware-root[0m/
+-r--r--r--  1 root    root      11 Dec  9 21:35 .X0-lock
+drwxrwxrwt  2 root    root    4096 Dec  9 21:35 [30;42m.X11-unix[0m/
+coral@coral:/tmp$ cat unity_support_test.0 
+coral@coral:/tmp$ ll
+total 72
+drwxrwxrwt 17 root    root    4096 Dec 17 00:04 [0m[30;42m.[0m/
+drwxr-xr-x 24 root    root    4096 Nov  5 04:48 [01;34m..[0m/
+drwxrwxrwt  2 lightdm lightdm 4096 Dec  9 21:35 [30;42mat-spi2[0m/
+drwxrwxrwt  2 root    root    4096 Dec  9 21:35 [30;42m.ICE-unix[0m/
+drwx------  2 coral   coral   4096 Dec  9 21:35 [01;34mkeyring-RhR3th[0m/
+drwx------  2 lightdm lightdm 4096 Dec  9 21:36 [01;34mpulse-PKdhtXMmr18n[0m/
+drwx------  2 coral   coral   4096 Dec  9 21:36 [01;34mpulse-qjbWP7Mvaczl[0m/
+drwxrwxr-x  2 coral   coral   4096 Dec 17 00:11 [01;34mrecycled[0m/
+drwx------  2 coral   coral   4096 Dec 17 00:04 [01;34mssh-gBgDh32367[0m/
+drwx------  2 coral   coral   4096 Dec  9 21:35 [01;34mssh-NTxwwzRd2156[0m/
+drwx------  2 coral   coral   4096 Dec 15 18:10 [01;34mssh-pHUBl27458[0m/
+drwx------  2 coral   coral   4096 Dec 16 00:16 [01;34mtmp1_27VW[0m/
+drwx------  3 coral   coral   4096 Dec 16 00:16 [01;34mtmp1W8Q4J[0m/
+-rw-rw-r--  1 lightdm lightdm    0 Dec  9 21:35 unity_support_test.0
+drwx------  2 coral   coral   4096 Dec  9 21:36 [01;34mvmware-coral[0m/
+drwxrwxrwt  3 coral   coral   4096 Dec  9 21:36 [30;42mVMwareDnD[0m/
+drwx------  2 root    root    4096 Dec  9 21:35 [01;34mvmware-root[0m/
+-r--r--r--  1 root    root      11 Dec  9 21:35 .X0-lock
+drwxrwxrwt  2 root    root    4096 Dec  9 21:35 [30;42m.X11-unix[0m/
+coral@coral:/tmp$ rm -f unity_support_test.0 
+rm: cannot remove `unity_support_test.0': Operation not permitted
+coral@coral:/tmp$ ll
+total 72
+drwxrwxrwt 17 root    root    4096 Dec 17 00:04 [0m[30;42m.[0m/
+drwxr-xr-x 24 root    root    4096 Nov  5 04:48 [01;34m..[0m/
+drwxrwxrwt  2 lightdm lightdm 4096 Dec  9 21:35 [30;42mat-spi2[0m/
+drwxrwxrwt  2 root    root    4096 Dec  9 21:35 [30;42m.ICE-unix[0m/
+drwx------  2 coral   coral   4096 Dec  9 21:35 [01;34mkeyring-RhR3th[0m/
+drwx------  2 lightdm lightdm 4096 Dec  9 21:36 [01;34mpulse-PKdhtXMmr18n[0m/
+drwx------  2 coral   coral   4096 Dec  9 21:36 [01;34mpulse-qjbWP7Mvaczl[0m/
+drwxrwxr-x  2 coral   coral   4096 Dec 17 00:11 [01;34mrecycled[0m/
+drwx------  2 coral   coral   4096 Dec 17 00:04 [01;34mssh-gBgDh32367[0m/
+drwx------  2 coral   coral   4096 Dec  9 21:35 [01;34mssh-NTxwwzRd2156[0m/
+drwx------  2 coral   coral   4096 Dec 15 18:10 [01;34mssh-pHUBl27458[0m/
+drwx------  2 coral   coral   4096 Dec 16 00:16 [01;34mtmp1_27VW[0m/
+drwx------  3 coral   coral   4096 Dec 16 00:16 [01;34mtmp1W8Q4J[0m/
+-rw-rw-r--  1 lightdm lightdm    0 Dec  9 21:35 unity_support_test.0
+drwx------  2 coral   coral   4096 Dec  9 21:36 [01;34mvmware-coral[0m/
+drwxrwxrwt  3 coral   coral   4096 Dec  9 21:36 [30;42mVMwareDnD[0m/
+drwx------  2 root    root    4096 Dec  9 21:35 [01;34mvmware-root[0m/
+-r--r--r--  1 root    root      11 Dec  9 21:35 .X0-lock
+drwxrwxrwt  2 root    root    4096 Dec  9 21:35 [30;42m.X11-unix[0m/
+coral@coral:/tmp$ ll VMwareDnD/
+total 12
+drwxrwxrwt  3 coral coral 4096 Dec  9 21:36 [0m[30;42m.[0m/
+drwxrwxrwt 17 root  root  4096 Dec 17 00:04 [30;42m..[0m/
+drwxr-xr-x  2 coral coral 4096 Dec  9 21:36 [01;34maed8edbc[0m/
+coral@coral:/tmp$ ll
+total 72
+drwxrwxrwt 17 root    root    4096 Dec 17 00:04 [0m[30;42m.[0m/
+drwxr-xr-x 24 root    root    4096 Nov  5 04:48 [01;34m..[0m/
+drwxrwxrwt  2 lightdm lightdm 4096 Dec  9 21:35 [30;42mat-spi2[0m/
+drwxrwxrwt  2 root    root    4096 Dec  9 21:35 [30;42m.ICE-unix[0m/
+drwx------  2 coral   coral   4096 Dec  9 21:35 [01;34mkeyring-RhR3th[0m/
+drwx------  2 lightdm lightdm 4096 Dec  9 21:36 [01;34mpulse-PKdhtXMmr18n[0m/
+drwx------  2 coral   coral   4096 Dec  9 21:36 [01;34mpulse-qjbWP7Mvaczl[0m/
+drwxrwxr-x  2 coral   coral   4096 Dec 17 00:11 [01;34mrecycled[0m/
+drwx------  2 coral   coral   4096 Dec 17 00:04 [01;34mssh-gBgDh32367[0m/
+drwx------  2 coral   coral   4096 Dec  9 21:35 [01;34mssh-NTxwwzRd2156[0m/
+drwx------  2 coral   coral   4096 Dec 15 18:10 [01;34mssh-pHUBl27458[0m/
+drwx------  2 coral   coral   4096 Dec 16 00:16 [01;34mtmp1_27VW[0m/
+drwx------  3 coral   coral   4096 Dec 16 00:16 [01;34mtmp1W8Q4J[0m/
+-rw-rw-r--  1 lightdm lightdm    0 Dec  9 21:35 unity_support_test.0
+drwx------  2 coral   coral   4096 Dec  9 21:36 [01;34mvmware-coral[0m/
+drwxrwxrwt  3 coral   coral   4096 Dec  9 21:36 [30;42mVMwareDnD[0m/
+drwx------  2 root    root    4096 Dec  9 21:35 [01;34mvmware-root[0m/
+-r--r--r--  1 root    root      11 Dec  9 21:35 .X0-lock
+drwxrwxrwt  2 root    root    4096 Dec  9 21:35 [30;42m.X11-unix[0m/
+coral@coral:/tmp$ pwd
+/tmp
+coral@coral:/tmp$ ll
+total 72
+drwxrwxrwt 17 root    root    4096 Dec 17 00:04 [0m[30;42m.[0m/
+drwxr-xr-x 24 root    root    4096 Nov  5 04:48 [01;34m..[0m/
+drwxrwxrwt  2 lightdm lightdm 4096 Dec  9 21:35 [30;42mat-spi2[0m/
+drwxrwxrwt  2 root    root    4096 Dec  9 21:35 [30;42m.ICE-unix[0m/
+drwx------  2 coral   coral   4096 Dec  9 21:35 [01;34mkeyring-RhR3th[0m/
+drwx------  2 lightdm lightdm 4096 Dec  9 21:36 [01;34mpulse-PKdhtXMmr18n[0m/
+drwx------  2 coral   coral   4096 Dec  9 21:36 [01;34mpulse-qjbWP7Mvaczl[0m/
+drwxrwxr-x  2 coral   coral   4096 Dec 17 00:11 [01;34mrecycled[0m/
+drwx------  2 coral   coral   4096 Dec 17 00:04 [01;34mssh-gBgDh32367[0m/
+drwx------  2 coral   coral   4096 Dec  9 21:35 [01;34mssh-NTxwwzRd2156[0m/
+drwx------  2 coral   coral   4096 Dec 15 18:10 [01;34mssh-pHUBl27458[0m/
+drwx------  2 coral   coral   4096 Dec 16 00:16 [01;34mtmp1_27VW[0m/
+drwx------  3 coral   coral   4096 Dec 16 00:16 [01;34mtmp1W8Q4J[0m/
+-rw-rw-r--  1 lightdm lightdm    0 Dec  9 21:35 unity_support_test.0
+drwx------  2 coral   coral   4096 Dec  9 21:36 [01;34mvmware-coral[0m/
+drwxrwxrwt  3 coral   coral   4096 Dec  9 21:36 [30;42mVMwareDnD[0m/
+drwx------  2 root    root    4096 Dec  9 21:35 [01;34mvmware-root[0m/
+-r--r--r--  1 root    root      11 Dec  9 21:35 .X0-lock
+drwxrwxrwt  2 root    root    4096 Dec  9 21:35 [30;42m.X11-unix[0m/
+coral@coral:/tmp$ cd tmp11[K_27VW/
+coral@coral:/tmp/tmp1_27VW$ ll
+total 8
+drwx------  2 coral coral 4096 Dec 16 00:16 [0m[01;34m.[0m/
+drwxrwxrwt 17 root  root  4096 Dec 17 00:04 [30;42m..[0m/
+coral@coral:/tmp/tmp1_27VW$ cd ..
+coral@coral:/tmp$ tree
+[01;34m.[00m
+├── [01;34mat-spi2[00m
+│   └── [01;35msocket-1581-1804289383[00m
+├── [01;34mkeyring-RhR3th[00m
+│   ├── [01;35mcontrol[00m
+│   ├── [01;35mgpg[00m
+│   ├── [01;35mpkcs11[00m
+│   └── [01;35mssh[00m
+├── [01;34mpulse-PKdhtXMmr18n[00m [error opening dir]
+├── [01;34mpulse-qjbWP7Mvaczl[00m
+│   ├── [01;35mnative[00m
+│   └── pid
+├── [01;34mrecycled[00m
+├── [01;34mssh-gBgDh32367[00m
+│   └── [01;35magent.32367[00m
+├── [01;34mssh-NTxwwzRd2156[00m
+│   └── [01;35magent.2156[00m
+├── [01;34mssh-pHUBl27458[00m
+│   └── [01;35magent.27458[00m
+├── [01;34mtmp1_27VW[00m
+├── [01;34mtmp1W8Q4J[00m
+│   └── [01;34mprofile_default[00m
+│       ├── [01;34mdb[00m
+│       ├── history.sqlite
+│       ├── [01;34mlog[00m
+│       ├── [01;34mpid[00m
+│       ├── [01;34msecurity[00m
+│       └── [01;34mstartup[00m
+│           └── README
+├── unity_support_test.0
+├── [01;34mvmware-coral[00m
+│   └── apploader-2248.log
+├── [01;34mVMwareDnD[00m
+│   └── [01;34maed8edbc[00m
+│       └── [01;32m米聊.txt[00m
+└── [01;34mvmware-root[00m [error opening dir]
+
+20 directories, 15 files
+coral@coral:/tmp$ du -sh .
+du: cannot read directory `./vmware-root': Permission denied
+du: cannot read directory `./pulse-PKdhtXMmr18n': Permission denied
+124K	.
+coral@coral:/tmp$ pwd
+/tmp
+coral@coral:/tmp$ sudo su -
+[sudo] password for coral: 
+root@coral:~# ll
+total 80
+drwx------  7 root  root   4096 Dec 17 00:04 [0m[01;34m.[0m/
+drwxr-xr-x 24 root  root   4096 Nov  5 04:48 [01;34m..[0m/
+-rw-------  1 root  root  16323 Dec 16 00:34 .bash_history
+-rw-r--r--  1 root  root   3107 Dec  5 00:46 .bashrc
+drwx------  3 root  root   4096 Nov 24 19:16 [01;34m.config[0m/
+-rw-r--r--  1 root  root     21 Dec 17 00:04 file
+drwx------  2 root  root   4096 Nov 17 23:21 [01;34m.gnupg[0m/
+drwxr-xr-x  3 root  root   4096 Nov 17 23:24 [01;34m.ipython[0m/
+-rw-r--r--  1 root  root    140 Apr 19  2012 .profile
+-rw-------  1 root  root     26 Nov 22 02:38 .pythonhistory
+drwx------  2 root  root   4096 Nov 21 20:11 [01;34m.ssh[0m/
+drwxr-xr-x 15 coral coral  4096 Dec  9 21:39 [01;34m.vim[0m/
+-rw-------  1 root  root  13742 Dec 16 00:34 .viminfo
+-rw-rw-r--  1 coral coral  2276 Dec  9 21:47 .vimrc
+root@coral:~# ex[K[Kok
+ok: command not found
+root@coral:~# echo aaaa
+aaaa
+root@coral:~# exit
+logout
+coral@coral:/tmp$ exit
+logout

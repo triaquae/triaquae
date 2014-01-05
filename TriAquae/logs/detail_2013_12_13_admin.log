@@ -1,0 +1,166 @@
+Welcome to Ubuntu 12.04.3 LTS (GNU/Linux 3.8.0-29-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+Last login: Fri Dec 13 23:08:13 2013 from localhost
+coral@coral:~$ who
+coral    tty7         2013-12-09 21:35
+coral    pts/1        2013-12-09 21:36 (:0)
+coral    pts/2        2013-12-09 21:54 (:0)
+coral    pts/3        2013-12-12 10:11 (192.168.0.179)
+coral    pts/5        2013-12-12 10:11 (192.168.0.179)
+coral    pts/6        2013-12-12 10:20 (192.168.0.179)
+coral    pts/7        2013-12-12 10:35 (192.168.0.179)
+coral    pts/8        2013-12-13 23:05 (192.168.0.179)
+coral    pts/9        2013-12-13 23:05 (192.168.0.179)
+coral    pts/10       2013-12-13 23:06 (192.168.0.179)
+coral    pts/11       2013-12-13 23:14 (localhost)
+coral@coral:~$ ls
+[0m[01;34mDesktop[0m    [01;34mDownloads[0m         [01;34mMusic[0m     [01;34mPublic[0m     [01;34mVideos[0m
+[01;34mDocuments[0m  examples.desktop  [01;34mPictures[0m  [01;34mTemplates[0m
+coral@coral:~$ pwd
+/home/coral
+coral@coral:~$ ll
+total 204
+drwxr-xr-x 26 coral coral  4096 Dec 11 13:52 [0m[01;34m.[0m/
+drwxr-xr-x  4 root  root   4096 Nov  4 21:24 [01;34m..[0m/
+drwx------  3 coral coral  4096 Dec  9 21:46 [01;34m.adobe[0m/
+-rw-------  1 coral coral  9728 Dec 13 23:08 .bash_history
+-rw-r--r--  1 coral coral   220 Nov  5 04:47 .bash_logout
+-rw-r--r--  1 coral coral  3486 Nov  5 04:47 .bashrc
+drwx------ 16 coral coral  4096 Nov 17 16:20 [01;34m.cache[0m/
+drwx------ 14 coral coral  4096 Dec  9 21:56 [01;34m.config[0m/
+drwx------  3 coral coral  4096 Nov  5 04:51 [01;34m.dbus[0m/
+drwxr-xr-x  2 coral coral  4096 Dec  9 21:37 [01;34mDesktop[0m/
+-rw-r--r--  1 coral coral    26 Dec  9 21:35 .dmrc
+drwxr-xr-x  2 coral coral  4096 Nov  5 04:51 [01;34mDocuments[0m/
+drwxr-xr-x  2 coral coral  4096 Nov 25 13:33 [01;34mDownloads[0m/
+-rw-r--r--  1 coral coral  8445 Nov  5 04:47 examples.desktop
+drwx------  4 coral coral  4096 Dec  9 21:36 [01;34m.gconf[0m/
+drwx------  4 coral coral  4096 Nov  5 04:51 [01;34m.gnome2[0m/
+drwx------  2 coral coral  4096 Nov  9 21:37 [01;34m.gnupg[0m/
+-rw-rw-r--  1 coral coral   137 Dec  9 21:36 .gtk-bookmarks
+dr-x------  2 coral coral     0 Dec  9 21:35 [01;34m.gvfs[0m/
+-rw-------  1 coral coral  2202 Dec  9 21:35 .ICEauthority
+drwxr-xr-x  3 coral coral  4096 Nov  5 04:51 [01;34m.local[0m/
+drwx------  3 coral coral  4096 Dec  9 21:46 [01;34m.macromedia[0m/
+drwx------  3 coral coral  4096 Nov  5 04:51 [01;34m.mission-control[0m/
+drwx------  4 coral coral  4096 Nov 17 16:19 [01;34m.mozilla[0m/
+drwxr-xr-x  2 coral coral  4096 Nov  5 04:51 [01;34mMusic[0m/
+-rw-------  1 coral coral    24 Nov 17 16:29 .mysql_history
+drwxr-xr-x  2 coral coral  4096 Nov  5 04:51 [01;34mPictures[0m/
+-rw-r--r--  1 coral coral   675 Nov  5 04:47 .profile
+drwxr-xr-x  2 coral coral  4096 Nov  5 04:51 [01;34mPublic[0m/
+drwx------  2 coral coral  4096 Dec  9 21:36 [01;34m.pulse[0m/
+-rw-------  1 coral coral   256 Nov  5 04:51 .pulse-cookie
+-rw-------  1 coral coral     2 Nov  9 21:38 .pythonhistory
+drwxr-xr-x  2 coral coral  4096 Nov  5 04:51 [01;34mTemplates[0m/
+drwx------  4 coral coral  4096 Nov  4 20:55 [01;34m.thumbnails[0m/
+drwxr-xr-x  2 coral coral  4096 Nov  5 04:51 [01;34mVideos[0m/
+drwxr-xr-x 15 coral coral  4096 Dec  9 21:39 [01;34m.vim[0m/
+-rw-------  1 coral coral 15103 Dec 11 13:52 .viminfo
+drwxrwxr-x  6 coral coral  4096 Nov 25 13:37 [01;34m.vim_old[0m/
+-rw-rw-r--  1 coral coral  2276 Dec  9 21:47 .vimrc
+-rw-------  1 coral coral    50 Dec  9 21:35 .Xauthority
+-rw-------  1 coral coral  5354 Dec 13 23:07 .xsession-errors
+-rw-------  1 coral coral 12197 Dec  9 21:34 .xsession-errors.old
+coral@coral:~$ 
+coral@coral:~$ 
+coral@coral:~$ 
+coral@coral:~$ ll
+total 204
+drwxr-xr-x 26 coral coral  4096 Dec 11 13:52 [0m[01;34m.[0m/
+drwxr-xr-x  4 root  root   4096 Nov  4 21:24 [01;34m..[0m/
+drwx------  3 coral coral  4096 Dec  9 21:46 [01;34m.adobe[0m/
+-rw-------  1 coral coral  9728 Dec 13 23:08 .bash_history
+-rw-r--r--  1 coral coral   220 Nov  5 04:47 .bash_logout
+-rw-r--r--  1 coral coral  3486 Nov  5 04:47 .bashrc
+drwx------ 16 coral coral  4096 Nov 17 16:20 [01;34m.cache[0m/
+drwx------ 14 coral coral  4096 Dec  9 21:56 [01;34m.config[0m/
+drwx------  3 coral coral  4096 Nov  5 04:51 [01;34m.dbus[0m/
+drwxr-xr-x  2 coral coral  4096 Dec  9 21:37 [01;34mDesktop[0m/
+-rw-r--r--  1 coral coral    26 Dec  9 21:35 .dmrc
+drwxr-xr-x  2 coral coral  4096 Nov  5 04:51 [01;34mDocuments[0m/
+drwxr-xr-x  2 coral coral  4096 Nov 25 13:33 [01;34mDownloads[0m/
+-rw-r--r--  1 coral coral  8445 Nov  5 04:47 examples.desktop
+drwx------  4 coral coral  4096 Dec  9 21:36 [01;34m.gconf[0m/
+drwx------  4 coral coral  4096 Nov  5 04:51 [01;34m.gnome2[0m/
+drwx------  2 coral coral  4096 Nov  9 21:37 [01;34m.gnupg[0m/
+-rw-rw-r--  1 coral coral   137 Dec  9 21:36 .gtk-bookmarks
+dr-x------  2 coral coral     0 Dec  9 21:35 [01;34m.gvfs[0m/
+-rw-------  1 coral coral  2202 Dec  9 21:35 .ICEauthority
+drwxr-xr-x  3 coral coral  4096 Nov  5 04:51 [01;34m.local[0m/
+drwx------  3 coral coral  4096 Dec  9 21:46 [01;34m.macromedia[0m/
+drwx------  3 coral coral  4096 Nov  5 04:51 [01;34m.mission-control[0m/
+drwx------  4 coral coral  4096 Nov 17 16:19 [01;34m.mozilla[0m/
+drwxr-xr-x  2 coral coral  4096 Nov  5 04:51 [01;34mMusic[0m/
+-rw-------  1 coral coral    24 Nov 17 16:29 .mysql_history
+drwxr-xr-x  2 coral coral  4096 Nov  5 04:51 [01;34mPictures[0m/
+-rw-r--r--  1 coral coral   675 Nov  5 04:47 .profile
+drwxr-xr-x  2 coral coral  4096 Nov  5 04:51 [01;34mPublic[0m/
+drwx------  2 coral coral  4096 Dec  9 21:36 [01;34m.pulse[0m/
+-rw-------  1 coral coral   256 Nov  5 04:51 .pulse-cookie
+-rw-------  1 coral coral     2 Nov  9 21:38 .pythonhistory
+drwxr-xr-x  2 coral coral  4096 Nov  5 04:51 [01;34mTemplates[0m/
+drwx------  4 coral coral  4096 Nov  4 20:55 [01;34m.thumbnails[0m/
+drwxr-xr-x  2 coral coral  4096 Nov  5 04:51 [01;34mVideos[0m/
+drwxr-xr-x 15 coral coral  4096 Dec  9 21:39 [01;34m.vim[0m/
+-rw-------  1 coral coral 15103 Dec 11 13:52 .viminfo
+drwxrwxr-x  6 coral coral  4096 Nov 25 13:37 [01;34m.vim_old[0m/
+-rw-rw-r--  1 coral coral  2276 Dec  9 21:47 .vimrc
+-rw-------  1 coral coral    50 Dec  9 21:35 .Xauthority
+-rw-------  1 coral coral  5354 Dec 13 23:07 .xsession-errors
+-rw-------  1 coral coral 12197 Dec  9 21:34 .xsession-errors.old
+coral@coral:~$ exit
+logout
+Last login: Sat Oct 26 04:26:27 2013 from 192.168.2.5
+[root@coral ~]# lsl[K
+anaconda-ks.cfg  [0m[01;31mepel-release-6-8.noarch.rpm[0m  install.log.syslog
+[01;34mbuild[0m            install.log                  test.py
+[m[root@coral ~]# pwd
+/root
+[root@coral ~]# exit
+logout
+Welcome to Ubuntu 12.04.3 LTS (GNU/Linux 3.8.0-29-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+Last login: Fri Dec 13 23:14:59 2013 from localhost
+coral@coral:~$ ls
+[0m[01;34mDesktop[0m    [01;34mDownloads[0m         [01;34mMusic[0m     [01;34mPublic[0m     [01;34mVideos[0m
+[01;34mDocuments[0m  examples.desktop  [01;34mPictures[0m  [01;34mTemplates[0m
+coral@coral:~$ ipaddr
+No command 'ipaddr' found, did you mean:
+ Command 'ipmaddr' from package 'net-tools' (main)
+ Command 'ibaddr' from package 'infiniband-diags' (universe)
+ipaddr: command not found
+coral@coral:~$ ip addr
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN 
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP qlen 1000
+    link/ether 00:0c:29:77:95:3c brd ff:ff:ff:ff:ff:ff
+    inet 192.168.2.5/16 brd 192.168.255.255 scope global eth0
+    inet6 fe80::20c:29ff:fe77:953c/64 scope link 
+       valid_lft forever preferred_lft forever
+3: eth1: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP qlen 1000
+    link/ether 00:0c:29:77:95:46 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.1.134/24 brd 192.168.1.255 scope global eth1
+    inet6 fe80::20c:29ff:fe77:9546/64 scope link 
+       valid_lft forever preferred_lft forever
+coral@coral:~$ 
+coral@coral:~$ exit
+logout
+Last login: Sat Oct 26 09:44:37 2013 from 192.168.2.5
+[root@coral ~]# 
+[root@coral ~]# ls
+anaconda-ks.cfg  [0m[01;31mepel-release-6-8.noarch.rpm[0m  install.log.syslog
+[01;34mbuild[0m            install.log                  test.py
+[m[root@coral ~]# pwd
+/root
+[root@coral ~]# date
+Sat Oct 26 09:51:09 CST 2013
+[root@coral ~]# exit
+logout

@@ -1,0 +1,178 @@
+#!/usr/bin/env python
+
+import os, sys, time, datetime, readline, socket
+from baoleidb import DBQuery
+
+# tab completion
+readline.parse_and_bind('tab: complete')
+# history file
+histfile = os.path.join(os.environ['HOME'], '.pythonhistory')
+
+username = sys.argv[1]
+
+head = '''\33[32;1m
+                                                        TriConn by TriAquae
+________________________________________________________________________________\033[0m
+'''
+
+tail = '''\33[32;1m
+                                                        TriConn by TriAquae
+________________________________________________________________________________\033[0m
+'''
+
+class TriConn:
+    def __init__(self):
+        # definition type(self.GroupList, self.GroupList, self.UserList)
+        self.GroupList = {}
+        self.IPList = {}
+        self.UserList = {}
+        self.summary = []
+
+
+    def GetDate(self):
+        global currdate
+        date = datetime.datetime.now()
+        currdate = time.strftime('%Y-%m-%d')
+
+    
+    def GetTime(self):
+        global currtime
+        time = datetime.datetime.now()
+        currtime = time.strftime('%H:%M:%S')
+
+
+    def Help(self):
+        print '''\033[32;1m
+            id            Select the ID of the item.
+            f   fast      fast login
+            s   search    search keyword.
+            b   backup    backup menu.
+            h   help      parameter description.
+            q   quit      exit TriConn.
+        \033[0m'''
+
+    def Connection(self, remote_ip, remote_user):
+        try:
+            socket.inet_aton(remote_ip)
+            valid_ip = 'ok'
+            conn = DBQuery().Summary(remote_ip, remote_user, username)
+            print conn
+            os.system(conn)
+            self.Main()
+        except:
+            valid_ip = 'no'
+            print '\033[31;1mPlease enter a valid IP\033[0m'
+
+
+    def Search(self, type, search):
+        # search keyword. type(self.GroupList, self.GroupList, self.UserList) search(user search input key)
+
+        key = 0
+        print head
+        print '\033[35;1m id  group\033[0m'
+        print
+        for k, v in type:
+            if search in v.lower():
+                print '\033[32;1m %s. %s\033[0m' % (k, v)
+                key = key + 1
+        else:
+            if key == 0:
+                print '\033[31;1m %s Not found\033[0m' % search
+        print tail 
+
+
+    def Display(self, title, type, dbquery):
+        # Display all info
+        id = 0
+        print head
+        for n in self.summary:
+            print "\033[35;1m%s\033[0m =>" % n,
+        print 
+        print 
+        print '\033[32;1m id  %s\033[0m' % title
+        print
+
+        data = map(str, dbquery)
+        num = DBQuery().ReturnIPNum()
+        print 'data : ', data
+        print 'num : ', num
+        for i in data:
+            #print i['localhost']
+            #print i['ip']
+            location = data.index(i)
+            number = num[location]
+            id = id + 1
+            if title == 'group':
+                print '\033[32;1m  %s. %s \033[36;1m[%s]\033[0m \033[0m' % (id , i, number)
+            elif title == 'ip':
+                pass
+                #print dbquery['ip'],';;;;;;;;;;;;;'
+                #print '\033[32;1m  %s. %s \033[36;1m[%s]\033[0m \033[0m' % (id , i['hostname'], number)
+            else:
+                print '\033[32;1m  %s. %s \033[0m' % (id , i)
+            type[id] = str(i)
+        print tail
+
+
+    def InputKey(self, type, next_page):
+        # judge user input type(self.GroupList, self.GroupList, self.UserList)
+
+        while True:
+            input = raw_input('Please choose items [ id | f | s | b | | h | q ]: ').strip()
+            print 'input : ', input
+            print 'type : ', map(str, type.keys())
+            print 'self.summary : ', self.summary
+            if input in map(str, type.keys()):   # gain user input id
+                element = type[int(input)]
+                self.summary.append(element)  # summary list
+                print 'element : ', element
+                next_page(element)               # skip next page
+            elif input == 'f':                   # search keyword.
+                ip_user = raw_input('Please input ip and user > ').strip().split()
+                remote_ip, remote_user = ip_user[0], ip_user[1]
+                self.Connection(remote_ip, remote_user)
+            elif input == 's':                   # search keyword.
+                search = raw_input('Please input the key words > ').strip()
+                self.Search(type.items(), search)
+            elif input == 'b':                   # backend menu
+                self.Main()
+            elif input == 'h':                   # display help
+                self.Help()
+            elif input == 'q':                   # quit TriConn
+                sys.exit(0)
+
+    def Summary(self, remote_user):
+        try:
+            print 'summmar : ',self.summary
+            remote_ip = self.summary[1]
+            remote_user = self.summary[2]
+            self.Connection(remote_ip, remote_user)
+        except:
+            print '\033[31;1m%s\033[0m Not logged in authority.' % remote_ip
+        
+
+    def ChooseRemoteUser(self, ip):
+        # Show the IP of users
+        self.Display('user', self.UserList, DBQuery().DisRemotUser(ip))
+        self.InputKey(self.UserList, self.Summary)
+
+
+    def ChooseRemoteIP(self, group):
+        # The IP under the display group.
+        self.Display('ip', self.IPList, DBQuery().DisIP(group))
+        self.InputKey(self.IPList, self.ChooseRemoteUser)
+
+
+    def Main(self):
+        # Display all groups.
+        self.summary = []
+        self.Display('group', self.GroupList, DBQuery().DisGroup())   # Query the database, display menu
+        self.InputKey(self.GroupList, self.ChooseRemoteIP)            # Determine the user to enter the keywords, (self.GroupList is type | self.ChooseRemoteIP is next page function) 
+
+
+    
+if __name__ == '__main__':
+    try:
+        TriConn().Main()
+    except KeyboardInterrupt:
+        print '\n\033[31;1mTriAquae TriConn Exit\033[0m'

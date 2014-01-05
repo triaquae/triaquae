@@ -56,6 +56,7 @@ def posix_shell(chan,django_loginuser,hostname):
         #triaquae_path = '/usr/local/src/triWeb_frontend'
         triaquae_path = tri_config.Working_dir
         f = open('%s/TriAquae/logs/audit_%s_%s.log' % (triaquae_path,day_time,django_loginuser),'a')
+        d = open('%s/TriAquae/logs/detail_%s_%s.log' % (triaquae_path,day_time,django_loginuser),'a')
         while True:
 	    date =time.strftime('%Y_%m_%d %H:%M:%S')
             r, w, e = select.select([chan, sys.stdin], [], [])
@@ -71,8 +72,9 @@ def posix_shell(chan,django_loginuser,hostname):
                     pass
                 #print x,'-------recv\n'
 
-                #f.write("%s"%x)
-                #f.flush()
+                d.write("%s"%x)
+                d.flush()
+
             if sys.stdin in r:
                 x = sys.stdin.read(1)
                 if len(x) == 0:
@@ -82,12 +84,14 @@ def posix_shell(chan,django_loginuser,hostname):
 
             if x == '\r':
                 cmd = ''.join(record).split('\r')[-2]
-                #log = "%s\t%s\t%s *** %s\n" % (hostname,date,django_loginuser,cmd)
-                log = "%s | %s | %s | %s\n" % (hostname,date,django_loginuser,cmd)
-                f.write(log)
-                #f.write("%s\n" % str(cmd))
-                f.flush()
+                if len(cmd) != 0:
+                     #log = "%s\t%s\t%s *** %s\n" % (hostname,date,django_loginuser,cmd)
+                     log = "%s | %s | %s | %s\n" % (hostname,date,django_loginuser,cmd)
+                     f.write(log)
+                     #f.write("%s\n" % str(cmd))
+                     f.flush()
         f.close()
+        d.close()
 
     finally:
         termios.tcsetattr(sys.stdin, termios.TCSADRAIN, oldtty)

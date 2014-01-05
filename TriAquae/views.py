@@ -7,8 +7,8 @@ from django.http import Http404
 from django.contrib import auth
 from django.contrib.auth.decorators import login_required
 from django.core.exceptions import ObjectDoesNotExist
-from models import Devinfo, Check_Devinfo, ServerStatus, DevForm
-from models import Group,IP,RemoteUser,OpsLog,OpsLogTemp,TriaquaeUser,AuthByIpAndRemoteUser,QuickLink
+#from models import Devinfo, Check_Devinfo, ServerStatus, DevForm
+#from models import Group,IP,RemoteUser,OpsLog,OpsLogTemp,TriaquaeUser,AuthByIpAndRemoteUser,QuickLink
 #from models import *
 
 from TriAquae.backend import MultiRunCounter

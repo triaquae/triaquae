@@ -1,0 +1,345 @@
+Welcome to Ubuntu 12.04.3 LTS (GNU/Linux 3.8.0-29-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+Last login: Sun Dec 29 15:05:21 2013 from 192.168.1.123
+
+coral@coral:~$ 
+coral@coral:~$ 
+coral@coral:~$ ll
+total 200
+drwxr-xr-x 26 coral coral  4096 Dec 29 13:10 [0m[01;34m.[0m/
+drwxr-xr-x  4 root  root   4096 Nov  4 21:24 [01;34m..[0m/
+drwx------  3 coral coral  4096 Dec  9 21:46 [01;34m.adobe[0m/
+-rw-------  1 coral coral 10605 Dec 29 13:11 .bash_history
+-rw-r--r--  1 coral coral   220 Nov  5 04:47 .bash_logout
+-rw-r--r--  1 coral coral  3486 Nov  5 04:47 .bashrc
+drwx------ 16 coral coral  4096 Nov 17 16:20 [01;34m.cache[0m/
+drwx------ 14 coral coral  4096 Dec  9 21:56 [01;34m.config[0m/
+drwx------  3 coral coral  4096 Nov  5 04:51 [01;34m.dbus[0m/
+drwxr-xr-x  2 coral coral  4096 Dec  9 21:37 [01;34mDesktop[0m/
+-rw-r--r--  1 coral coral    26 Dec  9 21:35 .dmrc
+drwxr-xr-x  2 coral coral  4096 Nov  5 04:51 [01;34mDocuments[0m/
+drwxr-xr-x  2 coral coral  4096 Nov 25 13:33 [01;34mDownloads[0m/
+-rw-r--r--  1 coral coral  8445 Nov  5 04:47 examples.desktop
+drwx------  4 coral coral  4096 Dec  9 21:36 [01;34m.gconf[0m/
+drwx------  4 coral coral  4096 Nov  5 04:51 [01;34m.gnome2[0m/
+drwx------  2 coral coral  4096 Nov  9 21:37 [01;34m.gnupg[0m/
+-rw-rw-r--  1 coral coral   137 Dec  9 21:36 .gtk-bookmarks
+dr-x------  2 coral coral     0 Dec  9 21:35 [01;34m.gvfs[0m/
+-rw-------  1 coral coral  2202 Dec  9 21:35 .ICEauthority
+drwxr-xr-x  3 coral coral  4096 Nov  5 04:51 [01;34m.local[0m/
+drwx------  3 coral coral  4096 Dec  9 21:46 [01;34m.macromedia[0m/
+drwx------  3 coral coral  4096 Nov  5 04:51 [01;34m.mission-control[0m/
+drwx------  4 coral coral  4096 Nov 17 16:19 [01;34m.mozilla[0m/
+drwxr-xr-x  2 coral coral  4096 Nov  5 04:51 [01;34mMusic[0m/
+-rw-------  1 coral coral    24 Nov 17 16:29 .mysql_history
+drwxr-xr-x  2 coral coral  4096 Nov  5 04:51 [01;34mPictures[0m/
+-rw-r--r--  1 coral coral   675 Nov  5 04:47 .profile
+drwxr-xr-x  2 coral coral  4096 Nov  5 04:51 [01;34mPublic[0m/
+drwx------  2 coral coral  4096 Dec  9 21:36 [01;34m.pulse[0m/
+-rw-------  1 coral coral   256 Nov  5 04:51 .pulse-cookie
+-rw-------  1 coral coral     2 Nov  9 21:38 .pythonhistory
+drwxr-xr-x  2 coral coral  4096 Nov  5 04:51 [01;34mTemplates[0m/
+drwx------  4 coral coral  4096 Nov  4 20:55 [01;34m.thumbnails[0m/
+drwxr-xr-x  2 coral coral  4096 Nov  5 04:51 [01;34mVideos[0m/
+drwxr-xr-x 15 coral coral  4096 Dec  9 21:39 [01;34m.vim[0m/
+-rw-------  1 coral coral  8785 Dec 29 13:10 .viminfo
+drwxrwxr-x  6 coral coral  4096 Nov 25 13:37 [01;34m.vim_old[0m/
+-rw-rw-r--  1 coral coral  2276 Dec  9 21:47 .vimrc
+-rw-------  1 coral coral    50 Dec  9 21:35 .Xauthority
+-rw-------  1 coral coral  7746 Dec 21 17:20 .xsession-errors
+-rw-------  1 coral coral 12197 Dec  9 21:34 .xsession-errors.old
+coral@coral:~$ vim /etc/hosts
+[m[0m[24;1H
+                                                                               --- Auto-Commands ---[0m
+                                                                               [23;80H [24;1HPress ENTER or type command to continue[?1h=[1;24r[m[m[0m[24;1H"/etc/hosts"                                                                   [24;14H[readonly] 9L, 220C[1;1H127.0.0.1       localhost                                                       [0m[2;1H127.0.1.1       coral                                                           [3;1H                                                                                [4;1H# The following lines are desirable for IPv6 capable hosts[0m                      [5;1H::1     ip6-localhost ip6-loopback                                              [6;1Hfe00::0 ip6-localnet                                                            [7;1Hff00::0 ip6-mcastprefix                                                         [8;1Hff02::1 ip6-allnodes                                                            [9;1Hff02::2 ip6-allrouters                                                          [10;1H~                                                                               [11;1H~                                                                               [12;1H~                                                                               [13;1H~                                                                               [14;1H~                                                                               [15;1H~                                                                               [16;1H~                                                                               [17;1H~                                                                               [18;1H~                                                                               [19;1H~                                                                               [20;1H~                                                                               [21;1H~                                                                               [22;1H~                                                                               [0m[24;63H1,1[11CAll[1;1H127.0.0.1       localhost                                                       [2;1H127.0.1.1       coral                                                           [0m[24;63H2[2;1H127.0.1.1       coral                                                           [3;1H                                                                                [0m[24;63H3,0-1[3;1H                                                                                [4;1H# The following lines are desirable for IPv6 capable hosts[0m                      [0m[24;63H4,1  [4;1H# The following lines are desirable for IPv6 capable hosts[0m                      [5;1H::1     ip6-localhost ip6-loopback                                              [0m[24;63H5[5;1H[23;1H                                                                                [24;1H                                [30C   [11C   [23;1H:q
+[?1l>[m[m[0m[23;1H[K[24;80H[K[24;1Hcoral@coral:~$ 
+coral@coral:~$ 
+coral@coral:~$ [H[Jcoral@coral:~$ 
+coral@coral:~$ 
+coral@coral:~$ 
+coral@coral:~$ ll
+total 200
+drwxr-xr-x 26 coral coral  4096 Dec 29 18:06 [0m[01;34m.[0m/
+drwxr-xr-x  4 root  root   4096 Nov  4 21:24 [01;34m..[0m/
+drwx------  3 coral coral  4096 Dec  9 21:46 [01;34m.adobe[0m/
+-rw-------  1 coral coral 10605 Dec 29 13:11 .bash_history
+-rw-r--r--  1 coral coral   220 Nov  5 04:47 .bash_logout
+-rw-r--r--  1 coral coral  3486 Nov  5 04:47 .bashrc
+drwx------ 16 coral coral  4096 Nov 17 16:20 [01;34m.cache[0m/
+drwx------ 14 coral coral  4096 Dec  9 21:56 [01;34m.config[0m/
+drwx------  3 coral coral  4096 Nov  5 04:51 [01;34m.dbus[0m/
+drwxr-xr-x  2 coral coral  4096 Dec  9 21:37 [01;34mDesktop[0m/
+-rw-r--r--  1 coral coral    26 Dec  9 21:35 .dmrc
+drwxr-xr-x  2 coral coral  4096 Nov  5 04:51 [01;34mDocuments[0m/
+drwxr-xr-x  2 coral coral  4096 Nov 25 13:33 [01;34mDownloads[0m/
+-rw-r--r--  1 coral coral  8445 Nov  5 04:47 examples.desktop
+drwx------  4 coral coral  4096 Dec  9 21:36 [01;34m.gconf[0m/
+drwx------  4 coral coral  4096 Nov  5 04:51 [01;34m.gnome2[0m/
+drwx------  2 coral coral  4096 Nov  9 21:37 [01;34m.gnupg[0m/
+-rw-rw-r--  1 coral coral   137 Dec  9 21:36 .gtk-bookmarks
+dr-x------  2 coral coral     0 Dec  9 21:35 [01;34m.gvfs[0m/
+-rw-------  1 coral coral  2202 Dec  9 21:35 .ICEauthority
+drwxr-xr-x  3 coral coral  4096 Nov  5 04:51 [01;34m.local[0m/
+drwx------  3 coral coral  4096 Dec  9 21:46 [01;34m.macromedia[0m/
+drwx------  3 coral coral  4096 Nov  5 04:51 [01;34m.mission-control[0m/
+drwx------  4 coral coral  4096 Nov 17 16:19 [01;34m.mozilla[0m/
+drwxr-xr-x  2 coral coral  4096 Nov  5 04:51 [01;34mMusic[0m/
+-rw-------  1 coral coral    24 Nov 17 16:29 .mysql_history
+drwxr-xr-x  2 coral coral  4096 Nov  5 04:51 [01;34mPictures[0m/
+-rw-r--r--  1 coral coral   675 Nov  5 04:47 .profile
+drwxr-xr-x  2 coral coral  4096 Nov  5 04:51 [01;34mPublic[0m/
+drwx------  2 coral coral  4096 Dec  9 21:36 [01;34m.pulse[0m/
+-rw-------  1 coral coral   256 Nov  5 04:51 .pulse-cookie
+-rw-------  1 coral coral     2 Nov  9 21:38 .pythonhistory
+drwxr-xr-x  2 coral coral  4096 Nov  5 04:51 [01;34mTemplates[0m/
+drwx------  4 coral coral  4096 Nov  4 20:55 [01;34m.thumbnails[0m/
+drwxr-xr-x  2 coral coral  4096 Nov  5 04:51 [01;34mVideos[0m/
+drwxr-xr-x 15 coral coral  4096 Dec  9 21:39 [01;34m.vim[0m/
+-rw-------  1 coral coral 10355 Dec 29 18:06 .viminfo
+drwxrwxr-x  6 coral coral  4096 Nov 25 13:37 [01;34m.vim_old[0m/
+-rw-rw-r--  1 coral coral  2276 Dec  9 21:47 .vimrc
+-rw-------  1 coral coral    50 Dec  9 21:35 .Xauthority
+-rw-------  1 coral coral  7746 Dec 21 17:20 .xsession-errors
+-rw-------  1 coral coral 12197 Dec  9 21:34 .xsession-errors.old
+coral@coral:~$ clean
+No command 'clean' found, did you mean:
+ Command 'uclean' from package 'svn-buildpackage' (universe)
+ Command 'clear' from package 'ncurses-bin' (main)
+clean: command not found
+coral@coral:~$ exit
+logout
+Welcome to Ubuntu 12.04.3 LTS (GNU/Linux 3.8.0-29-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+Last login: Sun Dec 29 23:54:51 2013 from 192.168.0.179
+coral@coral:~$ 
+coral@coral:~$ 
+coral@coral:~$ ll
+total 200
+drwxr-xr-x 26 coral coral  4096 Dec 29 18:06 [0m[01;34m.[0m/
+drwxr-xr-x  4 root  root   4096 Nov  4 21:24 [01;34m..[0m/
+drwx------  3 coral coral  4096 Dec  9 21:46 [01;34m.adobe[0m/
+-rw-------  1 coral coral 10731 Dec 29 18:44 .bash_history
+-rw-r--r--  1 coral coral   220 Nov  5 04:47 .bash_logout
+-rw-r--r--  1 coral coral  3486 Nov  5 04:47 .bashrc
+drwx------ 16 coral coral  4096 Nov 17 16:20 [01;34m.cache[0m/
+drwx------ 14 coral coral  4096 Dec  9 21:56 [01;34m.config[0m/
+drwx------  3 coral coral  4096 Nov  5 04:51 [01;34m.dbus[0m/
+drwxr-xr-x  2 coral coral  4096 Dec  9 21:37 [01;34mDesktop[0m/
+-rw-r--r--  1 coral coral    26 Dec  9 21:35 .dmrc
+drwxr-xr-x  2 coral coral  4096 Nov  5 04:51 [01;34mDocuments[0m/
+drwxr-xr-x  2 coral coral  4096 Nov 25 13:33 [01;34mDownloads[0m/
+-rw-r--r--  1 coral coral  8445 Nov  5 04:47 examples.desktop
+drwx------  4 coral coral  4096 Dec  9 21:36 [01;34m.gconf[0m/
+drwx------  4 coral coral  4096 Nov  5 04:51 [01;34m.gnome2[0m/
+drwx------  2 coral coral  4096 Nov  9 21:37 [01;34m.gnupg[0m/
+-rw-rw-r--  1 coral coral   137 Dec  9 21:36 .gtk-bookmarks
+dr-x------  2 coral coral     0 Dec  9 21:35 [01;34m.gvfs[0m/
+-rw-------  1 coral coral  2202 Dec  9 21:35 .ICEauthority
+drwxr-xr-x  3 coral coral  4096 Nov  5 04:51 [01;34m.local[0m/
+drwx------  3 coral coral  4096 Dec  9 21:46 [01;34m.macromedia[0m/
+drwx------  3 coral coral  4096 Nov  5 04:51 [01;34m.mission-control[0m/
+drwx------  4 coral coral  4096 Nov 17 16:19 [01;34m.mozilla[0m/
+drwxr-xr-x  2 coral coral  4096 Nov  5 04:51 [01;34mMusic[0m/
+-rw-------  1 coral coral    24 Nov 17 16:29 .mysql_history
+drwxr-xr-x  2 coral coral  4096 Nov  5 04:51 [01;34mPictures[0m/
+-rw-r--r--  1 coral coral   675 Nov  5 04:47 .profile
+drwxr-xr-x  2 coral coral  4096 Nov  5 04:51 [01;34mPublic[0m/
+drwx------  2 coral coral  4096 Dec  9 21:36 [01;34m.pulse[0m/
+-rw-------  1 coral coral   256 Nov  5 04:51 .pulse-cookie
+-rw-------  1 coral coral     2 Nov  9 21:38 .pythonhistory
+drwxr-xr-x  2 coral coral  4096 Nov  5 04:51 [01;34mTemplates[0m/
+drwx------  4 coral coral  4096 Nov  4 20:55 [01;34m.thumbnails[0m/
+drwxr-xr-x  2 coral coral  4096 Nov  5 04:51 [01;34mVideos[0m/
+drwxr-xr-x 15 coral coral  4096 Dec  9 21:39 [01;34m.vim[0m/
+-rw-------  1 coral coral 10355 Dec 29 18:06 .viminfo
+drwxrwxr-x  6 coral coral  4096 Nov 25 13:37 [01;34m.vim_old[0m/
+-rw-rw-r--  1 coral coral  2276 Dec  9 21:47 .vimrc
+-rw-------  1 coral coral    50 Dec  9 21:35 .Xauthority
+-rw-------  1 coral coral  7746 Dec 21 17:20 .xsession-errors
+-rw-------  1 coral coral 12197 Dec  9 21:34 .xsession-errors.old
+coral@coral:~$ vim .viminfo 
+[m[0m[24;1H
+                                                                               --- Auto-Commands ---[0m
+                                                                               [23;80H [24;1HPress ENTER or type command to continue[?1h=[1;24r[m[m[0m[24;1H".viminfo"                                                                     [24;12H691L, 10355C[23;1H                                                                                [24;1H                       [23;1H:q
+[?1l>[m[m[0m[23;1H[K[24;80H[K[24;1Hcoral@coral:~$ ll
+total 200
+drwxr-xr-x 26 coral coral  4096 Dec 29 23:55 [0m[01;34m.[0m/
+drwxr-xr-x  4 root  root   4096 Nov  4 21:24 [01;34m..[0m/
+drwx------  3 coral coral  4096 Dec  9 21:46 [01;34m.adobe[0m/
+-rw-------  1 coral coral 10731 Dec 29 18:44 .bash_history
+-rw-r--r--  1 coral coral   220 Nov  5 04:47 .bash_logout
+-rw-r--r--  1 coral coral  3486 Nov  5 04:47 .bashrc
+drwx------ 16 coral coral  4096 Nov 17 16:20 [01;34m.cache[0m/
+drwx------ 14 coral coral  4096 Dec  9 21:56 [01;34m.config[0m/
+drwx------  3 coral coral  4096 Nov  5 04:51 [01;34m.dbus[0m/
+drwxr-xr-x  2 coral coral  4096 Dec  9 21:37 [01;34mDesktop[0m/
+-rw-r--r--  1 coral coral    26 Dec  9 21:35 .dmrc
+drwxr-xr-x  2 coral coral  4096 Nov  5 04:51 [01;34mDocuments[0m/
+drwxr-xr-x  2 coral coral  4096 Nov 25 13:33 [01;34mDownloads[0m/
+-rw-r--r--  1 coral coral  8445 Nov  5 04:47 examples.desktop
+drwx------  4 coral coral  4096 Dec  9 21:36 [01;34m.gconf[0m/
+drwx------  4 coral coral  4096 Nov  5 04:51 [01;34m.gnome2[0m/
+drwx------  2 coral coral  4096 Nov  9 21:37 [01;34m.gnupg[0m/
+-rw-rw-r--  1 coral coral   137 Dec  9 21:36 .gtk-bookmarks
+dr-x------  2 coral coral     0 Dec  9 21:35 [01;34m.gvfs[0m/
+-rw-------  1 coral coral  2202 Dec  9 21:35 .ICEauthority
+drwxr-xr-x  3 coral coral  4096 Nov  5 04:51 [01;34m.local[0m/
+drwx------  3 coral coral  4096 Dec  9 21:46 [01;34m.macromedia[0m/
+drwx------  3 coral coral  4096 Nov  5 04:51 [01;34m.mission-control[0m/
+drwx------  4 coral coral  4096 Nov 17 16:19 [01;34m.mozilla[0m/
+drwxr-xr-x  2 coral coral  4096 Nov  5 04:51 [01;34mMusic[0m/
+-rw-------  1 coral coral    24 Nov 17 16:29 .mysql_history
+drwxr-xr-x  2 coral coral  4096 Nov  5 04:51 [01;34mPictures[0m/
+-rw-r--r--  1 coral coral   675 Nov  5 04:47 .profile
+drwxr-xr-x  2 coral coral  4096 Nov  5 04:51 [01;34mPublic[0m/
+drwx------  2 coral coral  4096 Dec  9 21:36 [01;34m.pulse[0m/
+-rw-------  1 coral coral   256 Nov  5 04:51 .pulse-cookie
+-rw-------  1 coral coral     2 Nov  9 21:38 .pythonhistory
+drwxr-xr-x  2 coral coral  4096 Nov  5 04:51 [01;34mTemplates[0m/
+drwx------  4 coral coral  4096 Nov  4 20:55 [01;34m.thumbnails[0m/
+drwxr-xr-x  2 coral coral  4096 Nov  5 04:51 [01;34mVideos[0m/
+drwxr-xr-x 15 coral coral  4096 Dec  9 21:39 [01;34m.vim[0m/
+-rw-------  1 coral coral 11467 Dec 29 23:55 .viminfo
+drwxrwxr-x  6 coral coral  4096 Nov 25 13:37 [01;34m.vim_old[0m/
+-rw-rw-r--  1 coral coral  2276 Dec  9 21:47 .vimrc
+-rw-------  1 coral coral    50 Dec  9 21:35 .Xauthority
+-rw-------  1 coral coral  7746 Dec 21 17:20 .xsession-errors
+-rw-------  1 coral coral 12197 Dec  9 21:34 .xsession-errors.old
+coral@coral:~$ [H[Jcoral@coral:~$ 
+coral@coral:~$ 
+coral@coral:~$ 
+coral@coral:~$ 
+coral@coral:~$ 
+coral@coral:~$ 
+coral@coral:~$ 
+coral@coral:~$ 
+coral@coral:~$ 
+coral@coral:~$ 
+coral@coral:~$ 
+coral@coral:~$ 
+coral@coral:~$ 
+coral@coral:~$ 
+coral@coral:~$ 
+coral@coral:~$ 
+coral@coral:~$ 
+coral@coral:~$ 
+coral@coral:~$ 
+coral@coral:~$ 
+coral@coral:~$ 
+coral@coral:~$ 
+coral@coral:~$ 
+coral@coral:~$ 
+coral@coral:~$ 
+coral@coral:~$ 
+coral@coral:~$ 
+coral@coral:~$ 
+coral@coral:~$ 
+coral@coral:~$ 
+coral@coral:~$ 
+coral@coral:~$ 
+coral@coral:~$ 
+coral@coral:~$ 
+coral@coral:~$ 
+coral@coral:~$ 
+coral@coral:~$ 
+coral@coral:~$ 
+coral@coral:~$ 
+coral@coral:~$ 
+coral@coral:~$ 
+coral@coral:~$ 
+coral@coral:~$ clear
+[H[Jcoral@coral:~$ ^C
+coral@coral:~$ 
+coral@coral:~$ 
+coral@coral:~$ 
+coral@coral:~$ 
+coral@coral:~$ 
+coral@coral:~$ 
+coral@coral:~$ 
+coral@coral:~$ 
+coral@coral:~$ 
+coral@coral:~$ 
+coral@coral:~$ 
+coral@coral:~$ 
+coral@coral:~$ 
+coral@coral:~$ 
+coral@coral:~$ 
+coral@coral:~$ 
+coral@coral:~$ 
+coral@coral:~$ 
+coral@coral:~$ 
+coral@coral:~$ 
+coral@coral:~$ 
+coral@coral:~$ 
+coral@coral:~$ 
+coral@coral:~$ 
+coral@coral:~$ 
+coral@coral:~$ 
+coral@coral:~$ 
+coral@coral:~$ 
+coral@coral:~$ 
+coral@coral:~$ 
+coral@coral:~$ 
+coral@coral:~$ 
+coral@coral:~$ 
+coral@coral:~$ 
+coral@coral:~$ 
+coral@coral:~$ 
+coral@coral:~$ 
+coral@coral:~$ 
+coral@coral:~$ 
+coral@coral:~$ 
+coral@coral:~$ ll
+total 200
+drwxr-xr-x 26 coral coral  4096 Dec 29 23:55 [0m[01;34m.[0m/
+drwxr-xr-x  4 root  root   4096 Nov  4 21:24 [01;34m..[0m/
+drwx------  3 coral coral  4096 Dec  9 21:46 [01;34m.adobe[0m/
+-rw-------  1 coral coral 10731 Dec 29 18:44 .bash_history
+-rw-r--r--  1 coral coral   220 Nov  5 04:47 .bash_logout
+-rw-r--r--  1 coral coral  3486 Nov  5 04:47 .bashrc
+drwx------ 16 coral coral  4096 Nov 17 16:20 [01;34m.cache[0m/
+drwx------ 14 coral coral  4096 Dec  9 21:56 [01;34m.config[0m/
+drwx------  3 coral coral  4096 Nov  5 04:51 [01;34m.dbus[0m/
+drwxr-xr-x  2 coral coral  4096 Dec  9 21:37 [01;34mDesktop[0m/
+-rw-r--r--  1 coral coral    26 Dec  9 21:35 .dmrc
+drwxr-xr-x  2 coral coral  4096 Nov  5 04:51 [01;34mDocuments[0m/
+drwxr-xr-x  2 coral coral  4096 Nov 25 13:33 [01;34mDownloads[0m/
+-rw-r--r--  1 coral coral  8445 Nov  5 04:47 examples.desktop
+drwx------  4 coral coral  4096 Dec  9 21:36 [01;34m.gconf[0m/
+drwx------  4 coral coral  4096 Nov  5 04:51 [01;34m.gnome2[0m/
+drwx------  2 coral coral  4096 Nov  9 21:37 [01;34m.gnupg[0m/
+-rw-rw-r--  1 coral coral   137 Dec  9 21:36 .gtk-bookmarks
+dr-x------  2 coral coral     0 Dec  9 21:35 [01;34m.gvfs[0m/
+-rw-------  1 coral coral  2202 Dec  9 21:35 .ICEauthority
+drwxr-xr-x  3 coral coral  4096 Nov  5 04:51 [01;34m.local[0m/
+drwx------  3 coral coral  4096 Dec  9 21:46 [01;34m.macromedia[0m/
+drwx------  3 coral coral  4096 Nov  5 04:51 [01;34m.mission-control[0m/
+drwx------  4 coral coral  4096 Nov 17 16:19 [01;34m.mozilla[0m/
+drwxr-xr-x  2 coral coral  4096 Nov  5 04:51 [01;34mMusic[0m/
+-rw-------  1 coral coral    24 Nov 17 16:29 .mysql_history
+drwxr-xr-x  2 coral coral  4096 Nov  5 04:51 [01;34mPictures[0m/
+-rw-r--r--  1 coral coral   675 Nov  5 04:47 .profile
+drwxr-xr-x  2 coral coral  4096 Nov  5 04:51 [01;34mPublic[0m/
+drwx------  2 coral coral  4096 Dec  9 21:36 [01;34m.pulse[0m/
+-rw-------  1 coral coral   256 Nov  5 04:51 .pulse-cookie
+-rw-------  1 coral coral     2 Nov  9 21:38 .pythonhistory
+drwxr-xr-x  2 coral coral  4096 Nov  5 04:51 [01;34mTemplates[0m/
+drwx------  4 coral coral  4096 Nov  4 20:55 [01;34m.thumbnails[0m/
+drwxr-xr-x  2 coral coral  4096 Nov  5 04:51 [01;34mVideos[0m/
+drwxr-xr-x 15 coral coral  4096 Dec  9 21:39 [01;34m.vim[0m/
+-rw-------  1 coral coral 11467 Dec 29 23:55 .viminfo
+drwxrwxr-x  6 coral coral  4096 Nov 25 13:37 [01;34m.vim_old[0m/
+-rw-rw-r--  1 coral coral  2276 Dec  9 21:47 .vimrc
+-rw-------  1 coral coral    50 Dec  9 21:35 .Xauthority
+-rw-------  1 coral coral  7746 Dec 21 17:20 .xsession-errors
+-rw-------  1 coral coral 12197 Dec  9 21:34 .xsession-errors.old
+coral@coral:~$ vim /etc/hosts
+[m[0m[24;1H
+                                                                               --- Auto-Commands ---[0m
+                                                                               [23;80H [24;1HPress ENTER or type command to continue[?1h=[1;24r[m[m[0m[24;1H"/etc/hosts"                                                                   [24;14H[readonly] 9L, 220C[1;1H127.0.0.1       localhost                                                       [0m[2;1H127.0.1.1       coral                                                           [3;1H                                                                                [4;1H# The following lines are desirable for IPv6 capable hosts[0m                      [5;1H::1     ip6-localhost ip6-loopback                                              [6;1Hfe00::0 ip6-localnet                                                            [7;1Hff00::0 ip6-mcastprefix                                                         [8;1Hff02::1 ip6-allnodes                                                            [9;1Hff02::2 ip6-allrouters                                                          [10;1H~                                                                               [11;1H~                                                                               [12;1H~                                                                               [13;1H~                                                                               [14;1H~                                                                               [15;1H~                                                                               [16;1H~                                                                               [17;1H~                                                                               [18;1H~                                                                               [19;1H~                                                                               [20;1H~                                                                               [21;1H~                                                                               [22;1H~                                                                               [0m[24;63H1,1[11CAll[1;1H127.0.0.1       localhost                                                       [2;1H127.0.1.1       coral                                                           [0m[24;63H2[2;1H127.0.1.1       coral                                                           [3;1H                                                                                [0m[24;63H3,0-1[3;1H                                                                                [4;1H# The following lines are desirable for IPv6 capable hosts[0m                      [0m[24;63H4,1  [4;1H# The following lines are desirable for IPv6 capable hosts[0m                      [5;1H::1     ip6-localhost ip6-loopback                                              [0m[24;63H5[5;1H::1     ip6-localhost ip6-loopback                                              [6;1Hfe00::0 ip6-localnet                                                            [0m[24;63H6[6;1Hfe00::0 ip6-localnet                                                            [7;1Hff00::0 ip6-mcastprefix                                                         [0m[24;63H7[7;1Hff00::0 ip6-mcastprefix                                                         [8;1Hff02::1 ip6-allnodes                                                            [0m[24;63H8[8;1Hff02::1 ip6-allnodes                                                            [9;1Hff02::2 ip6-allrouters                                                          [0m[24;63H9[9;1H[1;1H127.0.0.1       localhost                                                       [0m[9;1Hff02::2 ip6-allrouters                                                          [24;63H1[1;1H127.0.0.1       localhost                                                       [2;1H127.0.1.1       coral                                                           [0m[24;63H2[2;1H[23;1H                                                                                [24;1H                                [30C   [11C   [23;1H:q
+[?1l>[m[m[0m[23;1H[K[24;80H[K[24;1Hcoral@coral:~$ exit
+logout

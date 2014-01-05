@@ -455,46 +455,107 @@ def baoleihost_remote(request):
 
 
 
-def Log(request):
-    return render_to_response("log_date.html")
+#def Log(request):
+#    return render_to_response("log_date.html")
+#
+#def LogView(request):
+#    date = request.GET['date']
+#    log_date = date.replace('-','_')
+#    log_file = "%s/TriAquae/logs/audit_%s_%s.log" % (tri_config.Working_dir,log_date,request.user)
+#    print log_file
+#    try:
+#        # f = open(log_file,'r')
+#        f = open('audit_2013_09_05_alex.log')
+#
+#        list = []
+#        dict = {}
+#        for line in f.readlines():
+#            line = line.split('|')
+#            new_line = {'Remote_Ip':line[0],'Date':line[1],'User':line[2],'Command':line[3]}
+#            list.append(new_line)
+#        
+#        res={'cols':['Remote_Ip','Date','User','Command'],'arr':list}
+#
+#        f.close()
+#        t = Template(
+#        '''
+#        \n<h3 style="color:red">\t\tDATE: {{date}}\t\tUser: {{user}}</h3>
+#        \n<pre>{{content}}</pre>
+#        '''
+#        )
+#        html = t.render(Context({'date':date,'user':request.user,'content':json.dumps(res)}))
+#        print content
+#        print html
+#        #return HttpResponse(html)
+#        return render_to_response("log_date.html",{"content":html})
+#    except IOError:
+#        content = "%s No Record" % log_file
+#        return render_to_response("log_date.html",{"content":content})
 
-def LogView(request):
-    date = request.GET['date']
-    log_date = date.replace('-','_')
-    log_file = "%s/TriAquae/logs/audit_%s_%s.log" % (tri_config.Working_dir,log_date,request.user)
-    print log_file
-    try:
-        # f = open(log_file,'r')
-        f = open('audit_2013_09_05_alex.log')
 
-        list = []
-        dict = {}
-        for line in f.readlines():
-            line = line.split('|')
-            new_line = {'Remote_Ip':line[0],'Date':line[1],'User':line[2],'Command':line[3]}
-            list.append(new_line)
+def getLog(request):
+        log_path = tri_config.Log_dir
+        arr = []
+
+        startD = request.GET['startD'].split('/')
+        endD = request.GET['endD'].split('/')
+        uname = request.GET['uname']
+
+        sd = datetime.datetime(int(startD[2]),int(startD[0]),int(startD[1]))
+        ed = datetime.datetime(int(endD[2]),int(endD[0]),int(endD[1]))
+        timespan = (ed-sd).days + 1
+        for i in range(timespan):
+            print sd.strftime('%Y_%m_%d')
+            log_name = "%s/audit_%s_%s.log" % (log_path,sd.strftime('%Y_%m_%d'), uname)
+            print log_name
+            if os.path.isfile(log_name):
+                #if os.path.getsize(log_name) < 1024:
+                    f = open(log_name)
+                    log_content = f.read().split('\n')
+                    obj={'fileName':log_name.split('/')[-1], 'fileContent':log_content}
+                    f.close()
+                    arr.append(obj)
+                    print arr, '----------'
+                #else:
+                #    obj={'fileName':log_name.split('/')[-1], 'fileContent':'......'}
+                #    arr.append(obj)
+                #    print arr, '======='
+
+            sd += datetime.timedelta(days=1)
+        logs = json.dumps(arr)
+        return HttpResponse(logs) 
+
+            #obj['fileContent']=[line for line in f.readlines()]
+            #for line in f.readlines():
+            #    obj['fileContent'] = [line]
+            #f.close()
         
-        res={'cols':['Remote_Ip','Date','User','Command'],'arr':list}
+        #arr=[]
+        #filePath = '%s/TriAquae/logs/' % tri_config.Working_dir
+        #fileN='audit_2013_09_05_alex.log'
+        #obj={'fileName':fileN,'fileContent':[]}
+        #f=open(filePath+fileN)
+        #obj['fileContent']=[line for line in f.readlines()]
+        #f.close()
+        #arr.append(obj)
+        #logs=json.dumps(arr)
+        #return HttpResponse(logs) 
 
-        f.close()
-        t = Template(
-        '''
-        \n<h3 style="color:red">\t\tDATE: {{date}}\t\tUser: {{user}}</h3>
-        \n<pre>{{content}}</pre>
-        '''
-        )
-        html = t.render(Context({'date':date,'user':request.user,'content':json.dumps(res)}))
-        print content
-        print html
-        #return HttpResponse(html)
-        return render_to_response("log_date.html",{"content":html})
-    except IOError:
-        content = "%s No Record" % log_file
-        return render_to_response("log_date.html",{"content":content})
-
-
-
-
+#def getLog(request):
+#        startD = request.GET['startD']
+#        endD=request.GET['endD']
+#        #uname=request.GET['uname']
+#        uname="admin"
+#        arr=[]
+#        filePath = '%s/TriAquae/logs/' % tri_config.Working_dir
+#        fileN='audit_2013_09_05_alex.log'
+#        obj={'fileName':fileN,'fileContent':[]}
+#        f=open(filePath+fileN)
+#        obj['fileContent']=[line for line in f.readlines()]
+#        f.close()
+#        arr.append(obj)
+#        logs=json.dumps(arr)
+#        return HttpResponse(logs)       
 
 
 

@@ -3,8 +3,31 @@
 {% load staticfiles %}
 
 <script>
+Date.prototype.format = function(format){ 
+	var o = { 
+		"M+" : this.getMonth()+1, //month 
+		"d+" : this.getDate(), //day 
+		"h+" : this.getHours(), //hour 
+		"m+" : this.getMinutes(), //minute 
+		"s+" : this.getSeconds(), //second 
+		"q+" : Math.floor((this.getMonth()+3)/3), //quarter 
+		"S" : this.getMilliseconds() //millisecond 
+	} 
+
+	if(/(y+)/.test(format)) { 
+		format = format.replace(RegExp.$1, (this.getFullYear()+"").substr(4 - RegExp.$1.length)); 
+	} 
+
+	for(var k in o) { 
+		if(new RegExp("("+ k +")").test(format)) { 
+			format = format.replace(RegExp.$1, RegExp.$1.length==1 ? o[k] : ("00"+ o[k]).substr((""+ o[k]).length)); 
+		} 
+	} 
+	return format; 
+} 
+
  function getShowInBox(){
-    var uname= $("#selUser option:selected").text();
+    var uname=$("#selUser option:selected").text();
     var ip= $("#hidCurIp").val();
 //  alert(uname+":"+ip);
     $.ajax({
@@ -15,30 +38,56 @@
        success: function(msg){
         //response.write(msg.toString());
         if(msg){
-	window.open(msg.url,'TriAquae WebSSH');
-        //$("#ifShell").attr({src:msg.url});
-        //$("#ui_uname").text(msg.username);
-        //$("#ui_upass").text(msg.password);
+        $("#ifShell").attr({src:msg.url});
+        $("#ui_uname").text(msg.username);
+        $("#ui_upass").text(msg.password);
         //$($("#ifShell")).
         }
    }
 });
         
  }
-$(function(){
-	if($(".expanded a").attr("href") == "\/server_status"){
-		return;
-	}
-	 $(".expanded").removeClass("expanded");
-	 $(".current").removeClass("current");
-	 var _parent = $("a[href='\/server_status']").parent();
-	 _parent.addClass("expanded");
-	 _parent.parents("li").addClass("current");
 
+var logRes = {
+	logs:[{"fileName":"2013-12-8","fileContent":["command1","command2","command3"]},
+	      {"fileName":"2013-12-9","fileContent":["command1","command2","command3"]},
+	      {"fileName":"2013-12-10","fileContent":["command1","command2","command3"]}],
+	getLog:function(startD,endD,callback){
+    			var uname= "{{user.username}}";//$("#selUser option:selected").text();
+			$.getJSON("../../getLog",
+				{"startD":startD,"endD":endD,"uname":uname},
+				function(json){
+					if(json){
+						logRes.htmlList(json);
+						if(callback){
+							callback(json);	
+						}
+					}
+				});	
+
+		},
+        htmlList:function(jsonArr){
+                        var html="<div class=\"accordion\" id=\"accordion3\">";
+                        var accordionGroup="";
+                        $.each(jsonArr,function(i,e){
+                                accordionGroup+="<div class=\"accordion-group\">"
+                                        +"<div class=\"accordion-heading\">"
+                                        +"<a class=\"accordion-toggle\" data-toggle=\"collapse\"  data-target=\"#collapse"+i+"\" data-parent=\"#accordion3\">"
+                                        +e.fileName+"</a></div></div><div id=\"collapse"+i+"\" class=\"accordion-body collapse\" style=\"height: 0px;\">";
+                                $.each(e.fileContent,function(i,ee){
+                                        accordionGroup+="<div class=\"accordion-inner\">"+ee+"</div>";
+                                });                             
+                                accordionGroup+="</div></div>";
+                        });
+                        html+=accordionGroup+"</div>";
+
+                        $("#logList").html(html);       
+                }
+
+}
+$(document).ready(function(){
+	logRes.getLog(new Date().format("yyyy-MM-dd"),new Date().format("yyyy-MM-dd"),logRes.htmlList);
 });
-//function(){
-//	
-//}
 </script>
 
 
@@ -84,9 +133,9 @@ $(function(){
                                     <li>
                                         <a href="#s4" data-toggle="tab">Console</a>
                                     </li>
-                                    <!--li>
+                                    <li>
                                         <a href="#s5" data-toggle="tab">Logs</a>
-                                    </li-->
+                                    </li>
 
                                 </ul>
 
@@ -207,48 +256,31 @@ $(function(){
                                             </div-->
                                             <div>
                                                 <span>username:</span>
-                                                <span style="color:red;margin-right:20px;" id="ui_uname">{{tri_user}}</span>
+                                                <span style="color:red;margin-right:20px;" id="ui_uname"></span>
                                                 <span>password:</span>
-                                                <span style="color:red;" id="ui_upass">{{tri_pass}}</span>
+                                                <span style="color:red;" id="ui_upass"></span>
                                             </div>
                                         </div>
-                                        <!--div style="height:90%;">
+                                        <div style="height:90%;">
                                             <iframe id="ifShell" name="iframe" src="" width="98%" height="100%" style="border-width:1 1 1 1;border-style:solid;border-color:#eeeeee;">
                                             </iframe>
-                                        </div-->
+                                        </div>
                                     </div>
                                     <div class="tab-pane fade" id="s5">
                                     	<div>
-                                            <div></div>
-					    <div>
-				            <table class="table table-bordered table-hover" style="border:1px solid #ddd;">
-	<thead>
-		<tr>
-			<th>IP</th>
-			<th>Date</th>
-			<th>User</th>
-			<th>Input Command</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>t_col_1</td>
-			<td>t_col_1</td>
-			<td>t_col_1</td>
-			<td>t_col_1</td>
-		</tr>
-		<tr>
-			<td>t_col_1</td>
-			<td>t_col_1</td>
-			<td>t_col_1</td>
-			<td>t_col_1</td>
-		</tr>
-	</tbody>
-  </table> 
-
-					    </div>
+<div>
+<label>StartDate:</label><input class="datepicker" type="text" id="txtStartD" readonly="readonly" data-date-format="yyyy-mm-dd"/>
+<label>EndDate:</label><input class="datepicker" type="text" id="txtEndD"readonly="readonly" />
+<script>
+        $('#txtStartD').datepicker({});
+        $('#txtEndD').datepicker();
+</script>
+<button type="button" class="btn" onclick="logRes.getLog($('#txtStartD').val(),$('#txtEndD').val())">Search</button>
+</div>
+<div id="logList">
+</div>
                                         </div>
-                                    </di>
+                                    </div>
                                 </div>
                                 <!-- end tab-content -->
                             </div>
