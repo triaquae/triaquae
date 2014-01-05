@@ -88,6 +88,7 @@ STATICFILES_DIRS = (
     ("img", os.path.join(STATIC_ROOT, 'img')),
     ("font", os.path.join(STATIC_ROOT, 'font')),
     ("liger", os.path.join(STATIC_ROOT, 'liger')),
+("bootstrap3", os.path.join(STATIC_ROOT, 'bootstrap3')),
     #("mulselect", os.path.join(STATIC_ROOT, 'mulSelector')),
     #'/var/www/TriAquae/rrdtool_png',
     tri_config.RRDTOOL_png_dir,

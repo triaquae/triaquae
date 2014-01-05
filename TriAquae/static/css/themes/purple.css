@@ -1,0 +1,117 @@
+/* THEME: purple */
+
+/* theme background*/
+html, body {
+	background-color: #322042;
+}
+
+.dropdown-menu.toolbar {
+	background-color: #3A2949;
+}
+
+#header-toolbar {
+	border-bottom-color: #482952;
+}
+
+.main-search input {
+	border-color: #482952;
+}
+
+aside > .divider {
+	background-position: center -11px;
+}
+
+aside ul.menu {
+	border-color: #132918;
+	border: 1px solid #4C2D5C;
+	box-shadow: 0 1px 1px #38123F, 0 1px 1px #3C1E39 inset;
+	-webkit-box-shadow: 0 1px 1px #522C53, 0 1px 1px #341B3C inset;
+	-moz-box-shadow: 0 1px 1px #522C53, 0 1px 1px #341B3C inset;
+	color: white;
+	background: #672F86 url(../img/backgrounds/menu_bg_green.png) repeat-x;
+	background: -webkit-gradient(linear, left top, left bottom, from(#6B3E7C), to(#672F86));
+	background: -webkit-linear-gradient(top, #6B3E7C, #672F86);
+	background: -moz-linear-gradient(top, #6B3E7C, #672F86);
+	background: -ms-linear-gradient(top, #6B3E7C, #672F86);
+	background: -o-linear-gradient(top, #6B3E7C, #672F86);
+	background: linear-gradient(top, #6B3E7C, #672F86);
+}
+
+aside ul.menu li {
+	-webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), inset 0 -1px 0 rgba(0, 0, 0, 0.25);
+	-moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), inset 0 -1px 0 rgba(0, 0, 0, 0.25);
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), inset 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+
+aside ul.menu > li > ul > li:first-child a {
+	border-top: 1px solid #423049;
+}
+
+.indented, aside.right #datepicker {
+	box-shadow: 0 1px 1px #64497C, 0 1px 1px #37273F inset;
+	-webkit-box-shadow: 0 1px 1px #64497C, 0 1px 1px #37273F inset;
+	-moz-box-shadow: 0 1px 1px #64497C, 0 1px 1px #37273F inset;
+}
+
+.mini-inbox div.alert.inbox {
+	border-color: #472D49;
+}
+
+.number-stats ul li {
+	border-left-color: #472D49;
+}
+
+/* btn primary */
+/* btn generator: http://blog.koalite.com/bbg/ */
+.btn-primary {
+	color: #FFFFFF;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+	background-color: #4B0D85;
+	*background-color: #4B0D85;
+	background-image: -moz-linear-gradient(top, #6700AC, #4B0D85);
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#6700AC), to(#4B0D85));
+	background-image: -webkit-linear-gradient(top, #6700AC, #4B0D85);
+	background-image: -o-linear-gradient(top, #6700AC, #4B0D85);
+	background-image: linear-gradient(to bottom, #6700AC, #4B0D85);
+	background-repeat: repeat-x;
+	border-color: #4B0D85;
+	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#6700AC', endColorstr='#4B0D85', GradientType=0);
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+}
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary.active,
+.btn-primary.disabled,
+.btn-primary[disabled] {
+	color: #FFFFFF;
+	background-color: #4B0D85;
+	*background-color: #003bb3;
+}
+
+/* inverse buttons */
+.btn-toolbar .btn-group .btn-inverse {
+	color: #FFFFFF;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+	background-color: #2B1738;
+	*background-color: #2B1738;
+	background-image: -moz-linear-gradient(top, #341A35, #2B1738);
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#341A35), to(#2B1738));
+	background-image: -webkit-linear-gradient(top, #341A35, #2B1738);
+	background-image: -o-linear-gradient(top, #341A35, #2B1738);
+	background-image: linear-gradient(to bottom, #341A35, #2B1738);
+	background-repeat: repeat-x;
+	border-color: #2D2D2D;
+	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#341A35', endColorstr='#2B1738', GradientType=0);
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+}
+.btn-toolbar .btn-group .btn-inverse:hover,
+.btn-toolbar .btn-group .btn-inverse:active,
+.btn-toolbar .btn-group .btn-inverse.active,
+.btn-toolbar .btn-group .btn-inverse.disabled,
+.btn-toolbar .btn-group .btn-inverse[disabled] {
+	color: #FFFFFF;
+	background-color: #2B1738;
+	*background-color: #2B1738;
+}

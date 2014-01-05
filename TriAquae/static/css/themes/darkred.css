@@ -1,0 +1,84 @@
+/* THEME: RED */
+
+/* theme background*/
+html, body {
+	background-color: #461B29;
+}
+
+.dropdown-menu.toolbar {
+	background-color: #532D2D;
+}
+
+#header-toolbar {
+	border-bottom-color: #683434;
+}
+
+.main-search input {
+	border-color: #573F3F;
+}
+
+aside > .divider {
+	background-position: center -44px;
+}
+
+aside ul.menu {
+	border-color: #291313;
+	box-shadow: 0 1px 1px #581D1D, 0 1px 1px #6B2B2B inset;
+	-webkit-box-shadow: 0 1px 1px #5A2F2F, 0 1px 1px #441919 inset;
+	-moz-box-shadow: 0 1px 1px #2F425A, 0 1px 1px #193444 inset;
+	color: white;
+	background: #8B3131 url(../img/backgrounds/menu_bg_red.png) repeat-x;
+	background: -webkit-gradient(linear, left top, left bottom, from(#7A4040), to(#8B3131));
+	background: -webkit-linear-gradient(top, #7A4040, #8B3131);
+	background: -moz-linear-gradient(top, #7A4040, #8B3131);
+	background: -ms-linear-gradient(top, #7A4040, #8B3131);
+	background: -o-linear-gradient(top, #7A4040, #8B3131);
+	background: linear-gradient(top, #7A4040, #8B3131);
+}
+
+aside ul.menu > li > ul > li:first-child a {
+	border-top: 1px solid #521C1C;
+}
+
+.indented, aside.right #datepicker {
+	box-shadow: 0 1px 1px #927373, 0 1px 1px #4E2323 inset;
+	-webkit-box-shadow: 0 1px 1px #927373, 0 1px 1px #4E2323 inset;
+	-moz-box-shadow: 0 1px 1px #927373, 0 1px 1px #4E2323 inset;
+}
+
+.mini-inbox div.alert.inbox {
+	border-color: #412D2D;
+}
+
+.number-stats ul li {
+	border-left-color: #412D2D;
+}
+
+/* btn primary */
+/* btn generator: http://blog.koalite.com/bbg/ */
+.btn-primary {
+	color: #FFF;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+	background-color: #5F1F1F;
+	background-image: -moz-linear-gradient(top, #6F2424, #5F1F1F);
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#6F2424), to(#5F1F1F));
+	background-image: -webkit-linear-gradient(top, #6F2424, #5F1F1F);
+	background-image: -o-linear-gradient(top, #6F2424, #5F1F1F);
+	background-image: linear-gradient(to bottom, #6F2424, #5F1F1F);
+	background-repeat: repeat-x;
+	border-color: #5F1F1F;
+	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#6F2424', endColorstr='#5F1F1F', GradientType=0);
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+}
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary.active,
+.btn-primary.disabled,
+.btn-primary[disabled] {
+	color: #FFFFFF;
+	background-color: #5F1F1F;
+	*background-color: #003bb3;
+}
+
+/* inverse buttons */

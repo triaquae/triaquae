@@ -130,7 +130,7 @@ class TriaquaeUser(models.Model):
 
 class AuthByIpAndRemoteUser(models.Model):
     password = models.CharField(max_length=1024,verbose_name="Password or SSH_KEY")
-    AUTH_CHOICES = (('ssh', 'ssh-password'),('ssh-key', 'ssh-key'))
+    AUTH_CHOICES = (('ssh-password', 'ssh-password'),('ssh-key', 'ssh-key'))
     authtype = models.CharField(max_length=100, choices=AUTH_CHOICES)
     ip = models.ForeignKey(IP, null=True, blank=True)
     remoteUser = models.ForeignKey(RemoteUser, null=True, blank=True)

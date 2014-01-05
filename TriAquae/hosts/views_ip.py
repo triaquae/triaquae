@@ -29,7 +29,8 @@ def load_batch_ip(request):
 
         for l in list_buf:
             try:
-                (ip, hostname, idc, port, os) = re.split('\s+', l)[:6]
+                (ip, hostname, idc, port, os) = l.split()[:5]
+                #(ip, hostname, idc, port, os) = re.split('\s+', l)[:6]
                 idc = models.Idc.objects.get(name=idc)
                 models.IP(ip=ip, hostname=hostname, idc=idc, port =port, os=os).save()
                 num += 1

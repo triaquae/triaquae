@@ -1,7 +1,7 @@
 #Author: Alex Li
 import os,sys
 
-Working_dir = '/usr/local/TriAquae'
+Working_dir = '/opt/soft/TriAquae'
 Max_batch_threads =  35
 Tri_sftp_dir = '%s/TriSFTP' % Working_dir
 Tri_sftp_send_dir = '%s/TriSFTP/send' % Working_dir
@@ -15,7 +15,7 @@ MySQL_Name = 'TriAquae'   # Don't change this database name
 MySQL_Host = '127.0.0.1'  # Your Mysql hostname
 MySQL_Port = '3306'       # Your Mysql port
 MySQL_User = 'root'       # Your Mysql username
-MySQL_Pass = ''           # Your Mysql password, '' means no password.
+MySQL_Pass = 'alex3714'           # Your Mysql password, '' means no password.
 
 #TriAquae Log settings
 Log_dir = '%s/TriAquae/logs' % Working_dir
@@ -37,7 +37,7 @@ Mail_username = 'tri_mailuser'
 Mail_password = 'Motherfucker!23'
 
 Asset_collect_user = 'triaquae'
-Asset_user_password = 'dqnzbf'
+Asset_user_password = '5jykPF'
 
 dir_list = [Working_dir,Tri_sftp_dir, Log_dir,Tri_sftp_send_dir, Tri_sftp_recv_dir, Dangerous_cmd_list, RRDTOOL_rrd_file_dir,RRDTOOL_png_dir,Asset_collection_dir,Asset_collection_backup_dir]
 
