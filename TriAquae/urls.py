@@ -1,9 +1,9 @@
 #from django.conf.urls import patterns, include, url
 from django.conf.urls import *
-<<<<<<< HEAD
+#<<<<<<< HEAD
 #from TriAquae.views import TriAquae
-=======
->>>>>>> 4d44c37967a40556edc6361216fa2f68f88ddb17
+#=======
+#>>>>>>> 4d44c37967a40556edc6361216fa2f68f88ddb17
 #from TriAquae.views import CpuUsage
 #from TriAquae.views import ServiceStatus
 #from TriAquae.datas import TriAquaeData

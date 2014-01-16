@@ -31,7 +31,7 @@ class TriConn:
 
     def Help(self):
         print '''\033[32;1m
-            id            Select the ID of the item.
+            ID            Description
             f   fast      fast login
             s   search    search keyword. "q" is quit. "p" is previous.
             b   back      back menu.
@@ -41,7 +41,7 @@ class TriConn:
         \033[0m'''
 
     def ViewLog(self, lines):
-        print lines,'=========='
+        print '\033[32;1mview log: %s lines\033[0m' % lines
         #with open('/usr/local/TriAquae/TriAquae/logs/audit_2013_12_14_admin.log', 'r+') as f:
         try:
             #with open('%s/TriAquae/logs/audit_%s_%s.log' % (tri_config.Working_dir, time.strftime('%Y_%m_%d'), username),'r+') as f:
@@ -49,7 +49,8 @@ class TriConn:
             #        print num + 1, i,
             #        if num + 1 == line:
             #            break
-            for num, line in enumerate(reversed(open('/usr/local/TriAquae/TriAquae/logs/audit_2013_12_17_admin.log').readlines())):
+            daytime = time.strftime('%Y_%m_%d')
+            for num, line in enumerate(reversed(open('%s/TriAquae/logs/audit_%s_%s.log' % (tri_config.Working_dir, daytime, username)).readlines())):
                 print num + 1, line,
                 if num + 1 == lines:
                     break
@@ -201,7 +202,8 @@ class TriConn:
         # judge user input Type(self.GroupList, self.GroupList, self.UserList)
 
         while True:
-            input = raw_input('Please choose items [ id | f | s | b | v | h | q ]: ').strip()
+            #input = raw_input('Please choose items [ id | f | s | b | v | h | q ]: ').strip()
+            input = raw_input('[help | search | fast | back | quit] #: ').strip()
             #print 'input : ', input
             #print 'Type : ', map(str, Type.keys())
             #print 'self.summary : ', self.summary
@@ -212,13 +214,13 @@ class TriConn:
                 next_page(element)               # skip next page
             elif len(input) == 0:
                 continue
-            elif input == 'f':                   # fast login.
+            elif input == 'f' or input == 'fast':                   # fast login.
                 self.FastLogin()
-            elif input == 's':                   # search keyword.
+            elif input == 's' or input == 'search':                   # search keyword.
                 #search = raw_input('Please input the key words > ').strip()
                 self.Search()
                 #self.Search()
-            elif input == 'b':                   # backend menu
+            elif input == 'b' or input == 'back':                   # backend menu
                 self.Main()
             elif input[0] == 'v':                   # view the last log
                 try:
@@ -228,7 +230,7 @@ class TriConn:
                     self.ViewLog(lines=10)
                 except ValueError:
                     pass
-            elif input == 'h':                   # display help
+            elif input == 'h' or input == 'help':                   # display help
                 self.Help()
             elif input == 'q':                   # quit TriConn
                 print '\n\033[31;1mInput "quit" TriConn Exit\033[0m'

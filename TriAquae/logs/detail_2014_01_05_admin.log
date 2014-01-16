@@ -630,3 +630,15 @@ drwxrwxr-x  6 coral coral  4096 Nov 25 13:37 [01;34m.vim_old[0m/
 -rw-------  1 coral coral 12197 Dec  9 21:34 .xsession-errors.old
 coral@coral:~$ exit
 logout
+Welcome to Ubuntu 12.04.3 LTS (GNU/Linux 3.8.0-29-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+Last login: Sun Jan  5 21:55:02 2014 from 192.168.0.179
+coral@coral:~$ ls
+[0m[01;34mDesktop[0m    [01;34mDownloads[0m         [01;34mMusic[0m     [01;34mPublic[0m     [01;34mVideos[0m
+[01;34mDocuments[0m  examples.desktop  [01;34mPictures[0m  [01;34mTemplates[0m
+coral@coral:~$ w[Kpwd
+/home/coral
+coral@coral:~$ exit
+logout

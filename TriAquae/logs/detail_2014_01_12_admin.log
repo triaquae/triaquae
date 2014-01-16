@@ -1,0 +1,1646 @@
+Welcome to Ubuntu 12.04.3 LTS (GNU/Linux 3.8.0-29-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+Last login: Sun Jan  5 22:09:26 2014 from localhost
+
+coral@coral:~$ 
+coral@coral:~$ 
+coral@coral:~$ ll
+total 204
+drwxr-xr-x 27 coral coral  4096 Jan  5 22:02 [0m[01;34m.[0m/
+drwxr-xr-x  4 root  root   4096 Nov  4 21:24 [01;34m..[0m/
+drwx------  3 coral coral  4096 Dec  9 21:46 [01;34m.adobe[0m/
+-rw-------  1 coral coral 11502 Jan  5 22:12 .bash_history
+-rw-r--r--  1 coral coral   220 Nov  5 04:47 .bash_logout
+-rw-r--r--  1 coral coral  3486 Nov  5 04:47 .bashrc
+drwx------ 16 coral coral  4096 Nov 17 16:20 [01;34m.cache[0m/
+drwx------ 14 coral coral  4096 Dec  9 21:56 [01;34m.config[0m/
+drwx------  3 coral coral  4096 Nov  5 04:51 [01;34m.dbus[0m/
+drwxr-xr-x  2 coral coral  4096 Dec  9 21:37 [01;34mDesktop[0m/
+-rw-r--r--  1 coral coral    26 Dec  9 21:35 .dmrc
+drwxr-xr-x  2 coral coral  4096 Nov  5 04:51 [01;34mDocuments[0m/
+drwxr-xr-x  2 coral coral  4096 Nov 25 13:33 [01;34mDownloads[0m/
+-rw-r--r--  1 coral coral  8445 Nov  5 04:47 examples.desktop
+drwx------  4 coral coral  4096 Dec  9 21:36 [01;34m.gconf[0m/
+drwx------  4 coral coral  4096 Nov  5 04:51 [01;34m.gnome2[0m/
+drwx------  2 coral coral  4096 Nov  9 21:37 [01;34m.gnupg[0m/
+-rw-rw-r--  1 coral coral   137 Dec  9 21:36 .gtk-bookmarks
+dr-x------  2 coral coral     0 Dec  9 21:35 [01;34m.gvfs[0m/
+-rw-------  1 coral coral  2202 Dec  9 21:35 .ICEauthority
+drwxr-xr-x  3 coral coral  4096 Nov  5 04:51 [01;34m.local[0m/
+drwx------  3 coral coral  4096 Dec  9 21:46 [01;34m.macromedia[0m/
+drwx------  3 coral coral  4096 Nov  5 04:51 [01;34m.mission-control[0m/
+drwx------  4 coral coral  4096 Nov 17 16:19 [01;34m.mozilla[0m/
+drwxr-xr-x  2 coral coral  4096 Nov  5 04:51 [01;34mMusic[0m/
+-rw-------  1 coral coral    24 Nov 17 16:29 .mysql_history
+drwxr-xr-x  2 coral coral  4096 Nov  5 04:51 [01;34mPictures[0m/
+-rw-r--r--  1 coral coral   675 Nov  5 04:47 .profile
+drwxr-xr-x  2 coral coral  4096 Nov  5 04:51 [01;34mPublic[0m/
+drwx------  2 coral coral  4096 Dec  9 21:36 [01;34m.pulse[0m/
+-rw-------  1 coral coral   256 Nov  5 04:51 .pulse-cookie
+-rw-------  1 coral coral     2 Nov  9 21:38 .pythonhistory
+drwx------  2 coral coral  4096 Jan  5 18:18 [01;34m.ssh[0m/
+drwxr-xr-x  2 coral coral  4096 Nov  5 04:51 [01;34mTemplates[0m/
+drwx------  4 coral coral  4096 Nov  4 20:55 [01;34m.thumbnails[0m/
+drwxr-xr-x  2 coral coral  4096 Nov  5 04:51 [01;34mVideos[0m/
+drwxr-xr-x 15 coral coral  4096 Dec  9 21:39 [01;34m.vim.bak[0m/
+-rw-------  1 coral coral 10503 Jan  5 22:02 .viminfo
+drwxrwxr-x  6 coral coral  4096 Nov 25 13:37 [01;34m.vim_old[0m/
+-rw-rw-r--  1 coral coral  2276 Dec  9 21:47 .vimrc.bak
+-rw-------  1 coral coral    50 Dec  9 21:35 .Xauthority
+-rw-------  1 coral coral  7924 Jan  5 18:08 .xsession-errors
+-rw-------  1 coral coral 12197 Dec  9 21:34 .xsession-errors.old
+coral@coral:~$ vim /etc/hosts
+[?1h=[1;24r[m[m[0m[H[J[24;1H"/etc/hosts" [readonly] 9L, 220C[1;1H127.0.0.1       localhost
+127.0.1.1       coral
+
+[1m# The following lines are desirable for IPv6 capable hosts[0m
+::1     ip6-localhost ip6-loopback
+fe00::0 ip6-localnet
+ff00::0 ip6-mcastprefix
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters
+[1m~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~[0m[24;63H1,1[11CAll[1;1H[24;63H2[2;1H[24;63H3,0-1[3;1H[24;63H4,1  [4;1H[24;63H5[5;1H[24;63H6[6;1H[24;63H9[9;1H[24;1H[K[24;1H:q[?1l>[24;1H[K[24;1Hcoral@coral:~$ clear
+[H[Jcoral@coral:~$ ll
+total 204
+drwxr-xr-x 27 coral coral  4096 Jan 12 14:29 [0m[01;34m.[0m/
+drwxr-xr-x  4 root  root   4096 Nov  4 21:24 [01;34m..[0m/
+drwx------  3 coral coral  4096 Dec  9 21:46 [01;34m.adobe[0m/
+-rw-------  1 coral coral 11502 Jan  5 22:12 .bash_history
+-rw-r--r--  1 coral coral   220 Nov  5 04:47 .bash_logout
+-rw-r--r--  1 coral coral  3486 Nov  5 04:47 .bashrc
+drwx------ 16 coral coral  4096 Nov 17 16:20 [01;34m.cache[0m/
+drwx------ 14 coral coral  4096 Dec  9 21:56 [01;34m.config[0m/
+drwx------  3 coral coral  4096 Nov  5 04:51 [01;34m.dbus[0m/
+drwxr-xr-x  2 coral coral  4096 Dec  9 21:37 [01;34mDesktop[0m/
+-rw-r--r--  1 coral coral    26 Dec  9 21:35 .dmrc
+drwxr-xr-x  2 coral coral  4096 Nov  5 04:51 [01;34mDocuments[0m/
+drwxr-xr-x  2 coral coral  4096 Nov 25 13:33 [01;34mDownloads[0m/
+-rw-r--r--  1 coral coral  8445 Nov  5 04:47 examples.desktop
+drwx------  4 coral coral  4096 Dec  9 21:36 [01;34m.gconf[0m/
+drwx------  4 coral coral  4096 Nov  5 04:51 [01;34m.gnome2[0m/
+drwx------  2 coral coral  4096 Nov  9 21:37 [01;34m.gnupg[0m/
+-rw-rw-r--  1 coral coral   137 Dec  9 21:36 .gtk-bookmarks
+dr-x------  2 coral coral     0 Dec  9 21:35 [01;34m.gvfs[0m/
+-rw-------  1 coral coral  2202 Dec  9 21:35 .ICEauthority
+drwxr-xr-x  3 coral coral  4096 Nov  5 04:51 [01;34m.local[0m/
+drwx------  3 coral coral  4096 Dec  9 21:46 [01;34m.macromedia[0m/
+drwx------  3 coral coral  4096 Nov  5 04:51 [01;34m.mission-control[0m/
+drwx------  4 coral coral  4096 Nov 17 16:19 [01;34m.mozilla[0m/
+drwxr-xr-x  2 coral coral  4096 Nov  5 04:51 [01;34mMusic[0m/
+-rw-------  1 coral coral    24 Nov 17 16:29 .mysql_history
+drwxr-xr-x  2 coral coral  4096 Nov  5 04:51 [01;34mPictures[0m/
+-rw-r--r--  1 coral coral   675 Nov  5 04:47 .profile
+drwxr-xr-x  2 coral coral  4096 Nov  5 04:51 [01;34mPublic[0m/
+drwx------  2 coral coral  4096 Dec  9 21:36 [01;34m.pulse[0m/
+-rw-------  1 coral coral   256 Nov  5 04:51 .pulse-cookie
+-rw-------  1 coral coral     2 Nov  9 21:38 .pythonhistory
+drwx------  2 coral coral  4096 Jan  5 18:18 [01;34m.ssh[0m/
+drwxr-xr-x  2 coral coral  4096 Nov  5 04:51 [01;34mTemplates[0m/
+drwx------  4 coral coral  4096 Nov  4 20:55 [01;34m.thumbnails[0m/
+drwxr-xr-x  2 coral coral  4096 Nov  5 04:51 [01;34mVideos[0m/
+drwxr-xr-x 15 coral coral  4096 Dec  9 21:39 [01;34m.vim.bak[0m/
+-rw-------  1 coral coral 10334 Jan 12 14:29 .viminfo
+drwxrwxr-x  6 coral coral  4096 Nov 25 13:37 [01;34m.vim_old[0m/
+-rw-rw-r--  1 coral coral  2276 Dec  9 21:47 .vimrc.bak
+-rw-------  1 coral coral    50 Dec  9 21:35 .Xauthority
+-rw-------  1 coral coral  8180 Jan 12 14:29 .xsession-errors
+-rw-------  1 coral coral 12197 Dec  9 21:34 .xsession-errors.old
+coral@coral:~$ [H[Jcoral@coral:~$ ll
+total 204
+drwxr-xr-x 27 coral coral  4096 Jan 12 14:29 [0m[01;34m.[0m/
+drwxr-xr-x  4 root  root   4096 Nov  4 21:24 [01;34m..[0m/
+drwx------  3 coral coral  4096 Dec  9 21:46 [01;34m.adobe[0m/
+-rw-------  1 coral coral 11502 Jan  5 22:12 .bash_history
+-rw-r--r--  1 coral coral   220 Nov  5 04:47 .bash_logout
+-rw-r--r--  1 coral coral  3486 Nov  5 04:47 .bashrc
+drwx------ 16 coral coral  4096 Nov 17 16:20 [01;34m.cache[0m/
+drwx------ 14 coral coral  4096 Dec  9 21:56 [01;34m.config[0m/
+drwx------  3 coral coral  4096 Nov  5 04:51 [01;34m.dbus[0m/
+drwxr-xr-x  2 coral coral  4096 Dec  9 21:37 [01;34mDesktop[0m/
+-rw-r--r--  1 coral coral    26 Dec  9 21:35 .dmrc
+drwxr-xr-x  2 coral coral  4096 Nov  5 04:51 [01;34mDocuments[0m/
+drwxr-xr-x  2 coral coral  4096 Nov 25 13:33 [01;34mDownloads[0m/
+-rw-r--r--  1 coral coral  8445 Nov  5 04:47 examples.desktop
+drwx------  4 coral coral  4096 Dec  9 21:36 [01;34m.gconf[0m/
+drwx------  4 coral coral  4096 Nov  5 04:51 [01;34m.gnome2[0m/
+drwx------  2 coral coral  4096 Nov  9 21:37 [01;34m.gnupg[0m/
+-rw-rw-r--  1 coral coral   137 Dec  9 21:36 .gtk-bookmarks
+dr-x------  2 coral coral     0 Dec  9 21:35 [01;34m.gvfs[0m/
+-rw-------  1 coral coral  2202 Dec  9 21:35 .ICEauthority
+drwxr-xr-x  3 coral coral  4096 Nov  5 04:51 [01;34m.local[0m/
+drwx------  3 coral coral  4096 Dec  9 21:46 [01;34m.macromedia[0m/
+drwx------  3 coral coral  4096 Nov  5 04:51 [01;34m.mission-control[0m/
+drwx------  4 coral coral  4096 Nov 17 16:19 [01;34m.mozilla[0m/
+drwxr-xr-x  2 coral coral  4096 Nov  5 04:51 [01;34mMusic[0m/
+-rw-------  1 coral coral    24 Nov 17 16:29 .mysql_history
+drwxr-xr-x  2 coral coral  4096 Nov  5 04:51 [01;34mPictures[0m/
+-rw-r--r--  1 coral coral   675 Nov  5 04:47 .profile
+drwxr-xr-x  2 coral coral  4096 Nov  5 04:51 [01;34mPublic[0m/
+drwx------  2 coral coral  4096 Dec  9 21:36 [01;34m.pulse[0m/
+-rw-------  1 coral coral   256 Nov  5 04:51 .pulse-cookie
+-rw-------  1 coral coral     2 Nov  9 21:38 .pythonhistory
+drwx------  2 coral coral  4096 Jan  5 18:18 [01;34m.ssh[0m/
+drwxr-xr-x  2 coral coral  4096 Nov  5 04:51 [01;34mTemplates[0m/
+drwx------  4 coral coral  4096 Nov  4 20:55 [01;34m.thumbnails[0m/
+drwxr-xr-x  2 coral coral  4096 Nov  5 04:51 [01;34mVideos[0m/
+drwxr-xr-x 15 coral coral  4096 Dec  9 21:39 [01;34m.vim.bak[0m/
+-rw-------  1 coral coral 10334 Jan 12 14:29 .viminfo
+drwxrwxr-x  6 coral coral  4096 Nov 25 13:37 [01;34m.vim_old[0m/
+-rw-rw-r--  1 coral coral  2276 Dec  9 21:47 .vimrc.bak
+-rw-------  1 coral coral    50 Dec  9 21:35 .Xauthority
+-rw-------  1 coral coral  8180 Jan 12 14:29 .xsession-errors
+-rw-------  1 coral coral 12197 Dec  9 21:34 .xsession-errors.old
+coral@coral:~$ e[Kll
+total 204
+drwxr-xr-x 27 coral coral  4096 Jan 12 14:29 [0m[01;34m.[0m/
+drwxr-xr-x  4 root  root   4096 Nov  4 21:24 [01;34m..[0m/
+drwx------  3 coral coral  4096 Dec  9 21:46 [01;34m.adobe[0m/
+-rw-------  1 coral coral 11502 Jan  5 22:12 .bash_history
+-rw-r--r--  1 coral coral   220 Nov  5 04:47 .bash_logout
+-rw-r--r--  1 coral coral  3486 Nov  5 04:47 .bashrc
+drwx------ 16 coral coral  4096 Nov 17 16:20 [01;34m.cache[0m/
+drwx------ 14 coral coral  4096 Dec  9 21:56 [01;34m.config[0m/
+drwx------  3 coral coral  4096 Nov  5 04:51 [01;34m.dbus[0m/
+drwxr-xr-x  2 coral coral  4096 Dec  9 21:37 [01;34mDesktop[0m/
+-rw-r--r--  1 coral coral    26 Dec  9 21:35 .dmrc
+drwxr-xr-x  2 coral coral  4096 Nov  5 04:51 [01;34mDocuments[0m/
+drwxr-xr-x  2 coral coral  4096 Nov 25 13:33 [01;34mDownloads[0m/
+-rw-r--r--  1 coral coral  8445 Nov  5 04:47 examples.desktop
+drwx------  4 coral coral  4096 Dec  9 21:36 [01;34m.gconf[0m/
+drwx------  4 coral coral  4096 Nov  5 04:51 [01;34m.gnome2[0m/
+drwx------  2 coral coral  4096 Nov  9 21:37 [01;34m.gnupg[0m/
+-rw-rw-r--  1 coral coral   137 Dec  9 21:36 .gtk-bookmarks
+dr-x------  2 coral coral     0 Dec  9 21:35 [01;34m.gvfs[0m/
+-rw-------  1 coral coral  2202 Dec  9 21:35 .ICEauthority
+drwxr-xr-x  3 coral coral  4096 Nov  5 04:51 [01;34m.local[0m/
+drwx------  3 coral coral  4096 Dec  9 21:46 [01;34m.macromedia[0m/
+drwx------  3 coral coral  4096 Nov  5 04:51 [01;34m.mission-control[0m/
+drwx------  4 coral coral  4096 Nov 17 16:19 [01;34m.mozilla[0m/
+drwxr-xr-x  2 coral coral  4096 Nov  5 04:51 [01;34mMusic[0m/
+-rw-------  1 coral coral    24 Nov 17 16:29 .mysql_history
+drwxr-xr-x  2 coral coral  4096 Nov  5 04:51 [01;34mPictures[0m/
+-rw-r--r--  1 coral coral   675 Nov  5 04:47 .profile
+drwxr-xr-x  2 coral coral  4096 Nov  5 04:51 [01;34mPublic[0m/
+drwx------  2 coral coral  4096 Dec  9 21:36 [01;34m.pulse[0m/
+-rw-------  1 coral coral   256 Nov  5 04:51 .pulse-cookie
+-rw-------  1 coral coral     2 Nov  9 21:38 .pythonhistory
+drwx------  2 coral coral  4096 Jan  5 18:18 [01;34m.ssh[0m/
+drwxr-xr-x  2 coral coral  4096 Nov  5 04:51 [01;34mTemplates[0m/
+drwx------  4 coral coral  4096 Nov  4 20:55 [01;34m.thumbnails[0m/
+drwxr-xr-x  2 coral coral  4096 Nov  5 04:51 [01;34mVideos[0m/
+drwxr-xr-x 15 coral coral  4096 Dec  9 21:39 [01;34m.vim.bak[0m/
+-rw-------  1 coral coral 10334 Jan 12 14:29 .viminfo
+drwxrwxr-x  6 coral coral  4096 Nov 25 13:37 [01;34m.vim_old[0m/
+-rw-rw-r--  1 coral coral  2276 Dec  9 21:47 .vimrc.bak
+-rw-------  1 coral coral    50 Dec  9 21:35 .Xauthority
+-rw-------  1 coral coral  8180 Jan 12 14:29 .xsession-errors
+-rw-------  1 coral coral 12197 Dec  9 21:34 .xsession-errors.old
+coral@coral:~$ ll
+total 204
+drwxr-xr-x 27 coral coral  4096 Jan 12 14:29 [0m[01;34m.[0m/
+drwxr-xr-x  4 root  root   4096 Nov  4 21:24 [01;34m..[0m/
+drwx------  3 coral coral  4096 Dec  9 21:46 [01;34m.adobe[0m/
+-rw-------  1 coral coral 11502 Jan  5 22:12 .bash_history
+-rw-r--r--  1 coral coral   220 Nov  5 04:47 .bash_logout
+-rw-r--r--  1 coral coral  3486 Nov  5 04:47 .bashrc
+drwx------ 16 coral coral  4096 Nov 17 16:20 [01;34m.cache[0m/
+drwx------ 14 coral coral  4096 Dec  9 21:56 [01;34m.config[0m/
+drwx------  3 coral coral  4096 Nov  5 04:51 [01;34m.dbus[0m/
+drwxr-xr-x  2 coral coral  4096 Dec  9 21:37 [01;34mDesktop[0m/
+-rw-r--r--  1 coral coral    26 Dec  9 21:35 .dmrc
+drwxr-xr-x  2 coral coral  4096 Nov  5 04:51 [01;34mDocuments[0m/
+drwxr-xr-x  2 coral coral  4096 Nov 25 13:33 [01;34mDownloads[0m/
+-rw-r--r--  1 coral coral  8445 Nov  5 04:47 examples.desktop
+drwx------  4 coral coral  4096 Dec  9 21:36 [01;34m.gconf[0m/
+drwx------  4 coral coral  4096 Nov  5 04:51 [01;34m.gnome2[0m/
+drwx------  2 coral coral  4096 Nov  9 21:37 [01;34m.gnupg[0m/
+-rw-rw-r--  1 coral coral   137 Dec  9 21:36 .gtk-bookmarks
+dr-x------  2 coral coral     0 Dec  9 21:35 [01;34m.gvfs[0m/
+-rw-------  1 coral coral  2202 Dec  9 21:35 .ICEauthority
+drwxr-xr-x  3 coral coral  4096 Nov  5 04:51 [01;34m.local[0m/
+drwx------  3 coral coral  4096 Dec  9 21:46 [01;34m.macromedia[0m/
+drwx------  3 coral coral  4096 Nov  5 04:51 [01;34m.mission-control[0m/
+drwx------  4 coral coral  4096 Nov 17 16:19 [01;34m.mozilla[0m/
+drwxr-xr-x  2 coral coral  4096 Nov  5 04:51 [01;34mMusic[0m/
+-rw-------  1 coral coral    24 Nov 17 16:29 .mysql_history
+drwxr-xr-x  2 coral coral  4096 Nov  5 04:51 [01;34mPictures[0m/
+-rw-r--r--  1 coral coral   675 Nov  5 04:47 .profile
+drwxr-xr-x  2 coral coral  4096 Nov  5 04:51 [01;34mPublic[0m/
+drwx------  2 coral coral  4096 Dec  9 21:36 [01;34m.pulse[0m/
+-rw-------  1 coral coral   256 Nov  5 04:51 .pulse-cookie
+-rw-------  1 coral coral     2 Nov  9 21:38 .pythonhistory
+drwx------  2 coral coral  4096 Jan  5 18:18 [01;34m.ssh[0m/
+drwxr-xr-x  2 coral coral  4096 Nov  5 04:51 [01;34mTemplates[0m/
+drwx------  4 coral coral  4096 Nov  4 20:55 [01;34m.thumbnails[0m/
+drwxr-xr-x  2 coral coral  4096 Nov  5 04:51 [01;34mVideos[0m/
+drwxr-xr-x 15 coral coral  4096 Dec  9 21:39 [01;34m.vim.bak[0m/
+-rw-------  1 coral coral 10334 Jan 12 14:29 .viminfo
+drwxrwxr-x  6 coral coral  4096 Nov 25 13:37 [01;34m.vim_old[0m/
+-rw-rw-r--  1 coral coral  2276 Dec  9 21:47 .vimrc.bak
+-rw-------  1 coral coral    50 Dec  9 21:35 .Xauthority
+-rw-------  1 coral coral  8180 Jan 12 14:29 .xsession-errors
+-rw-------  1 coral coral 12197 Dec  9 21:34 .xsession-errors.old
+coral@coral:~$ vim .po[Krofile 
+[?1h=[1;24r[m[m[0m[H[J[24;1H".profile" 22L, 675C[1;1H[1m# ~/.profile: executed by the command interpreter for login shells.
+# This file is not read by bash(1), if ~/.bash_profile or ~/.bash_login
+# exists.
+# see /usr/share/doc/bash/examples/startup-files for examples.
+# the files are located in the bash-doc package.
+
+# the default umask is set in /etc/profile; for setting the umask
+# for ssh logins, install and configure the libpam-umask package.
+#umask 022
+
+# if running bash
+if [[0m [1m-n[0m [1m"[0m[4m$BASH_VERSION[m[1m"[0m [1m];[0m [1mthen[0m
+    [1m# include .bashrc if it exists[0m
+    [1mif [[0m [1m-f[0m [1m"[0m[4m$HOME/.bashrc[m[1m"[0m [1m];[0m [1mthen
+        . "[0m[4m$HOME/.bashrc[m[1m"[0m
+    [1mfi
+fi
+
+# set PATH so it includes user's private bin if it exists
+if [[0m [1m-d[0m [1m"[0m[4m$HOME/bin[m[1m"[0m [1m][0m [1m;[0m [1mthen[0m
+    [4mPATH[m=[1m"[0m[4m$HOME/bin:$PATH[m[1m"
+fi
+~[0m[24;63H1,1[11CAll[1;1H[24;63H2[2;1H[24;64H2,1[22;1H[24;64H1[21;1H[24;64H0[20;1H[24;63H19[19;1H[24;64H8,0-1[18;1H[24;64H7,1  [17;1H[24;64H6[16;1H[24;64H5,1-8[15;8H[24;64H4,1  [14;1H[24;64H3[13;1H[24;64H2[12;1H[24;64H1[11;1H[24;64H0,0-1[10;1H[24;63H9,1   [9;1H[24;63H8[8;1H[24;63H7[7;1H[24;63H6,0-1[6;1H[24;63H5,1  [5;1H[24;63H4[4;1H[24;63H3[3;1H[24;63H2[2;1H[24;63H1[1;1H[24;63H22,1[22;1H[24;1H[K[24;1H:q[?1l>[24;1H[K[24;1Hcoral@coral:~$ ll
+total 208
+drwxr-xr-x 27 coral coral  4096 Jan 12 14:30 [0m[01;34m.[0m/
+drwxr-xr-x  4 root  root   4096 Nov  4 21:24 [01;34m..[0m/
+drwx------  3 coral coral  4096 Dec  9 21:46 [01;34m.adobe[0m/
+-rw-------  1 coral coral 11502 Jan  5 22:12 .bash_history
+-rw-r--r--  1 coral coral   220 Nov  5 04:47 .bash_logout
+-rw-r--r--  1 coral coral  3486 Nov  5 04:47 .bashrc
+drwx------ 16 coral coral  4096 Nov 17 16:20 [01;34m.cache[0m/
+drwx------ 14 coral coral  4096 Dec  9 21:56 [01;34m.config[0m/
+drwx------  3 coral coral  4096 Nov  5 04:51 [01;34m.dbus[0m/
+drwxr-xr-x  2 coral coral  4096 Dec  9 21:37 [01;34mDesktop[0m/
+-rw-r--r--  1 coral coral    26 Dec  9 21:35 .dmrc
+drwxr-xr-x  2 coral coral  4096 Nov  5 04:51 [01;34mDocuments[0m/
+drwxr-xr-x  2 coral coral  4096 Nov 25 13:33 [01;34mDownloads[0m/
+-rw-r--r--  1 coral coral  8445 Nov  5 04:47 examples.desktop
+drwx------  4 coral coral  4096 Dec  9 21:36 [01;34m.gconf[0m/
+drwx------  4 coral coral  4096 Nov  5 04:51 [01;34m.gnome2[0m/
+drwx------  2 coral coral  4096 Nov  9 21:37 [01;34m.gnupg[0m/
+-rw-rw-r--  1 coral coral   137 Dec  9 21:36 .gtk-bookmarks
+dr-x------  2 coral coral     0 Dec  9 21:35 [01;34m.gvfs[0m/
+-rw-------  1 coral coral  2202 Dec  9 21:35 .ICEauthority
+drwxr-xr-x  3 coral coral  4096 Nov  5 04:51 [01;34m.local[0m/
+drwx------  3 coral coral  4096 Dec  9 21:46 [01;34m.macromedia[0m/
+drwx------  3 coral coral  4096 Nov  5 04:51 [01;34m.mission-control[0m/
+drwx------  4 coral coral  4096 Nov 17 16:19 [01;34m.mozilla[0m/
+drwxr-xr-x  2 coral coral  4096 Nov  5 04:51 [01;34mMusic[0m/
+-rw-------  1 coral coral    24 Nov 17 16:29 .mysql_history
+drwxr-xr-x  2 coral coral  4096 Nov  5 04:51 [01;34mPictures[0m/
+-rw-r--r--  1 coral coral   675 Nov  5 04:47 .profile
+drwxr-xr-x  2 coral coral  4096 Nov  5 04:51 [01;34mPublic[0m/
+drwx------  2 coral coral  4096 Dec  9 21:36 [01;34m.pulse[0m/
+-rw-------  1 coral coral   256 Nov  5 04:51 .pulse-cookie
+-rw-------  1 coral coral     2 Nov  9 21:38 .pythonhistory
+drwx------  2 coral coral  4096 Jan  5 18:18 [01;34m.ssh[0m/
+drwxr-xr-x  2 coral coral  4096 Nov  5 04:51 [01;34mTemplates[0m/
+drwx------  4 coral coral  4096 Nov  4 20:55 [01;34m.thumbnails[0m/
+drwxr-xr-x  2 coral coral  4096 Nov  5 04:51 [01;34mVideos[0m/
+drwxr-xr-x 15 coral coral  4096 Dec  9 21:39 [01;34m.vim.bak[0m/
+-rw-------  1 coral coral 10505 Jan 12 14:30 .viminfo
+drwxrwxr-x  6 coral coral  4096 Nov 25 13:37 [01;34m.vim_old[0m/
+-rw-rw-r--  1 coral coral  2276 Dec  9 21:47 .vimrc.bak
+-rw-------  1 coral coral    50 Dec  9 21:35 .Xauthority
+-rw-------  1 coral coral  8692 Jan 12 14:30 .xsession-errors
+-rw-------  1 coral coral 12197 Dec  9 21:34 .xsession-errors.old
+coral@coral:~$ vim .viminfo 
+[?1h=[1;24r[m[m[0m[H[J[24;1H".viminfo" 754L, 10505C[1;1H[1m# This viminfo file was generated by Vim 7.3.
+# You may edit it if you're careful!
+
+# Value of 'encoding' when this file was written[0m
+*encoding=utf-8
+
+
+[1m# hlsearch on (H) or off (h):
+~h
+# Last Search Pattern:
+~MSle0~/[0mgit
+
+[1m# Command Line History (newest to oldest):
+:[0mq
+[1m:[0mwq
+[1m:[0mw
+[1m:[0mq!
+[1m:[0mNERDTree
+[1m:[0mNERDtree
+[1m:[0mset nu
+[1m:[0mwq!
+[1m:[0m:w
+[1m:[0mQ[24;63H1,1[11CTop[1;1H[24;1H[K[24;1H:q[?1l>[24;1H[K[24;1Hcoral@coral:~$ ls
+[0m[01;34mDesktop[0m    [01;34mDownloads[0m         [01;34mMusic[0m     [01;34mPublic[0m     [01;34mVideos[0m
+[01;34mDocuments[0m  examples.desktop  [01;34mPictures[0m  [01;34mTemplates[0m
+coral@coral:~$ pwd
+/home/coral
+coral@coral:~$ exit
+logout
+Welcome to Ubuntu 12.04.3 LTS (GNU/Linux 3.8.0-29-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+Last login: Sun Jan 12 14:29:35 2014 from localhost
+coral@coral:~$ exit
+logout
+Welcome to Ubuntu 12.04.3 LTS (GNU/Linux 3.8.0-29-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+Last login: Sun Jan 12 14:31:19 2014 from localhost
+coral@coral:~$ exit
+logout
+Welcome to Ubuntu 12.04.3 LTS (GNU/Linux 3.8.0-29-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+Last login: Sun Jan 12 15:27:05 2014 from localhost
+coral@coral:~$ top
+[H[J[mtop - 16:34:22 up 2 days, 10:09,  6 users,  load average: 0.36, 0.39, 0.35[m[K
+Tasks:[m[m 172 [mtotal,[m[m   1 [mrunning,[m[m 171 [msleeping,[m[m   0 [mstopped,[m[m   0 [mzombie[m[K
+Cpu(s):[m[m  6.4%[mus,[m[m  1.8%[msy,[m[m  0.0%[mni,[m[m 91.7%[mid,[m[m  0.0%[mwa,[m[m  0.0%[mhi,[m[m  0.0%[msi,[m[m  0.0%[mst[m[K
+Mem: [m[m  4045736k [mtotal,[m[m  2185660k [mused,[m[m  1860076k [mfree,[m[m   196760k [mbuffers[m[K
+Swap:[m[m  1046524k [mtotal,[m[m        0k [mused,[m[m  1046524k [mfree,[m[m   987836k [mcached[m[K
+[6;1H
+[7m  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND            [m[K
+[m 1130 root      20   0  275m 129m 8444 S  3.7  3.3  10:40.93 Xorg               [m
+[m 2494 coral     20   0  599m  25m  12m S  1.8  0.6   1:06.10 gnome-terminal     [m
+[m[m30356 coral     20   0 17340 1316  940 R  1.8  0.0   0:00.03 top                [m
+[m    1 root      20   0 24580 2544 1368 S  0.0  0.1   0:02.23 init               [m
+[m    2 root      20   0     0    0    0 S  0.0  0.0   0:00.03 kthreadd           [m
+[m    3 root      20   0     0    0    0 S  0.0  0.0   0:08.23 ksoftirqd/0        [m
+[m    5 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 kworker/0:0H       [m
+[m    6 root      20   0     0    0    0 S  0.0  0.0   0:00.00 kworker/u:0        [m
+[m    7 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 kworker/u:0H       [m
+[m    8 root      RT   0     0    0    0 S  0.0  0.0   0:00.12 migration/0        [m
+[m    9 root      20   0     0    0    0 S  0.0  0.0   0:00.00 rcu_bh             [m
+[m   10 root      20   0     0    0    0 S  0.0  0.0   0:16.63 rcu_sched          [m
+[m   11 root      RT   0     0    0    0 S  0.0  0.0   0:01.93 watchdog/0         [m
+[m   12 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 cpuset             [m
+[m   13 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 khelper            [m
+[m   14 root      20   0     0    0    0 S  0.0  0.0   0:00.00 kdevtmpfs          [m
+[m   15 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 netns              [m[6;1H[K[25;1H
+coral@coral:~$ 
+coral@coral:~$ 
+coral@coral:~$ ls
+[0m[01;34mDesktop[0m    [01;34mDownloads[0m         [01;34mMusic[0m     [01;34mPublic[0m     [01;34mVideos[0m
+[01;34mDocuments[0m  examples.desktop  [01;34mPictures[0m  [01;34mTemplates[0m
+coral@coral:~$ vi examples.desktop 
+[?1h=[1;24r[m[m[0m[H[J[24;1H"examples.desktop" 227L, 8445C[1;1H[1m[Desktop Entry][0m
+[4mVersion[m=1.0
+[4mType=Link
+Name=[mExamples
+[4mName[aa]=[mCeelallo
+[4mName[ace]=[mContoh
+[4mName[af]=[mVoorbeelde
+[4mName[am]=[mምሳሌዎች
+[4mName[an]=[mExemplos
+[4mName[ar]=[mﺄﻤﺜﻟﺓ
+[4mName[ast]=[mExemplos
+[4mName[az]=[mNümunələr
+[4mName[be]=[mПрыклады
+[4mName[bg]=[mПримери
+[4mName[bn]=[mউদাহরণ
+[4mName[br]=[mSkouerioù
+[4mName[bs]=[mPrimjeri
+[4mName[ca]=[mExemples
+[4mName[ca@valencia]=[mExemples
+[4mName[ckb]=[mﻦﻣﻮﻨﻫ[1m<200c>[0mﻛﺎﻧ
+[4mName[cs]=[mUkázky
+[4mName[csb]=[mPrzëmiôrë
+[4mName[cy]=[mEnghreifftiau[24;63H1,1[11CTop[1;1H[24;1H[K[24;1H: [61C1,1[11CTop[1;1H[24;1H[1m-- INSERT --[0m[24;63H[K[24;63H1,1[11CTop[1;1Hi[Desktop Entry][24;65H2[1;2Hii[Desktop Entry][24;65H3[1;3H[24;1H[K[1;2HiO[A[[24;63H1,2[11CTop[1;2H[24;1H[1m-- INSERT --[0m[24;63H[K[24;63H1,18[10CTop[1;18HO O O O O O [24;1H[K[24;63H1,17[10CTop[1;17H[24;63H2,11[2;11H[24;63H3,9 [3;9H[24;63H4,13[4;13H[24;63H3,9 [3;9H[24;63H4,13[4;13H[24;63H3,9 [3;9H[24;63H4,13[4;13H[24;63H5,17[5;17H[24;63H4,13[4;13H[24;63H3,9 [3;9H[24;63H2,11[2;11H[24;63H1,17[1;17H[24;63H2,11[2;11H[24;63H3,9 [3;9H[24;63H4,13[4;13H[24;63H5,17[5;17H[24;63H6,16[6;16H[24;63H7,17[7;17H[24;63H8,22-14[8;14H[24;63H9,17   [9;17H[24;63H10,18-14[10;14H[24;64H1,17   [11;17H[24;64H2,19-17[12;17H[24;64H3,24[13;17H[24;64H4,22-16[14;16H[24;64H5,25-14[15;14H[24;64H6,17   [16;17H[24;64H7[17;17H[24;64H8[18;17H[24;64H9[19;17H[24;63H[K[24;1H:q![?1l>[24;1H[K[24;1Hcoral@coral:~$ ls
+[0m[01;34mDesktop[0m    [01;34mDownloads[0m         [01;34mMusic[0m     [01;34mPublic[0m     [01;34mVideos[0m
+[01;34mDocuments[0m  examples.desktop  [01;34mPictures[0m  [01;34mTemplates[0m
+coral@coral:~$ cd 
+coral@coral:~$ ls
+[0m[01;34mDesktop[0m    [01;34mDownloads[0m         [01;34mMusic[0m     [01;34mPublic[0m     [01;34mVideos[0m
+[01;34mDocuments[0m  examples.desktop  [01;34mPictures[0m  [01;34mTemplates[0m
+coral@coral:~$ cd /tmp/
+coral@coral:/tmp$ ls
+[0m[30;42mat-spi2[0m             [01;34mpulse-qjbWP7Mvaczl[0m  [01;34mtmp66yD8r[0m      unity_support_test.0
+file                [01;34mrecycled[0m            [01;34mtmp8fnreS[0m      [01;34mvmware-coral[0m
+files               [01;34mssh-NTxwwzRd2156[0m    [01;34mtmpFLtDKC[0m      [30;42mVMwareDnD[0m
+[01;34mkeyring-RhR3th[0m      [01;34mtmp1_27VW[0m           [01;34mtmprUcuYF[0m      [01;34mvmware-root[0m
+[01;34mpulse-PKdhtXMmr18n[0m  [01;34mtmp1W8Q4J[0m           tri_config.py
+coral@coral:/tmp$ vi tri_config.py 
+[?1h=[1;24r[m[m[0m[H[J[24;1H"tri_config.py" [readonly] 52L, 1894C[1;1H[1m#Author: Alex Li[0m
+[4mimport[m os,sys
+
+[1m#Working_dir = '/opt/soft/TriAquae'[0m
+Working_dir = [4m'/usr/local/TriAquae'[m
+Max_batch_threads =  [4m35[m
+Tri_sftp_dir = [4m'%s/TriSFTP'[m % Working_dir
+Tri_sftp_send_dir = [4m'%s/TriSFTP/send'[m % Working_dir
+Tri_sftp_recv_dir = [4m'%s/TriSFTP/recv'[m % Working_dir
+Dangerous_cmd_list = [4m'%s/share/dangerous_cmd.txt'[m % Working_dir
+RRDTOOL_png_dir = [4m'%s/TriAquae/static/img/rrdtool_png/'[m %  Working_dir
+RRDTOOL_rrd_file_dir= [4m'%s/rrdtool/rrd_files'[m % Working_dir
+
+[1m#TriAquae database info[0m
+MySQL_Name = [4m'TriAquae'[m   [1m# Don't change this database name[0m
+MySQL_Host = [4m'127.0.0.1'[m  [1m# Your Mysql hostname[0m
+MySQL_Port = [4m'3306'[m       [1m# Your Mysql port[0m
+MySQL_User = [4m'root'[m       [1m# Your Mysql username[0m
+MySQL_Pass = [4m'alex3714'[m[10C [1m# Your Mysql password, '' means no password.
+
+#TriAquae Log settings[0m
+Log_dir = [4m'%s/TriAquae/logs'[m % Working_dir
+Snmp_temp_log = [4m'%s/snmp_temp.log'[m % Log_dir[24;63H1,1[11CTop[1;1H[24;1H[7mW10: Warning: Changing a readonly file[m[24;63H[K[1;23r[23;1H
+[1;24r[24;1H[K[24;63H1,1[11CTop[1;1H[1;23r[23;1H
+[1;24r[23;1HTri_IP = [4m'192.168.2.5'[m  [1m# Change it to your own IP address[0m[24;63H[K[24;63H1,0-1[9CTop[1;1H[1;23r[23;1H
+[1;24r[23;1HTri_Port = [4m'4200'[m      [1m# render device[0m[24;63H[K[24;63H1,1[11CTop[1;1H[1;23r[23;1H
+[1;24r[23;1HTri_connector_username = [4m'tri_connector'[m[24;63H[K[24;63H1,1[11CTop[1;1H[1;23r[23;1H
+[1;24r[23;1HTri_connector_password = [4m'tripass'[m[24;63H[K[24;63H1,1[11CTop[1;1H[1;23r[23;1H
+[1;24r[23;1HTri_connector_baoleiuser = [4m'%s/TriAquae/backend/baoleiuser.py'[m % Working_dir[24;63H[K[24;63H1,1[11CTop[1;1H[1;23r[23;1H
+[1;24r[23;1HTri_connector_baoleihost = [4m'%s/TriAquae/backend/baoleihost.py'[m % Working_dir[24;63H[K[24;63H1,1[11CTop[1;1H[24;63H2[2;1H[24;63H3[3;1H[24;63H4[4;1H[24;63H5[5;1H[24;63H6,0-1[6;1H[24;63H7,1  [7;1H[24;63H8[8;1H[24;63H9[9;1H[24;63H10,1[10;1H[24;64H1[11;1H[24;64H2[12;1H[24;64H3,0-1[13;1H[24;64H4,1  [14;1H[24;64H5[15;1H[24;64H6[16;1H[16;23r[23;1H
+[1;24r[24;63H[K[24;63H16,0-1[8CTop[16;1H[16;23r[23;1H
+[1;24r[23;1HAsset_collection_dir = [4m'%s/asset_collection'[m % Log_dir[24;63H[K[24;63H16,1[10CTop[16;1H[24;63H[K[24;1H:q[24;2H[K[24;2Hwq[7mE45: 'readonly' option is set (add ! to override)[m[13C16,1[10CTop[16;1H[24;63H23[23;1H[24;1H[K[24;1H:q![?1l>[24;1H[K[24;1Hcoral@coral:/tmp$ ls
+[0m[30;42mat-spi2[0m             [01;34mpulse-qjbWP7Mvaczl[0m  [01;34mtmp66yD8r[0m      unity_support_test.0
+file                [01;34mrecycled[0m            [01;34mtmp8fnreS[0m      [01;34mvmware-coral[0m
+files               [01;34mssh-NTxwwzRd2156[0m    [01;34mtmpFLtDKC[0m      [30;42mVMwareDnD[0m
+[01;34mkeyring-RhR3th[0m      [01;34mtmp1_27VW[0m           [01;34mtmprUcuYF[0m      [01;34mvmware-root[0m
+[01;34mpulse-PKdhtXMmr18n[0m  [01;34mtmp1W8Q4J[0m           tri_config.py
+coral@coral:/tmp$ vi [Km /[Ktri_config.py 
+[?1h=[1;24r[m[m[0m[H[J[24;1H"tri_config.py" [readonly] 52L, 1894C[1;1H[1m#Author: Alex Li[0m
+[4mimport[m os,sys
+
+[1m#Working_dir = '/opt/soft/TriAquae'[0m
+Working_dir = [4m'/usr/local/TriAquae'[m
+Max_batch_threads =  [4m35[m
+Tri_sftp_dir = [4m'%s/TriSFTP'[m % Working_dir
+Tri_sftp_send_dir = [4m'%s/TriSFTP/send'[m % Working_dir
+Tri_sftp_recv_dir = [4m'%s/TriSFTP/recv'[m % Working_dir
+Dangerous_cmd_list = [4m'%s/share/dangerous_cmd.txt'[m % Working_dir
+RRDTOOL_png_dir = [4m'%s/TriAquae/static/img/rrdtool_png/'[m %  Working_dir
+RRDTOOL_rrd_file_dir= [4m'%s/rrdtool/rrd_files'[m % Working_dir
+
+[1m#TriAquae database info[0m
+MySQL_Name = [4m'TriAquae'[m   [1m# Don't change this database name[0m
+MySQL_Host = [4m'127.0.0.1'[m  [1m# Your Mysql hostname[0m
+MySQL_Port = [4m'3306'[m       [1m# Your Mysql port[0m
+MySQL_User = [4m'root'[m       [1m# Your Mysql username[0m
+MySQL_Pass = [4m'alex3714'[m[10C [1m# Your Mysql password, '' means no password.
+
+#TriAquae Log settings[0m
+Log_dir = [4m'%s/TriAquae/logs'[m % Working_dir
+Snmp_temp_log = [4m'%s/snmp_temp.log'[m % Log_dir[24;63H1,1[11CTop[1;1H[24;63H2[2;1H[24;63H3,0-1[3;1H[24;63H4,1  [4;1H[24;63H5[5;1H[24;63H6[6;1H[24;63H7[7;1H[24;63H8[8;1H[24;63H9[9;1H[24;63H10,1[10;1H[24;64H1[11;1H[24;64H2[12;1H[24;64H3,0-1[13;1H[24;64H4,1  [14;1H[24;64H5[15;1H[24;64H6[16;1H[24;1H[7mW10: Warning: Changing a readonly file[m[24;63H[K[16;23r[23;1H
+[1;24r[24;1H[K[24;63H16,1[10CTop[16;1H[24;63H[K[24;1H:q![?1l>[24;1H[K[24;1Hcoral@coral:/tmp$ ls
+[0m[30;42mat-spi2[0m             [01;34mpulse-qjbWP7Mvaczl[0m  [01;34mtmp66yD8r[0m      unity_support_test.0
+file                [01;34mrecycled[0m            [01;34mtmp8fnreS[0m      [01;34mvmware-coral[0m
+files               [01;34mssh-NTxwwzRd2156[0m    [01;34mtmpFLtDKC[0m      [30;42mVMwareDnD[0m
+[01;34mkeyring-RhR3th[0m      [01;34mtmp1_27VW[0m           [01;34mtmprUcuYF[0m      [01;34mvmware-root[0m
+[01;34mpulse-PKdhtXMmr18n[0m  [01;34mtmp1W8Q4J[0m           tri_config.py
+coral@coral:/tmp$ top
+[H[J[mtop - 16:35:23 up 2 days, 10:10,  6 users,  load average: 0.51, 0.43, 0.37[m[K
+Tasks:[m[m 177 [mtotal,[m[m   2 [mrunning,[m[m 175 [msleeping,[m[m   0 [mstopped,[m[m   0 [mzombie[m[K
+Cpu(s):[m[m  6.4%[mus,[m[m  1.8%[msy,[m[m  0.0%[mni,[m[m 91.7%[mid,[m[m  0.0%[mwa,[m[m  0.0%[mhi,[m[m  0.0%[msi,[m[m  0.0%[mst[m[K
+Mem: [m[m  4045736k [mtotal,[m[m  2209524k [mused,[m[m  1836212k [mfree,[m[m   196832k [mbuffers[m[K
+Swap:[m[m  1046524k [mtotal,[m[m        0k [mused,[m[m  1046524k [mfree,[m[m   988612k [mcached[m[K
+[6;1H
+[7m  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND            [m[K
+[m[m30422 root      20   0  143m  25m 4136 R 95.7  0.6   0:02.45 python             [m
+[m 1130 root      20   0  275m 129m 8444 S  2.0  3.3  10:41.86 Xorg               [m
+[m 1584 root      20   0 87644 4140 3212 S  2.0  0.1   4:00.65 vmtoolsd           [m
+[m 2223 coral     20   0  981m 104m  34m S  2.0  2.7  15:35.89 compiz             [m
+[m 2494 coral     20   0  609m  25m  12m S  2.0  0.6   1:06.75 gnome-terminal     [m
+[m    1 root      20   0 24580 2544 1368 S  0.0  0.1   0:02.23 init               [m
+[m    2 root      20   0     0    0    0 S  0.0  0.0   0:00.03 kthreadd           [m
+[m    3 root      20   0     0    0    0 S  0.0  0.0   0:08.24 ksoftirqd/0        [m
+[m    5 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 kworker/0:0H       [m
+[m    6 root      20   0     0    0    0 S  0.0  0.0   0:00.00 kworker/u:0        [m
+[m    7 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 kworker/u:0H       [m
+[m    8 root      RT   0     0    0    0 S  0.0  0.0   0:00.12 migration/0        [m
+[m    9 root      20   0     0    0    0 S  0.0  0.0   0:00.00 rcu_bh             [m
+[m   10 root      20   0     0    0    0 S  0.0  0.0   0:16.66 rcu_sched          [m
+[m   11 root      RT   0     0    0    0 S  0.0  0.0   0:01.93 watchdog/0         [m
+[m   12 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 cpuset             [m
+[m   13 root       0 -20     0    0    0 S  0.0  0.0   0:00.00 khelper            [m[6;1H[K[H[mtop - 16:35:23 up 2 days, 10:10,  6 users,  load average: 0.51, 0.43, 0.37[m[K
+Tasks:[m[m 177 [mtotal,[m[m   2 [mrunning,[m[m 175 [msleeping,[m[m   0 [mstopped,[m[m   0 [mzombie[m[K
+Cpu(s):[m[m 85.7%[mus,[m[m 14.3%[msy,[m[m  0.0%[mni,[m[m  0.0%[mid,[m[m  0.0%[mwa,[m[m  0.0%[mhi,[m[m  0.0%[msi,[m[m  0.0%[mst[m[K
+Mem: [m[m  4045736k [mtotal,[m[m  2209516k [mused,[m[m  1836220k [mfree,[m[m   196832k [mbuffers[m[K
+Swap:[m[m  1046524k [mtotal,[m[m        0k [mused,[m[m  1046524k [mfree,[m[m   988616k [mcached[m[K
+[6;1H
+[7m  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND            [m[K
+[m 2912 coral     20   0  931m 185m  45m S  0.0  4.7   2:56.94 firefox            [m
+[m 1130 root      20   0  275m 129m 8444 S  1.4  3.3  10:41.87 Xorg               [m
+[m 2223 coral     20   0  981m 104m  34m S  1.4  2.7  15:35.90 compiz             [m
+[m 1108 mysql     20   0  865m  44m 7604 S  0.0  1.1   1:08.97 mysqld             [m
+[m 3344 coral     20   0  403m  37m  24m S  1.4  0.9  43:07.06 plugin-containe    [m
+[m 2248 coral     20   0  451m  35m  24m S  0.0  0.9   5:42.12 vmtoolsd           [m
+[m 2206 coral     20   0  686m  34m  12m S  0.0  0.9   0:31.29 gnome-settings-    [m
+[m 2247 coral     20   0 1013m  31m  18m S  0.0  0.8   0:10.94 nautilus           [m
+[m 6661 root      20   0  290m  27m 4196 S  0.0  0.7   0:05.80 python             [m
+[m30054 root      20   0  237m  27m 4416 S  1.4  0.7   0:00.96 python             [m
+[m 2494 coral     20   0  609m  25m  12m S  0.0  0.6   1:06.75 gnome-terminal     [m
+[m30038 root      20   0  149m  25m 4524 S  0.0  0.6   0:00.33 python             [m
+[m[m30422 root      20   0  143m  25m 4136 R 95.7  0.6   0:03.12 python             [m
+[m 3995 root      20   0  149m  25m 4532 S  0.0  0.6   0:00.52 python             [m
+[m30033 root      20   0  145m  24m 4124 S  0.0  0.6   0:00.54 python             [m
+[m 2338 coral     20   0  527m  24m  11m S  0.0  0.6   0:27.60 unity-panel-ser    [m
+[m 2632 coral     20   0  554m  21m 9752 S  0.0  0.5   0:01.11 unity-scope-vid    [m[6;1H[K[H[mtop - 16:35:24 up 2 days, 10:10,  6 users,  load average: 0.51, 0.43, 0.37[m[K
+Tasks:[m[m 177 [mtotal,[m[m   3 [mrunning,[m[m 174 [msleeping,[m[m   0 [mstopped,[m[m   0 [mzombie[m[K
+Cpu(s):[m[m 76.0%[mus,[m[m 24.0%[msy,[m[m  0.0%[mni,[m[m  0.0%[mid,[m[m  0.0%[mwa,[m[m  0.0%[mhi,[m[m  0.0%[msi,[m[m  0.0%[mst[m[K
+Mem: [m[m  4045736k [mtotal,[m[m  2209844k [mused,[m[m  1835892k [mfree,[m[m   196832k [mbuffers[m[K
+Swap:[m[m  1046524k [mtotal,[m[m        0k [mused,[m[m  1046524k [mfree,[m[m   988616k [mcached[m[K
+[6;1H
+[7m  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND            [m[K
+[m 2912 coral     20   0  931m 185m  45m S  0.0  4.7   2:56.94 firefox            [m
+[m[m 1130 root      20   0  275m 129m 8444 R  4.0  3.3  10:41.88 Xorg               [m
+[m 2223 coral     20   0  981m 104m  34m S  0.0  2.7  15:35.90 compiz             [m
+[m 1108 mysql     20   0  865m  44m 7604 S  0.0  1.1   1:08.97 mysqld             [m
+[m 3344 coral     20   0  403m  37m  24m S  0.0  0.9  43:07.06 plugin-containe    [m
+[m 2248 coral     20   0  451m  35m  24m S  0.0  0.9   5:42.12 vmtoolsd           [m
+[m 2206 coral     20   0  686m  34m  12m S  0.0  0.9   0:31.29 gnome-settings-    [m
+[m 2247 coral     20   0 1013m  31m  18m S  0.0  0.8   0:10.94 nautilus           [m
+[m 6661 root      20   0  290m  27m 4196 S  0.0  0.7   0:05.80 python             [m
+[m30054 root      20   0  237m  27m 4416 S  0.0  0.7   0:00.96 python             [m
+[m 2494 coral     20   0  609m  25m  12m S  0.0  0.6   1:06.75 gnome-terminal     [m
+[m30038 root      20   0  149m  25m 4524 S  0.0  0.6   0:00.33 python             [m
+[m[m30422 root      20   0  143m  25m 4148 R 87.2  0.6   0:03.34 python             [m
+[m 3995 root      20   0  149m  25m 4532 S  0.0  0.6   0:00.52 python             [m
+[m30033 root      20   0  145m  24m 4124 S  0.0  0.6   0:00.54 python             [m
+[m 2338 coral     20   0  527m  24m  11m S  0.0  0.6   0:27.60 unity-panel-ser    [m
+[m 2632 coral     20   0  554m  21m 9752 S  0.0  0.5   0:01.11 unity-scope-vid    [m[6;1H[K[H[mtop - 16:35:24 up 2 days, 10:10,  6 users,  load average: 0.51, 0.43, 0.37[m[K
+Tasks:[m[m 177 [mtotal,[m[m   2 [mrunning,[m[m 175 [msleeping,[m[m   0 [mstopped,[m[m   0 [mzombie[m[K
+Cpu(s):[m[m 86.4%[mus,[m[m 13.6%[msy,[m[m  0.0%[mni,[m[m  0.0%[mid,[m[m  0.0%[mwa,[m[m  0.0%[mhi,[m[m  0.0%[msi,[m[m  0.0%[mst[m[K
+Mem: [m[m  4045736k [mtotal,[m[m  2209844k [mused,[m[m  1835892k [mfree,[m[m   196832k [mbuffers[m[K
+Swap:[m[m  1046524k [mtotal,[m[m        0k [mused,[m[m  1046524k [mfree,[m[m   988616k [mcached[m[K
+[6;1H
+[7m  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND            [m[K
+[m 2912 coral     20   0  931m 185m  45m S  0.0  4.7   2:56.94 firefox            [m
+[m 1130 root      20   0  275m 129m 8444 S  0.0  3.3  10:41.88 Xorg               [m
+[m 2223 coral     20   0  981m 104m  34m S  0.0  2.7  15:35.90 compiz             [m
+[m 1108 mysql     20   0  865m  44m 7604 S  0.0  1.1   1:08.97 mysqld             [m
+[m 3344 coral     20   0  403m  37m  24m S  0.0  0.9  43:07.06 plugin-containe    [m
+[m 2248 coral     20   0  451m  35m  24m S  0.0  0.9   5:42.12 vmtoolsd           [m
+[m 2206 coral     20   0  686m  34m  12m S  0.0  0.9   0:31.29 gnome-settings-    [m
+[m 2247 coral     20   0 1013m  31m  18m S  0.0  0.8   0:10.94 nautilus           [m
+[m 6661 root      20   0  290m  27m 4196 S  0.0  0.7   0:05.80 python             [m
+[m30054 root      20   0  237m  27m 4416 S  4.5  0.7   0:00.97 python             [m
+[m 2494 coral     20   0  609m  25m  12m S  4.5  0.6   1:06.76 gnome-terminal     [m
+[m30038 root      20   0  149m  25m 4524 S  0.0  0.6   0:00.33 python             [m
+[m[m30422 root      20   0  143m  25m 4148 R 94.4  0.6   0:03.55 python             [m
+[m 3995 root      20   0  149m  25m 4532 S  0.0  0.6   0:00.52 python             [m
+[m30033 root      20   0  145m  24m 4124 S  0.0  0.6   0:00.54 python             [m
+[m 2338 coral     20   0  527m  24m  11m S  0.0  0.6   0:27.60 unity-panel-ser    [m
+[m 2632 coral     20   0  554m  21m 9752 S  0.0  0.5   0:01.11 unity-scope-vid    [m[6;1H[K[H[mtop - 16:35:24 up 2 days, 10:10,  6 users,  load average: 0.51, 0.43, 0.37[m[K
+Tasks:[m[m 177 [mtotal,[m[m   2 [mrunning,[m[m 175 [msleeping,[m[m   0 [mstopped,[m[m   0 [mzombie[m[K
+Cpu(s):[m[m 85.7%[mus,[m[m 14.3%[msy,[m[m  0.0%[mni,[m[m  0.0%[mid,[m[m  0.0%[mwa,[m[m  0.0%[mhi,[m[m  0.0%[msi,[m[m  0.0%[mst[m[K
+Mem: [m[m  4045736k [mtotal,[m[m  2209796k [mused,[m[m  1835940k [mfree,[m[m   196832k [mbuffers[m[K
+Swap:[m[m  1046524k [mtotal,[m[m        0k [mused,[m[m  1046524k [mfree,[m[m   988620k [mcached[m[K
+[6;1H
+[7m  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND            [m[K
+[m 2912 coral     20   0  931m 185m  45m S  0.0  4.7   2:56.94 firefox            [m
+[m 1130 root      20   0  275m 129m 8444 S  0.0  3.3  10:41.88 Xorg               [m
+[m 2223 coral     20   0  981m 104m  34m S  4.7  2.7  15:35.91 compiz             [m
+[m 1108 mysql     20   0  865m  44m 7604 S  0.0  1.1   1:08.97 mysqld             [m
+[m 3344 coral     20   0  403m  37m  24m S  0.0  0.9  43:07.06 plugin-containe    [m
+[m 2248 coral     20   0  451m  35m  24m S  0.0  0.9   5:42.12 vmtoolsd           [m
+[m 2206 coral     20   0  686m  34m  12m S  0.0  0.9   0:31.29 gnome-settings-    [m
+[m 2247 coral     20   0 1013m  31m  18m S  0.0  0.8   0:10.94 nautilus           [m
+[m 6661 root      20   0  290m  27m 4196 S  0.0  0.7   0:05.80 python             [m
+[m30054 root      20   0  237m  27m 4416 S  4.7  0.7   0:00.98 python             [m
+[m 2494 coral     20   0  609m  25m  12m S  4.7  0.6   1:06.77 gnome-terminal     [m
+[m30038 root      20   0  149m  25m 4524 S  0.0  0.6   0:00.33 python             [m
+[m[m30422 root      20   0  143m  25m 4148 R 83.7  0.6   0:03.73 python             [m
+[m 3995 root      20   0  149m  25m 4532 S  0.0  0.6   0:00.52 python             [m
+[m30033 root      20   0  145m  24m 4124 S  0.0  0.6   0:00.54 python             [m
+[m 2338 coral     20   0  527m  24m  11m S  0.0  0.6   0:27.60 unity-panel-ser    [m
+[m 2632 coral     20   0  554m  21m 9752 S  0.0  0.5   0:01.11 unity-scope-vid    [m[6;1H[K[H[mtop - 16:35:24 up 2 days, 10:10,  6 users,  load average: 0.51, 0.43, 0.37[m[K
+Tasks:[m[m 177 [mtotal,[m[m   2 [mrunning,[m[m 175 [msleeping,[m[m   0 [mstopped,[m[m   0 [mzombie[m[K
+Cpu(s):[m[m 75.0%[mus,[m[m 25.0%[msy,[m[m  0.0%[mni,[m[m  0.0%[mid,[m[m  0.0%[mwa,[m[m  0.0%[mhi,[m[m  0.0%[msi,[m[m  0.0%[mst[m[K
+Mem: [m[m  4045736k [mtotal,[m[m  2209796k [mused,[m[m  1835940k [mfree,[m[m   196832k [mbuffers[m[K
+Swap:[m[m  1046524k [mtotal,[m[m        0k [mused,[m[m  1046524k [mfree,[m[m   988620k [mcached[m[K
+[6;1H
+[7m  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND            [m[K
+[m 2912 coral     20   0  931m 185m  45m S  0.0  4.7   2:56.94 firefox            [m
+[m 1130 root      20   0  275m 129m 8444 S  5.1  3.3  10:41.89 Xorg               [m
+[m 2223 coral     20   0  981m 104m  34m S  0.0  2.7  15:35.91 compiz             [m
+[m 1108 mysql     20   0  865m  44m 7604 S  0.0  1.1   1:08.97 mysqld             [m
+[m 3344 coral     20   0  403m  37m  24m S  0.0  0.9  43:07.06 plugin-containe    [m
+[m 2248 coral     20   0  451m  35m  24m S  0.0  0.9   5:42.12 vmtoolsd           [m
+[m 2206 coral     20   0  686m  34m  12m S  0.0  0.9   0:31.29 gnome-settings-    [m
+[m 2247 coral     20   0 1013m  31m  18m S  0.0  0.8   0:10.94 nautilus           [m
+[m 6661 root      20   0  290m  27m 4196 S  0.0  0.7   0:05.80 python             [m
+[m30054 root      20   0  237m  27m 4416 S  0.0  0.7   0:00.98 python             [m
+[m 2494 coral     20   0  609m  25m  12m S  0.0  0.6   1:06.77 gnome-terminal     [m
+[m30038 root      20   0  149m  25m 4524 S  0.0  0.6   0:00.33 python             [m
+[m[m30422 root      20   0  143m  25m 4148 R 86.0  0.6   0:03.90 python             [m
+[m 3995 root      20   0  149m  25m 4532 S  0.0  0.6   0:00.52 python             [m
+[m30033 root      20   0  145m  24m 4124 S  0.0  0.6   0:00.54 python             [m
+[m 2338 coral     20   0  527m  24m  11m S  0.0  0.6   0:27.60 unity-panel-ser    [m
+[m 2632 coral     20   0  554m  21m 9752 S  0.0  0.5   0:01.11 unity-scope-vid    [m[6;1H[K[H[mtop - 16:35:25 up 2 days, 10:10,  6 users,  load average: 0.51, 0.43, 0.37[m[K
+Tasks:[m[m 177 [mtotal,[m[m   3 [mrunning,[m[m 174 [msleeping,[m[m   0 [mstopped,[m[m   0 [mzombie[m[K
+Cpu(s):[m[m 80.0%[mus,[m[m 20.0%[msy,[m[m  0.0%[mni,[m[m  0.0%[mid,[m[m  0.0%[mwa,[m[m  0.0%[mhi,[m[m  0.0%[msi,[m[m  0.0%[mst[m[K
+Mem: [m[m  4045736k [mtotal,[m[m  2209796k [mused,[m[m  1835940k [mfree,[m[m   196832k [mbuffers[m[K
+Swap:[m[m  1046524k [mtotal,[m[m        0k [mused,[m[m  1046524k [mfree,[m[m   988620k [mcached[m[K
+[6;1H
+[7m  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND            [m[K
+[m 2912 coral     20   0  931m 185m  45m S  0.0  4.7   2:56.94 firefox            [m
+[m[m 1130 root      20   0  275m 129m 8444 R  0.0  3.3  10:41.89 Xorg               [m
+[m 2223 coral     20   0  981m 104m  34m S  0.0  2.7  15:35.91 compiz             [m
+[m 1108 mysql     20   0  865m  44m 7604 S  0.0  1.1   1:08.97 mysqld             [m
+[m 3344 coral     20   0  403m  37m  24m S  0.0  0.9  43:07.06 plugin-containe    [m
+[m 2248 coral     20   0  451m  35m  24m S  0.0  0.9   5:42.12 vmtoolsd           [m
+[m 2206 coral     20   0  686m  34m  12m S  0.0  0.9   0:31.29 gnome-settings-    [m
+[m 2247 coral     20   0 1013m  31m  18m S  0.0  0.8   0:10.94 nautilus           [m
+[m 6661 root      20   0  290m  27m 4196 S  0.0  0.7   0:05.80 python             [m
+[m30054 root      20   0  237m  27m 4416 S  5.1  0.7   0:00.99 python             [m
+[m 2494 coral     20   0  609m  25m  12m S  0.0  0.6   1:06.77 gnome-terminal     [m
+[m30038 root      20   0  149m  25m 4524 S  0.0  0.6   0:00.33 python             [m
+[m[m30422 root      20   0  143m  25m 4148 R 86.1  0.6   0:04.07 python             [m
+[m 3995 root      20   0  149m  25m 4532 S  0.0  0.6   0:00.52 python             [m
+[m30033 root      20   0  145m  24m 4124 S  0.0  0.6   0:00.54 python             [m
+[m 2338 coral     20   0  527m  24m  11m S  0.0  0.6   0:27.60 unity-panel-ser    [m
+[m 2632 coral     20   0  554m  21m 9752 S  0.0  0.5   0:01.11 unity-scope-vid    [m[6;1H[K[H[mtop - 16:35:25 up 2 days, 10:10,  6 users,  load average: 0.51, 0.43, 0.37[m[K
+Tasks:[m[m 172 [mtotal,[m[m   1 [mrunning,[m[m 171 [msleeping,[m[m   0 [mstopped,[m[m   0 [mzombie[m[K
+Cpu(s):[m[m 66.7%[mus,[m[m  9.5%[msy,[m[m  0.0%[mni,[m[m 23.8%[mid,[m[m  0.0%[mwa,[m[m  0.0%[mhi,[m[m  0.0%[msi,[m[m  0.0%[mst[m[K
+Mem: [m[m  4045736k [mtotal,[m[m  2187384k [mused,[m[m  1858352k [mfree,[m[m   196832k [mbuffers[m[K
+Swap:[m[m  1046524k [mtotal,[m[m        0k [mused,[m[m  1046524k [mfree,[m[m   988620k [mcached[m[K
+[6;1H
+[7m  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND            [m[K
+[m 2912 coral     20   0  931m 185m  45m S  0.0  4.7   2:56.94 firefox            [m
+[m 1130 root      20   0  275m 129m 8444 S  4.6  3.3  10:41.90 Xorg               [m
+[m 2223 coral     20   0  981m 104m  34m S  0.0  2.7  15:35.91 compiz             [m
+[m 1108 mysql     20   0  865m  44m 7604 S  0.0  1.1   1:08.97 mysqld             [m
+[m 3344 coral     20   0  403m  37m  24m S  0.0  0.9  43:07.06 plugin-containe    [m
+[m 2248 coral     20   0  451m  35m  24m S  0.0  0.9   5:42.12 vmtoolsd           [m
+[m 2206 coral     20   0  686m  34m  12m S  0.0  0.9   0:31.29 gnome-settings-    [m
+[m 2247 coral     20   0 1013m  31m  18m S  0.0  0.8   0:10.94 nautilus           [m
+[m 6661 root      20   0  290m  27m 4196 S  0.0  0.7   0:05.80 python             [m
+[m30054 root      20   0  237m  27m 4416 S  0.0  0.7   0:00.99 python             [m
+[m 2494 coral     20   0  609m  25m  12m S  0.0  0.6   1:06.77 gnome-terminal     [m
+[m30038 root      20   0  149m  25m 4524 S  0.0  0.6   0:00.33 python             [m
+[m 3995 root      20   0  149m  25m 4532 S  0.0  0.6   0:00.52 python             [m
+[m30033 root      20   0  145m  24m 4124 S  0.0  0.6   0:00.54 python             [m
+[m 2338 coral     20   0  527m  24m  11m S  0.0  0.6   0:27.60 unity-panel-ser    [m
+[m 2632 coral     20   0  554m  21m 9752 S  0.0  0.5   0:01.11 unity-scope-vid    [m
+[m 2251 coral     20   0  575m  16m  12m S  0.0  0.4   0:02.28 nm-applet          [m[6;1H[K[H[mtop - 16:35:25 up 2 days, 10:10,  6 users,  load average: 0.51, 0.43, 0.37[m[K
+Tasks:[m[m 172 [mtotal,[m[m   1 [mrunning,[m[m 171 [msleeping,[m[m   0 [mstopped,[m[m   0 [mzombie[m[K
+Cpu(s):[m[m 18.2%[mus,[m[m 13.6%[msy,[m[m  0.0%[mni,[m[m 68.2%[mid,[m[m  0.0%[mwa,[m[m  0.0%[mhi,[m[m  0.0%[msi,[m[m  0.0%[mst[m[K
+Mem: [m[m  4045736k [mtotal,[m[m  2187384k [mused,[m[m  1858352k [mfree,[m[m   196832k [mbuffers[m[K
+Swap:[m[m  1046524k [mtotal,[m[m        0k [mused,[m[m  1046524k [mfree,[m[m   988620k [mcached[m[K
+[6;1H
+[7m  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND            [m[K
+[m 2912 coral     20   0  931m 185m  45m S  0.0  4.7   2:56.94 firefox            [m
+[m 1130 root      20   0  275m 129m 8444 S  4.7  3.3  10:41.91 Xorg               [m
+[m 2223 coral     20   0  981m 104m  34m S  0.0  2.7  15:35.91 compiz             [m
+[m 1108 mysql     20   0  865m  44m 7604 S  0.0  1.1   1:08.97 mysqld             [m
+[m 3344 coral     20   0  403m  37m  24m S  0.0  0.9  43:07.06 plugin-containe    [m
+[m 2248 coral     20   0  451m  35m  24m S  0.0  0.9   5:42.12 vmtoolsd           [m
+[m 2206 coral     20   0  686m  34m  12m S  0.0  0.9   0:31.29 gnome-settings-    [m
+[m 2247 coral     20   0 1013m  31m  18m S  0.0  0.8   0:10.94 nautilus           [m
+[m 6661 root      20   0  290m  27m 4196 S  0.0  0.7   0:05.80 python             [m
+[m30054 root      20   0  237m  27m 4416 S  9.3  0.7   0:01.01 python             [m
+[m 2494 coral     20   0  609m  25m  12m S  4.7  0.6   1:06.78 gnome-terminal     [m
+[m30038 root      20   0  149m  25m 4524 S  0.0  0.6   0:00.33 python             [m
+[m 3995 root      20   0  149m  25m 4532 S  0.0  0.6   0:00.52 python             [m
+[m30033 root      20   0  145m  24m 4124 S  0.0  0.6   0:00.54 python             [m
+[m 2338 coral     20   0  527m  24m  11m S  0.0  0.6   0:27.60 unity-panel-ser    [m
+[m 2632 coral     20   0  554m  21m 9752 S  0.0  0.5   0:01.11 unity-scope-vid    [m
+[m 2251 coral     20   0  575m  16m  12m S  0.0  0.4   0:02.28 nm-applet          [m[6;1H[K[H[mtop - 16:35:25 up 2 days, 10:10,  6 users,  load average: 0.51, 0.43, 0.37[m[K
+Tasks:[m[m 172 [mtotal,[m[m   1 [mrunning,[m[m 171 [msleeping,[m[m   0 [mstopped,[m[m   0 [mzombie[m[K
+Cpu(s):[m[m 27.3%[mus,[m[m  9.1%[msy,[m[m  0.0%[mni,[m[m 63.6%[mid,[m[m  0.0%[mwa,[m[m  0.0%[mhi,[m[m  0.0%[msi,[m[m  0.0%[mst[m[K
+Mem: [m[m  4045736k [mtotal,[m[m  2187336k [mused,[m[m  1858400k [mfree,[m[m   196832k [mbuffers[m[K
+Swap:[m[m  1046524k [mtotal,[m[m        0k [mused,[m[m  1046524k [mfree,[m[m   988632k [mcached[m[K
+[6;1H
+[7m  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND            [m[K
+[m 2912 coral     20   0  931m 185m  45m S  0.0  4.7   2:56.94 firefox            [m
+[m 1130 root      20   0  275m 129m 8444 S 14.0  3.3  10:41.94 Xorg               [m
+[m 2223 coral     20   0  981m 104m  34m S  0.0  2.7  15:35.91 compiz             [m
+[m 1108 mysql     20   0  865m  44m 7604 S  0.0  1.1   1:08.97 mysqld             [m
+[m 3344 coral     20   0  403m  37m  24m S  0.0  0.9  43:07.06 plugin-containe    [m
+[m 2248 coral     20   0  451m  35m  24m S  0.0  0.9   5:42.12 vmtoolsd           [m
+[m 2206 coral     20   0  686m  34m  12m S  0.0  0.9   0:31.29 gnome-settings-    [m
+[m 2247 coral     20   0 1013m  31m  18m S  0.0  0.8   0:10.94 nautilus           [m
+[m 6661 root      20   0  290m  27m 4196 S  0.0  0.7   0:05.80 python             [m
+[m30054 root      20   0  237m  27m 4416 S  9.3  0.7   0:01.03 python             [m
+[m 2494 coral     20   0  609m  25m  12m S  4.7  0.6   1:06.79 gnome-terminal     [m
+[m30038 root      20   0  149m  25m 4524 S  0.0  0.6   0:00.33 python             [m
+[m 3995 root      20   0  149m  25m 4532 S  0.0  0.6   0:00.52 python             [m
+[m30033 root      20   0  145m  24m 4124 S  0.0  0.6   0:00.54 python             [m
+[m 2338 coral     20   0  527m  24m  11m S  0.0  0.6   0:27.60 unity-panel-ser    [m
+[m 2632 coral     20   0  554m  21m 9752 S  0.0  0.5   0:01.11 unity-scope-vid    [m
+[m 2251 coral     20   0  575m  16m  12m S  0.0  0.4   0:02.28 nm-applet          [m[6;1H[K[H[mtop - 16:35:25 up 2 days, 10:10,  6 users,  load average: 0.51, 0.43, 0.37[m[K
+Tasks:[m[m 172 [mtotal,[m[m   1 [mrunning,[m[m 171 [msleeping,[m[m   0 [mstopped,[m[m   0 [mzombie[m[K
+Cpu(s):[m[m 22.2%[mus,[m[m 16.7%[msy,[m[m  0.0%[mni,[m[m 61.1%[mid,[m[m  0.0%[mwa,[m[m  0.0%[mhi,[m[m  0.0%[msi,[m[m  0.0%[mst[m[K
+Mem: [m[m  4045736k [mtotal,[m[m  2187336k [mused,[m[m  1858400k [mfree,[m[m   196832k [mbuffers[m[K
+Swap:[m[m  1046524k [mtotal,[m[m        0k [mused,[m[m  1046524k [mfree,[m[m   988632k [mcached[m[K
+[6;1H
+[7m  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND            [m[K
+[m 2912 coral     20   0  931m 185m  45m S  0.0  4.7   2:56.94 firefox            [m
+[m 1130 root      20   0  275m 129m 8444 S  9.7  3.3  10:41.96 Xorg               [m
+[m 2223 coral     20   0  981m 104m  34m S  4.9  2.7  15:35.92 compiz             [m
+[m 1108 mysql     20   0  865m  44m 7604 S  0.0  1.1   1:08.97 mysqld             [m
+[m 3344 coral     20   0  403m  37m  24m S  4.9  0.9  43:07.07 plugin-containe    [m
+[m 2248 coral     20   0  451m  35m  24m S  4.9  0.9   5:42.13 vmtoolsd           [m
+[m 2206 coral     20   0  686m  34m  12m S  0.0  0.9   0:31.29 gnome-settings-    [m
+[m 2247 coral     20   0 1013m  31m  18m S  0.0  0.8   0:10.94 nautilus           [m
+[m 6661 root      20   0  290m  27m 4196 S  0.0  0.7   0:05.80 python             [m
+[m30054 root      20   0  237m  27m 4416 S 14.6  0.7   0:01.06 python             [m
+[m 2494 coral     20   0  609m  25m  12m S 14.6  0.6   1:06.82 gnome-terminal     [m
+[m30038 root      20   0  149m  25m 4524 S  0.0  0.6   0:00.33 python             [m
+[m 3995 root      20   0  149m  25m 4532 S  0.0  0.6   0:00.52 python             [m
+[m30033 root      20   0  145m  24m 4124 S  0.0  0.6   0:00.54 python             [m
+[m 2338 coral     20   0  527m  24m  11m S  0.0  0.6   0:27.60 unity-panel-ser    [m
+[m 2632 coral     20   0  554m  21m 9752 S  0.0  0.5   0:01.11 unity-scope-vid    [m
+[m 2251 coral     20   0  575m  16m  12m S  0.0  0.4   0:02.28 nm-applet          [m[6;1H[K[H[mtop - 16:35:26 up 2 days, 10:10,  6 users,  load average: 0.51, 0.43, 0.37[m[K
+Tasks:[m[m 172 [mtotal,[m[m   2 [mrunning,[m[m 170 [msleeping,[m[m   0 [mstopped,[m[m   0 [mzombie[m[K
+Cpu(s):[m[m 20.0%[mus,[m[m 15.0%[msy,[m[m  0.0%[mni,[m[m 65.0%[mid,[m[m  0.0%[mwa,[m[m  0.0%[mhi,[m[m  0.0%[msi,[m[m  0.0%[mst[m[K
+Mem: [m[m  4045736k [mtotal,[m[m  2187336k [mused,[m[m  1858400k [mfree,[m[m   196832k [mbuffers[m[K
+Swap:[m[m  1046524k [mtotal,[m[m        0k [mused,[m[m  1046524k [mfree,[m[m   988632k [mcached[m[K
+[6;1H
+[7m  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND            [m[K
+[m 2912 coral     20   0  931m 185m  45m S  0.0  4.7   2:56.94 firefox            [m
+[m[m 1130 root      20   0  275m 129m 8444 R  5.0  3.3  10:41.97 Xorg               [m
+[m 2223 coral     20   0  981m 104m  34m S  0.0  2.7  15:35.92 compiz             [m
+[m 1108 mysql     20   0  865m  44m 7604 S  0.0  1.1   1:08.97 mysqld             [m
+[m 3344 coral     20   0  403m  37m  24m S  0.0  0.9  43:07.07 plugin-containe    [m
+[m 2248 coral     20   0  451m  35m  24m S  0.0  0.9   5:42.13 vmtoolsd           [m
+[m 2206 coral     20   0  686m  34m  12m S  0.0  0.9   0:31.29 gnome-settings-    [m
+[m 2247 coral     20   0 1013m  31m  18m S  0.0  0.8   0:10.94 nautilus           [m
+[m 6661 root      20   0  290m  27m 4196 S  0.0  0.7   0:05.80 python             [m
+[m30054 root      20   0  237m  27m 4416 S  5.0  0.7   0:01.07 python             [m
+[m 2494 coral     20   0  609m  25m  12m S  5.0  0.6   1:06.83 gnome-terminal     [m
+[m30038 root      20   0  149m  25m 4524 S  0.0  0.6   0:00.33 python             [m
+[m 3995 root      20   0  149m  25m 4532 S  0.0  0.6   0:00.52 python             [m
+[m30033 root      20   0  145m  24m 4124 S  0.0  0.6   0:00.54 python             [m
+[m 2338 coral     20   0  527m  24m  11m S  0.0  0.6   0:27.60 unity-panel-ser    [m
+[m 2632 coral     20   0  554m  21m 9752 S  0.0  0.5   0:01.11 unity-scope-vid    [m
+[m 2251 coral     20   0  575m  16m  12m S  0.0  0.4   0:02.28 nm-applet          [m[6;1H[K[H[mtop - 16:35:26 up 2 days, 10:10,  6 users,  load average: 0.51, 0.43, 0.37[m[K
+Tasks:[m[m 172 [mtotal,[m[m   1 [mrunning,[m[m 171 [msleeping,[m[m   0 [mstopped,[m[m   0 [mzombie[m[K
+Cpu(s):[m[m 15.8%[mus,[m[m 10.5%[msy,[m[m  0.0%[mni,[m[m 73.7%[mid,[m[m  0.0%[mwa,[m[m  0.0%[mhi,[m[m  0.0%[msi,[m[m  0.0%[mst[m[K
+Mem: [m[m  4045736k [mtotal,[m[m  2187336k [mused,[m[m  1858400k [mfree,[m[m   196840k [mbuffers[m[K
+Swap:[m[m  1046524k [mtotal,[m[m        0k [mused,[m[m  1046524k [mfree,[m[m   988624k [mcached[m[K
+[6;1H
+[7m  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND            [m[K
+[m 2912 coral     20   0  931m 185m  45m S  0.0  4.7   2:56.94 firefox            [m
+[m 1130 root      20   0  275m 129m 8444 S  4.9  3.3  10:41.98 Xorg               [m
+[m 2223 coral     20   0  981m 104m  34m S  0.0  2.7  15:35.92 compiz             [m
+[m 1108 mysql     20   0  865m  44m 7604 S  0.0  1.1   1:08.97 mysqld             [m
+[m 3344 coral     20   0  403m  37m  24m S  0.0  0.9  43:07.07 plugin-containe    [m
+[m 2248 coral     20   0  451m  35m  24m S  0.0  0.9   5:42.13 vmtoolsd           [m
+[m 2206 coral     20   0  686m  34m  12m S  0.0  0.9   0:31.29 gnome-settings-    [m
+[m 2247 coral     20   0 1013m  31m  18m S  0.0  0.8   0:10.94 nautilus           [m
+[m 6661 root      20   0  290m  27m 4196 S  0.0  0.7   0:05.80 python             [m
+[m30054 root      20   0  237m  27m 4416 S  9.7  0.7   0:01.09 python             [m
+[m 2494 coral     20   0  609m  25m  12m S  4.9  0.6   1:06.84 gnome-terminal     [m
+[m30038 root      20   0  149m  25m 4524 S  0.0  0.6   0:00.33 python             [m
+[m 3995 root      20   0  149m  25m 4532 S  0.0  0.6   0:00.52 python             [m
+[m30033 root      20   0  145m  24m 4124 S  0.0  0.6   0:00.54 python             [m
+[m 2338 coral     20   0  527m  24m  11m S  0.0  0.6   0:27.60 unity-panel-ser    [m
+[m 2632 coral     20   0  554m  21m 9752 S  0.0  0.5   0:01.11 unity-scope-vid    [m
+[m 2251 coral     20   0  575m  16m  12m S  0.0  0.4   0:02.28 nm-applet          [m[6;1H[K[H[mtop - 16:35:26 up 2 days, 10:10,  6 users,  load average: 0.51, 0.43, 0.37[m[K
+Tasks:[m[m 172 [mtotal,[m[m   1 [mrunning,[m[m 171 [msleeping,[m[m   0 [mstopped,[m[m   0 [mzombie[m[K
+Cpu(s):[m[m 26.3%[mus,[m[m  0.0%[msy,[m[m  0.0%[mni,[m[m 73.7%[mid,[m[m  0.0%[mwa,[m[m  0.0%[mhi,[m[m  0.0%[msi,[m[m  0.0%[mst[m[K
+Mem: [m[m  4045736k [mtotal,[m[m  2187336k [mused,[m[m  1858400k [mfree,[m[m   196840k [mbuffers[m[K
+Swap:[m[m  1046524k [mtotal,[m[m        0k [mused,[m[m  1046524k [mfree,[m[m   988624k [mcached[m[K
+[6;1H
+[7m  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND            [m[K
+[m 2912 coral     20   0  931m 185m  45m S  0.0  4.7   2:56.94 firefox            [m
+[m 1130 root      20   0  275m 129m 8444 S  5.1  3.3  10:41.99 Xorg               [m
+[m 2223 coral     20   0  981m 104m  34m S  0.0  2.7  15:35.92 compiz             [m
+[m 1108 mysql     20   0  865m  44m 7604 S  0.0  1.1   1:08.97 mysqld             [m
+[m 3344 coral     20   0  403m  37m  24m S  5.1  0.9  43:07.08 plugin-containe    [m
+[m 2248 coral     20   0  451m  35m  24m S  0.0  0.9   5:42.13 vmtoolsd           [m
+[m 2206 coral     20   0  686m  34m  12m S  0.0  0.9   0:31.29 gnome-settings-    [m
+[m 2247 coral     20   0 1013m  31m  18m S  0.0  0.8   0:10.94 nautilus           [m
+[m 6661 root      20   0  290m  27m 4196 S  0.0  0.7   0:05.80 python             [m
+[m30054 root      20   0  237m  27m 4416 S  5.1  0.7   0:01.10 python             [m
+[m 2494 coral     20   0  609m  25m  12m S  0.0  0.6   1:06.84 gnome-terminal     [m
+[m30038 root      20   0  149m  25m 4524 S  0.0  0.6   0:00.33 python             [m
+[m 3995 root      20   0  149m  25m 4532 S  0.0  0.6   0:00.52 python             [m
+[m30033 root      20   0  145m  24m 4124 S  0.0  0.6   0:00.54 python             [m
+[m 2338 coral     20   0  527m  24m  11m S  0.0  0.6   0:27.60 unity-panel-ser    [m
+[m 2632 coral     20   0  554m  21m 9752 S  0.0  0.5   0:01.11 unity-scope-vid    [m
+[m 2251 coral     20   0  575m  16m  12m S  0.0  0.4   0:02.28 nm-applet          [m[6;1H[K[H[mtop - 16:35:26 up 2 days, 10:10,  6 users,  load average: 0.51, 0.43, 0.37[m[K
+Tasks:[m[m 172 [mtotal,[m[m   1 [mrunning,[m[m 171 [msleeping,[m[m   0 [mstopped,[m[m   0 [mzombie[m[K
+Cpu(s):[m[m 23.8%[mus,[m[m 19.0%[msy,[m[m  0.0%[mni,[m[m 57.1%[mid,[m[m  0.0%[mwa,[m[m  0.0%[mhi,[m[m  0.0%[msi,[m[m  0.0%[mst[m[K
+Mem: [m[m  4045736k [mtotal,[m[m  2187336k [mused,[m[m  1858400k [mfree,[m[m   196840k [mbuffers[m[K
+Swap:[m[m  1046524k [mtotal,[m[m        0k [mused,[m[m  1046524k [mfree,[m[m   988644k [mcached[m[K
+[6;1H
+[7m  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND            [m[K
+[m 2912 coral     20   0  931m 185m  45m S  0.0  4.7   2:56.94 firefox            [m
+[m 1130 root      20   0  275m 129m 8444 S 10.1  3.3  10:42.01 Xorg               [m
+[m 2223 coral     20   0  981m 104m  34m S  5.0  2.7  15:35.93 compiz             [m
+[m 1108 mysql     20   0  865m  44m 7604 S  0.0  1.1   1:08.97 mysqld             [m
+[m 3344 coral     20   0  403m  37m  24m S  5.0  0.9  43:07.09 plugin-containe    [m
+[m 2248 coral     20   0  451m  35m  24m S  0.0  0.9   5:42.13 vmtoolsd           [m
+[m 2206 coral     20   0  686m  34m  12m S  0.0  0.9   0:31.29 gnome-settings-    [m
+[m 2247 coral     20   0 1013m  31m  18m S  0.0  0.8   0:10.94 nautilus           [m
+[m 6661 root      20   0  290m  27m 4196 S  0.0  0.7   0:05.80 python             [m
+[m30054 root      20   0  237m  27m 4416 S 15.1  0.7   0:01.13 python             [m
+[m 2494 coral     20   0  609m  25m  12m S 10.1  0.6   1:06.86 gnome-terminal     [m
+[m30038 root      20   0  149m  25m 4524 S  0.0  0.6   0:00.33 python             [m
+[m 3995 root      20   0  149m  25m 4532 S  0.0  0.6   0:00.52 python             [m
+[m30033 root      20   0  145m  24m 4124 S  0.0  0.6   0:00.54 python             [m
+[m 2338 coral     20   0  527m  24m  11m S  0.0  0.6   0:27.60 unity-panel-ser    [m
+[m 2632 coral     20   0  554m  21m 9752 S  0.0  0.5   0:01.11 unity-scope-vid    [m
+[m 2251 coral     20   0  575m  16m  12m S  0.0  0.4   0:02.28 nm-applet          [m[6;1H[K[H[mtop - 16:35:26 up 2 days, 10:10,  6 users,  load average: 0.51, 0.43, 0.37[m[K
+Tasks:[m[m 172 [mtotal,[m[m   1 [mrunning,[m[m 171 [msleeping,[m[m   0 [mstopped,[m[m   0 [mzombie[m[K
+Cpu(s):[m[m 23.5%[mus,[m[m 23.5%[msy,[m[m  0.0%[mni,[m[m 52.9%[mid,[m[m  0.0%[mwa,[m[m  0.0%[mhi,[m[m  0.0%[msi,[m[m  0.0%[mst[m[K
+Mem: [m[m  4045736k [mtotal,[m[m  2187336k [mused,[m[m  1858400k [mfree,[m[m   196840k [mbuffers[m[K
+Swap:[m[m  1046524k [mtotal,[m[m        0k [mused,[m[m  1046524k [mfree,[m[m   988644k [mcached[m[K
+[6;1H
+[7m  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND            [m[K
+[m 2912 coral     20   0  931m 185m  45m S  0.0  4.7   2:56.94 firefox            [m
+[m 1130 root      20   0  275m 129m 8444 S 15.8  3.3  10:42.04 Xorg               [m
+[m 2223 coral     20   0  981m 104m  34m S  0.0  2.7  15:35.93 compiz             [m
+[m 1108 mysql     20   0  865m  44m 7604 S  0.0  1.1   1:08.97 mysqld             [m
+[m 3344 coral     20   0  403m  37m  24m S  0.0  0.9  43:07.09 plugin-containe    [m
+[m 2248 coral     20   0  451m  35m  24m S  0.0  0.9   5:42.13 vmtoolsd           [m
+[m 2206 coral     20   0  686m  34m  12m S  0.0  0.9   0:31.29 gnome-settings-    [m
+[m 2247 coral     20   0 1013m  31m  18m S  0.0  0.8   0:10.94 nautilus           [m
+[m 6661 root      20   0  290m  27m 4196 S  0.0  0.7   0:05.80 python             [m
+[m30054 root      20   0  237m  27m 4416 S 15.8  0.7   0:01.16 python             [m
+[m 2494 coral     20   0  609m  25m  12m S  5.3  0.6   1:06.87 gnome-terminal     [m
+[m30038 root      20   0  149m  25m 4524 S  0.0  0.6   0:00.33 python             [m
+[m 3995 root      20   0  149m  25m 4532 S  0.0  0.6   0:00.52 python             [m
+[m30033 root      20   0  145m  24m 4124 S  0.0  0.6   0:00.54 python             [m
+[m 2338 coral     20   0  527m  24m  11m S  0.0  0.6   0:27.60 unity-panel-ser    [m
+[m 2632 coral     20   0  554m  21m 9752 S  0.0  0.5   0:01.11 unity-scope-vid    [m
+[m 2251 coral     20   0  575m  16m  12m S  0.0  0.4   0:02.28 nm-applet          [m[6;1H[K[H[mtop - 16:35:27 up 2 days, 10:10,  6 users,  load average: 0.51, 0.43, 0.37[m[K
+Tasks:[m[m 172 [mtotal,[m[m   1 [mrunning,[m[m 171 [msleeping,[m[m   0 [mstopped,[m[m   0 [mzombie[m[K
+Cpu(s):[m[m 26.3%[mus,[m[m 15.8%[msy,[m[m  0.0%[mni,[m[m 57.9%[mid,[m[m  0.0%[mwa,[m[m  0.0%[mhi,[m[m  0.0%[msi,[m[m  0.0%[mst[m[K
+Mem: [m[m  4045736k [mtotal,[m[m  2187336k [mused,[m[m  1858400k [mfree,[m[m   196840k [mbuffers[m[K
+Swap:[m[m  1046524k [mtotal,[m[m        0k [mused,[m[m  1046524k [mfree,[m[m   988644k [mcached[m[K
+[6;1H
+[7m  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND            [m[K
+[m 2912 coral     20   0  931m 185m  45m S  0.0  4.7   2:56.94 firefox            [m
+[m 1130 root      20   0  275m 129m 8444 S  0.0  3.3  10:42.04 Xorg               [m
+[m 2223 coral     20   0  981m 104m  34m S  5.5  2.7  15:35.94 compiz             [m
+[m 1108 mysql     20   0  865m  44m 7604 S  0.0  1.1   1:08.97 mysqld             [m
+[m 3344 coral     20   0  403m  37m  24m S  5.5  0.9  43:07.10 plugin-containe    [m
+[m 2248 coral     20   0  451m  35m  24m S  0.0  0.9   5:42.13 vmtoolsd           [m
+[m 2206 coral     20   0  686m  34m  12m S  0.0  0.9   0:31.29 gnome-settings-    [m
+[m 2247 coral     20   0 1013m  31m  18m S  0.0  0.8   0:10.94 nautilus           [m
+[m 6661 root      20   0  290m  27m 4196 S  0.0  0.7   0:05.80 python             [m
+[m30054 root      20   0  237m  27m 4416 S  5.5  0.7   0:01.17 python             [m
+[m 2494 coral     20   0  609m  25m  12m S 11.0  0.6   1:06.89 gnome-terminal     [m
+[m30038 root      20   0  149m  25m 4524 S  0.0  0.6   0:00.33 python             [m
+[m 3995 root      20   0  149m  25m 4532 S  0.0  0.6   0:00.52 python             [m
+[m30033 root      20   0  145m  24m 4124 S  0.0  0.6   0:00.54 python             [m
+[m 2338 coral     20   0  527m  24m  11m S  0.0  0.6   0:27.60 unity-panel-ser    [m
+[m 2632 coral     20   0  554m  21m 9752 S  0.0  0.5   0:01.11 unity-scope-vid    [m
+[m 2251 coral     20   0  575m  16m  12m S  0.0  0.4   0:02.28 nm-applet          [m[6;1H[K[H[mtop - 16:35:27 up 2 days, 10:10,  6 users,  load average: 0.51, 0.43, 0.37[m[K
+Tasks:[m[m 172 [mtotal,[m[m   2 [mrunning,[m[m 170 [msleeping,[m[m   0 [mstopped,[m[m   0 [mzombie[m[K
+Cpu(s):[m[m 26.3%[mus,[m[m 10.5%[msy,[m[m  0.0%[mni,[m[m 63.2%[mid,[m[m  0.0%[mwa,[m[m  0.0%[mhi,[m[m  0.0%[msi,[m[m  0.0%[mst[m[K
+Mem: [m[m  4045736k [mtotal,[m[m  2187336k [mused,[m[m  1858400k [mfree,[m[m   196840k [mbuffers[m[K
+Swap:[m[m  1046524k [mtotal,[m[m        0k [mused,[m[m  1046524k [mfree,[m[m   988644k [mcached[m[K
+[6;1H
+[7m  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND            [m[K
+[m 2912 coral     20   0  931m 185m  45m S  0.0  4.7   2:56.94 firefox            [m
+[m[m 1130 root      20   0  275m 129m 8444 R  5.0  3.3  10:42.05 Xorg               [m
+[m 2223 coral     20   0  981m 104m  34m S  0.0  2.7  15:35.94 compiz             [m
+[m 1108 mysql     20   0  865m  44m 7604 S  0.0  1.1   1:08.97 mysqld             [m
+[m 3344 coral     20   0  403m  37m  24m S  0.0  0.9  43:07.10 plugin-containe    [m
+[m 2248 coral     20   0  451m  35m  24m S  0.0  0.9   5:42.13 vmtoolsd           [m
+[m 2206 coral     20   0  686m  34m  12m S  0.0  0.9   0:31.29 gnome-settings-    [m
+[m 2247 coral     20   0 1013m  31m  18m S  0.0  0.8   0:10.94 nautilus           [m
+[m 6661 root      20   0  290m  27m 4196 S  0.0  0.7   0:05.80 python             [m
+[m30054 root      20   0  237m  27m 4416 S 10.1  0.7   0:01.19 python             [m
+[m 2494 coral     20   0  609m  25m  12m S 10.1  0.6   1:06.91 gnome-terminal     [m
+[m30038 root      20   0  149m  25m 4524 S  0.0  0.6   0:00.33 python             [m
+[m 3995 root      20   0  149m  25m 4532 S  0.0  0.6   0:00.52 python             [m
+[m30033 root      20   0  145m  24m 4124 S  0.0  0.6   0:00.54 python             [m
+[m 2338 coral     20   0  527m  24m  11m S  0.0  0.6   0:27.60 unity-panel-ser    [m
+[m 2632 coral     20   0  554m  21m 9752 S  0.0  0.5   0:01.11 unity-scope-vid    [m
+[m 2251 coral     20   0  575m  16m  12m S  0.0  0.4   0:02.28 nm-applet          [m[6;1H[K[H[mtop - 16:35:27 up 2 days, 10:10,  6 users,  load average: 0.51, 0.43, 0.37[m[K
+Tasks:[m[m 172 [mtotal,[m[m   1 [mrunning,[m[m 171 [msleeping,[m[m   0 [mstopped,[m[m   0 [mzombie[m[K
+Cpu(s):[m[m 20.0%[mus,[m[m 10.0%[msy,[m[m  0.0%[mni,[m[m 70.0%[mid,[m[m  0.0%[mwa,[m[m  0.0%[mhi,[m[m  0.0%[msi,[m[m  0.0%[mst[m[K
+Mem: [m[m  4045736k [mtotal,[m[m  2187336k [mused,[m[m  1858400k [mfree,[m[m   196840k [mbuffers[m[K
+Swap:[m[m  1046524k [mtotal,[m[m        0k [mused,[m[m  1046524k [mfree,[m[m   988644k [mcached[m[K
+[6;1H
+[7m  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND            [m[K
+[m 2912 coral     20   0  931m 185m  45m S  0.0  4.7   2:56.94 firefox            [m
+[m 1130 root      20   0  275m 129m 8444 S  5.1  3.3  10:42.06 Xorg               [m
+[m 2223 coral     20   0  981m 104m  34m S  0.0  2.7  15:35.94 compiz             [m
+[m 1108 mysql     20   0  865m  44m 7604 S  0.0  1.1   1:08.97 mysqld             [m
+[m 3344 coral     20   0  403m  37m  24m S  0.0  0.9  43:07.10 plugin-containe    [m
+[m 2248 coral     20   0  451m  35m  24m S  0.0  0.9   5:42.13 vmtoolsd           [m
+[m 2206 coral     20   0  686m  34m  12m S  0.0  0.9   0:31.29 gnome-settings-    [m
+[m 2247 coral     20   0 1013m  31m  18m S  0.0  0.8   0:10.94 nautilus           [m
+[m 6661 root      20   0  290m  27m 4196 S  0.0  0.7   0:05.80 python             [m
+[m30054 root      20   0  237m  27m 4416 S 10.1  0.7   0:01.21 python             [m
+[m 2494 coral     20   0  609m  25m  12m S  0.0  0.6   1:06.91 gnome-terminal     [m
+[m30038 root      20   0  149m  25m 4524 S  0.0  0.6   0:00.33 python             [m
+[m 3995 root      20   0  149m  25m 4532 S  0.0  0.6   0:00.52 python             [m
+[m30033 root      20   0  145m  24m 4124 S  0.0  0.6   0:00.54 python             [m
+[m 2338 coral     20   0  527m  24m  11m S  0.0  0.6   0:27.60 unity-panel-ser    [m
+[m 2632 coral     20   0  554m  21m 9752 S  0.0  0.5   0:01.11 unity-scope-vid    [m
+[m 2251 coral     20   0  575m  16m  12m S  0.0  0.4   0:02.28 nm-applet          [m[6;1H[K[H[mtop - 16:35:27 up 2 days, 10:10,  6 users,  load average: 0.51, 0.43, 0.37[m[K
+Tasks:[m[m 172 [mtotal,[m[m   1 [mrunning,[m[m 171 [msleeping,[m[m   0 [mstopped,[m[m   0 [mzombie[m[K
+Cpu(s):[m[m 26.3%[mus,[m[m 10.5%[msy,[m[m  0.0%[mni,[m[m 63.2%[mid,[m[m  0.0%[mwa,[m[m  0.0%[mhi,[m[m  0.0%[msi,[m[m  0.0%[mst[m[K
+Mem: [m[m  4045736k [mtotal,[m[m  2187336k [mused,[m[m  1858400k [mfree,[m[m   196840k [mbuffers[m[K
+Swap:[m[m  1046524k [mtotal,[m[m        0k [mused,[m[m  1046524k [mfree,[m[m   988656k [mcached[m[K
+[6;1H
+[7m  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND            [m[K
+[m 2912 coral     20   0  931m 185m  45m S  0.0  4.7   2:56.94 firefox            [m
+[m 1130 root      20   0  275m 129m 8444 S  9.7  3.3  10:42.08 Xorg               [m
+[m 2223 coral     20   0  981m 104m  34m S  0.0  2.7  15:35.94 compiz             [m
+[m 1108 mysql     20   0  865m  44m 7604 S  0.0  1.1   1:08.97 mysqld             [m
+[m 3344 coral     20   0  403m  37m  24m S  4.9  0.9  43:07.11 plugin-containe    [m
+[m 2248 coral     20   0  451m  35m  24m S  0.0  0.9   5:42.13 vmtoolsd           [m
+[m 2206 coral     20   0  686m  34m  12m S  0.0  0.9   0:31.29 gnome-settings-    [m
+[m 2247 coral     20   0 1013m  31m  18m S  0.0  0.8   0:10.94 nautilus           [m
+[m 6661 root      20   0  290m  27m 4196 S  0.0  0.7   0:05.80 python             [m
+[m30054 root      20   0  237m  27m 4416 S 14.6  0.7   0:01.24 python             [m
+[m 2494 coral     20   0  609m  25m  12m S  9.7  0.6   1:06.93 gnome-terminal     [m
+[m30038 root      20   0  149m  25m 4524 S  0.0  0.6   0:00.33 python             [m
+[m 3995 root      20   0  149m  25m 4532 S  0.0  0.6   0:00.52 python             [m
+[m30033 root      20   0  145m  24m 4124 S  0.0  0.6   0:00.54 python             [m
+[m 2338 coral     20   0  527m  24m  11m S  0.0  0.6   0:27.60 unity-panel-ser    [m
+[m 2632 coral     20   0  554m  21m 9752 S  0.0  0.5   0:01.11 unity-scope-vid    [m
+[m 2251 coral     20   0  575m  16m  12m S  0.0  0.4   0:02.28 nm-applet          [m[6;1H[K[H[mtop - 16:35:27 up 2 days, 10:10,  6 users,  load average: 0.51, 0.43, 0.37[m[K
+Tasks:[m[m 172 [mtotal,[m[m   1 [mrunning,[m[m 171 [msleeping,[m[m   0 [mstopped,[m[m   0 [mzombie[m[K
+Cpu(s):[m[m 25.0%[mus,[m[m 15.0%[msy,[m[m  0.0%[mni,[m[m 60.0%[mid,[m[m  0.0%[mwa,[m[m  0.0%[mhi,[m[m  0.0%[msi,[m[m  0.0%[mst[m[K
+Mem: [m[m  4045736k [mtotal,[m[m  2187336k [mused,[m[m  1858400k [mfree,[m[m   196840k [mbuffers[m[K
+Swap:[m[m  1046524k [mtotal,[m[m        0k [mused,[m[m  1046524k [mfree,[m[m   988656k [mcached[m[K
+[6;1H
+[7m  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND            [m[K
+[m 2912 coral     20   0  931m 185m  45m S  0.0  4.7   2:56.94 firefox            [m
+[m 1130 root      20   0  275m 129m 8444 S 10.1  3.3  10:42.10 Xorg               [m
+[m 2223 coral     20   0  981m 104m  34m S  5.0  2.7  15:35.95 compiz             [m
+[m 1108 mysql     20   0  865m  44m 7604 S  0.0  1.1   1:08.97 mysqld             [m
+[m 3344 coral     20   0  403m  37m  24m S  0.0  0.9  43:07.11 plugin-containe    [m
+[m 2248 coral     20   0  451m  35m  24m S  0.0  0.9   5:42.13 vmtoolsd           [m
+[m 2206 coral     20   0  686m  34m  12m S  0.0  0.9   0:31.29 gnome-settings-    [m
+[m 2247 coral     20   0 1013m  31m  18m S  0.0  0.8   0:10.94 nautilus           [m
+[m 6661 root      20   0  290m  27m 4196 S  0.0  0.7   0:05.80 python             [m
+[m30054 root      20   0  237m  27m 4416 S  5.0  0.7   0:01.25 python             [m
+[m 2494 coral     20   0  609m  25m  12m S  5.0  0.6   1:06.94 gnome-terminal     [m
+[m30038 root      20   0  149m  25m 4524 S  0.0  0.6   0:00.33 python             [m
+[m 3995 root      20   0  149m  25m 4532 S  0.0  0.6   0:00.52 python             [m
+[m30033 root      20   0  145m  24m 4124 S  0.0  0.6   0:00.54 python             [m
+[m 2338 coral     20   0  527m  24m  11m S  0.0  0.6   0:27.60 unity-panel-ser    [m
+[m 2632 coral     20   0  554m  21m 9752 S  0.0  0.5   0:01.11 unity-scope-vid    [m
+[m 2251 coral     20   0  575m  16m  12m S  0.0  0.4   0:02.28 nm-applet          [m[6;1H[K[H[mtop - 16:35:28 up 2 days, 10:10,  6 users,  load average: 0.51, 0.43, 0.37[m[K
+Tasks:[m[m 172 [mtotal,[m[m   1 [mrunning,[m[m 171 [msleeping,[m[m   0 [mstopped,[m[m   0 [mzombie[m[K
+Cpu(s):[m[m 31.6%[mus,[m[m 10.5%[msy,[m[m  0.0%[mni,[m[m 57.9%[mid,[m[m  0.0%[mwa,[m[m  0.0%[mhi,[m[m  0.0%[msi,[m[m  0.0%[mst[m[K
+Mem: [m[m  4045736k [mtotal,[m[m  2187336k [mused,[m[m  1858400k [mfree,[m[m   196840k [mbuffers[m[K
+Swap:[m[m  1046524k [mtotal,[m[m        0k [mused,[m[m  1046524k [mfree,[m[m   988656k [mcached[m[K
+[6;1H
+[7m  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND            [m[K
+[m 2912 coral     20   0  931m 185m  45m S  0.0  4.7   2:56.94 firefox            [m
+[m 1130 root      20   0  275m 129m 8444 S 20.2  3.3  10:42.14 Xorg               [m
+[m 2223 coral     20   0  981m 104m  34m S  5.1  2.7  15:35.96 compiz             [m
+[m 1108 mysql     20   0  865m  44m 7604 S  0.0  1.1   1:08.97 mysqld             [m
+[m 3344 coral     20   0  403m  37m  24m S  0.0  0.9  43:07.11 plugin-containe    [m
+[m 2248 coral     20   0  451m  35m  24m S  0.0  0.9   5:42.13 vmtoolsd           [m
+[m 2206 coral     20   0  686m  34m  12m S  0.0  0.9   0:31.29 gnome-settings-    [m
+[m 2247 coral     20   0 1013m  31m  18m S  0.0  0.8   0:10.94 nautilus           [m
+[m 6661 root      20   0  290m  27m 4196 S  0.0  0.7   0:05.80 python             [m
+[m30054 root      20   0  237m  27m 4416 S 10.1  0.7   0:01.27 python             [m
+[m 2494 coral     20   0  609m  25m  12m S  0.0  0.6   1:06.94 gnome-terminal     [m
+[m30038 root      20   0  149m  25m 4524 S  0.0  0.6   0:00.33 python             [m
+[m 3995 root      20   0  149m  25m 4532 S  0.0  0.6   0:00.52 python             [m
+[m30033 root      20   0  145m  24m 4124 S  0.0  0.6   0:00.54 python             [m
+[m 2338 coral     20   0  527m  24m  11m S  0.0  0.6   0:27.60 unity-panel-ser    [m
+[m 2632 coral     20   0  554m  21m 9752 S  0.0  0.5   0:01.11 unity-scope-vid    [m
+[m 2251 coral     20   0  575m  16m  12m S  0.0  0.4   0:02.28 nm-applet          [m[6;1H[K[H[mtop - 16:35:28 up 2 days, 10:10,  6 users,  load average: 0.47, 0.42, 0.37[m[K
+Tasks:[m[m 172 [mtotal,[m[m   1 [mrunning,[m[m 171 [msleeping,[m[m   0 [mstopped,[m[m   0 [mzombie[m[K
+Cpu(s):[m[m 30.0%[mus,[m[m 15.0%[msy,[m[m  0.0%[mni,[m[m 55.0%[mid,[m[m  0.0%[mwa,[m[m  0.0%[mhi,[m[m  0.0%[msi,[m[m  0.0%[mst[m[K
+Mem: [m[m  4045736k [mtotal,[m[m  2187336k [mused,[m[m  1858400k [mfree,[m[m   196840k [mbuffers[m[K
+Swap:[m[m  1046524k [mtotal,[m[m        0k [mused,[m[m  1046524k [mfree,[m[m   988656k [mcached[m[K
+[6;1H
+[7m  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND            [m[K
+[m 2912 coral     20   0  931m 185m  45m S  0.0  4.7   2:56.94 firefox            [m
+[m 1130 root      20   0  275m 129m 8444 S 14.6  3.3  10:42.17 Xorg               [m
+[m 2223 coral     20   0  981m 104m  34m S  4.9  2.7  15:35.97 compiz             [m
+[m 1108 mysql     20   0  865m  44m 7604 S  0.0  1.1   1:08.97 mysqld             [m
+[m 3344 coral     20   0  403m  37m  24m S  0.0  0.9  43:07.11 plugin-containe    [m
+[m 2248 coral     20   0  451m  35m  24m S  0.0  0.9   5:42.13 vmtoolsd           [m
+[m 2206 coral     20   0  686m  34m  12m S  0.0  0.9   0:31.29 gnome-settings-    [m
+[m 2247 coral     20   0 1013m  31m  18m S  0.0  0.8   0:10.94 nautilus           [m
+[m 6661 root      20   0  290m  27m 4196 S  0.0  0.7   0:05.80 python             [m
+[m30054 root      20   0  237m  27m 4416 S 14.6  0.7   0:01.30 python             [m
+[m 2494 coral     20   0  609m  25m  12m S 14.6  0.6   1:06.97 gnome-terminal     [m
+[m30038 root      20   0  149m  25m 4524 S  0.0  0.6   0:00.33 python             [m
+[m 3995 root      20   0  149m  25m 4532 S  0.0  0.6   0:00.52 python             [m
+[m30033 root      20   0  145m  24m 4124 S  0.0  0.6   0:00.54 python             [m
+[m 2338 coral     20   0  527m  24m  11m S  0.0  0.6   0:27.60 unity-panel-ser    [m
+[m 2632 coral     20   0  554m  21m 9752 S  0.0  0.5   0:01.11 unity-scope-vid    [m
+[m 2251 coral     20   0  575m  16m  12m S  0.0  0.4   0:02.28 nm-applet          [m[6;1H[K[H[mtop - 16:35:28 up 2 days, 10:10,  6 users,  load average: 0.47, 0.42, 0.37[m[K
+Tasks:[m[m 172 [mtotal,[m[m   2 [mrunning,[m[m 170 [msleeping,[m[m   0 [mstopped,[m[m   0 [mzombie[m[K
+Cpu(s):[m[m 30.0%[mus,[m[m 10.0%[msy,[m[m  0.0%[mni,[m[m 60.0%[mid,[m[m  0.0%[mwa,[m[m  0.0%[mhi,[m[m  0.0%[msi,[m[m  0.0%[mst[m[K
+Mem: [m[m  4045736k [mtotal,[m[m  2187336k [mused,[m[m  1858400k [mfree,[m[m   196840k [mbuffers[m[K
+Swap:[m[m  1046524k [mtotal,[m[m        0k [mused,[m[m  1046524k [mfree,[m[m   988656k [mcached[m[K
+[6;1H
+[7m  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND            [m[K
+[m 2912 coral     20   0  931m 185m  45m S  0.0  4.7   2:56.94 firefox            [m
+[m 1130 root      20   0  275m 129m 8444 S 14.5  3.3  10:42.20 Xorg               [m
+[m 2223 coral     20   0  981m 104m  34m S  0.0  2.7  15:35.97 compiz             [m
+[m 1108 mysql     20   0  865m  44m 7604 S  0.0  1.1   1:08.97 mysqld             [m
+[m 3344 coral     20   0  403m  37m  24m S  0.0  0.9  43:07.11 plugin-containe    [m
+[m 2248 coral     20   0  451m  35m  24m S  0.0  0.9   5:42.13 vmtoolsd           [m
+[m 2206 coral     20   0  686m  34m  12m S  0.0  0.9   0:31.29 gnome-settings-    [m
+[m 2247 coral     20   0 1013m  31m  18m S  0.0  0.8   0:10.94 nautilus           [m
+[m 6661 root      20   0  290m  27m 4196 S  0.0  0.7   0:05.80 python             [m
+[m30054 root      20   0  237m  27m 4416 S 14.5  0.7   0:01.33 python             [m
+[m 2494 coral     20   0  609m  25m  12m S  4.8  0.6   1:06.98 gnome-terminal     [m
+[m30038 root      20   0  149m  25m 4524 S  0.0  0.6   0:00.33 python             [m
+[m 3995 root      20   0  149m  25m 4532 S  0.0  0.6   0:00.52 python             [m
+[m30033 root      20   0  145m  24m 4124 S  0.0  0.6   0:00.54 python             [m
+[m 2338 coral     20   0  527m  24m  11m S  0.0  0.6   0:27.60 unity-panel-ser    [m
+[m 2632 coral     20   0  554m  21m 9752 S  0.0  0.5   0:01.11 unity-scope-vid    [m
+[m 2251 coral     20   0  575m  16m  12m S  0.0  0.4   0:02.28 nm-applet          [m[6;1H[K[H[mtop - 16:35:28 up 2 days, 10:10,  6 users,  load average: 0.47, 0.42, 0.37[m[K
+Tasks:[m[m 172 [mtotal,[m[m   1 [mrunning,[m[m 171 [msleeping,[m[m   0 [mstopped,[m[m   0 [mzombie[m[K
+Cpu(s):[m[m 31.6%[mus,[m[m 15.8%[msy,[m[m  0.0%[mni,[m[m 52.6%[mid,[m[m  0.0%[mwa,[m[m  0.0%[mhi,[m[m  0.0%[msi,[m[m  0.0%[mst[m[K
+Mem: [m[m  4045736k [mtotal,[m[m  2187336k [mused,[m[m  1858400k [mfree,[m[m   196840k [mbuffers[m[K
+Swap:[m[m  1046524k [mtotal,[m[m        0k [mused,[m[m  1046524k [mfree,[m[m   988668k [mcached[m[K
+[6;1H
+[7m  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND            [m[K
+[m 2912 coral     20   0  931m 185m  45m S  0.0  4.7   2:56.94 firefox            [m
+[m 1130 root      20   0  275m 129m 8444 S 15.2  3.3  10:42.23 Xorg               [m
+[m 2223 coral     20   0  981m 104m  34m S  5.1  2.7  15:35.98 compiz             [m
+[m 1108 mysql     20   0  865m  44m 7604 S  0.0  1.1   1:08.97 mysqld             [m
+[m 3344 coral     20   0  403m  37m  24m S  5.1  0.9  43:07.12 plugin-containe    [m
+[m 2248 coral     20   0  451m  35m  24m S  0.0  0.9   5:42.13 vmtoolsd           [m
+[m 2206 coral     20   0  686m  34m  12m S  0.0  0.9   0:31.29 gnome-settings-    [m
+[m 2247 coral     20   0 1013m  31m  18m S  0.0  0.8   0:10.94 nautilus           [m
+[m 6661 root      20   0  290m  27m 4196 S  0.0  0.7   0:05.80 python             [m
+[m30054 root      20   0  237m  27m 4416 S 15.2  0.7   0:01.36 python             [m
+[m 2494 coral     20   0  609m  25m  12m S  5.1  0.6   1:06.99 gnome-terminal     [m
+[m30038 root      20   0  149m  25m 4524 S  0.0  0.6   0:00.33 python             [m
+[m 3995 root      20   0  149m  25m 4532 S  0.0  0.6   0:00.52 python             [m
+[m30033 root      20   0  145m  24m 4124 S  0.0  0.6   0:00.54 python             [m
+[m 2338 coral     20   0  527m  24m  11m S  0.0  0.6   0:27.60 unity-panel-ser    [m
+[m 2632 coral     20   0  554m  21m 9752 S  0.0  0.5   0:01.11 unity-scope-vid    [m
+[m 2251 coral     20   0  575m  16m  12m S  0.0  0.4   0:02.28 nm-applet          [m[6;1H[K[H[mtop - 16:35:28 up 2 days, 10:10,  6 users,  load average: 0.47, 0.42, 0.37[m[K
+Tasks:[m[m 172 [mtotal,[m[m   2 [mrunning,[m[m 170 [msleeping,[m[m   0 [mstopped,[m[m   0 [mzombie[m[K
+Cpu(s):[m[m 28.6%[mus,[m[m 14.3%[msy,[m[m  0.0%[mni,[m[m 57.1%[mid,[m[m  0.0%[mwa,[m[m  0.0%[mhi,[m[m  0.0%[msi,[m[m  0.0%[mst[m[K
+Mem: [m[m  4045736k [mtotal,[m[m  2187336k [mused,[m[m  1858400k [mfree,[m[m   196840k [mbuffers[m[K
+Swap:[m[m  1046524k [mtotal,[m[m        0k [mused,[m[m  1046524k [mfree,[m[m   988668k [mcached[m[K
+[6;1H
+[7m  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND            [m[K
+[m 2912 coral     20   0  931m 185m  45m S  0.0  4.7   2:56.94 firefox            [m
+[m 1130 root      20   0  275m 129m 8444 S  9.7  3.3  10:42.25 Xorg               [m
+[m 2223 coral     20   0  981m 104m  34m S  0.0  2.7  15:35.98 compiz             [m
+[m 1108 mysql     20   0  865m  44m 7604 S  0.0  1.1   1:08.97 mysqld             [m
+[m 3344 coral     20   0  403m  37m  24m S  4.8  0.9  43:07.13 plugin-containe    [m
+[m 2248 coral     20   0  451m  35m  24m S  0.0  0.9   5:42.13 vmtoolsd           [m
+[m 2206 coral     20   0  686m  34m  12m S  0.0  0.9   0:31.29 gnome-settings-    [m
+[m 2247 coral     20   0 1013m  31m  18m S  0.0  0.8   0:10.94 nautilus           [m
+[m 6661 root      20   0  290m  27m 4196 S  0.0  0.7   0:05.80 python             [m
+[m30054 root      20   0  237m  27m 4416 S  9.7  0.7   0:01.38 python             [m
+[m 2494 coral     20   0  609m  25m  12m S  9.7  0.6   1:07.01 gnome-terminal     [m
+[m30038 root      20   0  149m  25m 4524 S  0.0  0.6   0:00.33 python             [m
+[m 3995 root      20   0  149m  25m 4532 S  0.0  0.6   0:00.52 python             [m
+[m30033 root      20   0  145m  24m 4124 S  0.0  0.6   0:00.54 python             [m
+[m 2338 coral     20   0  527m  24m  11m S  0.0  0.6   0:27.60 unity-panel-ser    [m
+[m 2632 coral     20   0  554m  21m 9752 S  0.0  0.5   0:01.11 unity-scope-vid    [m
+[m 2251 coral     20   0  575m  16m  12m S  0.0  0.4   0:02.28 nm-applet          [m[6;1H[K[H[mtop - 16:35:29 up 2 days, 10:10,  6 users,  load average: 0.47, 0.42, 0.37[m[K
+Tasks:[m[m 172 [mtotal,[m[m   1 [mrunning,[m[m 171 [msleeping,[m[m   0 [mstopped,[m[m   0 [mzombie[m[K
+Cpu(s):[m[m 27.8%[mus,[m[m 16.7%[msy,[m[m  0.0%[mni,[m[m 55.6%[mid,[m[m  0.0%[mwa,[m[m  0.0%[mhi,[m[m  0.0%[msi,[m[m  0.0%[mst[m[K
+Mem: [m[m  4045736k [mtotal,[m[m  2187336k [mused,[m[m  1858400k [mfree,[m[m   196840k [mbuffers[m[K
+Swap:[m[m  1046524k [mtotal,[m[m        0k [mused,[m[m  1046524k [mfree,[m[m   988668k [mcached[m[K
+[6;1H
+[7m  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND            [m[K
+[m 2912 coral     20   0  931m 185m  45m S  0.0  4.7   2:56.94 firefox            [m
+[m 1130 root      20   0  275m 129m 8444 S 20.2  3.3  10:42.29 Xorg               [m
+[m 2223 coral     20   0  981m 104m  34m S  5.0  2.7  15:35.99 compiz             [m
+[m 1108 mysql     20   0  865m  44m 7604 S  0.0  1.1   1:08.97 mysqld             [m
+[m 3344 coral     20   0  403m  37m  24m S  0.0  0.9  43:07.13 plugin-containe    [m
+[m 2248 coral     20   0  451m  35m  24m S  0.0  0.9   5:42.13 vmtoolsd           [m
+[m 2206 coral     20   0  686m  34m  12m S  0.0  0.9   0:31.29 gnome-settings-    [m
+[m 2247 coral     20   0 1013m  31m  18m S  0.0  0.8   0:10.94 nautilus           [m
+[m 6661 root      20   0  290m  27m 4196 S  0.0  0.7   0:05.80 python             [m
+[m30054 root      20   0  237m  27m 4416 S 10.1  0.7   0:01.40 python             [m
+[m 2494 coral     20   0  609m  25m  12m S 10.1  0.6   1:07.03 gnome-terminal     [m
+[m30038 root      20   0  149m  25m 4524 S  0.0  0.6   0:00.33 python             [m
+[m 3995 root      20   0  149m  25m 4532 S  0.0  0.6   0:00.52 python             [m
+[m30033 root      20   0  145m  24m 4124 S  0.0  0.6   0:00.54 python             [m
+[m 2338 coral     20   0  527m  24m  11m S  0.0  0.6   0:27.60 unity-panel-ser    [m
+[m 2632 coral     20   0  554m  21m 9752 S  0.0  0.5   0:01.11 unity-scope-vid    [m
+[m 2251 coral     20   0  575m  16m  12m S  0.0  0.4   0:02.28 nm-applet          [m[6;1H[K[H[mtop - 16:35:29 up 2 days, 10:10,  6 users,  load average: 0.47, 0.42, 0.37[m[K
+Tasks:[m[m 172 [mtotal,[m[m   1 [mrunning,[m[m 171 [msleeping,[m[m   0 [mstopped,[m[m   0 [mzombie[m[K
+Cpu(s):[m[m 23.8%[mus,[m[m  9.5%[msy,[m[m  0.0%[mni,[m[m 66.7%[mid,[m[m  0.0%[mwa,[m[m  0.0%[mhi,[m[m  0.0%[msi,[m[m  0.0%[mst[m[K
+Mem: [m[m  4045736k [mtotal,[m[m  2187336k [mused,[m[m  1858400k [mfree,[m[m   196840k [mbuffers[m[K
+Swap:[m[m  1046524k [mtotal,[m[m        0k [mused,[m[m  1046524k [mfree,[m[m   988668k [mcached[m[K
+[6;1H
+[7m  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND            [m[K
+[m 2912 coral     20   0  931m 185m  45m S  0.0  4.7   2:56.94 firefox            [m
+[m 1130 root      20   0  275m 129m 8444 S  9.4  3.3  10:42.31 Xorg               [m
+[m 2223 coral     20   0  981m 104m  34m S  4.7  2.7  15:36.00 compiz             [m
+[m 1108 mysql     20   0  865m  44m 7604 S  0.0  1.1   1:08.97 mysqld             [m
+[m 3344 coral     20   0  403m  37m  24m S  0.0  0.9  43:07.13 plugin-containe    [m
+[m 2248 coral     20   0  451m  35m  24m S  0.0  0.9   5:42.13 vmtoolsd           [m
+[m 2206 coral     20   0  686m  34m  12m S  0.0  0.9   0:31.29 gnome-settings-    [m
+[m 2247 coral     20   0 1013m  31m  18m S  0.0  0.8   0:10.94 nautilus           [m
+[m 6661 root      20   0  290m  27m 4196 S  0.0  0.7   0:05.80 python             [m
+[m30054 root      20   0  237m  27m 4416 S  9.4  0.7   0:01.42 python             [m
+[m 2494 coral     20   0  609m  25m  12m S  4.7  0.6   1:07.04 gnome-terminal     [m
+[m30038 root      20   0  149m  25m 4524 S  0.0  0.6   0:00.33 python             [m
+[m 3995 root      20   0  149m  25m 4532 S  0.0  0.6   0:00.52 python             [m
+[m30033 root      20   0  145m  24m 4124 S  0.0  0.6   0:00.54 python             [m
+[m 2338 coral     20   0  527m  24m  11m S  0.0  0.6   0:27.60 unity-panel-ser    [m
+[m 2632 coral     20   0  554m  21m 9752 S  0.0  0.5   0:01.11 unity-scope-vid    [m
+[m 2251 coral     20   0  575m  16m  12m S  0.0  0.4   0:02.28 nm-applet          [m[6;1H[K[H[mtop - 16:35:29 up 2 days, 10:10,  6 users,  load average: 0.47, 0.42, 0.37[m[K
+Tasks:[m[m 172 [mtotal,[m[m   3 [mrunning,[m[m 169 [msleeping,[m[m   0 [mstopped,[m[m   0 [mzombie[m[K
+Cpu(s):[m[m 31.6%[mus,[m[m 10.5%[msy,[m[m  0.0%[mni,[m[m 52.6%[mid,[m[m  0.0%[mwa,[m[m  0.0%[mhi,[m[m  5.3%[msi,[m[m  0.0%[mst[m[K
+Mem: [m[m  4045736k [mtotal,[m[m  2187336k [mused,[m[m  1858400k [mfree,[m[m   196840k [mbuffers[m[K
+Swap:[m[m  1046524k [mtotal,[m[m        0k [mused,[m[m  1046524k [mfree,[m[m   988668k [mcached[m[K
+[6;1H
+[7m  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND            [m[K
+[m 2912 coral     20   0  931m 185m  45m S  0.0  4.7   2:56.94 firefox            [m
+[m 1130 root      20   0  275m 129m 8444 S 15.1  3.3  10:42.34 Xorg               [m
+[m[m 2223 coral     20   0  981m 104m  34m R  0.0  2.7  15:36.00 compiz             [m
+[m 1108 mysql     20   0  865m  44m 7604 S  0.0  1.1   1:08.97 mysqld             [m
+[m 3344 coral     20   0  403m  37m  24m S  0.0  0.9  43:07.13 plugin-containe    [m
+[m 2248 coral     20   0  451m  35m  24m S  5.0  0.9   5:42.14 vmtoolsd           [m
+[m[m 2206 coral     20   0  686m  34m  12m R  0.0  0.9   0:31.29 gnome-settings-    [m
+[m 2247 coral     20   0 1013m  31m  18m S  0.0  0.8   0:10.94 nautilus           [m
+[m 6661 root      20   0  290m  27m 4196 S  0.0  0.7   0:05.80 python             [m
+[m30054 root      20   0  237m  27m 4416 S 15.1  0.7   0:01.45 python             [m
+[m 2494 coral     20   0  609m  25m  12m S 10.1  0.6   1:07.06 gnome-terminal     [m
+[m30038 root      20   0  149m  25m 4524 S  0.0  0.6   0:00.33 python             [m
+[m 3995 root      20   0  149m  25m 4532 S  0.0  0.6   0:00.52 python             [m
+[m30033 root      20   0  145m  24m 4124 S  0.0  0.6   0:00.54 python             [m
+[m 2338 coral     20   0  527m  24m  11m S  0.0  0.6   0:27.60 unity-panel-ser    [m
+[m 2632 coral     20   0  554m  21m 9752 S  0.0  0.5   0:01.11 unity-scope-vid    [m
+[m 2251 coral     20   0  575m  16m  12m S  0.0  0.4   0:02.28 nm-applet          [m[6;1H[K[H[mtop - 16:35:30 up 2 days, 10:10,  6 users,  load average: 0.47, 0.42, 0.37[m[K
+Tasks:[m[m 172 [mtotal,[m[m   1 [mrunning,[m[m 171 [msleeping,[m[m   0 [mstopped,[m[m   0 [mzombie[m[K
+Cpu(s):[m[m  2.9%[mus,[m[m  1.5%[msy,[m[m  0.0%[mni,[m[m 95.6%[mid,[m[m  0.0%[mwa,[m[m  0.0%[mhi,[m[m  0.0%[msi,[m[m  0.0%[mst[m[K
+Mem: [m[m  4045736k [mtotal,[m[m  2187336k [mused,[m[m  1858400k [mfree,[m[m   196840k [mbuffers[m[K
+Swap:[m[m  1046524k [mtotal,[m[m        0k [mused,[m[m  1046524k [mfree,[m[m   988680k [mcached[m[K
+[6;1H
+[7m  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND            [m[K
+[m 2912 coral     20   0  931m 185m  45m S  0.0  4.7   2:56.94 firefox            [m
+[m 1130 root      20   0  275m 129m 8444 S  0.7  3.3  10:42.35 Xorg               [m
+[m 2223 coral     20   0  981m 104m  34m S  0.7  2.7  15:36.01 compiz             [m
+[m 1108 mysql     20   0  865m  44m 7604 S  0.0  1.1   1:08.97 mysqld             [m
+[m 3344 coral     20   0  403m  37m  24m S  2.1  0.9  43:07.16 plugin-containe    [m
+[m 2248 coral     20   0  451m  35m  24m S  0.0  0.9   5:42.14 vmtoolsd           [m
+[m 2206 coral     20   0  686m  34m  12m S  0.0  0.9   0:31.29 gnome-settings-    [m
+[m 2247 coral     20   0 1013m  31m  18m S  0.0  0.8   0:10.94 nautilus           [m
+[m 6661 root      20   0  290m  27m 4196 S  0.0  0.7   0:05.80 python             [m
+[m30054 root      20   0  237m  27m 4416 S  0.7  0.7   0:01.46 python             [m
+[m 2494 coral     20   0  609m  25m  12m S  0.7  0.6   1:07.07 gnome-terminal     [m
+[m30038 root      20   0  149m  25m 4524 S  0.0  0.6   0:00.33 python             [m
+[m 3995 root      20   0  149m  25m 4532 S  0.0  0.6   0:00.52 python             [m
+[m30033 root      20   0  145m  24m 4124 S  0.0  0.6   0:00.54 python             [m
+[m 2338 coral     20   0  527m  24m  11m S  0.0  0.6   0:27.60 unity-panel-ser    [m
+[m 2632 coral     20   0  554m  21m 9752 S  0.0  0.5   0:01.11 unity-scope-vid    [m
+[m 2251 coral     20   0  575m  16m  12m S  0.0  0.4   0:02.28 nm-applet          [m[6;1H[K[H[mtop - 16:35:31 up 2 days, 10:10,  6 users,  load average: 0.47, 0.42, 0.37[m[K
+Tasks:[m[m 172 [mtotal,[m[m   1 [mrunning,[m[m 171 [msleeping,[m[m   0 [mstopped,[m[m   0 [mzombie[m[K
+Cpu(s):[m[m 22.2%[mus,[m[m 14.8%[msy,[m[m  0.0%[mni,[m[m 63.0%[mid,[m[m  0.0%[mwa,[m[m  0.0%[mhi,[m[m  0.0%[msi,[m[m  0.0%[mst[m[K
+Mem: [m[m  4045736k [mtotal,[m[m  2187336k [mused,[m[m  1858400k [mfree,[m[m   196840k [mbuffers[m[K
+Swap:[m[m  1046524k [mtotal,[m[m        0k [mused,[m[m  1046524k [mfree,[m[m   988680k [mcached[m[K
+[6;1H
+[7m  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND            [m[K
+[m 2912 coral     20   0  931m 185m  45m S  0.0  4.7   2:56.94 firefox            [m
+[m 1130 root      20   0  275m 129m 8444 S  7.6  3.3  10:42.37 Xorg               [m
+[m 2223 coral     20   0  981m 104m  34m S  0.0  2.7  15:36.01 compiz             [m
+[m 1108 mysql     20   0  865m  44m 7604 S  0.0  1.1   1:08.97 mysqld             [m
+[m 3344 coral     20   0  403m  37m  24m S  0.0  0.9  43:07.16 plugin-containe    [m
+[m 2248 coral     20   0  451m  35m  24m S  0.0  0.9   5:42.14 vmtoolsd           [m
+[m 2206 coral     20   0  686m  34m  12m S  3.8  0.9   0:31.30 gnome-settings-    [m
+[m 2247 coral     20   0 1013m  31m  18m S  0.0  0.8   0:10.94 nautilus           [m
+[m 6661 root      20   0  290m  27m 4196 S  0.0  0.7   0:05.80 python             [m
+[m30054 root      20   0  237m  27m 4416 S  7.6  0.7   0:01.48 python             [m
+[m 2494 coral     20   0  609m  25m  12m S  3.8  0.6   1:07.08 gnome-terminal     [m
+[m30038 root      20   0  149m  25m 4524 S  0.0  0.6   0:00.33 python             [m
+[m 3995 root      20   0  149m  25m 4532 S  0.0  0.6   0:00.52 python             [m
+[m30033 root      20   0  145m  24m 4124 S  0.0  0.6   0:00.54 python             [m
+[m 2338 coral     20   0  527m  24m  11m S  0.0  0.6   0:27.60 unity-panel-ser    [m
+[m 2632 coral     20   0  554m  21m 9752 S  0.0  0.5   0:01.11 unity-scope-vid    [m
+[m 2251 coral     20   0  575m  16m  12m S  0.0  0.4   0:02.28 nm-applet          [m[6;1H[K[H[mtop - 16:35:31 up 2 days, 10:10,  6 users,  load average: 0.47, 0.42, 0.37[m[K
+Tasks:[m[m 172 [mtotal,[m[m   1 [mrunning,[m[m 171 [msleeping,[m[m   0 [mstopped,[m[m   0 [mzombie[m[K
+Cpu(s):[m[m 26.3%[mus,[m[m  5.3%[msy,[m[m  0.0%[mni,[m[m 68.4%[mid,[m[m  0.0%[mwa,[m[m  0.0%[mhi,[m[m  0.0%[msi,[m[m  0.0%[mst[m[K
+Mem: [m[m  4045736k [mtotal,[m[m  2187336k [mused,[m[m  1858400k [mfree,[m[m   196844k [mbuffers[m[K
+Swap:[m[m  1046524k [mtotal,[m[m        0k [mused,[m[m  1046524k [mfree,[m[m   988676k [mcached[m[K
+[6;1H
+[7m  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND            [m[K
+[m 2912 coral     20   0  931m 185m  45m S  0.0  4.7   2:56.94 firefox            [m
+[m 1130 root      20   0  275m 129m 8444 S  9.7  3.3  10:42.39 Xorg               [m
+[m 2223 coral     20   0  981m 104m  34m S  4.9  2.7  15:36.02 compiz             [m
+[m 1108 mysql     20   0  865m  44m 7604 S  0.0  1.1   1:08.97 mysqld             [m
+[m 3344 coral     20   0  403m  37m  24m S  0.0  0.9  43:07.16 plugin-containe    [m
+[m 2248 coral     20   0  451m  35m  24m S  0.0  0.9   5:42.14 vmtoolsd           [m
+[m 2206 coral     20   0  686m  34m  12m S  0.0  0.9   0:31.30 gnome-settings-    [m
+[m 2247 coral     20   0 1013m  31m  18m S  0.0  0.8   0:10.94 nautilus           [m
+[m 6661 root      20   0  290m  27m 4196 S  0.0  0.7   0:05.80 python             [m
+[m30054 root      20   0  237m  27m 4416 S 14.6  0.7   0:01.51 python             [m
+[m 2494 coral     20   0  609m  25m  12m S  4.9  0.6   1:07.09 gnome-terminal     [m
+[m30038 root      20   0  149m  25m 4524 S  0.0  0.6   0:00.33 python             [m
+[m 3995 root      20   0  149m  25m 4532 S  0.0  0.6   0:00.52 python             [m
+[m30033 root      20   0  145m  24m 4124 S  0.0  0.6   0:00.54 python             [m
+[m 2338 coral     20   0  527m  24m  11m S  0.0  0.6   0:27.60 unity-panel-ser    [m
+[m 2632 coral     20   0  554m  21m 9752 S  0.0  0.5   0:01.11 unity-scope-vid    [m
+[m 2251 coral     20   0  575m  16m  12m S  0.0  0.4   0:02.28 nm-applet          [m[6;1H[K[H[mtop - 16:35:34 up 2 days, 10:10,  6 users,  load average: 0.43, 0.42, 0.37[m[K
+Tasks:[m[m 172 [mtotal,[m[m   1 [mrunning,[m[m 171 [msleeping,[m[m   0 [mstopped,[m[m   0 [mzombie[m[K
+Cpu(s):[m[m  4.2%[mus,[m[m  1.7%[msy,[m[m  0.0%[mni,[m[m 94.1%[mid,[m[m  0.0%[mwa,[m[m  0.0%[mhi,[m[m  0.0%[msi,[m[m  0.0%[mst[m[K
+Mem: [m[m  4045736k [mtotal,[m[m  2187336k [mused,[m[m  1858400k [mfree,[m[m   196844k [mbuffers[m[K
+Swap:[m[m  1046524k [mtotal,[m[m        0k [mused,[m[m  1046524k [mfree,[m[m   988684k [mcached[m[K
+[6;1H
+[7m  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND            [m[K
+
+[m 1130 root      20   0  275m 129m 8444 S  4.0  3.3  10:42.51 Xorg               [m
+[m 2223 coral     20   0  981m 104m  34m S  0.3  2.7  15:36.03 compiz             [m
+[m 1108 mysql     20   0  865m  44m 7604 S  0.3  1.1   1:08.98 mysqld             [m
+[m 3344 coral     20   0  403m  37m  24m S  2.0  0.9  43:07.22 plugin-containe    [m
+[m 2248 coral     20   0  451m  35m  24m S  1.0  0.9   5:42.17 vmtoolsd           [m
+
+
+
+[m30054 root      20   0  237m  27m 4416 S  0.7  0.7   0:01.53 python             [m
+[m 2494 coral     20   0  609m  25m  12m S  1.7  0.6   1:07.14 gnome-terminal     [m
+
+
+
+
+
+[6;1H[K[H[mtop - 16:35:37 up 2 days, 10:10,  6 users,  load average: 0.43, 0.42, 0.37[m[K
+Tasks:[m[m 172 [mtotal,[m[m   1 [mrunning,[m[m 171 [msleeping,[m[m   0 [mstopped,[m[m   0 [mzombie[m[K
+Cpu(s):[m[m  5.9%[mus,[m[m  4.8%[msy,[m[m  0.0%[mni,[m[m 89.3%[mid,[m[m  0.0%[mwa,[m[m  0.0%[mhi,[m[m  0.0%[msi,[m[m  0.0%[mst[m[K
+Mem: [m[m  4045736k [mtotal,[m[m  2187336k [mused,[m[m  1858400k [mfree,[m[m   196848k [mbuffers[m[K
+Swap:[m[m  1046524k [mtotal,[m[m        0k [mused,[m[m  1046524k [mfree,[m[m   988688k [mcached[m[K
+[6;1H
+[7m  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND            [m[K
+
+[m 1130 root      20   0  275m 129m 8444 S  3.0  3.3  10:42.60 Xorg               [m
+[m 2223 coral     20   0  981m 104m  34m S  2.3  2.7  15:36.10 compiz             [m
+[m 1108 mysql     20   0  865m  44m 7604 S  0.0  1.1   1:08.98 mysqld             [m
+[m 3344 coral     20   0  403m  37m  24m S  1.7  0.9  43:07.27 plugin-containe    [m
+[m 2248 coral     20   0  451m  35m  24m S  0.0  0.9   5:42.17 vmtoolsd           [m
+
+
+
+[m30054 root      20   0  237m  27m 4416 S  1.0  0.7   0:01.56 python             [m
+[m 2494 coral     20   0  609m  25m  12m S  2.0  0.6   1:07.20 gnome-terminal     [m
+
+
+
+
+
+[6;1H[K[H[mtop - 16:35:40 up 2 days, 10:10,  6 users,  load average: 0.48, 0.43, 0.37[m[K
+Tasks:[m[m 172 [mtotal,[m[m   2 [mrunning,[m[m 170 [msleeping,[m[m   0 [mstopped,[m[m   0 [mzombie[m[K
+Cpu(s):[m[m 10.3%[mus,[m[m  5.5%[msy,[m[m  0.0%[mni,[m[m 84.1%[mid,[m[m  0.0%[mwa,[m[m  0.0%[mhi,[m[m  0.0%[msi,[m[m  0.0%[mst[m[K
+Mem: [m[m  4045736k [mtotal,[m[m  2187336k [mused,[m[m  1858400k [mfree,[m[m   196848k [mbuffers[m[K
+Swap:[m[m  1046524k [mtotal,[m[m        0k [mused,[m[m  1046524k [mfree,[m[m   988688k [mcached[m[K
+[6;1H
+[7m  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND            [m[K
+
+[m 1130 root      20   0  275m 129m 8444 S  7.3  3.3  10:42.82 Xorg               [m
+[m[m 2223 coral     20   0  981m 104m  34m R  4.6  2.7  15:36.24 compiz             [m
+
+[m 3344 coral     20   0  403m  37m  24m S  2.0  0.9  43:07.33 plugin-containe    [m
+[m 2248 coral     20   0  451m  35m  24m S  0.7  0.9   5:42.19 vmtoolsd           [m
+[m 2206 coral     20   0  686m  34m  12m S  0.3  0.9   0:31.31 gnome-settings-    [m
+[m 2247 coral     20   0 1013m  31m  18m S  0.3  0.8   0:10.95 nautilus           [m
+
+[m30054 root      20   0  237m  27m 4416 S  0.7  0.7   0:01.58 python             [m
+[m 2494 coral     20   0  609m  25m  12m S  1.7  0.6   1:07.25 gnome-terminal     [m
+
+
+
+
+
+[6;1H[K[H[mtop - 16:35:43 up 2 days, 10:10,  6 users,  load average: 0.44, 0.42, 0.37[m[K
+Tasks:[m[m 172 [mtotal,[m[m   2 [mrunning,[m[m 170 [msleeping,[m[m   0 [mstopped,[m[m   0 [mzombie[m[K
+Cpu(s):[m[m  8.4%[mus,[m[m  4.2%[msy,[m[m  0.0%[mni,[m[m 87.4%[mid,[m[m  0.0%[mwa,[m[m  0.0%[mhi,[m[m  0.0%[msi,[m[m  0.0%[mst[m[K
+Mem: [m[m  4045736k [mtotal,[m[m  2187336k [mused,[m[m  1858400k [mfree,[m[m   196852k [mbuffers[m[K
+Swap:[m[m  1046524k [mtotal,[m[m        0k [mused,[m[m  1046524k [mfree,[m[m   988688k [mcached[m[K
+[6;1H
+[7m  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND            [m[K
+[m 2912 coral     20   0  931m 185m  45m S  2.6  4.7   2:57.02 firefox            [m
+[m[m 1130 root      20   0  275m 129m 8444 R  4.6  3.3  10:42.96 Xorg               [m
+[m 2223 coral     20   0  981m 104m  34m S  1.6  2.7  15:36.29 compiz             [m
+
+[m 3344 coral     20   0  403m  37m  24m S  1.6  0.9  43:07.38 plugin-containe    [m
+[m 2248 coral     20   0  451m  35m  24m S  0.3  0.9   5:42.20 vmtoolsd           [m
+[m 2206 coral     20   0  686m  34m  12m S  0.0  0.9   0:31.31 gnome-settings-    [m
+[m 2247 coral     20   0 1013m  31m  18m S  0.0  0.8   0:10.95 nautilus           [m
+
+[m30054 root      20   0  237m  27m 4416 S  0.3  0.7   0:01.59 python             [m
+[m 2494 coral     20   0  609m  25m  12m S  2.3  0.6   1:07.32 gnome-terminal     [m
+
+
+
+
+
+[6;1H[K[H[mtop - 16:35:46 up 2 days, 10:11,  6 users,  load average: 0.44, 0.42, 0.37[m[K
+Tasks:[m[m 172 [mtotal,[m[m   1 [mrunning,[m[m 171 [msleeping,[m[m   0 [mstopped,[m[m   0 [mzombie[m[K
+Cpu(s):[m[m 14.2%[mus,[m[m  5.9%[msy,[m[m  0.0%[mni,[m[m 79.9%[mid,[m[m  0.0%[mwa,[m[m  0.0%[mhi,[m[m  0.0%[msi,[m[m  0.0%[mst[m[K
+Mem: [m[m  4045736k [mtotal,[m[m  2187336k [mused,[m[m  1858400k [mfree,[m[m   196852k [mbuffers[m[K
+Swap:[m[m  1046524k [mtotal,[m[m        0k [mused,[m[m  1046524k [mfree,[m[m   988692k [mcached[m[K
+[6;1H
+[7m  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND            [m[K
+[m 2912 coral     20   0  931m 185m  45m S  0.3  4.7   2:57.03 firefox            [m
+[m 1130 root      20   0  275m 129m 8444 S  7.9  3.3  10:43.20 Xorg               [m
+[m 2223 coral     20   0  981m 104m  34m S  8.9  2.7  15:36.56 compiz             [m
+
+[m 3344 coral     20   0  403m  37m  24m S  2.0  0.9  43:07.44 plugin-containe    [m
+[m 2248 coral     20   0  451m  35m  24m S  0.0  0.9   5:42.20 vmtoolsd           [m
+
+
+
+[m30054 root      20   0  237m  27m 4416 S  0.7  0.7   0:01.61 python             [m
+[m 2494 coral     20   0  609m  25m  12m S  1.0  0.6   1:07.35 gnome-terminal     [m
+
+
+
+
+
+[6;1H[K[H[mtop - 16:35:47 up 2 days, 10:11,  6 users,  load average: 0.44, 0.42, 0.37[m[K
+Tasks:[m[m 172 [mtotal,[m[m   1 [mrunning,[m[m 171 [msleeping,[m[m   0 [mstopped,[m[m   0 [mzombie[m[K
+Cpu(s):[m[m 14.0%[mus,[m[m  4.0%[msy,[m[m  0.0%[mni,[m[m 80.0%[mid,[m[m  0.0%[mwa,[m[m  0.0%[mhi,[m[m  2.0%[msi,[m[m  0.0%[mst[m[K
+Mem: [m[m  4045736k [mtotal,[m[m  2187336k [mused,[m[m  1858400k [mfree,[m[m   196852k [mbuffers[m[K
+Swap:[m[m  1046524k [mtotal,[m[m        0k [mused,[m[m  1046524k [mfree,[m[m   988692k [mcached[m[K
+[6;1H
+[7m  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND            [m[K
+[m 2912 coral     20   0  931m 185m  45m S  0.0  4.7   2:57.03 firefox            [m
+[m 1130 root      20   0  275m 129m 8444 S  5.9  3.3  10:43.23 Xorg               [m
+[m 2223 coral     20   0  981m 104m  34m S  2.0  2.7  15:36.57 compiz             [m
+[m 1108 mysql     20   0  865m  44m 7604 S  0.0  1.1   1:08.98 mysqld             [m
+[m 3344 coral     20   0  403m  37m  24m S  2.0  0.9  43:07.45 plugin-containe    [m
+[m 2248 coral     20   0  451m  35m  24m S  0.0  0.9   5:42.20 vmtoolsd           [m
+[m 2206 coral     20   0  686m  34m  12m S  0.0  0.9   0:31.31 gnome-settings-    [m
+[m 2247 coral     20   0 1013m  31m  18m S  0.0  0.8   0:10.95 nautilus           [m
+[m 6661 root      20   0  290m  27m 4196 S  0.0  0.7   0:05.80 python             [m
+[m30054 root      20   0  237m  27m 4416 S  5.9  0.7   0:01.64 python             [m
+[m 2494 coral     20   0  609m  25m  12m S  3.9  0.6   1:07.37 gnome-terminal     [m
+[m30038 root      20   0  149m  25m 4524 S  0.0  0.6   0:00.33 python             [m
+[m 3995 root      20   0  149m  25m 4532 S  0.0  0.6   0:00.52 python             [m
+[m30033 root      20   0  145m  24m 4124 S  0.0  0.6   0:00.54 python             [m
+[m 2338 coral     20   0  527m  24m  11m S  0.0  0.6   0:27.60 unity-panel-ser    [m
+[m 2632 coral     20   0  554m  21m 9752 S  0.0  0.5   0:01.11 unity-scope-vid    [m
+[m 2251 coral     20   0  575m  16m  12m S  0.0  0.4   0:02.28 nm-applet          [m[6;1H[K[H[mtop - 16:35:47 up 2 days, 10:11,  6 users,  load average: 0.44, 0.42, 0.37[m[K
+Tasks:[m[m 172 [mtotal,[m[m   1 [mrunning,[m[m 171 [msleeping,[m[m   0 [mstopped,[m[m   0 [mzombie[m[K
+Cpu(s):[m[m 23.8%[mus,[m[m 14.3%[msy,[m[m  0.0%[mni,[m[m 61.9%[mid,[m[m  0.0%[mwa,[m[m  0.0%[mhi,[m[m  0.0%[msi,[m[m  0.0%[mst[m[K
+Mem: [m[m  4045736k [mtotal,[m[m  2187336k [mused,[m[m  1858400k [mfree,[m[m   196852k [mbuffers[m[K
+Swap:[m[m  1046524k [mtotal,[m[m        0k [mused,[m[m  1046524k [mfree,[m[m   988692k [mcached[m[K
+[6;1H
+[7m  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND            [m[K
+[m 2912 coral     20   0  931m 185m  45m S  0.0  4.7   2:57.03 firefox            [m
+[m 1130 root      20   0  275m 129m 8444 S  9.0  3.3  10:43.25 Xorg               [m
+[m 2223 coral     20   0  981m 104m  34m S  0.0  2.7  15:36.57 compiz             [m
+[m 1108 mysql     20   0  865m  44m 7604 S  0.0  1.1   1:08.98 mysqld             [m
+[m 3344 coral     20   0  403m  37m  24m S  4.5  0.9  43:07.46 plugin-containe    [m
+[m 2248 coral     20   0  451m  35m  24m S  0.0  0.9   5:42.20 vmtoolsd           [m
+[m 2206 coral     20   0  686m  34m  12m S  0.0  0.9   0:31.31 gnome-settings-    [m
+[m 2247 coral     20   0 1013m  31m  18m S  0.0  0.8   0:10.95 nautilus           [m
+[m 6661 root      20   0  290m  27m 4196 S  0.0  0.7   0:05.80 python             [m
+[m30054 root      20   0  237m  27m 4416 S  9.0  0.7   0:01.66 python             [m
+[m 2494 coral     20   0  609m  25m  12m S  9.0  0.6   1:07.39 gnome-terminal     [m
+[m30038 root      20   0  149m  25m 4524 S  0.0  0.6   0:00.33 python             [m
+[m 3995 root      20   0  149m  25m 4532 S  0.0  0.6   0:00.52 python             [m
+[m30033 root      20   0  145m  24m 4124 S  0.0  0.6   0:00.54 python             [m
+[m 2338 coral     20   0  527m  24m  11m S  0.0  0.6   0:27.60 unity-panel-ser    [m
+[m 2632 coral     20   0  554m  21m 9752 S  0.0  0.5   0:01.11 unity-scope-vid    [m
+[m 2251 coral     20   0  575m  16m  12m S  0.0  0.4   0:02.28 nm-applet          [m[6;1H[K[H[mtop - 16:35:47 up 2 days, 10:11,  6 users,  load average: 0.44, 0.42, 0.37[m[K
+Tasks:[m[m 172 [mtotal,[m[m   1 [mrunning,[m[m 171 [msleeping,[m[m   0 [mstopped,[m[m   0 [mzombie[m[K
+Cpu(s):[m[m 28.6%[mus,[m[m 19.0%[msy,[m[m  0.0%[mni,[m[m 52.4%[mid,[m[m  0.0%[mwa,[m[m  0.0%[mhi,[m[m  0.0%[msi,[m[m  0.0%[mst[m[K
+Mem: [m[m  4045736k [mtotal,[m[m  2187336k [mused,[m[m  1858400k [mfree,[m[m   196852k [mbuffers[m[K
+Swap:[m[m  1046524k [mtotal,[m[m        0k [mused,[m[m  1046524k [mfree,[m[m   988692k [mcached[m[K
+[6;1H
+[7m  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND            [m[K
+[m 2912 coral     20   0  931m 185m  45m S  0.0  4.7   2:57.03 firefox            [m
+[m 1130 root      20   0  275m 129m 8444 S  9.4  3.3  10:43.27 Xorg               [m
+[m 2223 coral     20   0  981m 104m  34m S  4.7  2.7  15:36.58 compiz             [m
+[m 1108 mysql     20   0  865m  44m 7604 S  0.0  1.1   1:08.98 mysqld             [m
+[m 3344 coral     20   0  403m  37m  24m S  0.0  0.9  43:07.46 plugin-containe    [m
+[m 2248 coral     20   0  451m  35m  24m S  0.0  0.9   5:42.20 vmtoolsd           [m
+[m 2206 coral     20   0  686m  34m  12m S  0.0  0.9   0:31.31 gnome-settings-    [m
+[m 2247 coral     20   0 1013m  31m  18m S  0.0  0.8   0:10.95 nautilus           [m
+[m 6661 root      20   0  290m  27m 4196 S  0.0  0.7   0:05.80 python             [m
+[m30054 root      20   0  237m  27m 4416 S 14.1  0.7   0:01.69 python             [m
+[m 2494 coral     20   0  609m  25m  12m S  4.7  0.6   1:07.40 gnome-terminal     [m
+[m30038 root      20   0  149m  25m 4524 S  0.0  0.6   0:00.33 python             [m
+[m 3995 root      20   0  149m  25m 4532 S  0.0  0.6   0:00.52 python             [m
+[m30033 root      20   0  145m  24m 4124 S  0.0  0.6   0:00.54 python             [m
+[m 2338 coral     20   0  527m  24m  11m S  0.0  0.6   0:27.60 unity-panel-ser    [m
+[m 2632 coral     20   0  554m  21m 9752 S  0.0  0.5   0:01.11 unity-scope-vid    [m
+[m 2251 coral     20   0  575m  16m  12m S  0.0  0.4   0:02.28 nm-applet          [m[6;1H[K[H[mtop - 16:35:47 up 2 days, 10:11,  6 users,  load average: 0.44, 0.42, 0.37[m[K
+Tasks:[m[m 172 [mtotal,[m[m   1 [mrunning,[m[m 171 [msleeping,[m[m   0 [mstopped,[m[m   0 [mzombie[m[K
+Cpu(s):[m[m 35.0%[mus,[m[m 10.0%[msy,[m[m  0.0%[mni,[m[m 55.0%[mid,[m[m  0.0%[mwa,[m[m  0.0%[mhi,[m[m  0.0%[msi,[m[m  0.0%[mst[m[K
+Mem: [m[m  4045736k [mtotal,[m[m  2187336k [mused,[m[m  1858400k [mfree,[m[m   196852k [mbuffers[m[K
+Swap:[m[m  1046524k [mtotal,[m[m        0k [mused,[m[m  1046524k [mfree,[m[m   988700k [mcached[m[K
+[6;1H
+[7m  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND            [m[K
+[m 2912 coral     20   0  931m 185m  45m S  9.3  4.7   2:57.05 firefox            [m
+[m 1130 root      20   0  275m 129m 8444 S 18.7  3.3  10:43.31 Xorg               [m
+[m 2223 coral     20   0  981m 104m  34m S  0.0  2.7  15:36.58 compiz             [m
+[m 1108 mysql     20   0  865m  44m 7604 S  0.0  1.1   1:08.98 mysqld             [m
+[m 3344 coral     20   0  403m  37m  24m S  0.0  0.9  43:07.46 plugin-containe    [m
+[m 2248 coral     20   0  451m  35m  24m S  0.0  0.9   5:42.20 vmtoolsd           [m
+[m 2206 coral     20   0  686m  34m  12m S  0.0  0.9   0:31.31 gnome-settings-    [m
+[m 2247 coral     20   0 1013m  31m  18m S  0.0  0.8   0:10.95 nautilus           [m
+[m 6661 root      20   0  290m  27m 4196 S  0.0  0.7   0:05.80 python             [m
+[m30054 root      20   0  237m  27m 4416 S  9.3  0.7   0:01.71 python             [m
+[m 2494 coral     20   0  609m  25m  12m S  9.3  0.6   1:07.42 gnome-terminal     [m
+[m30038 root      20   0  149m  25m 4524 S  0.0  0.6   0:00.33 python             [m
+[m 3995 root      20   0  149m  25m 4532 S  0.0  0.6   0:00.52 python             [m
+[m30033 root      20   0  145m  24m 4124 S  0.0  0.6   0:00.54 python             [m
+[m 2338 coral     20   0  527m  24m  11m S  0.0  0.6   0:27.60 unity-panel-ser    [m
+[m 2632 coral     20   0  554m  21m 9752 S  0.0  0.5   0:01.11 unity-scope-vid    [m
+[m 2251 coral     20   0  575m  16m  12m S  0.0  0.4   0:02.28 nm-applet          [m[6;1H[K[H[mtop - 16:35:47 up 2 days, 10:11,  6 users,  load average: 0.44, 0.42, 0.37[m[K
+Tasks:[m[m 172 [mtotal,[m[m   1 [mrunning,[m[m 171 [msleeping,[m[m   0 [mstopped,[m[m   0 [mzombie[m[K
+Cpu(s):[m[m 28.6%[mus,[m[m 14.3%[msy,[m[m  0.0%[mni,[m[m 57.1%[mid,[m[m  0.0%[mwa,[m[m  0.0%[mhi,[m[m  0.0%[msi,[m[m  0.0%[mst[m[K
+Mem: [m[m  4045736k [mtotal,[m[m  2187336k [mused,[m[m  1858400k [mfree,[m[m   196852k [mbuffers[m[K
+Swap:[m[m  1046524k [mtotal,[m[m        0k [mused,[m[m  1046524k [mfree,[m[m   988700k [mcached[m[K
+[6;1H
+[7m  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND            [m[K
+[m 2912 coral     20   0  931m 185m  45m S  0.0  4.7   2:57.05 firefox            [m
+[m 1130 root      20   0  275m 129m 8444 S 14.6  3.3  10:43.34 Xorg               [m
+[m 2223 coral     20   0  981m 104m  34m S  4.9  2.7  15:36.59 compiz             [m
+[m 1108 mysql     20   0  865m  44m 7604 S  0.0  1.1   1:08.98 mysqld             [m
+[m 3344 coral     20   0  403m  37m  24m S  0.0  0.9  43:07.46 plugin-containe    [m
+[m 2248 coral     20   0  451m  35m  24m S  0.0  0.9   5:42.20 vmtoolsd           [m
+[m 2206 coral     20   0  686m  34m  12m S  0.0  0.9   0:31.31 gnome-settings-    [m
+[m 2247 coral     20   0 1013m  31m  18m S  0.0  0.8   0:10.95 nautilus           [m
+[m 6661 root      20   0  290m  27m 4196 S  0.0  0.7   0:05.80 python             [m
+[m30054 root      20   0  237m  27m 4416 S  9.7  0.7   0:01.73 python             [m
+[m 2494 coral     20   0  609m  25m  12m S  4.9  0.6   1:07.43 gnome-terminal     [m
+[m30038 root      20   0  149m  25m 4524 S  0.0  0.6   0:00.33 python             [m
+[m 3995 root      20   0  149m  25m 4532 S  0.0  0.6   0:00.52 python             [m
+[m30033 root      20   0  145m  24m 4124 S  0.0  0.6   0:00.54 python             [m
+[m 2338 coral     20   0  527m  24m  11m S  0.0  0.6   0:27.60 unity-panel-ser    [m
+[m 2632 coral     20   0  554m  21m 9752 S  0.0  0.5   0:01.11 unity-scope-vid    [m
+[m 2251 coral     20   0  575m  16m  12m S  0.0  0.4   0:02.28 nm-applet          [m[6;1H[K[H[mtop - 16:35:48 up 2 days, 10:11,  6 users,  load average: 0.44, 0.42, 0.37[m[K
+Tasks:[m[m 172 [mtotal,[m[m   1 [mrunning,[m[m 171 [msleeping,[m[m   0 [mstopped,[m[m   0 [mzombie[m[K
+Cpu(s):[m[m 15.8%[mus,[m[m 15.8%[msy,[m[m  0.0%[mni,[m[m 68.4%[mid,[m[m  0.0%[mwa,[m[m  0.0%[mhi,[m[m  0.0%[msi,[m[m  0.0%[mst[m[K
+Mem: [m[m  4045736k [mtotal,[m[m  2187336k [mused,[m[m  1858400k [mfree,[m[m   196852k [mbuffers[m[K
+Swap:[m[m  1046524k [mtotal,[m[m        0k [mused,[m[m  1046524k [mfree,[m[m   988700k [mcached[m[K
+[6;1H
+[7m  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND            [m[K
+[m 2912 coral     20   0  931m 185m  45m S  0.0  4.7   2:57.05 firefox            [m
+[m 1130 root      20   0  275m 129m 8444 S 10.1  3.3  10:43.36 Xorg               [m
+[m 2223 coral     20   0  981m 104m  34m S  0.0  2.7  15:36.59 compiz             [m
+[m 1108 mysql     20   0  865m  44m 7604 S  0.0  1.1   1:08.98 mysqld             [m
+[m 3344 coral     20   0  403m  37m  24m S  0.0  0.9  43:07.46 plugin-containe    [m
+[m 2248 coral     20   0  451m  35m  24m S  0.0  0.9   5:42.20 vmtoolsd           [m
+[m 2206 coral     20   0  686m  34m  12m S  0.0  0.9   0:31.31 gnome-settings-    [m
+[m 2247 coral     20   0 1013m  31m  18m S  0.0  0.8   0:10.95 nautilus           [m
+[m 6661 root      20   0  290m  27m 4196 S  0.0  0.7   0:05.80 python             [m
+[m30054 root      20   0  237m  27m 4416 S 10.1  0.7   0:01.75 python             [m
+[m 2494 coral     20   0  609m  25m  12m S 10.1  0.6   1:07.45 gnome-terminal     [m
+[m30038 root      20   0  149m  25m 4524 S  0.0  0.6   0:00.33 python             [m
+[m 3995 root      20   0  149m  25m 4532 S  0.0  0.6   0:00.52 python             [m
+[m30033 root      20   0  145m  24m 4124 S  0.0  0.6   0:00.54 python             [m
+[m 2338 coral     20   0  527m  24m  11m S  0.0  0.6   0:27.60 unity-panel-ser    [m
+[m 2632 coral     20   0  554m  21m 9752 S  0.0  0.5   0:01.11 unity-scope-vid    [m
+[m 2251 coral     20   0  575m  16m  12m S  0.0  0.4   0:02.28 nm-applet          [m[6;1H[K[H[mtop - 16:35:48 up 2 days, 10:11,  6 users,  load average: 0.48, 0.43, 0.37[m[K
+Tasks:[m[m 172 [mtotal,[m[m   2 [mrunning,[m[m 170 [msleeping,[m[m   0 [mstopped,[m[m   0 [mzombie[m[K
+Cpu(s):[m[m 27.3%[mus,[m[m  9.1%[msy,[m[m  0.0%[mni,[m[m 63.6%[mid,[m[m  0.0%[mwa,[m[m  0.0%[mhi,[m[m  0.0%[msi,[m[m  0.0%[mst[m[K
+Mem: [m[m  4045736k [mtotal,[m[m  2187336k [mused,[m[m  1858400k [mfree,[m[m   196852k [mbuffers[m[K
+Swap:[m[m  1046524k [mtotal,[m[m        0k [mused,[m[m  1046524k [mfree,[m[m   988700k [mcached[m[K
+[6;1H
+[7m  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND            [m[K
+[m 2912 coral     20   0  931m 185m  45m S  0.0  4.7   2:57.05 firefox            [m
+[m[m 1130 root      20   0  275m 129m 8444 R  9.3  3.3  10:43.38 Xorg               [m
+[m 2223 coral     20   0  981m 104m  34m S  0.0  2.7  15:36.59 compiz             [m
+[m 1108 mysql     20   0  865m  44m 7604 S  0.0  1.1   1:08.98 mysqld             [m
+[m 3344 coral     20   0  403m  37m  24m S  0.0  0.9  43:07.46 plugin-containe    [m
+[m 2248 coral     20   0  451m  35m  24m S  0.0  0.9   5:42.20 vmtoolsd           [m
+[m 2206 coral     20   0  686m  34m  12m S  0.0  0.9   0:31.31 gnome-settings-    [m
+[m 2247 coral     20   0 1013m  31m  18m S  0.0  0.8   0:10.95 nautilus           [m
+[m 6661 root      20   0  290m  27m 4196 S  0.0  0.7   0:05.80 python             [m
+[m30054 root      20   0  237m  27m 4416 S 14.0  0.7   0:01.78 python             [m
+[m 2494 coral     20   0  609m  25m  12m S  4.7  0.6   1:07.46 gnome-terminal     [m
+[m30038 root      20   0  149m  25m 4524 S  0.0  0.6   0:00.33 python             [m
+[m 3995 root      20   0  149m  25m 4532 S  0.0  0.6   0:00.52 python             [m
+[m30033 root      20   0  145m  24m 4124 S  0.0  0.6   0:00.54 python             [m
+[m 2338 coral     20   0  527m  24m  11m S  0.0  0.6   0:27.60 unity-panel-ser    [m
+[m 2632 coral     20   0  554m  21m 9752 S  0.0  0.5   0:01.11 unity-scope-vid    [m
+[m 2251 coral     20   0  575m  16m  12m S  0.0  0.4   0:02.28 nm-applet          [m[6;1H[K[H[mtop - 16:35:48 up 2 days, 10:11,  6 users,  load average: 0.48, 0.43, 0.37[m[K
+Tasks:[m[m 172 [mtotal,[m[m   1 [mrunning,[m[m 171 [msleeping,[m[m   0 [mstopped,[m[m   0 [mzombie[m[K
+Cpu(s):[m[m 16.7%[mus,[m[m 11.1%[msy,[m[m  0.0%[mni,[m[m 72.2%[mid,[m[m  0.0%[mwa,[m[m  0.0%[mhi,[m[m  0.0%[msi,[m[m  0.0%[mst[m[K
+Mem: [m[m  4045736k [mtotal,[m[m  2187336k [mused,[m[m  1858400k [mfree,[m[m   196852k [mbuffers[m[K
+Swap:[m[m  1046524k [mtotal,[m[m        0k [mused,[m[m  1046524k [mfree,[m[m   988700k [mcached[m[K
+[6;1H
+[7m  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND            [m[K
+[m 2912 coral     20   0  931m 185m  45m S  0.0  4.7   2:57.05 firefox            [m
+[m 1130 root      20   0  275m 129m 8444 S  5.3  3.3  10:43.39 Xorg               [m
+[m 2223 coral     20   0  981m 104m  34m S  5.3  2.7  15:36.60 compiz             [m
+[m 1108 mysql     20   0  865m  44m 7604 S  0.0  1.1   1:08.98 mysqld             [m
+[m 3344 coral     20   0  403m  37m  24m S  5.3  0.9  43:07.47 plugin-containe    [m
+[m 2248 coral     20   0  451m  35m  24m S  0.0  0.9   5:42.20 vmtoolsd           [m
+[m 2206 coral     20   0  686m  34m  12m S  0.0  0.9   0:31.31 gnome-settings-    [m
+[m 2247 coral     20   0 1013m  31m  18m S  0.0  0.8   0:10.95 nautilus           [m
+[m 6661 root      20   0  290m  27m 4196 S  0.0  0.7   0:05.80 python             [m
+[m30054 root      20   0  237m  27m 4416 S  5.3  0.7   0:01.79 python             [m
+[m 2494 coral     20   0  609m  25m  12m S  0.0  0.6   1:07.46 gnome-terminal     [m
+[m30038 root      20   0  149m  25m 4524 S  0.0  0.6   0:00.33 python             [m
+[m 3995 root      20   0  149m  25m 4532 S  0.0  0.6   0:00.52 python             [m
+[m30033 root      20   0  145m  24m 4124 S  0.0  0.6   0:00.54 python             [m
+[m 2338 coral     20   0  527m  24m  11m S  0.0  0.6   0:27.60 unity-panel-ser    [m
+[m 2632 coral     20   0  554m  21m 9752 S  0.0  0.5   0:01.11 unity-scope-vid    [m
+[m 2251 coral     20   0  575m  16m  12m S  0.0  0.4   0:02.28 nm-applet          [m[6;1H[K[25;1H
+coral@coral:/tmp$ 
+coral@coral:/tmp$ 
+coral@coral:/tmp$ 
+coral@coral:/tmp$ 
+coral@coral:/tmp$ 
+coral@coral:/tmp$ clera
+No command 'clera' found, did you mean:
+ Command 'clear' from package 'ncurses-bin' (main)
+clera: command not found
+coral@coral:/tmp$ clear
+[H[Jcoral@coral:/tmp$ 
+coral@coral:/tmp$ 
+coral@coral:/tmp$ 
+coral@coral:/tmp$ 
+coral@coral:/tmp$ 
+coral@coral:/tmp$ 
+coral@coral:/tmp$ 
+coral@coral:/tmp$ 
+coral@coral:/tmp$ 
+coral@coral:/tmp$ 
+coral@coral:/tmp$ 
+coral@coral:/tmp$ 
+coral@coral:/tmp$ 
+coral@coral:/tmp$ 
+coral@coral:/tmp$ 
+coral@coral:/tmp$ 
+coral@coral:/tmp$ 
+coral@coral:/tmp$ 
+coral@coral:/tmp$ 
+coral@coral:/tmp$ 
+coral@coral:/tmp$ 
+coral@coral:/tmp$ 
+coral@coral:/tmp$ 
+coral@coral:/tmp$ 
+coral@coral:/tmp$ 
+coral@coral:/tmp$ 
+coral@coral:/tmp$ 
+coral@coral:/tmp$ 
+coral@coral:/tmp$ 
+coral@coral:/tmp$ 
+coral@coral:/tmp$ 
+coral@coral:/tmp$ 
+coral@coral:/tmp$ 
+coral@coral:/tmp$ 
+coral@coral:/tmp$ 
+coral@coral:/tmp$ 
+coral@coral:/tmp$ 
+coral@coral:/tmp$ 
+coral@coral:/tmp$ 
+coral@coral:/tmp$ 
+coral@coral:/tmp$ clera
+No command 'clera' found, did you mean:
+ Command 'clear' from package 'ncurses-bin' (main)
+clera: command not found
+coral@coral:/tmp$ 
+coral@coral:/tmp$ 
+coral@coral:/tmp$ clear
+[H[Jcoral@coral:/tmp$ 
+coral@coral:/tmp$ 
+coral@coral:/tmp$ 
+coral@coral:/tmp$ 
+coral@coral:/tmp$ 
+coral@coral:/tmp$ 
+coral@coral:/tmp$ 
+coral@coral:/tmp$ 
+coral@coral:/tmp$ 
+coral@coral:/tmp$ 
+coral@coral:/tmp$ 
+coral@coral:/tmp$ 
+coral@coral:/tmp$ 
+coral@coral:/tmp$ 
+coral@coral:/tmp$ 
+coral@coral:/tmp$ 
+coral@coral:/tmp$ 
+coral@coral:/tmp$ 
+coral@coral:/tmp$ 
+coral@coral:/tmp$ 
+coral@coral:/tmp$ 
+coral@coral:/tmp$ 
+coral@coral:/tmp$ 
+coral@coral:/tmp$ 
+coral@coral:/tmp$ 
+coral@coral:/tmp$ 
+coral@coral:/tmp$ 
+coral@coral:/tmp$ 
+coral@coral:/tmp$ 
+coral@coral:/tmp$ 
+coral@coral:/tmp$ 
+coral@coral:/tmp$ 
+coral@coral:/tmp$ 
+coral@coral:/tmp$ 
+coral@coral:/tmp$ 
+coral@coral:/tmp$ 
+coral@coral:/tmp$ 
+coral@coral:/tmp$ 
+coral@coral:/tmp$ 
+coral@coral:/tmp$ 
+coral@coral:/tmp$ 
+coral@coral:/tmp$ 
+coral@coral:/tmp$ 
