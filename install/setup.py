@@ -97,11 +97,12 @@ def setup_init():
     MySQL_Name = tri_config.MySQL_Name
     MySQL_User = tri_config.MySQL_User
     MySQL_Pass = tri_config.MySQL_Pass
+    MySQL_Host = tri_config.MySQL_Host
     Tri_IP = tri_config.Tri_IP
     if len(tri_config.MySQL_Pass) == 0:
         import_db = "mysql -u'%s' <TriAquae.sql" % tri_config.MySQL_User
     else:
-        import_db = "mysql -u'%s' -p'%s' <TriAquae.sql" % (tri_config.MySQL_User,tri_config.MySQL_Pass)
+        import_db = "mysql -h %s -u'%s' -p'%s' <TriAquae.sql" % (MySQL_Host, tri_config.MySQL_User,tri_config.MySQL_Pass)
     #print import_db
     if os.system(import_db) == 0:
         asset_collect_user = tri_config.Asset_collect_user
